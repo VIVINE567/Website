@@ -742,6 +742,7 @@ const HomeContent = () => {
                         key={app} 
                         className="glass-card p-1 min-[375px]:p-2 sm:p-4 lg:p-8 border-white/20 text-center hover:bg-white/20 transition-all rounded-xl cursor-default text-white flex items-center justify-center min-h-[90px] min-[375px]:min-h-[100px] sm:min-h-[120px] md:min-h-[140px] xl:min-h-[160px] overflow-hidden"
                       >
+                      
                         <span className="text-[10px] min-[370px]:text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg font-bold uppercase tracking-tight sm:whitespace-nowrap whitespace-normal w-full px-1 sm:px-2">{app}</span>
                       </motion.div>
                     ))}
