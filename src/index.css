@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Typography */
+  --font-sans: "Roboto", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-luxury: "Cinzel", serif;
+  --font-light: "Raleway", sans-serif;
+
+  /* Forest palette (from test.html) */
+  --color-brand-primary: #2C3A23;
+  --color-brand-secondary: #3D4F2F;
+  --color-brand-accent: #5A6E48;
+
+  /* Gold palette */
+  --color-brand-gold: #C9A84C;
+  --color-brand-gold-light: #E8C97A;
+  --color-brand-gold-dark: #9A7A2E;
+
+  /* Cream palette */
+  --color-brand-bg: #F5EEE0;
+  --color-brand-bg-dark: #EDE0C8;
+
+  /* Warm tones */
+  --color-brand-brown: #866E54;
+  --color-brand-red: #7A1C1C;
+  --color-brand-ink: #1A1A14;
+
+  /* Legacy alias */
+  --color-vibrant-green: #C9A84C;
+}
+
+/* Raw CSS variables for use in gradients & non-Tailwind contexts */
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8C97A;
+  --gold-dark: #9A7A2E;
+  --cream: #F5EEE0;
+  --cream-dark: #EDE0C8;
+  --forest: #2C3A23;
+  --forest-mid: #3D4F2F;
+  --forest-light: #5A6E48;
+  --brown-warm: #866E54;
+  --red-accent: #7A1C1C;
+  --ink: #1A1A14;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-brand-ink bg-brand-bg;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+
+  /* === Z-INDEX LAYERS === */
+  .z-preloader { @apply z-[200]; }
+  .z-nav       { @apply z-[100]; }
+  .z-mobile    { @apply z-[90]; }
+  .z-dropdown  { @apply z-[50]; }
+
+  /* === LAYOUT === */
+  .hero-height { @apply min-h-[600px] lg:h-[750px]; }
+  .rounded-huge  { @apply rounded-[3rem]; }
+  .rounded-large { @apply rounded-[2.5rem]; }
+  .blur-glow     { @apply blur-[100px]; }
+
+  /* === PRELOADER === */
+  .preloader-particle {
+    @apply absolute w-2 h-2 bg-brand-gold rounded-full blur-[1px] bottom-[-20px];
+  }
+
+  /* === GLASS & CARD STYLES === */
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl;
+  }
+
+  .glass-dropdown {
+    @apply bg-brand-bg border border-brand-primary/10 shadow-xl rounded-lg py-2;
+  }
+
+  .glass-tag {
+    @apply px-4 py-2 bg-brand-bg-dark rounded-full text-sm font-medium text-brand-primary;
+  }
+
+  .standard-card {
+    @apply p-8 bg-brand-bg border border-brand-gold/20 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all;
+  }
+
+  /* === GOLD DIVIDER / ORNAMENT === */
+  .gold-divider {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    margin: 0 auto;
+  }
+
+  .gold-eyebrow {
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+  }
+  .gold-eyebrow::before,
+  .gold-eyebrow::after {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  /* === LUXURY SECTION HEADER (forest bg) === */
+  .luxury-section-dark {
+    background: linear-gradient(135deg, var(--forest) 0%, var(--forest-mid) 100%);
+  }
+
+  .luxury-section-radial {
+    background: var(--forest);
+    position: relative;
+    overflow: hidden;
+  }
+  .luxury-section-radial::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 50% 20%, rgba(201,168,76,0.18) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 80% 80%, rgba(122,28,28,0.10) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  /* === BANNER === */
+  .banner-box {
+    @apply rounded-[3rem] p-12 md:p-20 text-white relative overflow-hidden;
+  }
+
+  /* === BUTTONS === */
+  .btn-primary {
+    background: var(--forest);
+    color: var(--cream);
+    @apply px-8 py-4 rounded-lg font-bold transition-all uppercase tracking-widest shadow-lg hover:scale-105 active:scale-95;
+    border: 1px solid rgba(201,168,76,0.3);
+  }
+  .btn-primary:hover {
+    background: var(--forest-mid);
+    box-shadow: 0 8px 30px rgba(201,168,76,0.25);
+  }
+
+  .btn-gold {
+    background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
+    color: var(--forest);
+    @apply px-8 py-4 rounded-lg font-bold transition-all uppercase tracking-widest shadow-lg hover:scale-105 active:scale-95;
+  }
+
+  .btn-white {
+    background: var(--cream);
+    color: var(--forest);
+    @apply px-10 py-5 rounded-xl font-bold transition-all uppercase tracking-widest hover:scale-105 active:scale-95;
+    border: 1px solid rgba(201,168,76,0.4);
+  }
+  .btn-white:hover {
+    background: var(--cream-dark);
+  }
+
+  .btn-outline-primary {
+    border: 1px solid var(--gold);
+    color: var(--forest);
+    @apply px-8 py-2 rounded-sm font-bold transition-all uppercase text-sm hover:scale-105;
+    background: transparent;
+  }
+  .btn-outline-primary:hover {
+    background: var(--gold);
+    color: var(--cream);
+  }
+
+  .btn-vibrant {
+    background: var(--gold);
+    color: var(--forest);
+    @apply px-8 py-3 rounded-md font-bold uppercase tracking-wider hover:opacity-90 transition-all;
+  }
+
+  .btn-vibrant-outline {
+    border: 2px solid var(--cream);
+    color: var(--cream);
+    @apply px-8 py-3 rounded-md font-bold uppercase tracking-wider transition-all;
+  }
+  .btn-vibrant-outline:hover {
+    background: var(--cream);
+    color: var(--forest);
+  }
+
+  /* === OVERLAYS & SHADOWS === */
+  .bg-primary-overlay       { background: rgba(44,58,35,0.10); }
+  .bg-primary-overlay-bold  { background: rgba(44,58,35,0.20); }
+  .bg-gold-overlay          { background: rgba(201,168,76,0.10); }
+  .bg-white-overlay         { @apply bg-white/10; }
+  .bg-white-overlay-bold    { @apply bg-white/20; }
+  .bg-white-low-overlay     { @apply bg-white/5; }
+  .bg-bg-nav-overlay        { background: rgba(245,238,224,0.92); backdrop-filter: blur(12px); }
+  .shadow-brand             { box-shadow: 0 4px 20px rgba(44,58,35,0.20); }
+  .shadow-brand-bold        { box-shadow: 0 12px 40px rgba(44,58,35,0.35); }
+  .shadow-gold              { box-shadow: 0 8px 30px rgba(201,168,76,0.30); }
+  .glass-blur               { @apply backdrop-blur-xl; }
+  .glass-blur-md            { @apply backdrop-blur-md; }
+
+  /* === PRODUCT GRID === */
+  .product-grid-container { @apply max-w-5xl mx-auto space-y-24; }
+
+  .product-text-block {
+    @apply p-12 flex flex-col justify-center items-center text-center space-y-4;
+    background: var(--cream);
+    border: 1px solid rgba(201,168,76,0.20);
+    border-radius: 1.5rem;
+  }
+
+  .product-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+    color: var(--forest);
+    @apply mb-4 uppercase;
+  }
+
+  .product-separator {
+    width: 3rem;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    @apply mb-6;
+  }
+
+  .product-desc {
+    @apply text-sm leading-relaxed;
+    color: var(--brown-warm);
+    font-style: italic;
+  }
+
+  .product-tags {
+    @apply text-sm font-bold;
+    color: var(--forest);
+  }
+
+  /* === NAV RIPPLE EFFECT === */
+  .nav-ripple {
+    position: relative;
+    overflow: hidden;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 6px;
+    z-index: 0;
+  }
+
+  .nav-ripple::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(201,168,76,0.35) 0%, rgba(201,168,76,0.15) 50%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease, opacity 0.4s ease;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  .nav-ripple:hover::before {
+    width: 200%;
+    height: 600%;
+    opacity: 1;
+    animation: ripplePulse 1.2s ease-in-out infinite;
+  }
+
+  @keyframes ripplePulse {
+    0%   { transform: translate(-50%, -50%) scale(0.85); opacity: 0.7; }
+    50%  { transform: translate(-50%, -50%) scale(1);    opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(0.85); opacity: 0.7; }
+  }
+
+  /* === MISC LAYOUT === */
+  .hero-grid      { @apply grid lg:grid-cols-[1.3fr_0.7fr] gap-12 items-center; }
+  .image-grid-2x2 { @apply grid grid-cols-2 grid-rows-2 gap-1 h-full; }
+  .left-p15 { @apply left-[15%]; }
+  .left-p30 { @apply left-[30%]; }
+  .left-p45 { @apply left-[45%]; }
+  .left-p60 { @apply left-[60%]; }
+  .left-p75 { @apply left-[75%]; }
+}
