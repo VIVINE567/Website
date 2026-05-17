@@ -5,22 +5,27 @@
 
 import React, { useState, useEffect } from 'react';
 import { COLORS } from './colors';
-import { 
-  ChevronDown, 
-  Menu, 
-  X, 
-  ArrowRight, 
-  DollarSign, 
-  Truck, 
-  Headset, 
-  Settings, 
+import {
+  ChevronDown,
+  Menu,
+  X,
+  ArrowRight,
+  DollarSign,
+  Truck,
+  Headset,
+  Settings,
   Play,
   Mail,
   Phone,
   MapPin,
   Linkedin,
   Twitter,
-  Globe
+  Globe,
+  XCircle,
+  Frown,
+  Angry,
+  AlertCircle,
+  Bell
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Link, Routes, Route, useLocation } from 'react-router-dom';
@@ -176,7 +181,7 @@ const DefaultPage = () => {
   const location = useLocation();
   const pageName = location.pathname.substring(1).replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
   return (
-    <div className="pt-32 pb-24 min-h-[70vh] flex flex-col items-center justify-center bg-brand-bg-dark text-white text-center px-4">
+    <div className="pt-32 pb-24 min-h-[70vh] flex flex-col items-center justify-center text-center px-4" style={{ background: 'var(--cream)' }}>
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -185,8 +190,8 @@ const DefaultPage = () => {
         <Link to="/">
           <Logo className="h-16 md:h-20 mb-8 mx-auto" />
         </Link>
-        <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6">{pageName || 'Page Not Found'}</h1>
-        <p className="max-w-2xl text-white/70 text-lg md:text-xl mb-10 leading-relaxed mx-auto">
+        <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6" style={{ color: 'var(--forest)' }}>{pageName || 'Page Not Found'}</h1>
+        <p className="max-w-2xl text-lg md:text-xl mb-10 leading-relaxed mx-auto" style={{ color: 'var(--brown-warm)', fontFamily: "'Cormorant Garamond', serif", fontStyle: 'italic' }}>
           Information about our {pageName} will be available soon. Please contact our technical support team for immediate assistance or more details.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -255,7 +260,7 @@ export default function App() {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <button className="lg:hidden p-2" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          <button className="lg:hidden p-2" style={{ color: 'var(--forest)' }} onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             {mobileMenuOpen ? <X /> : <Menu />}
           </button>
         </div>
@@ -264,26 +269,141 @@ export default function App() {
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {mobileMenuOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
-            className="fixed inset-0 bg-white z-mobile lg:hidden pt-24 px-6"
+            className="fixed inset-0 z-mobile lg:hidden pt-24 px-6"
+            style={{ background: 'var(--cream)', borderLeft: '1px solid rgba(201,168,76,0.2)' }}
           >
-            <div className="flex flex-col gap-6 text-xl font-medium">
-              <Link to="/home" onClick={() => setMobileMenuOpen(false)} className="hover:text-brand-primary">Home</Link>
-              <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="hover:text-brand-primary">About</Link>
-              <Link to="/products" onClick={() => setMobileMenuOpen(false)} className="hover:text-brand-primary">Products</Link>
-              <Link to="/applications" onClick={() => setMobileMenuOpen(false)} className="hover:text-brand-primary">Applications</Link>
-              <Link to="/services" onClick={() => setMobileMenuOpen(false)} className="hover:text-brand-primary">Services</Link>
-              <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="hover:text-brand-primary">Contact</Link>
-              <button className="bg-brand-primary text-white py-4 rounded-xl">Request a Quote</button>
+            <div className="flex flex-col gap-6 text-xl font-medium" style={{ fontFamily: "'Raleway', sans-serif" }}>
+              <Link to="/home" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--forest)' }} className="hover:opacity-60 transition-opacity">Home</Link>
+              <Link to="/about" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--forest)' }} className="hover:opacity-60 transition-opacity">About</Link>
+              <Link to="/products" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--forest)' }} className="hover:opacity-60 transition-opacity">Products</Link>
+              <Link to="/applications" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--forest)' }} className="hover:opacity-60 transition-opacity">Applications</Link>
+              <Link to="/services" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--forest)' }} className="hover:opacity-60 transition-opacity">Services</Link>
+              <Link to="/contact" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--forest)' }} className="hover:opacity-60 transition-opacity">Contact</Link>
+              <button className="btn-gold py-4 rounded-xl">Request a Quote</button>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
 
       <PageContent />
+
+      {/* Inquiry + Vision Section */}
+      <section className="py-24 overflow-hidden" style={{ background: 'var(--cream)', borderTop: '1px solid rgba(201,168,76,0.2)' }}>
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+            {/* Left: Form */}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false, amount: 0.1 }}
+              transition={{ duration: 0.7 }}
+            >
+              <div className="gold-eyebrow mb-3" style={{ justifyContent: 'flex-start' }}>Get In Touch</div>
+              <h2 style={{ fontFamily: "'Cormorant Garamond', serif", color: 'var(--forest)', fontWeight: 400, lineHeight: 1.2 }}
+                className="text-2xl md:text-3xl mb-4">
+                Quick <em style={{ color: 'var(--gold-dark)', fontStyle: 'italic' }}>Inquiry</em>
+              </h2>
+
+              <form className="inquiry-form" onSubmit={(e) => e.preventDefault()}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="form-field">
+                    <input type="text" placeholder="First Name" className="form-input" />
+                  </div>
+                  <div className="form-field">
+                    <input type="text" placeholder="Last Name" className="form-input" />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="form-field">
+                    <input type="email" placeholder="Email" className="form-input" />
+                  </div>
+                  <div className="form-field">
+                    <input type="text" placeholder="Company Name (Optional)" className="form-input" />
+                  </div>
+                </div>
+
+                <div className="form-field">
+                  <input type="tel" placeholder="Phone Number (Optional)" className="form-input" />
+                </div>
+
+                <div className="form-field">
+                  <textarea
+                    rows="3"
+                    placeholder="Describe your requirements, product application, order quantity…"
+                    className="form-input form-textarea"
+                  />
+                </div>
+
+                <div className="mt-4">
+                  <button type="submit" className="btn-gold px-8 py-2.5 rounded-md"
+                    style={{ fontFamily: "'Raleway', sans-serif", letterSpacing: '0.15em', fontSize: '0.8rem' }}>
+                    Submit Inquiry
+                  </button>
+                </div>
+              </form>
+            </motion.div>
+
+            {/* Right: Vision Content */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false, amount: 0.1 }}
+              transition={{ duration: 0.7, delay: 0.15 }}
+              className="lg:pt-8"
+            >
+              <h2 style={{ fontFamily: "'Oswald', sans-serif", color: 'var(--forest)', fontWeight: 600, lineHeight: 1.15, letterSpacing: '0.04em' }}
+                className="text-xl md:text-2xl mb-1 uppercase">
+                You Have a <span style={{ color: 'var(--gold)' }}>Vision</span>
+              </h2>
+              <h2 style={{ fontFamily: "'Oswald', sans-serif", color: 'var(--forest)', fontWeight: 600, lineHeight: 1.15, letterSpacing: '0.04em' }}
+                className="text-xl md:text-2xl mb-5 uppercase">
+                We Have a Way to Get You There!
+              </h2>
+
+              <div className="space-y-3">
+                {[
+                  { icon: XCircle, text: "No materials or recipes?" },
+                  { icon: Frown, text: "Have limited time and resources?" },
+                  { icon: Angry, text: "Difficult to formulate or reformulate new products?" },
+                  { icon: AlertCircle, text: "Hard to handle the texture, stability, flavor, appearance, quality?" },
+                  { icon: AlertCircle, text: "Challenging to select trustworthy hydrocolloid manufacturer or supplier?" },
+                  { icon: Bell, text: "Keeping up to date with the latest news and trends about the hydrocolloid world?" },
+                ].map((item, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: false, amount: 0.1 }}
+                    transition={{ duration: 0.4, delay: 0.1 + idx * 0.08 }}
+                    className="flex items-start gap-3"
+                  >
+                    <div className="shrink-0 mt-0.5">
+                      <item.icon className="w-4 h-4" style={{ color: 'var(--gold-dark)' }} />
+                    </div>
+                    <p style={{ fontFamily: "'Cormorant Garamond', serif", color: 'var(--forest)', fontSize: '1rem', lineHeight: 1.5, fontWeight: 400 }}>
+                      {item.text}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+
+              <div className="mt-6" style={{ borderTop: '1.5px solid var(--gold)', paddingTop: '16px' }}>
+                <p style={{ fontFamily: "'Cinzel', serif", color: 'var(--forest)', fontWeight: 700, letterSpacing: '0.06em', lineHeight: 1.4 }}
+                  className="text-xs md:text-sm uppercase">
+                  Subscribe to learn how <span style={{ color: 'var(--gold)' }}>VIVINE</span> provides you the right solutions
+                </p>
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="pt-24 pb-12" style={{ background: '#E2D5C3', color: 'var(--forest)' }}>
@@ -359,87 +479,52 @@ export default function App() {
 const HomeContent = () => {
   return (
     <>
-      <section className="relative hero-height flex items-center pt-20 overflow-hidden luxury-section-radial">
-        {/* Slanted Background */}
+      <section className="relative hero-height flex items-center justify-center pt-28 md:pt-32 lg:pt-20 overflow-hidden">
+        {/* Full-width Video Background */}
         <div className="absolute inset-0 z-0">
-          <div 
-            className="absolute inset-0 w-[75%] h-full"
-            style={{ clipPath: 'polygon(0 0, 100% 0, 80% 100%, 0 100%)' }}
-          >
-             <img 
-              src="/back_image.png" 
-              alt="Ingredients" 
-              className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
-            />
-            <div className="absolute inset-0 bg-brand-primary/30 mix-blend-multiply" />
-          </div>
+          <video
+            src="/background_video.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-brand-primary/50" />
         </div>
-        
-        <div className="relative z-20 max-w-7xl mx-auto px-4 md:px-6 w-full">
-            <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 items-center">
-              <motion.div 
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-center flex flex-col items-center"
-              >
-                <motion.span
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 }}
-                  style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--gold)', letterSpacing: '0.3em' }}
-                  className="text-xs md:text-sm font-medium mb-6 uppercase flex items-center gap-3"
-                >
-                  <span style={{ display: 'inline-block', width: 30, height: 1, background: 'var(--gold)' }} />
-                  100% Vegan · Plant-Based
-                  <span style={{ display: 'inline-block', width: 30, height: 1, background: 'var(--gold)' }} />
-                </motion.span>
 
-                <h1 style={{ fontFamily: "'Cormorant Garamond', serif", color: 'var(--cream)', fontWeight: 300, lineHeight: 1.2 }}
-                  className="text-4xl md:text-6xl mb-8 max-w-4xl text-center">
-                  Global Leader in <em style={{ color: 'var(--gold)', fontStyle: 'italic' }}>Hydrocolloid</em> Ingredients &amp; Customized Solutions
-                </h1>
-                
-                <p style={{ fontFamily: "'Cormorant Garamond', serif", color: 'var(--cream-dark)', fontStyle: 'italic', fontWeight: 300, lineHeight: 1.8 }}
-                  className="text-lg md:text-xl mb-10 max-w-2xl leading-relaxed text-center opacity-90">
-                  As a trusted hydrocolloid supplier and solution provider, we bring extensive expertise in the research,
-                  development, and application of hydrocolloids. Our team delivers innovative, high-performance
-                  stabilizer systems tailored to meet diverse industry requirements.
-                </p>
+        <div className="relative z-20 max-w-4xl mx-auto px-4 md:px-6 w-full">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center flex flex-col items-center"
+          >
 
-                <div className="flex flex-wrap items-center justify-center gap-4">
-                  <button className="btn-gold px-10 py-3 rounded-md active:scale-95" style={{ fontFamily: "'Raleway', sans-serif", letterSpacing: '0.15em', fontSize: '0.75rem' }}>
-                    Get a Quote
-                  </button>
-                  <button style={{ border: '1px solid rgba(201,168,76,0.5)', color: 'var(--cream)', fontFamily: "'Raleway', sans-serif", letterSpacing: '0.15em', fontSize: '0.75rem', background: 'transparent' }}
-                    className="px-10 py-3 rounded-md font-medium uppercase hover:bg-white/10 transition-all active:scale-95">
-                    Explore More
-                  </button>
-                </div>
-              </motion.div>
+            <h1 style={{ fontFamily: "'Oswald', sans-serif", color: 'var(--cream)', fontWeight: 900, fontSize: '40px', fontStyle: 'normal', lineHeight: 1.2 }}
+              className="mb-8 max-w-4xl text-center">
+              Global Leader in <em style={{ color: 'var(--gold)', fontStyle: 'normal' }}>Hydrocolloid</em> Ingredients &amp; Customized Solutions
+            </h1>
 
-              <motion.div 
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="hidden lg:flex flex-col items-center justify-center h-full"
-              >
-                <div className="relative p-2 bg-white/20 backdrop-blur-md rounded-2xl shadow-2xl max-h-[550px] overflow-hidden">
-                  <img 
-                    src="/powder_product.png" 
-                    alt="Powder Product" 
-                    className="rounded-xl w-full h-full object-cover shadow-lg"
-                    referrerPolicy="no-referrer"
-                  />
-                </div>
-                <p className="mt-4 text-brand-primary italic text-sm font-medium tracking-wide">
-                  Vegan Hydrocolloids - Power to the Plant!
-                </p>
-              </motion.div>
+            <p style={{ fontFamily: "'Cormorant Garamond', serif", color: 'var(--cream-dark)', fontStyle: 'italic', fontWeight: 300, lineHeight: 1.8 }}
+              className="text-lg md:text-xl mb-10 max-w-2xl leading-relaxed text-center opacity-90">
+              As a trusted hydrocolloid supplier and solution provider, we bring extensive expertise in the research,
+              development, and application of hydrocolloids. Our team delivers innovative, high-performance
+              stabilizer systems tailored to meet diverse industry requirements.
+            </p>
+
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <button className="btn-gold px-10 py-3 rounded-md active:scale-95" style={{ fontFamily: "'Raleway', sans-serif", letterSpacing: '0.15em', fontSize: '0.75rem' }}>
+                Get a Quote
+              </button>
+              <button style={{ border: '1px solid rgba(201,168,76,0.5)', color: 'var(--cream)', fontFamily: "'Raleway', sans-serif", letterSpacing: '0.15em', fontSize: '0.75rem', background: 'transparent' }}
+                className="px-10 py-3 rounded-md font-medium uppercase hover:bg-white/10 transition-all active:scale-95">
+                Explore More
+              </button>
             </div>
-          </div>
-        </section>
+          </motion.div>
+        </div>
+      </section>
 
         {/* Global Leader Introduction */}
         <section className="py-24 overflow-hidden" style={{ background: 'var(--cream-dark)', borderTop: '1px solid rgba(201,168,76,0.2)', borderBottom: '1px solid rgba(201,168,76,0.2)' }}>
@@ -481,20 +566,41 @@ const HomeContent = () => {
                 { icon: Headset, title: "24/7 Online Support", desc: "Vivine is always here to support your business." },
                 { icon: Settings, title: "Customized Solutions", desc: "Product Development & Solutions expertise." }
               ].map((item, id) => (
-                <motion.div 
+                <motion.div
                   key={id}
-                  initial={{ opacity: 0, y: 40 }}
+                  initial={{ opacity: 0, y: 60 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: false, amount: 0.1 }}
-                  transition={{ duration: 0.5, delay: id * 0.1 }}
-                  className="standard-card group text-center"
+                  viewport={{ once: false, amount: 0.2 }}
+                  transition={{ duration: 0.6, delay: id * 0.15, ease: [0.22, 1, 0.36, 1] }}
+                  whileHover={{ y: -8, rotateY: 5, rotateX: -3 }}
+                  className="feature-card-animated group relative"
+                  style={{ perspective: '1000px' }}
                 >
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 transition-colors"
-                    style={{ background: 'rgba(201,168,76,0.12)' }}>
-                    <item.icon className="w-8 h-8 transition-colors" style={{ color: 'var(--gold-dark)' }} />
+                  {/* Corner accents */}
+                  <span className="corner-accent corner-tl" />
+                  <span className="corner-accent corner-br" />
+
+                  {/* Number */}
+                  <span className="feature-card-number">0{id + 1}</span>
+
+                  {/* Icon */}
+                  <div
+                    className="feature-card-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+                    style={{ background: 'rgba(201,168,76,0.12)', border: '10px solid rgba(201,168,76,0.25)' }}
+                  >
+                    <item.icon className="w-8 h-8" style={{ color: 'var(--gold-dark)' }} />
                   </div>
-                  <h3 className="text-xl font-bold mb-3" style={{ fontFamily: "'Cinzel', serif", fontSize: '0.9rem', letterSpacing: '0.1em', color: 'var(--forest)' }}>{item.title}</h3>
-                  <p className="leading-relaxed" style={{ color: 'var(--brown-warm)', fontStyle: 'italic', fontFamily: "'Cormorant Garamond', serif", fontSize: '1.05rem' }}>{item.desc}</p>
+
+                  {/* Title */}
+                  <h3 className="font-bold mb-4 feature-card-title"
+                    style={{ fontFamily: "'Cinzel', serif", fontSize: '0.9rem', letterSpacing: '0.1em' }}>{item.title}</h3>
+
+                  {/* Divider */}
+                  <div className="w-10 h-[1px] mx-auto mb-4" style={{ background: 'linear-gradient(to right, transparent, var(--gold), transparent)' }} />
+
+                  {/* Description */}
+                  <p className="leading-relaxed feature-card-desc"
+                    style={{ fontStyle: 'italic', fontFamily: "'Cormorant Garamond', serif", fontSize: '1.05rem' }}>{item.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -542,7 +648,8 @@ const HomeContent = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: false, amount: 0.1 }}
                   transition={{ duration: 0.7 }}
-                  className="relative overflow-hidden rounded-3xl shadow-xl bg-white flex items-center justify-center p-2"
+                  className="relative overflow-hidden rounded-3xl shadow-xl flex items-center justify-center p-2"
+                  style={{ background: 'var(--cream-dark)' }}
                 >
                   <img src="/products.png" className="w-full h-auto max-h-[500px] object-contain hover:scale-105 transition-transform duration-700 rounded-2xl" alt="Hydrocolloid Gums Products" referrerPolicy="no-referrer" />
                 </motion.div>
@@ -560,7 +667,8 @@ const HomeContent = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: false, amount: 0.1 }}
                   transition={{ duration: 0.7 }}
-                  className="order-2 lg:order-1 relative overflow-hidden rounded-3xl shadow-xl bg-white flex items-center justify-center p-2"
+                  className="order-2 lg:order-1 relative overflow-hidden rounded-3xl shadow-xl flex items-center justify-center p-2"
+                  style={{ background: 'var(--cream-dark)' }}
                 >
                   <img src="/product_2.png" className="w-full h-auto max-h-[500px] object-contain hover:scale-105 transition-transform duration-700 rounded-2xl" alt="Stabilizers" referrerPolicy="no-referrer" />
                 </motion.div>
@@ -613,7 +721,7 @@ const HomeContent = () => {
                   />
                   <div className="absolute inset-0 bg-brand-primary/5 flexitems-center justify-center pointer-events-none rounded-3xl" />
                   <div className="absolute inset-x-0 bottom-6 flex justify-center pointer-events-none">
-                    <span className="bg-white/90 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest text-brand-primary shadow-lg backdrop-blur-sm pointer-events-auto">Tailor-Made Systems</span>
+                    <span className="px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg backdrop-blur-sm pointer-events-auto" style={{ background: 'rgba(245,238,224,0.92)', color: 'var(--forest)', fontFamily: "'Raleway', sans-serif", letterSpacing: '0.15em' }}>Tailor-Made Systems</span>
                   </div>
                 </motion.div>
               </motion.div>
@@ -685,7 +793,7 @@ const HomeContent = () => {
               className="relative group"
             >
               <div className="absolute -inset-4 bg-primary-overlay rounded-huge blur-xl group-hover:blur-2xl transition-all" />
-              <div className="relative aspect-video bg-slate-900 rounded-large overflow-hidden flex items-center justify-center shadow-2xl border-4 border-white">
+              <div className="relative aspect-video rounded-large overflow-hidden flex items-center justify-center shadow-2xl" style={{ background: 'var(--ink)', border: '2px solid rgba(201,168,76,0.35)' }}>
                 <img 
                   src="https://images.unsplash.com/photo-1576086213369-97a306dca665?auto=format&fit=crop&q=80&w=1200" 
                   alt="Lab Video Placeholder" 
@@ -722,8 +830,8 @@ const HomeContent = () => {
                    viewport={{ once: false, amount: 0.1 }}
                    transition={{ duration: 0.8, delay: 0.2 }}
                  >
-                    <h2 className="text-3xl font-bold mb-6 italic text-white">"Hydrocolloids are Used in Technical and Regulated Applications to Thicken and to Stabilize Formulations."</h2>
-                    <p className="text-xl text-white/80 mb-10 leading-relaxed">
+                    <h2 className="text-3xl font-bold mb-6 italic" style={{ color: 'var(--cream)', fontFamily: "'Cormorant Garamond', serif", fontWeight: 300 }}>"Hydrocolloids are Used in Technical and Regulated Applications to Thicken and to Stabilize Formulations."</h2>
+                    <p className="text-xl mb-10 leading-relaxed" style={{ color: 'var(--cream-dark)', fontFamily: "'Cormorant Garamond', serif", fontStyle: 'italic', opacity: 0.85 }}>
                       Our sales & technical support team can assist you to determine the most effective hydrocolloid to
                       meet your various needs, not only in the Food, Technical, and Pharmaceutical Industries but also in
                       the Personal Care & Allied Industries. 
