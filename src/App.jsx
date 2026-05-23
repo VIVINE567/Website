@@ -6,7 +6,7 @@
 import { useState, useEffect } from 'react';
 import { ArrowRight, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Link, Routes, Route } from 'react-router-dom';
+import { Link, Routes, Route, useLocation } from 'react-router-dom';
 
 import S from './styles';
 import { CONTENT } from './content';
@@ -16,7 +16,10 @@ import Preloader from './components/Preloader';
 import DefaultPage from './components/DefaultPage';
 import InquirySection from './components/InquirySection';
 import Footer from './components/Footer';
+import ChatWidget from './components/ChatWidget';
 import Home from './pages/Home';
+import Products from './pages/Products';
+import ProductDetail from './pages/ProductDetail';
 
 const Cn = CONTENT.nav;
 
@@ -24,6 +27,8 @@ export default function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [loading, setLoading] = useState(true);
+  const location = useLocation();
+  const isProductDetail = location.pathname.startsWith('/products/') && location.pathname !== '/products/';
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -39,7 +44,7 @@ export default function App() {
   return (
     <div className="min-h-screen">
       <AnimatePresence>
-        {loading && <Preloader key="preloader" />}
+        {(loading) && <Preloader key="preloader" />}
       </AnimatePresence>
 
       {!loading && (
@@ -47,12 +52,12 @@ export default function App() {
           {/* Navigation */}
           <nav
             className={`fixed top-0 left-0 right-0 z-nav transition-all duration-300 ${
-              isScrolled ? 'shadow-md py-2' : 'glass-blur-md py-4'
+              isScrolled ? 'shadow-md py-1' : 'glass-blur-md py-2'
             }`}
             style={S.navBar(isScrolled)}
           >
-            <div className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between">
-              <Link to="/">
+            <div className="max-w-8xl mx-auto px-4 md:px-3 flex items-center justify-start gap-[20px]">
+              <Link to="/" className="shrink-0">
                 <Logo className="h-16 md:h-20 lg:h-[84px]" />
               </Link>
 
@@ -70,7 +75,7 @@ export default function App() {
               </div>
 
               {/* Mobile Menu Toggle */}
-              <button className="lg:hidden p-2" style={S.navMobileToggle} onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+              <button className="lg:hidden p-2" style={{ ...S.navMobileToggle, marginLeft: 'auto' }} onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
                 {mobileMenuOpen ? <X /> : <Menu />}
               </button>
             </div>
@@ -109,12 +114,15 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/home" element={<Home />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/products/:slug" element={<ProductDetail />} />
               <Route path="*" element={<DefaultPage />} />
             </Routes>
           </main>
 
-          <InquirySection />
+          {!isProductDetail && <InquirySection />}
           <Footer />
+          <ChatWidget />
         </>
       )}
     </div>

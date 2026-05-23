@@ -1,6 +1,9 @@
+'use client';
+
 import { motion } from 'motion/react';
 import { XCircle, Frown, Angry, AlertCircle, Bell } from 'lucide-react';
 import S from '../styles';
+import FormInput from './FormInput';
 import { CONTENT } from '../content';
 
 const Ci = CONTENT.inquiry;
@@ -24,14 +27,13 @@ const InquirySection = () => {
     btn.disabled = true;
     btn.textContent = 'Submitting...';
     try {
-      const SHEET_URL = import.meta.env.VITE_GOOGLE_SHEET_URL;
-      if (!SHEET_URL) throw new Error('Sheet URL not configured');
-      await fetch(SHEET_URL, {
+      const res = await fetch('/api/submit', {
         method: 'POST',
-        mode: 'no-cors',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
+      const result = await res.json();
+      if (result.status === 'error') throw new Error(result.message);
       btn.textContent = 'Submitted ✓';
       form.reset();
       setTimeout(() => { btn.textContent = Ci.submitButton; btn.disabled = false; }, 3000);
@@ -61,36 +63,18 @@ const InquirySection = () => {
 
             <form className="inquiry-form" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div className="form-field">
-                  <input type="text" name="firstName" placeholder={Ci.fields.firstName} className="form-input" required />
-                </div>
-                <div className="form-field">
-                  <input type="text" name="lastName" placeholder={Ci.fields.lastName} className="form-input" required />
-                </div>
+                <FormInput type="text" name="firstName" placeholder={Ci.fields.firstName} required />
+                <FormInput type="text" name="lastName" placeholder={Ci.fields.lastName} required />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div className="form-field">
-                  <input type="email" name="email" placeholder={Ci.fields.email} className="form-input" required />
-                </div>
-                <div className="form-field">
-                  <input type="text" name="company" placeholder={Ci.fields.company} className="form-input" />
-                </div>
+                <FormInput type="email" name="email" placeholder={Ci.fields.email} required />
+                <FormInput type="text" name="company" placeholder={Ci.fields.company} />
               </div>
 
-              <div className="form-field">
-                <input type="tel" name="phone" placeholder={Ci.fields.phone} className="form-input" />
-              </div>
+              <FormInput type="tel" name="phone" placeholder={Ci.fields.phone} />
 
-              <div className="form-field">
-                <textarea
-                  name="message"
-                  rows="3"
-                  placeholder={Ci.fields.message}
-                  className="form-input form-textarea"
-                  required
-                />
-              </div>
+              <FormInput as="textarea" name="message" rows="3" placeholder={Ci.fields.message} required />
 
               <div className="mt-4">
                 <button type="submit" className="btn-gold px-8 py-2.5 rounded-md" style={S.inquirySubmitBtn}>
@@ -109,7 +93,42 @@ const InquirySection = () => {
             className="lg:pt-8"
           >
             <h2 style={S.visionH2} className="text-xl md:text-2xl mb-1 uppercase">
-              {Cv.heading1Pre} <span style={S.visionAccent}>{Cv.heading1Accent}</span>
+              {Cv.heading1Pre}{' '}
+              <span className="relative inline-block whitespace-nowrap">
+                <span style={S.visionAccent}>{Cv.heading1Accent}</span>
+                <motion.svg
+                  style={{
+                    position: 'absolute',
+                    top: '-17px',
+                    left: '-8px',
+                    width: 'calc(100% + 14px)',
+                    height: 'calc(100% + 34px)',
+                    pointerEvents: 'none',
+                    overflow: 'visible',
+                  }}
+                  viewBox="0 0 100 40"
+                  fill="none"
+                >
+                  <motion.path
+                    d="M 52,2 C 76,1 98,10 98,20 C 98,30 76,39 52,39 C 28,39 2,30 2,20 C 2,10 26,1 52,2"
+                    stroke="#e53e3e"
+                    strokeWidth="2.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    fill="none"
+                    animate={{
+                      pathLength: [0, 1, 1, 1],
+                      opacity:    [0, 1, 1, 0],
+                    }}
+                    transition={{
+                      duration: 2.4,
+                      times: [0, 0.42, 0.72, 1],
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                    }}
+                  />
+                </motion.svg>
+              </span>
             </h2>
             <h2 style={S.visionH2} className="text-xl md:text-2xl mb-5 uppercase">
               {Cv.heading2}
@@ -128,7 +147,7 @@ const InquirySection = () => {
                     className="flex items-start gap-3"
                   >
                     <div className="shrink-0 mt-0.5">
-                      <Icon className="w-4 h-4" style={S.visionListIcon} />
+                      <Icon className="w-6 h-6" style={S.visionListIcon} />
                     </div>
                     <p style={S.visionListText}>{text}</p>
                   </motion.div>

@@ -1,9 +1,9 @@
 const Logo = ({ className = "h-16 md:h-20" }) => (
   <div className={`flex items-center ${className}`}>
     <img
-      src="/vivine_logo.png"
+      src="/viv_logo.svg"
       alt="VIVINE International"
-      className="h-full w-auto object-contain"
+      className="w-[140px] md:w-[180px] lg:w-[240px] h-auto object-contain !max-w-none"
       referrerPolicy="no-referrer"
     />
   </div>

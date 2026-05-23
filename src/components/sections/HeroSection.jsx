@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'motion/react';
 import S from '../../styles';
 import { CONTENT } from '../../content';
@@ -5,7 +7,7 @@ import { CONTENT } from '../../content';
 const C = CONTENT.home.hero;
 
 const HeroSection = () => (
-  <section className="relative hero-height flex items-center justify-center pt-28 md:pt-32 lg:pt-20 overflow-hidden">
+  <section className="relative hero-height flex items-center justify-center pt-28 md:pt-32 lg:pt-20 pb-12 md:pb-16 overflow-hidden">
     <div className="absolute inset-0 z-0">
       <video
         src={C.videoSrc}

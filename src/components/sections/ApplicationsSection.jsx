@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'motion/react';
 import S from '../../styles';
 import { CONTENT } from '../../content';

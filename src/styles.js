@@ -5,17 +5,17 @@ const S = {
     borderBottom: "1px solid rgba(201,168,76,0.2)",
   }),
   navLink: {
-    fontFamily: "'Raleway', sans-serif",
+    fontFamily: "'Oswald', sans-serif",
     color: "var(--forest)",
     letterSpacing: "0.12em",
   },
-  navMoreBtn: { fontFamily: "'Raleway', sans-serif", letterSpacing: "0.1em" },
+  navMoreBtn: { fontFamily: "'Oswald', sans-serif", letterSpacing: "0.1em" },
   navMobileToggle: { color: "var(--forest)" },
   navMobileOverlay: {
     background: "var(--cream)",
     borderLeft: "1px solid rgba(201,168,76,0.2)",
   },
-  navMobileLinks: { fontFamily: "'Raleway', sans-serif" },
+  navMobileLinks: { fontFamily: "'Oswald', sans-serif" },
   navMobileLink: { color: "var(--forest)" },
 
   // --- PRELOADER ---
@@ -209,7 +209,7 @@ const S = {
   visionListText: {
     fontFamily: "'Cormorant Garamond', serif",
     color: "var(--forest)",
-    fontSize: "1rem",
+    fontSize: "1.25rem",
     lineHeight: 1.5,
     fontWeight: 400,
   },
@@ -248,27 +248,231 @@ const S = {
     boxShadow: "0 12px 40px rgba(201,168,76,0.4)",
   },
 
-  // --- FOOTER ---
-  footer: { background: "#E2D5C3", color: "var(--forest)" },
-  footerAboutText: {
+  // --- PRODUCTS PAGE ---
+  productsHero: {
+    background: "linear-gradient(135deg, var(--forest) 0%, var(--forest-mid) 100%)",
+    minHeight: "350px",
+  },
+  productsHeroH1: {
+    fontFamily: "'Oswald', sans-serif",
+    color: "var(--cream)",
+    fontWeight: 900,
+    lineHeight: 1.1,
+  },
+  productsHeroSub: {
+    fontFamily: "'Cormorant Garamond', serif",
+    color: "var(--cream-dark)",
+    fontStyle: "italic",
+    fontWeight: 300,
+    opacity: 0.85,
+  },
+  productsIntroH2: {
+    fontFamily: "'Cormorant Garamond', serif",
+    color: "var(--forest)",
+    fontWeight: 400,
+    lineHeight: 1.2,
+  },
+  productsIntroAccent: { color: "var(--gold-dark)", fontStyle: "italic" },
+  productsIntroBody: {
+    fontFamily: "'Cormorant Garamond', serif",
     color: "var(--brown-warm)",
+    fontStyle: "italic",
+    fontWeight: 300,
+    lineHeight: 1.9,
+  },
+  productsCatIcon: {
+    background: "rgba(201,168,76,0.12)",
+    border: "1px solid rgba(201,168,76,0.3)",
+  },
+  productsCatTitle: {
+    fontFamily: "'Cinzel', serif",
+    letterSpacing: "0.1em",
+  },
+  productsCatItems: {
     fontFamily: "'Cormorant Garamond', serif",
     fontStyle: "italic",
+    lineHeight: 1.8,
+  },
+  productsQuickLink: {
+    fontFamily: "'Raleway', sans-serif",
+    letterSpacing: "0.08em",
+    fontSize: "0.75rem",
+  },
+  productsSectionH3: {
+    fontFamily: "'Cinzel', serif",
+    color: "var(--forest)",
+    letterSpacing: "0.12em",
+  },
+  productsCardName: {
+    fontFamily: "'Cinzel', serif",
+    color: "var(--forest)",
+    letterSpacing: "0.1em",
+  },
+  productsCardDesc: {
+    fontFamily: "'Cormorant Garamond', serif",
+    color: "var(--brown-warm)",
+    fontStyle: "italic",
+    lineHeight: 1.7,
+  },
+  productsSubName: {
+    fontFamily: "'Raleway', sans-serif",
+    color: "var(--forest)",
+    fontWeight: 600,
+    fontSize: "0.85rem",
+  },
+  productsSubDesc: {
+    fontFamily: "'Cormorant Garamond', serif",
+    color: "var(--brown-warm)",
+    fontStyle: "italic",
+    fontSize: "0.9rem",
+  },
+  productsCtaGlow: {
+    background: "radial-gradient(ellipse 60% 40% at 50% 50%, rgba(201,168,76,0.12) 0%, transparent 70%)",
+  },
+  productsCtaEyebrow: { color: "var(--gold)" },
+  productsCtaH2: {
+    fontFamily: "'Cormorant Garamond', serif",
+    color: "var(--cream)",
+    fontWeight: 300,
+    lineHeight: 1.3,
+  },
+  productsCtaAccent: { color: "var(--gold)", fontStyle: "italic" },
+  productsCtaBody: {
+    fontFamily: "'Cormorant Garamond', serif",
+    color: "var(--cream-dark)",
+    fontStyle: "italic",
+    opacity: 0.85,
+    lineHeight: 1.8,
+  },
+  productsCtaBtn: {
+    fontFamily: "'Cinzel', serif",
+    letterSpacing: "0.15em",
+    fontSize: "0.8rem",
+  },
+
+  // --- PRODUCT DETAIL PAGE ---
+  productDetailHero: {
+    background: "linear-gradient(135deg, var(--forest) 0%, var(--forest-mid) 100%)",
+    minHeight: "340px",
+  },
+  productDetailBreadcrumb: {
+    color: "rgba(245,238,224,0.55)",
+    fontFamily: "'Raleway', sans-serif",
+    fontSize: "0.75rem",
+    letterSpacing: "0.12em",
+  },
+  productDetailHeroH1: {
+    fontFamily: "'Cinzel', serif",
+    color: "var(--cream)",
+    fontWeight: 700,
+    lineHeight: 1.15,
+  },
+  productDetailTagline: {
+    fontFamily: "'Cormorant Garamond', serif",
+    color: "var(--cream-dark)",
+    fontStyle: "italic",
+    fontWeight: 300,
+    lineHeight: 1.7,
+    opacity: 0.85,
+  },
+  productDetailOverview: {
+    background: "var(--cream)",
+    borderBottom: "1px solid rgba(201,168,76,0.15)",
+  },
+  productDetailDescBody: {
+    fontFamily: "'Raleway', sans-serif",
+    color: "var(--brown-warm)",
+    fontWeight: 400,
+    fontSize: "0.95rem",
+    lineHeight: 1.85,
+  },
+  productDetailSpecTable: {
+    border: "1px solid rgba(201,168,76,0.2)",
+    borderRadius: "0.75rem",
+    overflow: "hidden",
+  },
+  productDetailSpecLabel: {
+    color: "var(--brown-warm)",
+    fontFamily: "'Raleway', sans-serif",
+    fontSize: "0.78rem",
+    letterSpacing: "0.06em",
+  },
+  productDetailSpecValue: {
+    color: "var(--forest)",
+    fontFamily: "'Cormorant Garamond', serif",
+    fontWeight: 600,
+    fontSize: "1rem",
+  },
+  productDetailSpecRow: { borderBottom: "1px solid rgba(201,168,76,0.12)" },
+  productDetailVariantsSection: { background: "var(--cream-dark)" },
+  productDetailVariantCard: {
+    background: "var(--cream)",
+    border: "1px solid rgba(201,168,76,0.2)",
+    borderRadius: "0.75rem",
+  },
+  productDetailVariantName: {
+    fontFamily: "'Cinzel', serif",
+    color: "var(--forest)",
+    letterSpacing: "0.06em",
+    fontSize: "0.9rem",
+  },
+  productDetailVariantDesc: {
+    fontFamily: "'Cormorant Garamond', serif",
+    color: "var(--brown-warm)",
+    fontStyle: "italic",
+    lineHeight: 1.6,
+  },
+  productDetailPropsSection: {
+    background: "var(--cream)",
+    borderTop: "1px solid rgba(201,168,76,0.15)",
+    borderBottom: "1px solid rgba(201,168,76,0.15)",
+  },
+  productDetailPropItem: {
+    fontFamily: "'Cormorant Garamond', serif",
+    color: "var(--forest)",
+    fontSize: "1rem",
+    lineHeight: 1.5,
+  },
+  productDetailAppsSection: {
+    background: "linear-gradient(135deg, var(--forest) 0%, var(--forest-mid) 100%)",
+  },
+  productDetailAppChip: {
+    background: "rgba(201,168,76,0.12)",
+    border: "1px solid rgba(201,168,76,0.35)",
+    color: "var(--cream)",
+    fontFamily: "'Raleway', sans-serif",
+    letterSpacing: "0.06em",
+    fontSize: "0.78rem",
+    borderRadius: "9999px",
+  },
+
+  sidebarNav: {
+    borderLeft: "1px solid rgba(201,168,76,0.15)",
+  },
+
+  // --- FOOTER ---
+  footer: { color: "var(--cream-dark)", borderTop: "1px solid rgba(201,168,76,0.2)" },
+  footerAboutText: {
+    color: "var(--cream-dark)",
+    fontFamily: "'Cormorant Garamond', serif",
+    fontStyle: "italic",
+    opacity: 0.82,
   },
   footerSocialBtn: {
-    background: "rgba(44,58,35,0.08)",
-    color: "var(--forest)",
+    background: "rgba(201,168,76,0.1)",
+    border: "1px solid rgba(201,168,76,0.3)",
+    color: "var(--gold)",
   },
   footerHeading: {
     fontFamily: "'Cinzel', serif",
-    color: "var(--gold-dark)",
-    fontSize: "0.8rem",
-    letterSpacing: "0.2em",
+    color: "var(--gold)",
+    fontSize: "0.78rem",
+    letterSpacing: "0.22em",
   },
-  footerLinks: { color: "var(--brown-warm)" },
+  footerLinks: { color: "rgba(237,224,200,0.72)" },
   footerBottom: {
-    borderTop: "1px solid rgba(154,122,46,0.3)",
-    color: "var(--brown-warm)",
+    borderTop: "1px solid rgba(201,168,76,0.2)",
+    color: "rgba(237,224,200,0.5)",
   },
 };
 

@@ -1,7 +1,9 @@
+'use client';
+
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import S from '../styles';
 
 const NavLink = ({ href, children, subItems }) => {
@@ -15,7 +17,7 @@ const NavLink = ({ href, children, subItems }) => {
       onMouseLeave={() => setIsOpen(false)}
     >
       <Link
-        to={isDefaultPage ? `/${children.toLowerCase().replace(/\s+/g, '-')}` : href}
+        href={isDefaultPage ? `/${children.toLowerCase().replace(/\s+/g, '-')}` : href}
         style={S.navLink}
         className="nav-ripple flex items-center gap-1 py-4 text-xs font-medium transition-colors uppercase"
       >
@@ -32,15 +34,21 @@ const NavLink = ({ href, children, subItems }) => {
               exit={{ opacity: 0, y: 10 }}
               className="absolute left-0 w-64 glass-dropdown z-dropdown"
             >
-              {subItems.map((item) => (
-                <Link
-                  key={item}
-                  to={`/${item.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="block px-6 py-2 text-sm text-brand-primary/70 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors"
-                >
-                  {item}
-                </Link>
-              ))}
+              {subItems.map((item) => {
+                const label = typeof item === 'string' ? item : item.label;
+                const to = typeof item === 'string'
+                  ? `/${item.toLowerCase().replace(/\s+/g, '-')}`
+                  : item.href;
+                return (
+                  <Link
+                    key={label}
+                    href={to}
+                    className="block px-6 py-2 text-sm text-brand-primary/70 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors"
+                  >
+                    {label}
+                  </Link>
+                );
+              })}
             </motion.div>
           )}
         </AnimatePresence>

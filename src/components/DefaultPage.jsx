@@ -1,5 +1,8 @@
+'use client';
+
 import { motion } from 'motion/react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import Logo from './Logo';
 import S from '../styles';
 import { CONTENT } from '../content';
@@ -7,8 +10,8 @@ import { CONTENT } from '../content';
 const C = CONTENT.defaultPage;
 
 const DefaultPage = () => {
-  const location = useLocation();
-  const pageName = location.pathname.substring(1).replaceAll('-', ' ').replace(/\b\w/g, l => l.toUpperCase());
+  const pathname = usePathname();
+  const pageName = pathname.substring(1).replaceAll('-', ' ').replace(/\b\w/g, l => l.toUpperCase());
   return (
     <div className="pt-32 pb-24 min-h-[70vh] flex flex-col items-center justify-center text-center px-4" style={S.defaultPageBg}>
       <motion.div
@@ -16,7 +19,7 @@ const DefaultPage = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <Link to="/">
+        <Link href="/">
           <Logo className="h-16 md:h-20 mb-8 mx-auto" />
         </Link>
         <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6" style={S.defaultPageH1}>
@@ -26,7 +29,7 @@ const DefaultPage = () => {
           {C.bodyPrefix} {pageName} {C.bodySuffix}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link to="/" className="btn-primary py-3 px-8 rounded-full">{C.returnHome}</Link>
+          <Link href="/" className="btn-primary py-3 px-8 rounded-full">{C.returnHome}</Link>
           <a href={C.contactEmail} className="btn-white py-3 px-8 rounded-full">{C.contactSupport}</a>
         </div>
       </motion.div>
