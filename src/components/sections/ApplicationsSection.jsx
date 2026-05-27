@@ -6,6 +6,13 @@ import { CONTENT } from '../../content';
 
 const C = CONTENT.home.applications;
 
+const CATEGORY_IMAGES = [
+  '/food_inds.png',
+  '/pharma.png',
+  '/tech.png',
+  '/personel_care.png',
+];
+
 const ApplicationsSection = () => (
   <section className="py-24 overflow-hidden">
     <div className="max-w-7xl mx-auto px-4 md:px-6">
@@ -29,7 +36,7 @@ const ApplicationsSection = () => (
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h2 className="text-3xl font-bold mb-6 italic" style={S.appsBannerH2}>
-              {C.quote}
+              "Hydrocolloids are Used in <em style={{ color: 'var(--gold)', fontStyle: 'italic' }}>Technical</em> and <em style={{ color: 'var(--gold)', fontStyle: 'italic' }}>Regulated</em> Applications to Thicken and to Stabilize Formulations."
             </h2>
             <p className="text-xl mb-10 leading-relaxed" style={S.appsBannerBody}>
               {C.body}
@@ -37,7 +44,7 @@ const ApplicationsSection = () => (
             <button className="btn-white">{C.cta}</button>
           </motion.div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4">
             {C.categories.map((app, idx) => (
               <motion.div
                 key={app}
@@ -45,11 +52,19 @@ const ApplicationsSection = () => (
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: false, amount: 0.1 }}
                 transition={{ duration: 0.5, delay: 0.3 + idx * 0.1 }}
-                className="glass-card p-1 min-[375px]:p-2 sm:p-4 lg:p-8 border-white/20 text-center hover:bg-white/20 transition-all rounded-xl cursor-default text-white flex items-center justify-center min-h-[90px] min-[375px]:min-h-[100px] sm:min-h-[120px] md:min-h-[140px] xl:min-h-[160px] overflow-hidden"
+                className="relative rounded-xl overflow-hidden group cursor-default"
               >
-                <span className="text-[10px] min-[370px]:text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg font-bold uppercase tracking-tight sm:whitespace-nowrap whitespace-normal w-full px-1 sm:px-2">
-                  {app}
-                </span>
+                <img
+                  src={CATEGORY_IMAGES[idx]}
+                  alt={app}
+                  className="w-full aspect-[3/2] object-cover block scale-[1.25]"
+                  loading="lazy"
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent pt-8 pb-3 px-2 sm:pb-4 sm:px-3">
+                  <span className="block text-center text-white font-bold uppercase tracking-wide text-[10px] min-[375px]:text-xs sm:text-sm md:text-base">
+                    {app}
+                  </span>
+                </div>
               </motion.div>
             ))}
           </div>

@@ -9,6 +9,8 @@ import S from '../styles';
 import { CONTENT } from '../content';
 import DefaultPage from '../components/DefaultPage';
 import FormInput from '../components/FormInput';
+import ProductDetailRich from './ProductDetailRich';
+import QuoteModal from '../components/QuoteModal';
 
 const ALL_PRODUCTS = Object.entries(CONTENT.productDetails).map(([slug, p]) => ({
   slug,
@@ -138,6 +140,16 @@ const ProductDetail = () => {
   const product = CONTENT.productDetails[slug];
 
   useLayoutEffect(() => { window.scrollTo(0, 0); }, [slug]);
+
+  if (!product) return <DefaultPage />;
+
+  // Branch on layout — rich layout for the new cellulose-derivative products.
+  // These return BEFORE the rest of this component's hooks/handlers run.
+  if (product.layout === 'rich') {
+    return <ProductDetailRich slug={slug} product={product} />;
+  }
+
+  const [quoteOpen, setQuoteOpen] = useState(false);
 
   const handleInquiry = async (e) => {
     e.preventDefault();
@@ -301,7 +313,7 @@ const ProductDetail = () => {
                     </tbody>
                   </table>
                   <div className="flex flex-wrap gap-3 mt-10">
-                    <button className="btn-gold px-7 py-2.5 rounded-md text-sm" style={{ fontFamily: "'Raleway', sans-serif", letterSpacing: "0.12em" }}>
+                    <button onClick={() => setQuoteOpen(true)} className="btn-gold px-7 py-2.5 rounded-md text-sm" style={{ fontFamily: "'Raleway', sans-serif", letterSpacing: "0.12em" }}>
                       Get a Quote
                     </button>
                     <button
@@ -679,7 +691,7 @@ const ProductDetail = () => {
                         className="text-2xl md:text-3xl"
                         style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--forest)", fontWeight: 700, lineHeight: 1.2 }}
                       >
-                        Get a <em style={{ color: "var(--gold-dark)", fontStyle: "normal" }}>Quote</em>
+                        Contact <em style={{ color: "var(--gold-dark)", fontStyle: "normal" }}>Form</em>
                       </h2>
                     </div>
                     <div className="w-full mb-6" style={{ height: 1, background: "rgba(201,168,76,0.25)" }} />
@@ -761,6 +773,7 @@ const ProductDetail = () => {
         </div>
       </div>
 
+      <QuoteModal open={quoteOpen} onClose={() => setQuoteOpen(false)} />
     </div>
   );
 };

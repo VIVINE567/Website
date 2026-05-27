@@ -1,12 +1,17 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'motion/react';
 import S from '../../styles';
 import { CONTENT } from '../../content';
+import QuoteModal from '../QuoteModal';
 
 const C = CONTENT.home.hero;
 
-const HeroSection = () => (
+const HeroSection = () => {
+  const [quoteOpen, setQuoteOpen] = useState(false);
+
+  return (
   <section className="relative hero-height flex items-center justify-center pt-28 md:pt-32 lg:pt-20 pb-12 md:pb-16 overflow-hidden">
     <div className="absolute inset-0 z-0">
       <video
@@ -33,7 +38,7 @@ const HeroSection = () => (
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4">
-          <button className="btn-gold px-10 py-3 rounded-md active:scale-95" style={S.heroBtnGold}>
+          <button onClick={() => setQuoteOpen(true)} className="btn-gold px-10 py-3 rounded-md active:scale-95" style={S.heroBtnGold}>
             {C.primaryCta}
           </button>
           <button style={S.heroBtnOutline} className="px-10 py-3 rounded-md font-medium uppercase hover:bg-white/10 transition-all active:scale-95">
@@ -42,7 +47,9 @@ const HeroSection = () => (
         </div>
       </motion.div>
     </div>
+    <QuoteModal open={quoteOpen} onClose={() => setQuoteOpen(false)} />
   </section>
-);
+  );
+};
 
 export default HeroSection;

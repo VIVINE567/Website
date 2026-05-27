@@ -102,7 +102,7 @@ const S = {
   featureCardIconColor: { color: "var(--gold-dark)" },
   featureCardTitle: {
     fontFamily: "'Cinzel', serif",
-    fontSize: "0.9rem",
+    fontSize: "1.2rem",
     letterSpacing: "0.1em",
   },
   featureCardDivider: {
@@ -168,15 +168,17 @@ const S = {
 
   // --- APPLICATIONS BANNER ---
   appsBannerH2: {
-    color: "var(--cream)",
     fontFamily: "'Cormorant Garamond', serif",
+    color: "var(--cream)",
     fontWeight: 300,
+    lineHeight: 1.3,
   },
   appsBannerBody: {
-    color: "var(--cream-dark)",
     fontFamily: "'Cormorant Garamond', serif",
+    color: "var(--cream-dark)",
     fontStyle: "italic",
-    opacity: 0.85,
+    fontWeight: 300,
+    lineHeight: 1.9,
   },
 
   // --- INQUIRY + VISION SECTION ---
@@ -200,18 +202,21 @@ const S = {
   visionH2: {
     fontFamily: "'Oswald', sans-serif",
     color: "var(--forest)",
-    fontWeight: 600,
+    fontWeight: 900,
+    fontSize: "35px",
+    fontStyle: "normal",
     lineHeight: 1.15,
-    letterSpacing: "0.04em",
+    letterSpacing: "1px",
   },
   visionAccent: { color: "var(--gold)" },
   visionListIcon: { color: "var(--gold-dark)" },
   visionListText: {
-    fontFamily: "'Cormorant Garamond', serif",
+    fontFamily: "'Open Sans', sans-serif",
     color: "var(--forest)",
-    fontSize: "1.25rem",
-    lineHeight: 1.5,
+    fontSize: "15px",
+    fontStyle: "normal",
     fontWeight: 400,
+    lineHeight: "24px",
   },
   visionDivider: { borderTop: "1.5px solid var(--gold)", paddingTop: "16px" },
   visionSubscribeText: {
@@ -448,6 +453,390 @@ const S = {
 
   sidebarNav: {
     borderLeft: "1px solid rgba(201,168,76,0.15)",
+  },
+
+  // --- PRODUCT DETAIL RICH LAYOUT ---
+  richSection: {
+    background: "var(--cream)",
+  },
+  richHeroCard: {
+    background: "var(--cream)",
+    border: "1px solid rgba(201,168,76,0.25)",
+    borderRadius: "12px",
+    padding: "2rem 2.25rem",
+  },
+  richProductTag: {
+    display: "inline-block",
+    background: "rgba(201,168,76,0.15)",
+    color: "var(--gold-dark)",
+    fontFamily: "'Raleway', sans-serif",
+    fontSize: "0.7rem",
+    letterSpacing: "0.08em",
+    fontWeight: 600,
+    padding: "4px 12px",
+    borderRadius: "9999px",
+    textTransform: "uppercase",
+  },
+  richHeroH1: {
+    fontFamily: "'Cormorant Garamond', serif",
+    color: "var(--forest)",
+    fontWeight: 600,
+    lineHeight: 1.15,
+  },
+  richHeroCas: {
+    fontFamily: "'Raleway', sans-serif",
+    fontSize: "0.78rem",
+    color: "var(--brown-warm)",
+    letterSpacing: "0.04em",
+    fontWeight: 500,
+  },
+  richHeroDesc: {
+    fontFamily: "'Raleway', sans-serif",
+    fontSize: "0.95rem",
+    color: "var(--brown-warm)",
+    fontWeight: 400,
+    lineHeight: 1.75,
+  },
+  richStatPill: {
+    background: "var(--cream-dark)",
+    border: "1px solid rgba(201,168,76,0.25)",
+    borderRadius: "8px",
+    padding: "12px 14px",
+    textAlign: "center",
+  },
+  richStatVal: {
+    fontFamily: "'Cormorant Garamond', serif",
+    color: "var(--forest)",
+    fontSize: "0.95rem",
+    fontWeight: 700,
+    lineHeight: 1.2,
+  },
+  richStatLbl: {
+    fontFamily: "'Raleway', sans-serif",
+    color: "var(--brown-warm)",
+    fontSize: "0.68rem",
+    letterSpacing: "0.05em",
+    marginTop: "3px",
+  },
+
+  // Highlights row
+  richHlCard: {
+    background: "var(--cream)",
+    border: "1px solid rgba(201,168,76,0.2)",
+    borderRadius: "8px",
+    padding: "1rem",
+    textAlign: "center",
+  },
+  richHlIcon: {
+    fontSize: "1.4rem",
+    marginBottom: "6px",
+    color: "var(--gold-dark)",
+  },
+  richHlVal: {
+    fontFamily: "'Raleway', sans-serif",
+    fontSize: "0.85rem",
+    color: "var(--forest)",
+    fontWeight: 600,
+    lineHeight: 1.3,
+  },
+  richHlLbl: {
+    fontFamily: "'Raleway', sans-serif",
+    fontSize: "0.7rem",
+    color: "var(--brown-warm)",
+    marginTop: "2px",
+  },
+
+  // Section header
+  richSectionHeader: {
+    fontFamily: "'Cormorant Garamond', serif",
+    color: "var(--forest)",
+    fontSize: "1.5rem",
+    fontWeight: 600,
+    lineHeight: 1.2,
+  },
+  richSectionSub: {
+    fontFamily: "'Raleway', sans-serif",
+    color: "var(--brown-warm)",
+    fontSize: "0.82rem",
+    opacity: 0.85,
+  },
+
+  // Info cards (key properties)
+  richInfoCard: {
+    background: "var(--cream)",
+    border: "1px solid rgba(201,168,76,0.2)",
+    borderRadius: "10px",
+    padding: "1.1rem 1.25rem",
+  },
+  richInfoTitle: {
+    fontFamily: "'Cormorant Garamond', serif",
+    color: "var(--gold-dark)",
+    fontSize: "1.05rem",
+    fontWeight: 600,
+    marginBottom: "8px",
+    lineHeight: 1.3,
+  },
+  richInfoBody: {
+    fontFamily: "'Raleway', sans-serif",
+    color: "var(--brown-warm)",
+    fontSize: "0.85rem",
+    lineHeight: 1.65,
+  },
+
+  // Spec table
+  richSpecTableWrap: {
+    background: "var(--cream)",
+    border: "1px solid rgba(201,168,76,0.25)",
+    borderRadius: "10px",
+    overflow: "hidden",
+  },
+  richSpecRow: {
+    borderBottom: "1px solid rgba(201,168,76,0.15)",
+  },
+  richSpecKey: {
+    fontFamily: "'Raleway', sans-serif",
+    color: "var(--brown-warm)",
+    fontSize: "0.85rem",
+  },
+  richSpecVal: {
+    fontFamily: "'Cormorant Garamond', serif",
+    color: "var(--forest)",
+    fontWeight: 600,
+    fontSize: "0.95rem",
+    textAlign: "right",
+  },
+
+  // Filter bar
+  richFilterBar: {
+    background: "var(--cream)",
+    border: "1px solid rgba(201,168,76,0.2)",
+    borderRadius: "10px",
+    padding: "0.85rem 1rem",
+  },
+  richFilterLabel: {
+    fontFamily: "'Raleway', sans-serif",
+    fontSize: "0.75rem",
+    color: "var(--brown-warm)",
+    fontWeight: 600,
+    letterSpacing: "0.04em",
+    textTransform: "uppercase",
+  },
+  richFilterTag: {
+    fontFamily: "'Raleway', sans-serif",
+    fontSize: "0.78rem",
+    padding: "5px 14px",
+    borderRadius: "9999px",
+    border: "1px solid rgba(201,168,76,0.4)",
+    background: "transparent",
+    color: "var(--brown-warm)",
+    cursor: "pointer",
+    transition: "all 0.15s",
+    fontWeight: 500,
+  },
+  richFilterTagActive: {
+    background: "var(--gold-dark)",
+    color: "var(--cream)",
+    border: "1px solid var(--gold-dark)",
+    fontWeight: 600,
+  },
+
+  // Grade cards
+  richGradeCard: {
+    background: "var(--cream)",
+    border: "1px solid rgba(201,168,76,0.25)",
+    borderRadius: "10px",
+    padding: "1.1rem 1.15rem 1rem",
+    transition: "opacity 0.2s, border-color 0.2s",
+  },
+  richGradeCardFeatured: {
+    border: "2px solid var(--gold-dark)",
+  },
+  richGradeCardDim: {
+    opacity: 0.22,
+    pointerEvents: "none",
+  },
+  richGradeName: {
+    fontFamily: "'Cormorant Garamond', serif",
+    fontSize: "1rem",
+    fontWeight: 600,
+    color: "var(--forest)",
+    lineHeight: 1.25,
+  },
+  richGradeBadge: {
+    fontFamily: "'Raleway', sans-serif",
+    fontSize: "0.65rem",
+    padding: "2px 9px",
+    borderRadius: "9999px",
+    fontWeight: 600,
+    whiteSpace: "nowrap",
+    letterSpacing: "0.03em",
+  },
+  richViscRange: {
+    fontFamily: "'Raleway', sans-serif",
+    fontSize: "0.72rem",
+    color: "var(--brown-warm)",
+    fontWeight: 500,
+    marginBottom: "6px",
+  },
+  richVbarBg: {
+    height: "4px",
+    borderRadius: "2px",
+    background: "var(--cream-dark)",
+    overflow: "hidden",
+  },
+  richVbarFill: {
+    height: "100%",
+    borderRadius: "2px",
+    background: "var(--gold-dark)",
+  },
+  richGradeSpecsWrap: {
+    borderTop: "1px solid rgba(201,168,76,0.18)",
+    paddingTop: "8px",
+  },
+  richGradeSpecRow: {
+    borderBottom: "1px solid rgba(201,168,76,0.1)",
+    fontSize: "0.72rem",
+    padding: "3.5px 0",
+  },
+  richGradeSpecKey: {
+    color: "var(--brown-warm)",
+    fontFamily: "'Raleway', sans-serif",
+  },
+  richGradeSpecVal: {
+    color: "var(--forest)",
+    fontFamily: "'Raleway', sans-serif",
+    fontWeight: 600,
+    textAlign: "right",
+  },
+  richAppsLbl: {
+    fontFamily: "'Raleway', sans-serif",
+    fontSize: "0.62rem",
+    color: "var(--brown-warm)",
+    fontWeight: 700,
+    letterSpacing: "0.06em",
+    textTransform: "uppercase",
+    marginBottom: "6px",
+  },
+  richAppTag: {
+    fontFamily: "'Raleway', sans-serif",
+    fontSize: "0.7rem",
+    padding: "2px 9px",
+    borderRadius: "4px",
+    fontWeight: 500,
+  },
+
+  // Reference table
+  richRefTableWrap: {
+    background: "var(--cream)",
+    border: "1px solid rgba(201,168,76,0.25)",
+    borderRadius: "10px",
+    overflow: "hidden",
+  },
+  richRefTableHead: {
+    background: "var(--cream-dark)",
+  },
+  richRefTableTh: {
+    fontFamily: "'Raleway', sans-serif",
+    fontSize: "0.7rem",
+    color: "var(--brown-warm)",
+    fontWeight: 700,
+    letterSpacing: "0.05em",
+    textTransform: "uppercase",
+    padding: "10px 14px",
+    textAlign: "left",
+    borderBottom: "1px solid rgba(201,168,76,0.2)",
+  },
+  richRefTableTd: {
+    fontFamily: "'Raleway', sans-serif",
+    fontSize: "0.82rem",
+    color: "var(--brown-warm)",
+    padding: "10px 14px",
+    borderBottom: "1px solid rgba(201,168,76,0.12)",
+    verticalAlign: "top",
+    lineHeight: 1.5,
+  },
+  richTGrade: {
+    display: "inline-block",
+    fontFamily: "'Raleway', sans-serif",
+    fontSize: "0.7rem",
+    fontWeight: 600,
+    padding: "2px 9px",
+    borderRadius: "9999px",
+    whiteSpace: "nowrap",
+  },
+
+  // CSS bar chart
+  richChartCard: {
+    background: "var(--cream)",
+    border: "1px solid rgba(201,168,76,0.25)",
+    borderRadius: "10px",
+    padding: "1.5rem 1.75rem",
+  },
+  richChartTitle: {
+    fontFamily: "'Cormorant Garamond', serif",
+    color: "var(--forest)",
+    fontSize: "1.1rem",
+    fontWeight: 600,
+  },
+  richChartSub: {
+    fontFamily: "'Raleway', sans-serif",
+    color: "var(--brown-warm)",
+    fontSize: "0.75rem",
+  },
+  richChartGridline: {
+    borderTop: "1px dashed rgba(201,168,76,0.2)",
+  },
+  richChartAxisLabel: {
+    fontFamily: "'Raleway', sans-serif",
+    fontSize: "0.65rem",
+    color: "var(--brown-warm)",
+  },
+  richChartBarLabel: {
+    fontFamily: "'Raleway', sans-serif",
+    fontSize: "0.72rem",
+    color: "var(--forest)",
+    fontWeight: 500,
+    textAlign: "center",
+  },
+  richChartBarValue: {
+    fontFamily: "'Raleway', sans-serif",
+    fontSize: "0.65rem",
+    color: "var(--brown-warm)",
+    textAlign: "center",
+    marginTop: "3px",
+  },
+
+  // SEO section
+  richSeoCard: {
+    background: "var(--cream)",
+    border: "1px solid rgba(201,168,76,0.2)",
+    borderRadius: "10px",
+    padding: "1.75rem 2rem",
+  },
+  richSeoH2: {
+    fontFamily: "'Cormorant Garamond', serif",
+    color: "var(--forest)",
+    fontSize: "1.4rem",
+    fontWeight: 600,
+    marginBottom: "1rem",
+  },
+  richSeoBody: {
+    fontFamily: "'Raleway', sans-serif",
+    color: "var(--brown-warm)",
+    fontSize: "0.9rem",
+    lineHeight: 1.8,
+  },
+
+  // Footer note
+  richFooterNote: {
+    background: "rgba(201,168,76,0.1)",
+    border: "1px solid rgba(201,168,76,0.35)",
+    borderRadius: "8px",
+    padding: "0.9rem 1.15rem",
+    fontFamily: "'Raleway', sans-serif",
+    fontSize: "0.82rem",
+    color: "var(--gold-dark)",
+    lineHeight: 1.55,
   },
 
   // --- FOOTER ---

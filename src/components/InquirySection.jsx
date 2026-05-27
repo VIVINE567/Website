@@ -146,8 +146,8 @@ const InquirySection = () => {
                     transition={{ duration: 0.4, delay: 0.1 + idx * 0.08 }}
                     className="flex items-start gap-3"
                   >
-                    <div className="shrink-0 mt-0.5">
-                      <Icon className="w-6 h-6" style={S.visionListIcon} />
+                    <div className="shrink-0">
+                      <Icon className="w-4 h-4" style={{ ...S.visionListIcon, marginTop: '4px' }} />
                     </div>
                     <p style={S.visionListText}>{text}</p>
                   </motion.div>

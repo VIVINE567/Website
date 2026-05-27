@@ -2,17 +2,26 @@
 
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 import S from '../../../styles';
+import { CONTENT } from '../../../content';
+
+const VALID_SLUGS = new Set(Object.keys(CONTENT.productDetails));
+
+const toSlug = (name) => name.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '');
 
 const ProductCard = ({ product, index }) => {
   const fromLeft = index % 2 === 0;
-  return (
+  const slug = toSlug(product.name);
+  const hasPage = VALID_SLUGS.has(slug);
+
+  const card = (
     <motion.div
       initial={{ opacity: 0, x: fromLeft ? -30 : 30 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: false, amount: 0.1 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="bg-brand-bg border border-brand-gold/20 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow"
+      className="bg-brand-bg border border-brand-gold/20 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow cursor-pointer"
     >
       <div
         className="h-48 flex items-center justify-center relative overflow-hidden"
@@ -21,15 +30,9 @@ const ProductCard = ({ product, index }) => {
         <img
           src={product.img}
           alt={product.name}
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover"
           referrerPolicy="no-referrer"
         />
-        <span
-          className="absolute text-sm uppercase tracking-[0.2em] font-bold"
-          style={{ ...S.productsCardName, color: 'var(--forest)', opacity: 0.7 }}
-        >
-          {product.name}
-        </span>
       </div>
 
       <div className="p-6 space-y-4">
@@ -60,6 +63,11 @@ const ProductCard = ({ product, index }) => {
       </div>
     </motion.div>
   );
+
+  if (hasPage) {
+    return <Link href={`/products/${slug}`} className="block">{card}</Link>;
+  }
+  return card;
 };
 
 const ProductsCategorySection = ({ category }) => (

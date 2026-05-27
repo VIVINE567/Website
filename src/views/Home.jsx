@@ -17,7 +17,7 @@ const Home = () => (
     <ProductsSection />
     <ApplicationsSection />
     <CtaSection />
-    <ApplicationsShowcaseSection />
+    {/* <ApplicationsShowcaseSection /> */}
     <CertificationsSection />
   </>
 );

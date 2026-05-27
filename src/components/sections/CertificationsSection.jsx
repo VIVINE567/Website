@@ -64,12 +64,12 @@ const CertificationsSection = () => (
         {...fadeUp(0.12)}
         className="max-w-3xl mx-auto mb-16 space-y-4"
         style={{
-          fontFamily: "'Cormorant Garamond', serif",
+          fontFamily: "'Open Sans', sans-serif",
           color: 'var(--brown-warm)',
-          fontStyle: 'italic',
-          fontWeight: 300,
-          lineHeight: 1.85,
-          fontSize: '1.1rem',
+          fontStyle: 'normal',
+          fontWeight: 400,
+          lineHeight: '24px',
+          fontSize: '16px',
         }}
       >
         <p>
@@ -83,63 +83,33 @@ const CertificationsSection = () => (
         </p>
       </motion.div>
 
-      {/* Certification badge grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5">
-        {CERTS.map(({ code, num, label }, i) => (
-          <motion.div
-            key={`${code}-${num}`}
-            {...fadeUp(i * 0.07)}
-            className="flex flex-col items-center gap-3 py-6 px-3 rounded-2xl"
-            style={{
-              background: 'rgba(201,168,76,0.07)',
-              border: '1px solid rgba(201,168,76,0.22)',
-            }}
+      {/* Certification badges — 5 always in one row */}
+      <motion.div
+        {...fadeUp(0.1)}
+        className="grid grid-cols-5 max-w-4xl mx-auto"
+        style={{ gap: 'clamp(4px, 2vw, 32px)' }}
+      >
+        {[
+          { src: '/iso_9001.svg',   alt: 'ISO 9001 Certified',  origin: '45.07% 43%'    },
+          { src: '/iso_22000.svg',  alt: 'ISO 22000 Certified', origin: '52.01% 47.84%' },
+          { src: '/brg_cert.svg',   alt: 'BRC Certified Food',  origin: '54.06% 47.51%' },
+          { src: '/halal_cert.svg', alt: 'Halal Certified',     origin: '48.31% 47.84%' },
+          { src: '/kesher_cert.svg', alt: 'Kosher Certified',   origin: '50.40% 48.01%' },
+        ].map((cert) => (
+          <div
+            key={cert.src}
+            className="flex items-center justify-center"
+            style={{ width: '100%', aspectRatio: '1 / 1' }}
           >
-            {/* Badge circle */}
-            <div
-              className="w-16 h-16 rounded-full flex flex-col items-center justify-center gap-0.5"
-              style={{
-                background: 'rgba(201,168,76,0.14)',
-                border: '1.5px solid rgba(201,168,76,0.4)',
-              }}
-            >
-              <span style={{
-                fontFamily: "'Cinzel', serif",
-                color: 'var(--forest)',
-                fontWeight: 700,
-                fontSize: code.length > 4 ? '0.5rem' : '0.62rem',
-                letterSpacing: '0.04em',
-                lineHeight: 1.1,
-              }}>
-                {code}
-              </span>
-              {num && (
-                <span style={{
-                  fontFamily: "'Cinzel', serif",
-                  color: 'var(--gold-dark)',
-                  fontWeight: 700,
-                  fontSize: '0.68rem',
-                  lineHeight: 1,
-                }}>
-                  {num}
-                </span>
-              )}
-            </div>
-
-            {/* Label */}
-            <span style={{
-              fontFamily: "'Raleway', sans-serif",
-              color: 'var(--forest)',
-              fontSize: '0.62rem',
-              letterSpacing: '0.09em',
-              textTransform: 'uppercase',
-              lineHeight: 1.4,
-            }}>
-              {label}
-            </span>
-          </motion.div>
+            <img
+              src={cert.src}
+              alt={cert.alt}
+              className="w-full h-full object-contain"
+              style={{ transform: 'scale(3.0)', transformOrigin: cert.origin }}
+            />
+          </div>
         ))}
-      </div>
+      </motion.div>
 
     </div>
   </section>
