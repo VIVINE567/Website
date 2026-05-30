@@ -2,12 +2,23 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, ArrowRight } from 'lucide-react';
+import { X, ArrowRight, Check } from 'lucide-react';
+import { CONTENT } from '../content';
+
+// Source products from the Products nav dropdown — single source of truth
+const PRODUCTS = (CONTENT.nav.links.find((l) => l.label === 'Products')?.subItems || [])
+  .map((s) => (typeof s === 'string' ? s : s.label));
 
 const QuoteModal = ({ open, onClose }) => {
   const [form, setForm] = useState({ name: '', email: '', requirements: '' });
+  const [selectedProducts, setSelectedProducts] = useState([]);
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+
+  const toggleProduct = (p) =>
+    setSelectedProducts((prev) =>
+      prev.includes(p) ? prev.filter((x) => x !== p) : [...prev, p]
+    );
 
   useEffect(() => {
     if (open) {
@@ -28,12 +39,13 @@ const QuoteModal = ({ open, onClose }) => {
       await fetch('/api/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, products: selectedProducts }),
       });
       setSubmitted(true);
       setTimeout(() => {
         setSubmitted(false);
         setForm({ name: '', email: '', requirements: '' });
+        setSelectedProducts([]);
         onClose();
       }, 2500);
     } catch {
@@ -64,7 +76,7 @@ const QuoteModal = ({ open, onClose }) => {
             exit={{ opacity: 0, scale: 0.92, y: 20 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl"
+            className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl"
             style={{ background: 'var(--cream)' }}
           >
             {/* Gold top accent bar */}
@@ -174,6 +186,71 @@ const QuoteModal = ({ open, onClose }) => {
                         '--tw-ring-color': 'rgba(201,168,76,0.4)',
                       }}
                     />
+                  </div>
+
+                  {/* Products of Interest */}
+                  <div>
+                    <div
+                      className="mb-2.5 flex items-center justify-between"
+                      style={{
+                        fontFamily: "'Raleway', sans-serif",
+                        fontSize: '0.72rem',
+                        fontWeight: 600,
+                        letterSpacing: '0.08em',
+                        textTransform: 'uppercase',
+                        color: 'var(--brown-warm)',
+                      }}
+                    >
+                      <span>
+                        Products of Interest <span style={{ color: 'var(--gold-dark)' }}>*</span>
+                      </span>
+                      {selectedProducts.length > 0 && (
+                        <span style={{ color: 'var(--gold-dark)', fontWeight: 700 }}>
+                          {selectedProducts.length} selected
+                        </span>
+                      )}
+                    </div>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
+                      {PRODUCTS.map((p) => {
+                        const checked = selectedProducts.includes(p);
+                        return (
+                          <label
+                            key={p}
+                            className="flex items-center gap-2 px-2.5 py-2 rounded-md cursor-pointer transition-all"
+                            style={{
+                              border: `1px solid ${checked ? 'var(--gold)' : 'rgba(201,168,76,0.3)'}`,
+                              background: checked ? 'rgba(201,168,76,0.15)' : 'var(--cream-dark, #f5f0e8)',
+                            }}
+                          >
+                            <input
+                              type="checkbox"
+                              checked={checked}
+                              onChange={() => toggleProduct(p)}
+                              className="hidden"
+                            />
+                            <div
+                              className="w-4 h-4 rounded-sm flex items-center justify-center shrink-0"
+                              style={{
+                                border: `1.5px solid ${checked ? 'var(--gold-dark)' : 'rgba(134,110,84,0.5)'}`,
+                                background: checked ? 'var(--gold-dark)' : 'var(--cream)',
+                              }}
+                            >
+                              {checked && <Check className="w-3 h-3" style={{ color: '#fff' }} />}
+                            </div>
+                            <span
+                              className="text-xs"
+                              style={{
+                                color: checked ? 'var(--gold-dark)' : 'var(--brown-warm)',
+                                fontWeight: checked ? 600 : 500,
+                                fontFamily: "'Open Sans', sans-serif",
+                              }}
+                            >
+                              {p}
+                            </span>
+                          </label>
+                        );
+                      })}
+                    </div>
                   </div>
 
                   <div>

@@ -4,11 +4,41 @@ import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 import S from '../styles';
 
 const NavLink = ({ href, children, subItems }) => {
   const [isOpen, setIsOpen] = useState(false);
   const isDefaultPage = href === '#' || href === '' || !href;
+  const pathname = usePathname();
+  const router = useRouter();
+
+  // Smooth-scroll to hash target. If already on the target page, prevent default
+  // and scroll; otherwise navigate + scroll after navigation.
+  const handleHashNavigate = (e, to) => {
+    const hashIdx = to.indexOf('#');
+    if (hashIdx === -1) return;
+    const path = to.slice(0, hashIdx) || '/';
+    const id = to.slice(hashIdx + 1);
+    if (!id) return;
+    e.preventDefault();
+    setIsOpen(false);
+    const doScroll = () => {
+      const el = document.getElementById(id);
+      if (el) {
+        const top = el.getBoundingClientRect().top + window.scrollY - 90; // offset for fixed nav
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    };
+    if (pathname === path) {
+      doScroll();
+    } else {
+      router.push(to);
+      // wait for route + paint
+      setTimeout(doScroll, 350);
+      setTimeout(doScroll, 800);
+    }
+  };
 
   return (
     <div
@@ -43,6 +73,7 @@ const NavLink = ({ href, children, subItems }) => {
                   <Link
                     key={label}
                     href={to}
+                    onClick={(e) => handleHashNavigate(e, to)}
                     className="block px-6 py-2 text-sm text-brand-primary/70 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors"
                   >
                     {label}

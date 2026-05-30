@@ -29,13 +29,6 @@ const ProductCard = ({ product }) => {
       {product.whiteBg && (
         <div className="absolute inset-0 bg-brand-primary/5 pointer-events-none rounded-3xl" />
       )}
-      {product.badge && (
-        <div className="absolute inset-x-0 bottom-6 flex justify-center pointer-events-none">
-          <span className="px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg backdrop-blur-sm pointer-events-auto" style={S.productBadge}>
-            {product.badge}
-          </span>
-        </div>
-      )}
     </motion.div>
   );
 

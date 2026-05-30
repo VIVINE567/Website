@@ -14,6 +14,7 @@ import Preloader from '../src/components/Preloader';
 import InquirySection from '../src/components/InquirySection';
 import Footer from '../src/components/Footer';
 import ChatWidget from '../src/components/ChatWidget';
+import QuoteModal from '../src/components/QuoteModal';
 
 const Cn = CONTENT.nav;
 
@@ -21,8 +22,10 @@ export default function AppShell({ children }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [quoteOpen, setQuoteOpen] = useState(false);
   const pathname = usePathname();
   const isProductDetail = pathname.startsWith('/products/') && pathname !== '/products/';
+  const isContact = pathname === '/contact';
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -62,7 +65,11 @@ export default function AppShell({ children }) {
                     {link.label}
                   </NavLink>
                 ))}
-                <button className="btn-gold py-2.5 rounded-full text-sm flex items-center justify-center gap-2" style={S.navMoreBtn}>
+                <button
+                  onClick={() => setQuoteOpen(true)}
+                  className="btn-gold py-2.5 rounded-full text-sm flex items-center justify-center gap-2"
+                  style={S.navMoreBtn}
+                >
                   {Cn.cta}
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -97,7 +104,12 @@ export default function AppShell({ children }) {
                       {page.charAt(0).toUpperCase() + page.slice(1)}
                     </Link>
                   ))}
-                  <button className="btn-gold py-4 rounded-xl">{Cn.mobileCta}</button>
+                  <button
+                    onClick={() => { setMobileMenuOpen(false); setQuoteOpen(true); }}
+                    className="btn-gold py-4 rounded-xl"
+                  >
+                    {Cn.mobileCta}
+                  </button>
                 </div>
               </motion.div>
             )}
@@ -108,9 +120,10 @@ export default function AppShell({ children }) {
             {children}
           </main>
 
-          {!isProductDetail && <InquirySection />}
+          {!isProductDetail && !isContact && <InquirySection />}
           <Footer />
           <ChatWidget />
+          <QuoteModal open={quoteOpen} onClose={() => setQuoteOpen(false)} />
         </>
       )}
     </div>

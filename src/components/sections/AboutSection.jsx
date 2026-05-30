@@ -33,18 +33,31 @@ const AboutSection = () => (
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.1 }}
                 transition={{ duration: 0.5, delay: 0.2 + idx * 0.2 }}
-                className="flex gap-6"
+                whileHover={{ x: 6 }}
+                className="flex gap-6 group cursor-default"
               >
-                <div className="p-4 rounded-2xl shadow-md shrink-0 self-start" style={S.aboutIconBox}>
+                <motion.div 
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 12 }}
+                  className="p-4 rounded-2xl shadow-md shrink-0 self-start" 
+                  style={S.aboutIconBox}
+                >
                   <Icon className="w-8 h-8" style={S.aboutIconColor} />
-                </div>
-                <p style={S.aboutBody}>{text}</p>
+                </motion.div>
+                <p style={S.aboutBody} className="transition-colors duration-300 group-hover:text-white">{text}</p>
               </motion.div>
             );
           })}
         </div>
 
-        <button className="btn-primary">{C.cta}</button>
+        <motion.button 
+          whileHover={{ scale: 1.05, y: -2, boxShadow: '0 8px 24px rgba(201,168,76,0.3)' }}
+          whileTap={{ scale: 0.98 }}
+          transition={{ type: "spring", stiffness: 400, damping: 15 }}
+          className="btn-primary"
+        >
+          {C.cta}
+        </motion.button>
       </motion.div>
 
       <motion.div
@@ -52,8 +65,9 @@ const AboutSection = () => (
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: false, amount: 0.1 }}
         transition={{ duration: 0.8 }}
+        whileHover={{ y: -8 }}
       >
-        <div className="overflow-hidden shadow-xl h-[490px]" style={S.aboutImgFrame}>
+        <div className="overflow-hidden shadow-xl h-[490px]" style={{ ...S.aboutImgFrame, borderColor: 'rgba(201,168,76,0.35)', boxShadow: '0 20px 40px rgba(0,0,0,0.3)' }}>
           <img
             src={C.img}
             alt={C.imgAlt}

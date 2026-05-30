@@ -2,7 +2,6 @@
 
 import { motion } from 'motion/react';
 import Link from 'next/link';
-import { ExternalLink, X, Mail } from 'lucide-react';
 import Logo from './Logo';
 import S from '../styles';
 import { CONTENT } from '../content';
@@ -37,22 +36,6 @@ const Footer = () => (
           <p style={S.footerAboutText} className="mb-8 leading-relaxed text-sm">
             {C.tagline}
           </p>
-          <div className="flex gap-3">
-            {[
-              { id: 'linkedin', icon: <ExternalLink size={16} />, href: '#' },
-              { id: 'x',        icon: <X size={16} />,            href: '#' },
-              { id: 'email',    icon: <Mail size={16} />,          href: '#' },
-            ].map(({ id, icon, href }) => (
-              <a
-                key={id}
-                href={href}
-                className="w-9 h-9 flex items-center justify-center rounded-lg transition-all hover:scale-110 hover:brightness-125"
-                style={S.footerSocialBtn}
-              >
-                {icon}
-              </a>
-            ))}
-          </div>
         </motion.div>
 
         {/* Useful Links */}
@@ -107,18 +90,6 @@ const Footer = () => (
         <p style={{ fontFamily: "'Raleway', sans-serif", letterSpacing: '0.06em' }}>
           {C.copyright}
         </p>
-        <div className="flex gap-6">
-          {C.legal.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="hover:text-[var(--gold)] transition-colors"
-              style={{ fontFamily: "'Raleway', sans-serif", letterSpacing: '0.06em' }}
-            >
-              {item.label}
-            </a>
-          ))}
-        </div>
       </div>
 
     </div>

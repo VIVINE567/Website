@@ -17,9 +17,12 @@ import DefaultPage from './components/DefaultPage';
 import InquirySection from './components/InquirySection';
 import Footer from './components/Footer';
 import ChatWidget from './components/ChatWidget';
-import Home from './pages/Home';
-import Products from './pages/Products';
-import ProductDetail from './pages/ProductDetail';
+import Home from './views/Home';
+import Products from './views/Products';
+import ProductDetail from './views/ProductDetail';
+import Applications from './views/Applications';
+import About from './views/About';
+import Services from './views/Services';
 
 const Cn = CONTENT.nav;
 
@@ -116,6 +119,9 @@ export default function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/products" element={<Products />} />
               <Route path="/products/:slug" element={<ProductDetail />} />
+              <Route path="/applications" element={<Applications />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/about" element={<About />} />
               <Route path="*" element={<DefaultPage />} />
             </Routes>
           </main>
