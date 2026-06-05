@@ -18,18 +18,19 @@ const INDUSTRIES = [
 ];
 
 const PRODUCTS = [
-  'Agar Agar',
   'Carrageenan',
-  'PGA (E405)',
-  'Pectin (E440)',
   'Sodium Alginate',
+  'PGA',
+  'Pectin',
   'Xanthan Gum',
-  'Konjac Gum',
+  'Guar Gum',
   'Gellan Gum',
-  'PAC (Oilfield)',
+  'Konjac Gum',
+  'HPMC',
+  'HEC',
   'Sodium CMC',
-  'Croscarmellose Na',
-  'Stabilizer Systems',
+  'PAC',
+  'Croscarmellose Sodium (CCS)',
 ];
 
 const inputBase = {

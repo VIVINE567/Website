@@ -3,7 +3,7 @@
 import { motion } from 'motion/react';
 
 const CTA_CARDS = [
-  { icon: '🌍', title: 'Global Supply', body: 'Reliable delivery to 40+ countries with flexible MOQ and lead times' },
+  { icon: '🌍', title: 'Global Supply', body: 'Reliable delivery to 4+ countries with flexible MOQ and lead times' },
   { icon: '🔬', title: 'Technical Support', body: 'Application-specific guidance from our formulation scientists' },
   { icon: '📋', title: 'Documentation', body: 'TDS, MSDS, CoA, Halal, Kosher and organic certificates on request' },
   { icon: '⚗️', title: 'Custom Grades', body: 'Tailor-made blends and stabiliser systems for unique requirements' },
@@ -77,7 +77,7 @@ const ApplicationsCtaSection = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0 }}
         transition={{ duration: 0.22, ease: 'easeOut' }}
-        className="flex justify-center flex-wrap gap-3 mb-10"
+        className="flex justify-center flex-nowrap gap-3 mb-10"
       >
         {CTA_CARDS.map((card) => (
           <motion.div
@@ -85,7 +85,7 @@ const ApplicationsCtaSection = () => (
             whileHover={{ y: -4, borderColor: 'rgba(201,168,76,0.5)', background: 'rgba(255,255,255,0.09)' }}
             transition={{ type: 'spring', stiffness: 400, damping: 20 }}
             className="rounded-xl p-5 text-left"
-            style={{ width: '200px', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)' }}
+            style={{ width: '240px', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)' }}
           >
             <div className="text-2xl mb-2">{card.icon}</div>
             <div className="text-sm font-semibold mb-1" style={{ fontFamily: "'Raleway', sans-serif", color: '#fff' }}>{card.title}</div>

@@ -1,13 +1,12 @@
 'use client';
 
+import Link from 'next/link';
 import { motion } from 'motion/react';
+import { CONTENT } from '../../../content';
+import S from '../../../styles';
 
-const PORTFOLIO_CHIPS = [
-  'Sodium Alginate', 'Potassium Alginate', 'Kappa Carrageenan', 'Iota Carrageenan',
-  'Lambda Carrageenan', 'Food-grade Agar', 'Bacteriological Agar',
-  'CMC (Carboxymethyl Cellulose)', 'HPMC', 'HEC', 'MCC',
-  'Xanthan Gum', 'Guar Gum', 'Locust Bean Gum', 'Pectin', 'Konjac Gum',
-];
+const PRODUCTS = (CONTENT.nav.links.find((l) => l.label === 'Products')?.subItems || [])
+  .map((s) => (typeof s === 'string' ? { label: s, href: `/${s.toLowerCase().replace(/\s+/g, '-')}` } : s));
 
 const ApplicationsPortfolioStrip = () => (
   <section style={{ padding: '60px 1.5rem 0', background: 'var(--cream)' }}>
@@ -26,26 +25,38 @@ const ApplicationsPortfolioStrip = () => (
         <div className="shrink-0">
           <p
             className="text-xs font-semibold uppercase tracking-widest whitespace-nowrap"
-            style={{ color: 'var(--forest)', fontFamily: "'Raleway', sans-serif", letterSpacing: '0.1em' }}
+            style={{...S.textForest, letterSpacing: '0.1em'}}
           >
             Our Portfolio
           </p>
         </div>
         <div className="flex flex-wrap gap-2 flex-1">
-          {PORTFOLIO_CHIPS.map((chip) => (
-            <span
-              key={chip}
-              className="text-xs px-3 py-1 rounded-full cursor-default hover:scale-105 transition-transform"
+          {PRODUCTS.map((p) => (
+            <Link
+              key={p.label}
+              href={p.href}
+              className="text-xs px-3 py-1 rounded-full transition-all duration-200 hover:scale-105 hover:shadow-md"
               style={{
                 color: 'var(--forest)',
-                border: '1px solid rgba(44,58,35,0.25)',
-                background: 'rgba(255,255,255,0.9)',
-                fontFamily: "'Raleway', sans-serif",
+                border: '1px solid rgba(201,168,76,0.35)',
+                background: 'var(--cream)',
                 fontWeight: 400,
               }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'var(--gold)';
+                e.currentTarget.style.color = 'var(--forest)';
+                e.currentTarget.style.borderColor = 'var(--gold)';
+                e.currentTarget.style.fontWeight = '600';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'var(--cream)';
+                e.currentTarget.style.color = 'var(--forest)';
+                e.currentTarget.style.borderColor = 'rgba(201,168,76,0.35)';
+                e.currentTarget.style.fontWeight = '400';
+              }}
             >
-              {chip}
-            </span>
+              {p.label}
+            </Link>
           ))}
         </div>
       </motion.div>

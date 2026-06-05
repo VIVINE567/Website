@@ -54,7 +54,7 @@ const ContactInfoPanel = () => (
           fontFamily: "'Cormorant Garamond', serif",
           fontStyle: 'italic',
           fontWeight: 400,
-          textTransform: 'none',
+          textTransform: 'uppercase',
         }}
       >
         VIVINE International

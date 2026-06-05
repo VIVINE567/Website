@@ -1,10 +1,17 @@
 'use client';
 
 import { motion } from 'motion/react';
+import Link from 'next/link';
+import S from '../../../styles';
 
 const HERO_PILLS = [
-  'Alginates', 'Carrageenan', 'Agar-Agar', 'CMC · HEC · HPMC · MCC',
-  'Xanthan Gum', 'Guar Gum', 'Locust Bean Gum', 'Pectin',
+  { label: 'Alginates', href: '/products#seaweed-based' },
+  { label: 'Carrageenan', href: '/products#seaweed-based' },
+  { label: 'CMC · HEC · HPMC · MCC', href: '/products#cellulose-ethers' },
+  { label: 'Xanthan Gum', href: '/products#microbial' },
+  { label: 'Guar Gum', href: '/products#plant-based' },
+  { label: 'Locust Bean Gum', href: '/products#plant-based' },
+  { label: 'Pectin', href: '/products#plant-based' },
 ];
 
 const ApplicationsHeroSection = () => (
@@ -53,7 +60,7 @@ const ApplicationsHeroSection = () => (
         style={{ fontFamily: "'Oswald', sans-serif", color: '#fff', letterSpacing: '-0.01em' }}
       >
         Hydrocolloids, Alginates &<br />
-        <em style={{ color: 'var(--gold)', fontStyle: 'italic', fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: '0.92em' }}>
+        <em style={{ color: 'var(--gold)', fontStyle: 'italic', fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: '0.92em', textTransform: 'capitalize' }}>
           Cellulose Applications
         </em>
       </motion.h1>
@@ -77,19 +84,29 @@ const ApplicationsHeroSection = () => (
         className="flex flex-wrap justify-center gap-2 mb-9"
       >
         {HERO_PILLS.map((pill) => (
-          <span
-            key={pill}
-            className="text-xs px-4 py-1.5 rounded-full"
+          <Link
+            key={pill.label}
+            href={pill.href}
+            className="text-xs px-4 py-1.5 rounded-full transition-all duration-200 hover:scale-105 cursor-pointer"
             style={{
               color: 'rgba(255,255,255,0.7)',
               border: '1px solid rgba(255,255,255,0.15)',
               background: 'rgba(255,255,255,0.05)',
-              fontFamily: "'Raleway', sans-serif",
               letterSpacing: '0.02em',
             }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = 'rgba(201,168,76,0.25)';
+              e.currentTarget.style.borderColor = 'rgba(201,168,76,0.5)';
+              e.currentTarget.style.color = 'var(--gold-light)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
+              e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)';
+              e.currentTarget.style.color = 'rgba(255,255,255,0.7)';
+            }}
           >
-            {pill}
-          </span>
+            {pill.label}
+          </Link>
         ))}
       </motion.div>
 
