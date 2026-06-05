@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
+import S from '../../../styles';
 
 const INDUSTRIES = [
   {
@@ -32,7 +33,7 @@ const INDUSTRIES = [
 
 const ServicesIndustriesSection = () => {
   return (
-    <section className="py-20 px-4 md:px-8 bg-white border-t border-b" style={{ borderColor: 'rgba(90,122,96,0.1)' }}>
+    <section className="py-20 px-4 md:px-8" style={S.sectionDark}>
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -46,8 +47,10 @@ const ServicesIndustriesSection = () => {
             className="text-3xl md:text-4xl font-light"
             style={{ fontFamily: "'Cinzel', serif", color: 'var(--forest)' }}
           >
-            Specialized Across Every Sector
+            Specialized Across Every{' '}
+            <em style={S.accentItalic}>Sector</em>
           </h2>
+          <div className="gold-divider mt-6" />
         </div>
 
         {/* Industries Grid */}
@@ -59,9 +62,9 @@ const ServicesIndustriesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.25, delay: i * 0.04 }}
-              whileHover={{ y: -5, borderColor: 'var(--forest-light)' }}
-              className="border border-solid p-8 text-center rounded-xl relative overflow-hidden transition-all duration-300 bg-white"
-              style={{ borderColor: 'rgba(90,122,96,0.18)' }}
+              whileHover={{ y: -5, borderColor: 'var(--gold)' }}
+              className="border border-solid p-8 text-center rounded-xl relative overflow-hidden transition-all duration-300"
+              style={{ borderColor: 'rgba(201,168,76,0.2)', background: 'rgba(201,168,76,0.04)' }}
             >
               {/* Subtle back gradient */}
               <div

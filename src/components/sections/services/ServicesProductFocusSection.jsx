@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
+import S from '../../../styles';
 
 const PRODUCTS = [
   {
@@ -25,7 +26,7 @@ const PRODUCTS = [
 
 const ServicesProductFocusSection = () => {
   return (
-    <section className="py-20 px-4 md:px-8" style={{ background: 'var(--cream)' }}>
+    <section className="py-20 px-4 md:px-8" style={S.modalBg}>
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-14">
@@ -41,6 +42,7 @@ const ServicesProductFocusSection = () => {
           >
             Core Product Categories
           </h2>
+          <div className="gold-divider mt-6" />
         </div>
 
         {/* Product Cards Grid */}
@@ -53,11 +55,12 @@ const ServicesProductFocusSection = () => {
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.25, delay: i * 0.04 }}
               whileHover={{ y: -6, boxShadow: '0 16px 40px rgba(44,58,35,0.12)' }}
-              className="bg-white rounded-xl p-8 transition-all duration-300 shadow-sm border-t-[4px] flex flex-col justify-between"
+              className="rounded-xl p-8 transition-all duration-300 shadow-sm border-t-[3px] flex flex-col justify-between"
               style={{
-                borderTopColor: 'var(--forest)',
-                borderColor: 'rgba(90,122,96,0.1)',
+                borderTopColor: 'var(--gold)',
+                borderColor: 'rgba(201,168,76,0.2)',
                 borderWidth: '1px',
+                background: 'rgba(201,168,76,0.04)',
               }}
             >
               <div>
@@ -65,9 +68,10 @@ const ServicesProductFocusSection = () => {
                 <span
                   className="inline-block text-[10px] font-semibold tracking-wider uppercase px-3 py-1 rounded-full mb-4"
                   style={{
-                    background: 'rgba(90,122,96,0.12)',
-                    color: 'var(--forest)',
+                    background: 'rgba(201,168,76,0.12)',
+                    color: 'var(--gold-dark)',
                     fontFamily: "'Raleway', sans-serif",
+                    border: '1px solid rgba(201,168,76,0.25)',
                   }}
                 >
                   {prod.badge}
@@ -97,9 +101,10 @@ const ServicesProductFocusSection = () => {
                     key={tag}
                     className="text-[11px] font-medium px-3 py-1 rounded-full border border-solid"
                     style={{
-                      borderColor: 'rgba(90,122,96,0.18)',
-                      color: 'var(--forest-light)',
-                      fontFamily: "'Raleway', sans-serif",
+                      borderColor: 'rgba(201,168,76,0.3)',
+                      color: 'var(--forest)',
+                      
+                      background: 'rgba(201,168,76,0.06)',
                     }}
                   >
                     {tag}

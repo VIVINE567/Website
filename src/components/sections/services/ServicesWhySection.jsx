@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
+import S from '../../../styles';
 
 const ADVANTAGES = [
   {
@@ -27,14 +28,14 @@ const ADVANTAGES = [
 
 const ServicesWhySection = () => {
   return (
-    <section className="py-24 px-4 md:px-8 bg-white overflow-hidden">
+    <section className="py-24 px-4 md:px-8 overflow-hidden" style={S.sectionDark}>
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Left column: Orbital visual ring */}
         <div className="flex justify-center items-center relative aspect-square max-w-[380px] mx-auto w-full">
           {/* Solid outer ring */}
           <motion.div
             className="absolute inset-0 rounded-full border"
-            style={{ borderColor: 'rgba(90,122,96,0.18)' }}
+            style={{ borderColor: 'rgba(201,168,76,0.25)' }}
             animate={{ rotate: 360 }}
             transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
           />
@@ -42,7 +43,7 @@ const ServicesWhySection = () => {
           {/* Dashed inner ring, rotating reverse */}
           <motion.div
             className="absolute inset-[12%] rounded-full border border-dashed"
-            style={{ borderColor: 'rgba(90,122,96,0.22)' }}
+            style={{ borderColor: 'rgba(201,168,76,0.3)' }}
             animate={{ rotate: -360 }}
             transition={{ duration: 22, repeat: Infinity, ease: 'linear' }}
           />
@@ -108,7 +109,7 @@ const ServicesWhySection = () => {
                 {/* Gold bullet */}
                 <div
                   className="w-1.5 h-1.5 rounded-full flex-shrink-0 mt-2"
-                  style={{ background: 'var(--gold)' }}
+                  style={{background: 'var(--gold)'}}
                 />
                 <p
                   className="text-sm font-light leading-relaxed text-slate-800"

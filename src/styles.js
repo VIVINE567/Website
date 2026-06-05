@@ -863,6 +863,168 @@ const S = {
     borderTop: "1px solid rgba(201,168,76,0.2)",
     color: "rgba(237,224,200,0.5)",
   },
+   // --- SHARED / REUSABLE ---
+  cardBase: {
+    background: "var(--cream)",
+    border: "1px solid rgba(201,168,76,0.2)",
+  },
+  cardIconCircle: { background: "rgba(201,168,76,0.12)" },
+  textForest: { color: "var(--forest)" },
+  textGold: { color: "var(--gold)" },
+  textGoldDark: { color: "var(--gold-dark)" },
+  textBrown: { color: "var(--brown-warm)" },
+  textBrownLight: { color: "var(--brown-warm)", fontWeight: 300 },
+  textCream: { color: "var(--cream)" },
+  textCreamDark: { color: "var(--cream-dark)" },
+  textWhiteMuted: { color: "rgba(255,255,255,0.7)" },
+  textWhiteFaint: { color: "rgba(255,255,255,0.28)" },
+  textWhiteSoft: { color: "rgba(255,255,255,0.6)" },
+  sectionDark: {
+    background: "var(--cream-dark)",
+    borderTop: "1px solid rgba(201,168,76,0.2)",
+  },
+  borderGoldLight: { borderColor: "rgba(201,168,76,0.25)" },
+  borderGoldMed: { borderLeft: "1px solid rgba(201,168,76,0.3)" },
+  tagPill: {
+    background: "rgba(201,168,76,0.12)",
+    letterSpacing: "0.06em",
+  },
+  accentItalic: {
+    color: "var(--gold-dark)",
+    fontFamily: "'Oswald', sans-serif",
+    fontStyle: "normal",
+    fontWeight: 700,
+    textTransform: "inherit",
+  },
+  timelineDot: {
+    background: "var(--gold)",
+    borderColor: "var(--cream-dark)",
+    boxShadow: "0 0 0 3px rgba(201,168,76,0.2)",
+  },
+  tabBtn: (isActive) => ({
+    fontWeight: isActive ? 500 : 400,
+    color: isActive ? "var(--gold)" : "var(--brown-warm)",
+    background: "transparent",
+  }),
+  forestBg: {
+    background:
+      "linear-gradient(135deg, var(--forest) 0%, var(--forest-mid) 100%)",
+  },
+  forestBgSolid: { background: "var(--forest)" },
+  goldBorder: { border: "1px solid rgba(201,168,76,0.2)" },
+  goldBorderBottom: { borderBottom: "1px solid rgba(201,168,76,0.15)" },
+  letterSpaceTight: { letterSpacing: "0.04em" },
+  letterSpaceWide: { letterSpacing: "0.1em" },
+  letterSpaceExtraWide: { letterSpacing: "0.15em" },
+  eyebrowText: {
+    color: "var(--gold)",
+    letterSpacing: "0.18em",
+  },
+  whiteOutlineBtn: {
+    border: "1px solid rgba(255,255,255,0.2)",
+    color: "rgba(255,255,255,0.7)",
+  },
+  goldGradientBtn: {
+    background:
+      "linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark))",
+    color: "var(--forest)",
+  },
+  ctaCardBg: {
+    background: "rgba(201,168,76,0.08)",
+    border: "1px solid rgba(201,168,76,0.15)",
+  },
+  statsBarBg: {
+    background: "rgba(44,58,35,0.03)",
+    borderTop: "1px solid rgba(201,168,76,0.15)",
+    borderBottom: "1px solid rgba(201,168,76,0.15)",
+  },
+  // --- CONTACT PAGE ---
+  contactCardBg: {
+    background: "var(--cream)",
+    border: "1px solid rgba(201,168,76,0.25)",
+  },
+  contactFormLabel: {
+    fontSize: 11,
+    fontWeight: 600,
+    letterSpacing: "0.06em",
+    textTransform: "uppercase",
+    color: "var(--brown-warm)",
+  },
+  contactInputBase: {
+    width: "100%",
+    padding: "10px 13px",
+    border: "1px solid rgba(201,168,76,0.3)",
+    borderRadius: 6,
+    fontSize: 13.5,
+    color: "var(--forest)",
+    background: "var(--cream)",
+    outline: "none",
+    WebkitAppearance: "none",
+  },
+  contactIconBox: {
+    background: "rgba(201,168,76,0.15)",
+    color: "var(--gold-dark)",
+  },
+  contactTrustNote: {
+    background: "rgba(201,168,76,0.1)",
+    border: "1px solid rgba(201,168,76,0.25)",
+    color: "var(--brown-warm)",
+  },
+  goldAccentBar: { background: "var(--gold)" },
+  contactLink: {
+    color: "var(--gold)",
+    borderBottom: "1px solid rgba(201,168,76,0.5)",
+    paddingBottom: 1,
+  },
+
+  // --- MORE SHARED ---
+  goldLine: { background: "var(--gold)", opacity: 0.6 },
+  goldDividerThin: { height: 1, background: "rgba(201,168,76,0.15)" },
+  goldDividerMed: { height: 1, background: "rgba(201,168,76,0.25)" },
+  dotPattern28: {
+    backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)",
+    backgroundSize: "28px 28px",
+  },
+  dotPattern30: {
+    backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)",
+    backgroundSize: "30px 30px",
+  },
+
+  // --- QUOTE MODAL ---
+  modalBg: { background: "var(--cream)" },
+  modalGoldBar: {
+    background: "linear-gradient(to right, var(--gold), var(--gold-dark))",
+  },
+  modalDivider: {
+    background: "linear-gradient(to right, var(--gold), transparent)",
+  },
+  modalHeading: { color: "var(--forest)", fontWeight: 700 },
+  modalBody: {
+    fontSize: "0.88rem",
+    color: "var(--brown-warm)",
+    lineHeight: 1.6,
+  },
+  modalInput: {
+    fontSize: "0.88rem",
+    background: "var(--cream-dark, #f5f0e8)",
+    border: "1px solid rgba(201,168,76,0.25)",
+    color: "var(--forest)",
+    "--tw-ring-color": "rgba(201,168,76,0.4)",
+  },
+  modalFieldLabel: {
+    fontSize: "0.72rem",
+    fontWeight: 600,
+    letterSpacing: "0.08em",
+    textTransform: "uppercase",
+    color: "var(--brown-warm)",
+  },
+  modalSubmitBtn: {
+    fontSize: "0.82rem",
+    letterSpacing: "0.12em",
+    background: "linear-gradient(135deg, var(--gold), var(--gold-dark))",
+    color: "var(--forest)",
+    boxShadow: "0 4px 14px rgba(201,168,76,0.3)",
+  },
 };
 
 export default S;

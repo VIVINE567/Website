@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
+import S from '../../../styles';
 
 const SERVICES = [
   {
@@ -37,7 +38,7 @@ const SERVICES = [
 
 const ServicesListSection = () => {
   return (
-    <section className="py-24 px-4 md:px-8 relative overflow-hidden" style={{ background: 'var(--forest)' }}>
+    <section className="py-24 px-4 md:px-8 relative overflow-hidden" style={S.forestBgSolid}>
       {/* Background Radial Glow */}
       <div
         className="absolute top-[-200px] right-[-200px] w-[700px] h-[700px] rounded-full pointer-events-none"
@@ -61,6 +62,7 @@ const ServicesListSection = () => {
           >
             Our Core Services
           </h2>
+          <div className="gold-divider mt-6" />
         </div>
 
         {/* Services Grid */}

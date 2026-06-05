@@ -2,9 +2,10 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'motion/react';
+import S from '../../../styles';
 
 const STATS = [
-  { number: '50', suffix: '+', label: 'Countries Served Globally' },
+  { number: '4', suffix: '+', label: 'Countries Served Globally' },
   { number: '200', suffix: '+', label: 'Ingredient Grades Supplied' },
   { number: '15', suffix: '+', label: 'Years of Industry Experience' },
   { number: '4', suffix: '', label: 'Core Industry Verticals' },
@@ -36,7 +37,7 @@ const AnimatedNumber = ({ value }) => {
 
 const ServicesIntroSection = () => {
   return (
-    <section className="py-20 px-4 md:px-8 lg:px-16" style={{ background: 'var(--cream)' }}>
+    <section className="py-20 px-4 md:px-8 lg:px-16" style={S.modalBg}>
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         {/* Left column */}
         <motion.div
@@ -68,7 +69,7 @@ const ServicesIntroSection = () => {
           transition={{ duration: 0.3, delay: 0.05 }}
           className="space-y-8"
         >
-          <div className="space-y-4 text-base md:text-lg font-light leading-relaxed" style={{ color: 'var(--forest-mid)', fontFamily: "'Cormorant Garamond', serif" }}>
+          <div className="space-y-4 text-base md:text-lg font-light leading-relaxed" style={{ color: 'var(--forest-mid)' }}>
             <p>
               At VIVINE International, our services are built around one goal: making complex ingredient sourcing seamless and reliable for our clients. Whether you are a global manufacturer or a specialty producer, our team of specialists brings decades of hands-on expertise in hydrocolloids, cellulose derivatives and alginate chemistry.
             </p>
@@ -87,8 +88,8 @@ const ServicesIntroSection = () => {
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.25, delay: i * 0.04 }}
                 whileHover={{ y: -4, boxShadow: '0 12px 32px rgba(44,58,35,0.08)' }}
-                className="bg-white p-6 rounded-xl border border-solid transition-all duration-300"
-                style={{ borderColor: 'rgba(90,122,96,0.15)' }}
+                className="p-6 rounded-xl border border-solid transition-all duration-300"
+                style={{ borderColor: 'rgba(201,168,76,0.2)', background: 'rgba(201,168,76,0.06)' }}
               >
                 <div
                   className="text-4xl font-semibold mb-1"
