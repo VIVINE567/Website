@@ -5,7 +5,7 @@ import { motion, useInView } from 'motion/react';
 import Link from 'next/link';
 
 const STATS = [
-  { number: '40', suffix: '+', label: 'Countries served across Asia, Europe, Middle East & Americas' },
+  { number: '4', suffix: '+', label: 'Countries served across Asia, Europe, Middle East & Americas' },
   { number: '200', suffix: '+', label: 'Product grades across hydrocolloids, alginates & cellulose' },
   { number: '15', suffix: '+', label: 'Industries served from food & beverage to construction' },
   { number: 'ISO', suffix: '', label: 'Certified supply chain with Halal, Kosher & FSSC 22000 compliant partners' },

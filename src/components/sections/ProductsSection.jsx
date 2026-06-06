@@ -13,15 +13,14 @@ const ProductCard = ({ product }) => {
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: false, amount: 0.1 }}
       transition={{ duration: 0.7 }}
-      className={`relative overflow-hidden rounded-3xl shadow-xl flex items-center justify-center p-2${
+      className={`relative overflow-hidden rounded-3xl shadow-xl${
         product.imgRight ? '' : ' order-2 lg:order-1'
-      }${product.whiteBg ? ' bg-white group' : ''}`}
-      style={product.whiteBg ? undefined : S.productImgBg}
+      }${product.whiteBg ? ' group' : ''}`}
     >
       <img
         src={product.img}
-        className={`w-full h-auto max-h-[500px] object-contain transition-transform duration-700 rounded-2xl${
-          product.whiteBg ? ' group-hover:scale-105' : ' hover:scale-105'
+        className={`w-full h-full object-cover transition-transform duration-700 scale-110${
+          product.whiteBg ? ' group-hover:scale-120' : ' hover:scale-120'
         }`}
         alt={product.imgAlt}
         referrerPolicy="no-referrer"
