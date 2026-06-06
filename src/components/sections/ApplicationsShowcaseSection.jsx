@@ -2,7 +2,7 @@
 
 import { motion } from 'motion/react';
 import Link from 'next/link';
-import S from '../../styles';
+import S from '../../styles/products';
 
 const APPS = [
   {

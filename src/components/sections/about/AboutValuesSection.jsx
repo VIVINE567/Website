@@ -2,7 +2,7 @@
 
 import { motion } from 'motion/react';
 import { Heart, Users, Lightbulb, ShieldCheck } from 'lucide-react';
-import S from '../../../styles';
+import S from '../../../styles/shared';
 
 const VALUES = [
   {

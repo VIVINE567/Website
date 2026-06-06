@@ -2,7 +2,7 @@
 
 import { motion } from 'motion/react';
 import { XCircle, Frown, Angry, AlertCircle, Bell } from 'lucide-react';
-import S from '../styles';
+import S from '../styles/inquiry';
 import FormInput from './FormInput';
 import { CONTENT } from '../content';
 

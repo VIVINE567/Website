@@ -5,7 +5,7 @@ import { ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import S from '../styles';
+import S from '../styles/nav';
 
 const NavLink = ({ href, children, subItems }) => {
   const [isOpen, setIsOpen] = useState(false);

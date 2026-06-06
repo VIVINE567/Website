@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import S from '../src/styles';
+import S from '../src/styles/nav';
 import { CONTENT } from '../src/content';
 import Logo from '../src/components/Logo';
 import NavLink from '../src/components/NavLink';
@@ -39,7 +39,7 @@ export default function AppShell({ children }) {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <AnimatePresence>
         {loading && <Preloader key="preloader" />}
       </AnimatePresence>
@@ -53,7 +53,7 @@ export default function AppShell({ children }) {
             }`}
             style={S.navBar(isScrolled)}
           >
-            <div className="max-w-8xl mx-auto px-4 md:px-3 flex items-center justify-between lg:justify-start gap-[20px]">
+            <div className="max-w-8xl mx-auto md:px-3 flex items-center justify-between lg:justify-start gap-[20px]">
               <Link href="/" className="shrink-0">
                 <Logo className="h-16 md:h-20 lg:h-[84px]" />
               </Link>

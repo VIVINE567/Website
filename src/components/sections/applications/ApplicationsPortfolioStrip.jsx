@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { motion } from 'motion/react';
 import { CONTENT } from '../../../content';
-import S from '../../../styles';
+import S from '../../../styles/shared';
 
 const PRODUCTS = (CONTENT.nav.links.find((l) => l.label === 'Products')?.subItems || [])
   .map((s) => (typeof s === 'string' ? { label: s, href: `/${s.toLowerCase().replace(/\s+/g, '-')}` } : s));

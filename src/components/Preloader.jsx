@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { motion, animate } from 'motion/react';
-import S from '../styles';
+import S from '../styles/preloader';
 
 const LETTERS = ['V', 'I', 'V', 'I', 'N', 'E'];
 const DROP_Y = -280;      // px above final position each letter starts

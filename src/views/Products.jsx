@@ -5,7 +5,7 @@ import ProductsHeroSection from '../components/sections/products/ProductsHeroSec
 import ProductsIntroSection from '../components/sections/products/ProductsIntroSection';
 import ProductsCategorySection from '../components/sections/products/ProductsCategorySection';
 import { CONTENT } from '../content';
-import S from '../styles';
+import S from '../styles/products';
 
 const C = CONTENT.productsPage;
 

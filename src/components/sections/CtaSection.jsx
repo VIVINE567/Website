@@ -2,7 +2,7 @@
 
 import { motion } from 'motion/react';
 import Link from 'next/link';
-import S from '../../styles';
+import S from '../../styles/cta';
 import { CONTENT } from '../../content';
 
 const C = CONTENT.home.cta;

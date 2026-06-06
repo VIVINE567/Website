@@ -2,7 +2,7 @@
 
 import { motion } from 'motion/react';
 import { Globe, Truck } from 'lucide-react';
-import S from '../../styles';
+import S from '../../styles/about';
 import { CONTENT } from '../../content';
 
 const C = CONTENT.home.about;

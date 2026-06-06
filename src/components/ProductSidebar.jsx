@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import S from '../styles';
+import S from '../styles/products';
 import { CONTENT } from '../content';
 
 const ALL_PRODUCTS = Object.entries(CONTENT.productDetails).map(([slug, p]) => ({

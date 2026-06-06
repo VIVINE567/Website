@@ -2,7 +2,7 @@
 
 import { useRef, useEffect } from 'react';
 import { motion, animate } from 'motion/react';
-import S from '../styles';
+import S from '../styles/preloader';
 
 const LETTERS = [
   { char: 'V', id: 'v1' },

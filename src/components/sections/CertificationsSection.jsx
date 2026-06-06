@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
-import S from '../../styles';
+import S from '../../styles/products';
 
 const CERTS = [
   { code: 'ISO',   num: '9001',   label: 'Quality Management'      },

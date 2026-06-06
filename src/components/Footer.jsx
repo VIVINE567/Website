@@ -3,7 +3,7 @@
 import { motion } from 'motion/react';
 import Link from 'next/link';
 import Logo from './Logo';
-import S from '../styles';
+import S from '../styles/footer';
 import { CONTENT } from '../content';
 
 const C = CONTENT.footer;

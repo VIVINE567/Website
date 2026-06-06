@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Logo from './Logo';
-import S from '../styles';
+import S from '../styles/defaultPage';
 import { CONTENT } from '../content';
 
 const C = CONTENT.defaultPage;

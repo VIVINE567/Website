@@ -2,7 +2,7 @@
 
 import { motion } from 'motion/react';
 import { DollarSign, Truck, Headset, Settings } from 'lucide-react';
-import S from '../../styles';
+import S from '../../styles/featureCards';
 import { CONTENT } from '../../content';
 
 const ICONS = [DollarSign, Truck, Headset, Settings];

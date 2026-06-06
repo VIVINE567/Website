@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { motion } from 'motion/react';
 import { ChevronRight, ChevronLeft, Sprout } from 'lucide-react';
-import S from '../styles';
+import S from '../styles/products';
 import { CONTENT } from '../content';
 import DefaultPage from '../components/DefaultPage';
 import FormInput from '../components/FormInput';

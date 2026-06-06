@@ -4,7 +4,7 @@ import { useState, useLayoutEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'motion/react';
 import { ChevronRight, Info } from 'lucide-react';
-import S from '../styles';
+import S from '../styles/products';
 import ProductSidebar from '../components/ProductSidebar';
 
 const fadeUp = (delay = 0) => ({

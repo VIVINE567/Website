@@ -8,7 +8,7 @@ import { ArrowRight, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Link, Routes, Route, useLocation } from 'react-router-dom';
 
-import S from './styles';
+import S from 'styles/nav';
 import { CONTENT } from './content';
 import Logo from './components/Logo';
 import NavLink from './components/NavLink';

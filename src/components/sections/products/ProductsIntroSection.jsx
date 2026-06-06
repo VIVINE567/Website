@@ -2,7 +2,7 @@
 
 import { motion } from 'motion/react';
 import { Leaf, Waves, FlaskConical, ChefHat } from 'lucide-react';
-import S from '../../../styles';
+import S from '../../../styles/products';
 import { CONTENT } from '../../../content';
 
 const C = CONTENT.productsPage;

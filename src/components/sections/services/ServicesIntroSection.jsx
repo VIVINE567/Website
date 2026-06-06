@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'motion/react';
-import S from '../../../styles';
+import S from '../../../styles/modal';
 
 const STATS = [
   { number: '4', suffix: '+', label: 'Countries Served Globally' },

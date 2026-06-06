@@ -3,7 +3,7 @@
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import S from '../../../styles';
+import S from '../../../styles/products';
 import { CONTENT } from '../../../content';
 
 const VALID_SLUGS = new Set(Object.keys(CONTENT.productDetails));

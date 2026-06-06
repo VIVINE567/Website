@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import S from '../../styles';
+import S from '../../styles/hero';
 import { CONTENT } from '../../content';
 import QuoteModal from '../QuoteModal';
 
