@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'motion/react';
+import Link from 'next/link';
 import S from '../../styles/hero';
 import { CONTENT } from '../../content';
 import QuoteModal from '../QuoteModal';
@@ -41,9 +42,9 @@ const HeroSection = () => {
           <button onClick={() => setQuoteOpen(true)} className="btn-gold px-10 py-3 rounded-md active:scale-95" style={S.heroBtnGold}>
             {C.primaryCta}
           </button>
-          <button style={S.heroBtnOutline} className="px-10 py-3 rounded-md font-medium uppercase hover:bg-white/10 transition-all active:scale-95">
+          <Link href="/products" style={S.heroBtnOutline} className="px-10 py-3 rounded-md font-medium uppercase hover:bg-white/10 transition-all active:scale-95">
             {C.secondaryCta}
-          </button>
+          </Link>
         </div>
       </motion.div>
     </div>
