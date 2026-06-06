@@ -603,7 +603,7 @@ export const CONTENT = {
       name: "Carrageenan",
       shortName: "Carrageenan",
       productTag:
-        "Sulphated polysaccharide · Red seaweed · E407 / E407a · GRAS",
+        "Sulphated polysaccharide · Red seaweed · E407 / E407a · Food Approved",
       casNo: "9000-07-1 (κ/ι) · 9064-57-7 (λ)",
       eNo: "E407 (RC) · E407a (SRC/PES) · INS 407 / INS 407a",
       synonyms:
@@ -611,7 +611,7 @@ export const CONTENT = {
       tagline:
         "The world's most important dairy hydrocolloid — natural sulphated polysaccharide from red seaweed delivering firm gels (κ), elastic freeze-thaw-stable gels (ι), and cold-process thickening (λ) across dairy, meat, plant-based, pharmaceutical, and pet food applications.",
       statPills: [
-        { val: "E407 / GRAS", label: "Global food approval" },
+        { val: "E407 / Food Approved", label: "Global food approval" },
         { val: "3 types", label: "κ · ι · λ" },
         { val: "7 industries", label: "Served globally" },
         { val: "0.01–1%", label: "Typical use level" },
@@ -749,7 +749,7 @@ export const CONTENT = {
         },
         {
           key: "USA (FDA)",
-          val: "GRAS — 21 CFR 172.620 (RC) · 21 CFR 172.655 (PES/SRC)",
+          val: "Food Approved — 21 CFR 172.620 (RC) · 21 CFR 172.655 (PES/SRC)",
         },
         {
           key: "Codex Alimentarius",
@@ -914,7 +914,11 @@ export const CONTENT = {
           title: "EU E407 / E407a",
           sub: "Regulation (EC) No 1333/2008",
         },
-        { icon: "🇺🇸", title: "FDA GRAS", sub: "21 CFR 172.620 / 172.655" },
+        {
+          icon: "🇺🇸",
+          title: "FDA Food Approved",
+          sub: "21 CFR 172.620 / 172.655",
+        },
         { icon: "🌍", title: "JECFA INS 407 / 407a", sub: "ADI not specified" },
         { icon: "📋", title: "FCC compliant", sub: "Food Chemicals Codex" },
         { icon: "🌿", title: "Non-GMO / Vegan", sub: "Gluten-free · Natural" },
@@ -2484,7 +2488,7 @@ export const CONTENT = {
       name: "Xanthan Gum",
       shortName: "Xanthan Gum",
       productTag:
-        "Microbial polysaccharide · Xanthomonas campestris · E415 · GRAS · API 13A",
+        "Microbial polysaccharide · Xanthomonas campestris · E415 · Food Approved · API 13A",
       casNo: "11138-66-2",
       eNo: "E415 · INS 415",
       synonyms:
@@ -2492,7 +2496,7 @@ export const CONTENT = {
       tagline:
         "The world's most versatile industrial hydrocolloid — exceptional pseudoplasticity, pH 1–13 stability, salt tolerance, cold-water solubility, and API 13A oilfield performance across nine distinct industries.",
       statPills: [
-        { val: "E415 / GRAS", label: "Global approval" },
+        { val: "E415 / Food Approved", label: "Global approval" },
         { val: "9 industries", label: "Served globally" },
         { val: "pH 1–13", label: "Stability range" },
         { val: "Cold soluble", label: "Disperses in cold water" },
@@ -2516,7 +2520,11 @@ export const CONTENT = {
         { icon: "🌡️", val: "pH 1–13 stable", lbl: "Widest pH range" },
         { icon: "💧", val: "Cold-water soluble", lbl: "No heating required" },
         { icon: "🧂", val: "Salt-tolerant", lbl: "Brine stable" },
-        { icon: "✅", val: "E415 / GRAS", lbl: "Food & pharma approved" },
+        {
+          icon: "✅",
+          val: "E415 / Food Approved",
+          lbl: "Food & pharma approved",
+        },
         { icon: "🛢️", val: "API 13A / ISO", lbl: "Oilfield drilling standard" },
         { icon: "🌾", val: "Gluten-free", lbl: "Celiac & clean label" },
         { icon: "🔗", val: "Synergy partner", lbl: "LBG · Guar · Konjac" },
@@ -2660,7 +2668,7 @@ export const CONTENT = {
           key: "EU food approval",
           val: "E415 — Regulation (EC) No 1333/2008 (quantum satis in most categories)",
         },
-        { key: "USA (FDA)", val: "GRAS — 21 CFR 172.695" },
+        { key: "USA (FDA)", val: "Food Approved — 21 CFR 172.695" },
         {
           key: "Codex Alimentarius",
           val: "INS 415; ADI not specified (JECFA)",
@@ -2697,7 +2705,7 @@ export const CONTENT = {
             ["Loss on drying", "≤ 15.0%"],
             ["Pyruvate", "≥ 1.5%"],
             ["pH (1% solution)", "6.0–8.0"],
-            ["Standard", "E415 / JECFA / FCC / GRAS"],
+            ["Standard", "E415 / JECFA / FCC / Food Approved"],
           ],
           apps: [
             { l: "Salad dressings", i: "food" },
@@ -2816,7 +2824,7 @@ export const CONTENT = {
       regulatoryBadgesSub: "All grades comply with the following standards",
       regulatoryBadges: [
         { icon: "🇪🇺", title: "EU E415", sub: "Regulation (EC) No 1333/2008" },
-        { icon: "🇺🇸", title: "FDA GRAS", sub: "21 CFR 172.695" },
+        { icon: "🇺🇸", title: "FDA Food Approved", sub: "21 CFR 172.695" },
         { icon: "🌍", title: "JECFA INS 415", sub: "ADI not specified" },
         {
           icon: "🛢️",
@@ -3161,7 +3169,7 @@ export const CONTENT = {
         },
       ],
       seoDescription:
-        "<strong>Xanthan Gum</strong> (CAS 11138-66-2, E415, INS 415) is a high-molecular-weight anionic heteropolysaccharide produced by the controlled aerobic fermentation of carbohydrate substrates using the bacterium <em>Xanthomonas campestris</em> NRRL B-1459. The polymer consists of a cellulose-like β-1,4-linked D-glucose backbone with trisaccharide side chains containing D-mannose, D-glucuronic acid, and D-mannose. The terminal mannose is frequently modified by pyruvate groups (≥ 1.5% per JECFA specification).<br><br>Xanthan gum's most commercially valuable property is its exceptional <strong>pseudoplasticity (shear-thinning behaviour)</strong> — solutions are highly viscous at low shear rates and become far less viscous under high shear (pumping, stirring, squeezing), recovering full viscosity instantly when shear is removed. At 1% concentration, xanthan viscosity at 0.1 s⁻¹ shear rate is typically 10,000–100,000 mPa·s, dropping to 10–50 mPa·s at 100 s⁻¹. This unique flow profile underpins its functionality in salad dressings, oilfield drilling, paints, and toothpaste.<br><br>In the <strong>food and beverage industry</strong>, xanthan (E415) is approved under EU Regulation (EC) No 1333/2008 (quantum satis), FDA GRAS (21 CFR 172.695), and JECFA INS 415 (ADI not specified). Key food applications include salad dressings and sauces (0.1–0.3%), gluten-free bakery products (0.2–0.5%), fruit beverages (0.02–0.1%), soups, gravies, and condiments. In <strong>dairy applications</strong>, xanthan stabilises ice cream, flavoured milks, and yogurt. Xanthan + LBG synergistic gels provide freeze-thaw stable elastic gel systems for premium ice cream stabiliser blends.<br><br>In the <strong>oil and gas industry</strong>, xanthan gum (XC polymer, API 13A Section 4 / ISO 13500 compliant) is the standard biopolymer viscosifier in water-based drilling muds. At 0.25% in 1% KCl solution, API 13A-compliant xanthan delivers ≥ 600 mPa·s viscosity (Brookfield LVT, 60 rpm, 25°C). Xanthan-based biopolymer muds cause minimal formation damage compared to bentonite-based systems — preferred for horizontal drilling and completion operations.<br><br>In <strong>pharmaceuticals</strong>, high-purity xanthan functions as a controlled-release matrix polymer in tablets (15–40% w/w), a suspension agent in oral liquids (0.1–0.5%), a viscosity builder in ophthalmic drops (0.1–0.3%), and a dermal gel base (0.5–2.0%). In <strong>cosmetics</strong>, xanthan (INCI: Xanthan Gum) is used in toothpaste (0.5–1.5%), moisturising creams (0.1–0.5%), shampoos (0.2–0.6%), face serums (0.1–0.3%), and sunscreens. In <strong>industrial applications</strong> — paints, coatings, detergents, agricultural chemicals, and textile printing — xanthan's pH (1–13) and salt tolerance make it uniquely stable compared to cellulose ethers, carbomers, or natural gums.<br><br><strong>VIVINE International</strong> supplies Xanthan Gum in food grade (E415/FCC/JECFA), oilfield grade (API 13A compliant), pharma grade, cosmetic grade (INCI), and industrial grade with full TDS, SDS, COA, and API 13A test reports.",
+        "<strong>Xanthan Gum</strong> (CAS 11138-66-2, E415, INS 415) is a high-molecular-weight anionic heteropolysaccharide produced by the controlled aerobic fermentation of carbohydrate substrates using the bacterium <em>Xanthomonas campestris</em> NRRL B-1459. The polymer consists of a cellulose-like β-1,4-linked D-glucose backbone with trisaccharide side chains containing D-mannose, D-glucuronic acid, and D-mannose. The terminal mannose is frequently modified by pyruvate groups (≥ 1.5% per JECFA specification).<br><br>Xanthan gum's most commercially valuable property is its exceptional <strong>pseudoplasticity (shear-thinning behaviour)</strong> — solutions are highly viscous at low shear rates and become far less viscous under high shear (pumping, stirring, squeezing), recovering full viscosity instantly when shear is removed. At 1% concentration, xanthan viscosity at 0.1 s⁻¹ shear rate is typically 10,000–100,000 mPa·s, dropping to 10–50 mPa·s at 100 s⁻¹. This unique flow profile underpins its functionality in salad dressings, oilfield drilling, paints, and toothpaste.<br><br>In the <strong>food and beverage industry</strong>, xanthan (E415) is approved under EU Regulation (EC) No 1333/2008 (quantum satis), FDA Food Approved (21 CFR 172.695), and JECFA INS 415 (ADI not specified). Key food applications include salad dressings and sauces (0.1–0.3%), gluten-free bakery products (0.2–0.5%), fruit beverages (0.02–0.1%), soups, gravies, and condiments. In <strong>dairy applications</strong>, xanthan stabilises ice cream, flavoured milks, and yogurt. Xanthan + LBG synergistic gels provide freeze-thaw stable elastic gel systems for premium ice cream stabiliser blends.<br><br>In the <strong>oil and gas industry</strong>, xanthan gum (XC polymer, API 13A Section 4 / ISO 13500 compliant) is the standard biopolymer viscosifier in water-based drilling muds. At 0.25% in 1% KCl solution, API 13A-compliant xanthan delivers ≥ 600 mPa·s viscosity (Brookfield LVT, 60 rpm, 25°C). Xanthan-based biopolymer muds cause minimal formation damage compared to bentonite-based systems — preferred for horizontal drilling and completion operations.<br><br>In <strong>pharmaceuticals</strong>, high-purity xanthan functions as a controlled-release matrix polymer in tablets (15–40% w/w), a suspension agent in oral liquids (0.1–0.5%), a viscosity builder in ophthalmic drops (0.1–0.3%), and a dermal gel base (0.5–2.0%). In <strong>cosmetics</strong>, xanthan (INCI: Xanthan Gum) is used in toothpaste (0.5–1.5%), moisturising creams (0.1–0.5%), shampoos (0.2–0.6%), face serums (0.1–0.3%), and sunscreens. In <strong>industrial applications</strong> — paints, coatings, detergents, agricultural chemicals, and textile printing — xanthan's pH (1–13) and salt tolerance make it uniquely stable compared to cellulose ethers, carbomers, or natural gums.<br><br><strong>VIVINE International</strong> supplies Xanthan Gum in food grade (E415/FCC/JECFA), oilfield grade (API 13A compliant), pharma grade, cosmetic grade (INCI), and industrial grade with full TDS, SDS, COA, and API 13A test reports.",
       footerNote:
         "Viscosity values are indicative at 1% aqueous solution, 25°C, Brookfield LVT (Spindle 3, 60 rpm). API 13A oilfield viscosity per 0.25% in 1% KCl. Actual performance depends on grade, shear rate, pH, temperature, ionic environment, and co-formulation ingredients. Contact VIVINE International for grade-specific TDS, SDS, COA, API 13A test reports, samples, and formulation guidance.",
     },
@@ -3171,14 +3179,14 @@ export const CONTENT = {
       name: "Guar Gum",
       shortName: "Guar Gum",
       productTag:
-        "Galactomannan · Natural hydrocolloid · E412 · GRAS · ADI not specified",
+        "Galactomannan · Natural hydrocolloid · E412 · Food Approved · ADI not specified",
       casNo: "9000-30-0",
       eNo: "E412 (EU) · INS 412",
       synonyms: "Guaran, INCI: Cyamopsis Tetragonoloba Gum",
       tagline:
         "Natural galactomannan from guar bean — the world's highest-volume natural hydrocolloid, powering food, oil & gas drilling, and pharmaceutical formulations.",
       statPills: [
-        { val: "E412 / GRAS", label: "Global food approval" },
+        { val: "E412 / Food Approved", label: "Global food approval" },
         { val: "M:G ≈ 2:1", label: "Mannose:Galactose" },
         { val: "6 grades", label: "Available" },
         { val: "2,700–8,000+", label: "mPa·s @ 1% solution" },
@@ -3201,7 +3209,11 @@ export const CONTENT = {
           val: "Oilfield viscosifier",
           lbl: "Drilling & fracturing",
         },
-        { icon: "✅", val: "E412 / GRAS", lbl: "Food & pharma approved" },
+        {
+          icon: "✅",
+          val: "E412 / Food Approved",
+          lbl: "Food & pharma approved",
+        },
         {
           icon: "🔗",
           val: "Synergy partner",
@@ -3442,7 +3454,7 @@ export const CONTENT = {
         },
         {
           icon: "🇺🇸",
-          title: "FDA GRAS",
+          title: "FDA Food Approved",
           sub: "21 CFR 184.1339 — food & pharmaceutical use",
         },
         { icon: "🌍", title: "JECFA / INS 412", sub: "ADI: Not specified" },
@@ -3631,14 +3643,14 @@ export const CONTENT = {
       name: "Gellan Gum",
       shortName: "Gellan Gum",
       productTag:
-        "Microbial polysaccharide · Sphingomonas elodea · E418 · GRAS · Low Acyl & High Acyl",
+        "Microbial polysaccharide · Sphingomonas elodea · E418 · Food Approved · Low Acyl & High Acyl",
       casNo: "71010-52-1",
       eNo: "E418 · INS 418",
       synonyms: "Gellan, Polysaccharide S-60",
       tagline:
         "High-performance microbial polysaccharide producing crystal-clear gels, ultra-low-concentration particle suspension, and exceptional heat stability across food, pharma, and cosmetic applications.",
       statPills: [
-        { val: "E418 / GRAS", label: "Global food approval" },
+        { val: "E418 / Food Approved", label: "Global food approval" },
         { val: "LA & HA types", label: "Two commercial forms" },
         { val: "0.02–0.5%", label: "Typical use level" },
         { val: "3 industries", label: "Food · Pharma · Cosmetics" },
@@ -3665,7 +3677,11 @@ export const CONTENT = {
           val: "Crystal-clear gels (LA)",
           lbl: "Transparent gel formation",
         },
-        { icon: "✅", val: "E418 / GRAS", lbl: "US · EU · JP · CN approved" },
+        {
+          icon: "✅",
+          val: "E418 / Food Approved",
+          lbl: "US · EU · JP · CN approved",
+        },
         {
           icon: "🌿",
           val: "Vegan · Non-GMO",
@@ -3722,7 +3738,7 @@ export const CONTENT = {
         },
         {
           title: "Regulatory status — most widely approved microbial gum",
-          body: "Gellan gum (E418) is approved in the EU, as GRAS in the USA (21 CFR 172.665), in Japan, China (GB 2760), and by Codex Alimentarius (INS 418). It is the only microbial polysaccharide approved as a stabiliser in infant formula in the EU and USA — a unique regulatory achievement reflecting its exceptional safety profile.",
+          body: "Gellan gum (E418) is approved in the EU, as Food Approved in the USA (21 CFR 172.665), in Japan, China (GB 2760), and by Codex Alimentarius (INS 418). It is the only microbial polysaccharide approved as a stabiliser in infant formula in the EU and USA — a unique regulatory achievement reflecting its exceptional safety profile.",
         },
       ],
       comparisonAfterGrades: true,
@@ -3843,7 +3859,7 @@ export const CONTENT = {
           key: "EU",
           val: "E418 — Regulation (EC) No 1333/2008; approved in infant formula (unique among microbial gums)",
         },
-        { key: "USA (FDA)", val: "GRAS — 21 CFR 172.665" },
+        { key: "USA (FDA)", val: "Food Approved — 21 CFR 172.665" },
         {
           key: "Codex Alimentarius",
           val: "INS 418; ADI not specified (JECFA)",
@@ -3972,7 +3988,7 @@ export const CONTENT = {
           title: "EU E418",
           sub: "Regulation (EC) No 1333/2008 · Infant formula approved",
         },
-        { icon: "🇺🇸", title: "FDA GRAS", sub: "21 CFR 172.665" },
+        { icon: "🇺🇸", title: "FDA Food Approved", sub: "21 CFR 172.665" },
         { icon: "🌍", title: "JECFA INS 418", sub: "ADI not specified" },
         {
           icon: "🇯🇵",
@@ -4133,7 +4149,7 @@ export const CONTENT = {
       name: "Konjac Gum & Konjac Glucomannan",
       shortName: "Konjac Gum",
       productTag:
-        "Glucomannan · Natural hydrocolloid · E425i · E425ii · Vegan gelatin substitute · GRAS",
+        "Glucomannan · Natural hydrocolloid · E425i · E425ii · Vegan gelatin substitute · Food Approved",
       casNo: "37220-17-0",
       eNo: "E425i (Konjac Gum) · E425ii (Konjac Glucomannan)",
       synonyms: "Konjac Glucomannan, KGM, Konnyaku, INS 425",
@@ -4148,7 +4164,7 @@ export const CONTENT = {
       description: [
         "Konjac Gum and Konjac Glucomannan (KGM) are high-molecular-weight, water-soluble polysaccharides extracted from the corms of Amorphophallus konjac K. Koch, a plant cultivated for over 2,000 years in China, Japan, and Southeast Asia. Composed of D-mannose and D-glucose units at a molar ratio of approximately 1.6:1.0, connected by β-1,4-glycosidic bonds with acetyl group substitutions, Konjac Gum delivers the highest viscosity of any commercially available natural food gum.",
         "Its unique properties include powerful synergistic gelling with kappa-carrageenan and xanthan gum, an alkali-induced irreversible heat-stable gel, and exceptional prebiotic dietary fibre properties — making it the dominant hydrocolloid in Asian food applications and a growing ingredient in global food, pharmaceutical, and cosmetic markets.",
-        "VIVINE International supplies Konjac Gum (E425i) and Konjac Glucomannan (E425ii) in food grade, pharmaceutical-quality, and cosmetic grade, compliant with EU Regulation No 231/2012, FDA GRAS, JECFA, and FCC specifications.",
+        "VIVINE International supplies Konjac Gum (E425i) and Konjac Glucomannan (E425ii) in food grade, pharmaceutical-quality, and cosmetic grade, compliant with EU Regulation No 231/2012, FDA Food Approved, JECFA, and FCC specifications.",
       ],
       highlights: [
         { icon: "🌿", val: "Natural origin", lbl: "Konjac corm extract" },
@@ -4169,7 +4185,11 @@ export const CONTENT = {
           lbl: "Plant-based gel former",
         },
         { icon: "❤️", val: "Dietary fibre", lbl: "EU health claim approved" },
-        { icon: "✅", val: "E425 / GRAS", lbl: "Global food approval" },
+        {
+          icon: "✅",
+          val: "E425 / Food Approved",
+          lbl: "Global food approval",
+        },
         {
           icon: "🧪",
           val: "Alkali-set gel",
@@ -4462,7 +4482,7 @@ export const CONTENT = {
         },
         {
           icon: "🇺🇸",
-          title: "FDA — GRAS",
+          title: "FDA — Food Approved",
           sub: "Generally Recognized As Safe — food & dietary supplement use",
         },
         { icon: "🌍", title: "JECFA / INS 425", sub: "ADI: Not specified" },
@@ -6187,7 +6207,7 @@ export const CONTENT = {
           "Soluble in cold water; thermoreversible gel above cloud point",
         "Bulk Density": "300–700 g/L",
         "Ash Content": "≤ 1.5% (pharma); ≤ 5.0% (construction)",
-        Standards: "USP-NF / Ph.Eur. / JP / E464 / FDA GRAS",
+        Standards: "USP-NF / Ph.Eur. / JP / E464 / FDA Food Approved",
         Packaging: "25 kg kraft bags / custom bulk",
       },
       industries: [

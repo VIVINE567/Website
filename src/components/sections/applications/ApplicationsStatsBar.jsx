@@ -36,7 +36,7 @@ const AnimatedNumber = ({ value }) => {
 };
 
 const ApplicationsStatsBar = () => (
-  <div
+  <div data-component="ApplicationsStatsBar"
     role="region"
     aria-label="Company highlights"
     style={{ background: 'var(--forest-mid)', borderTop: '1px solid rgba(201,168,76,0.15)', borderBottom: '1px solid rgba(201,168,76,0.15)' }}

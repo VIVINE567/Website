@@ -8,7 +8,7 @@ import { CONTENT } from '../../content';
 const C = CONTENT.home.cta;
 
 const CtaSection = () => (
-  <section className="py-10 md:py-14 overflow-hidden luxury-section-radial" style={S.ctaSection}>
+  <section data-component="CtaSection" className="py-10 md:py-14 overflow-hidden luxury-section-radial" style={S.ctaSection}>
     <div className="max-w-7xl mx-auto px-4 md:px-6">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
 

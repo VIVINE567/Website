@@ -9,7 +9,7 @@ const C = CONTENT.productsPage;
 const iconMap = { Leaf, Waves, FlaskConical, ChefHat };
 
 const ProductsIntroSection = () => (
-  <section className="py-24" style={S.productsSection}>
+  <section data-component="ProductsIntroSection" className="py-24" style={S.productsSection}>
     <div className="max-w-7xl mx-auto px-4 md:px-6">
       <motion.div
         initial={{ opacity: 0, y: 20 }}

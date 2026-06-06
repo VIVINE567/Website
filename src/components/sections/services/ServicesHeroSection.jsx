@@ -3,7 +3,7 @@
 import { motion } from 'motion/react';
 
 const ServicesHeroSection = () => (
-  <header
+  <header data-component="ServicesHeroSection"
     className="relative overflow-hidden text-center pt-32 pb-20 md:pb-28"
     style={{ background: 'var(--forest)' }}
   >

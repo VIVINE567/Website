@@ -28,7 +28,7 @@ const fadeUp = (delay = 0) => ({
 });
 
 const ContactInfoPanel = () => (
-  <div>
+  <div data-component="ContactInfoPanel">
     {/* Eyebrow */}
     <motion.div {...fadeUp(0)} className="flex items-center gap-3 mb-3">
       <span className="inline-block w-4 h-px" style={{ background: 'var(--gold)' }} />

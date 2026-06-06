@@ -9,7 +9,7 @@ const fadeUp = (delay = 0) => ({
 });
 
 const ContactBannerSection = () => (
-  <section
+  <section data-component="ContactBannerSection"
     className="relative overflow-hidden pt-28 pb-12 md:pb-16"
     style={{ background: 'var(--forest)', minHeight: 320 }}
   >

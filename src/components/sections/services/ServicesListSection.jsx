@@ -38,7 +38,7 @@ const SERVICES = [
 
 const ServicesListSection = () => {
   return (
-    <section className="py-24 px-4 md:px-8 relative overflow-hidden" style={S.forestBgSolid}>
+    <section data-component="ServicesListSection" className="py-24 px-4 md:px-8 relative overflow-hidden" style={S.forestBgSolid}>
       {/* Background Radial Glow */}
       <div
         className="absolute top-[-200px] right-[-200px] w-[700px] h-[700px] rounded-full pointer-events-none"

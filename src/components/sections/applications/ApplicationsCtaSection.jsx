@@ -10,7 +10,7 @@ const CTA_CARDS = [
 ];
 
 const ApplicationsCtaSection = () => (
-  <section
+  <section data-component="ApplicationsCtaSection"
     id="applications-contact"
     aria-labelledby="cta-heading"
     className="relative py-24 md:py-32 overflow-hidden text-center"

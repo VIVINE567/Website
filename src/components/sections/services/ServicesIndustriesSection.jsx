@@ -33,7 +33,7 @@ const INDUSTRIES = [
 
 const ServicesIndustriesSection = () => {
   return (
-    <section className="py-20 px-4 md:px-8" style={S.sectionDark}>
+    <section data-component="ServicesIndustriesSection" className="py-20 px-4 md:px-8" style={S.sectionDark}>
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">

@@ -9,7 +9,7 @@ const C = CONTENT.home.about;
 const POINT_ICONS = [Globe, Truck];
 
 const AboutSection = () => (
-  <section className="py-24 overflow-hidden luxury-section-dark">
+  <section data-component="AboutSection" className="py-24 overflow-hidden luxury-section-dark">
     <div className="max-w-7xl mx-auto px-4 md:px-6 grid lg:grid-cols-2 gap-20 items-center">
 
       <motion.div

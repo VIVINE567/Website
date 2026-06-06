@@ -10,7 +10,7 @@ const ALL_PRODUCTS = Object.entries(CONTENT.productDetails).map(([slug, p]) => (
 }));
 
 const ProductSidebar = ({ currentSlug }) => (
-  <aside className="hidden lg:block relative">
+  <aside data-component="ProductSidebar" className="hidden lg:block relative">
     <div className="sticky top-[100px]">
       <h3
         className="text-xs uppercase mb-5 tracking-[0.18em]"

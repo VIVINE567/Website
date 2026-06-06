@@ -8,7 +8,7 @@ import AppCard from './AppCard';
  * Animations: once:true, amount:0, instant trigger, 0.2s max duration.
  */
 const IndustrySectionBlock = ({ id, title, desc, cards, alt = false }) => (
-  <section
+  <section data-component="IndustrySectionBlock"
     id={id}
     aria-labelledby={`${id}-heading`}
     className="py-20"

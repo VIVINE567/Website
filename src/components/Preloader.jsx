@@ -46,7 +46,7 @@ const Preloader = () => {
   const subtitleDelay = LETTERS_START + (LETTERS.length - 1) * STAGGER + 0.55;
 
   return (
-    <motion.div
+    <motion.div data-component="Preloader"
       initial={{ opacity: 1 }}
       exit={{
         opacity: 0,

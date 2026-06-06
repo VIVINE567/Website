@@ -43,7 +43,7 @@ const fadeUp = (delay = 0) => ({
 });
 
 const ApplicationsShowcaseSection = () => (
-  <section
+  <section data-component="ApplicationsShowcaseSection"
     className="py-24 overflow-hidden"
     style={{ background: 'var(--cream)', borderTop: '1px solid rgba(201,168,76,0.2)' }}
   >

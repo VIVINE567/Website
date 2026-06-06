@@ -10,7 +10,7 @@ const fadeUp = (delay = 0) => ({
 });
 
 const AboutCtaSection = () => (
-  <section
+  <section data-component="AboutCtaSection"
     id="contact"
     className="relative py-24 md:py-32 overflow-hidden text-center"
     style={{ background: 'var(--forest)' }}

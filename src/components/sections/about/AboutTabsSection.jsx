@@ -148,7 +148,7 @@ const AboutTabsSection = () => {
   const [active, setActive] = useState('why');
 
   return (
-    <section
+    <section data-component="AboutTabsSection"
       className="py-20 md:py-28 overflow-hidden"
       style={{ background: 'var(--cream-dark)', borderTop: '1px solid rgba(201,168,76,0.2)' }}
     >

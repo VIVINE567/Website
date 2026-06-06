@@ -71,7 +71,7 @@ const ProductCard = ({ product, index }) => {
 };
 
 const ProductsCategorySection = ({ category }) => (
-  <section id={category.id} className="py-16 md:py-20 scroll-mt-24">
+  <section data-component="ProductsCategorySection" id={category.id} className="py-16 md:py-20 scroll-mt-24">
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}

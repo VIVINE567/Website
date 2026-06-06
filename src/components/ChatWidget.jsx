@@ -124,7 +124,7 @@ export default function ChatWidget() {
   };
 
   return (
-    <div style={{ position: 'fixed', bottom: 24, right: 24, zIndex: 9999 }}>
+    <div data-component="ChatWidget" style={{ position: 'fixed', bottom: 24, right: 24, zIndex: 9999 }}>
       <AnimatePresence>
         {waPopup && (
           <WhatsAppPopup

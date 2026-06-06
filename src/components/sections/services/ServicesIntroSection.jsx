@@ -37,7 +37,7 @@ const AnimatedNumber = ({ value }) => {
 
 const ServicesIntroSection = () => {
   return (
-    <section className="py-20 px-4 md:px-8 lg:px-16" style={S.modalBg}>
+    <section data-component="ServicesIntroSection" className="py-20 px-4 md:px-8 lg:px-16" style={S.modalBg}>
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         {/* Left column */}
         <motion.div

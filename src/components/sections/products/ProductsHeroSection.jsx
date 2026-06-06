@@ -7,7 +7,7 @@ import { CONTENT } from '../../../content';
 const C = CONTENT.productsPage.hero;
 
 const ProductsHeroSection = () => (
-  <section
+  <section data-component="ProductsHeroSection"
     className="relative flex flex-col items-center justify-center text-center overflow-hidden pt-32 pb-24 md:pt-36 md:pb-28"
     style={S.productsHero}
   >

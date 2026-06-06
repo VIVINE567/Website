@@ -28,7 +28,7 @@ const ADVANTAGES = [
 
 const ServicesWhySection = () => {
   return (
-    <section className="py-24 px-4 md:px-8 overflow-hidden" style={S.sectionDark}>
+    <section data-component="ServicesWhySection" className="py-24 px-4 md:px-8 overflow-hidden" style={S.sectionDark}>
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Left column: Orbital visual ring */}
         <div className="flex justify-center items-center relative aspect-square max-w-[380px] mx-auto w-full">

@@ -9,7 +9,7 @@ const ServicesCtaSection = () => {
   const [quoteOpen, setQuoteOpen] = useState(false);
 
   return (
-    <section
+    <section data-component="ServicesCtaSection"
       id="services-cta"
       className="relative py-24 md:py-32 overflow-hidden text-center"
       style={{ background: 'var(--forest)' }}

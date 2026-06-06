@@ -29,7 +29,7 @@ const FormInput = ({
   };
 
   return (
-    <div className={`form-field-floating${filled ? " filled" : ""}`}>
+    <div data-component="FormInput" className={`form-field-floating${filled ? " filled" : ""}`}>
       <Component
         className={classes}
         placeholder=" "

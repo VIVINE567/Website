@@ -20,7 +20,7 @@ const fadeUp = (delay = 0) => ({
 });
 
 const CertificationsSection = () => (
-  <section
+  <section data-component="CertificationsSection"
     className="py-24 overflow-hidden"
     style={{ background: 'var(--cream)', borderTop: '1px solid rgba(201,168,76,0.2)' }}
   >

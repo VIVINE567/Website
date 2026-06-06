@@ -8,7 +8,7 @@ import { CONTENT } from '../../content';
 const ICONS = [DollarSign, Truck, Headset, Settings];
 
 const FeatureCardsSection = () => (
-  <section className="py-20 overflow-hidden" style={S.coreSection}>
+  <section data-component="FeatureCardsSection" className="py-20 overflow-hidden" style={S.coreSection}>
     <div className="max-w-7xl mx-auto px-4 md:px-6">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {CONTENT.home.featureCards.map((card, id) => {

@@ -408,7 +408,7 @@ const ProductDetailRich = ({ slug, product }) => {
               <section>
                 <motion.div {...fadeUp(0)} className="mb-6">
                   <h2 style={S.richSectionHeader}>
-                    Key properties of <em style={{ color: 'var(--gold-dark)', fontStyle: 'normal' }}>{product.shortName || product.name.split('(')[0].trim()}</em>
+                    Key properties of <em style={{ color: 'var(--gold-dark)', fontStyle: 'normal',textTransform:'capitalize' }}>{product.shortName || product.name.split('(')[0].trim()}</em>
                   </h2>
                   <p style={S.richSectionSub}>{product.keyPropertiesSub || 'What sets it apart in formulations'}</p>
                 </motion.div>
@@ -529,13 +529,14 @@ const ProductDetailRich = ({ slug, product }) => {
                   {product.grades.map((g, i) => {
                     const ok = filter === 'all' || (g.industries || []).includes(filter);
                     return (
-                      <motion.div
+                      <div
                         key={g.id}
-                        {...fadeUp(0.03 * i)}
                         style={{
                           ...S.richGradeCard,
                           ...(g.featured ? S.richGradeCardFeatured : {}),
-                          ...(ok ? {} : S.richGradeCardDim),
+                          opacity: ok ? 1 : 0.22,
+                          pointerEvents: ok ? 'auto' : 'none',
+                          transition: 'opacity 0.3s ease, border-color 0.3s ease',
                         }}
                       >
                         <div className="flex justify-between items-start gap-2 mb-1.5">
@@ -589,7 +590,7 @@ const ProductDetailRich = ({ slug, product }) => {
                             </div>
                           </>
                         )}
-                      </motion.div>
+                      </div>
                     );
                   })}
                 </div>

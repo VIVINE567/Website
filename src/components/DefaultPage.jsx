@@ -13,7 +13,7 @@ const DefaultPage = () => {
   const pathname = usePathname();
   const pageName = pathname.substring(1).replaceAll('-', ' ').replace(/\b\w/g, l => l.toUpperCase());
   return (
-    <div className="pt-32 pb-24 min-h-[70vh] flex flex-col items-center justify-center text-center px-4" style={S.defaultPageBg}>
+    <div data-component="DefaultPage" className="pt-32 pb-24 min-h-[70vh] flex flex-col items-center justify-center text-center px-4" style={S.defaultPageBg}>
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}

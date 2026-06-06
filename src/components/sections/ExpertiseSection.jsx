@@ -7,7 +7,7 @@ import { CONTENT } from '../../content';
 const C = CONTENT.home.expertise;
 
 const ExpertiseSection = () => (
-  <section className="py-24 overflow-hidden" style={S.globalLeaderSection}>
+  <section data-component="ExpertiseSection" className="py-24 overflow-hidden" style={S.globalLeaderSection}>
     <div className="max-w-4xl mx-auto px-4 text-center">
       <div className="gold-eyebrow mb-6">{C.eyebrow}</div>
       <motion.h2

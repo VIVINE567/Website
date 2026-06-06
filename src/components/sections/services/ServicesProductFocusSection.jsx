@@ -26,7 +26,7 @@ const PRODUCTS = [
 
 const ServicesProductFocusSection = () => {
   return (
-    <section className="py-20 px-4 md:px-8" style={S.modalBg}>
+    <section data-component="ServicesProductFocusSection" className="py-20 px-4 md:px-8" style={S.modalBg}>
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-14">

@@ -14,7 +14,7 @@ const CATEGORY_IMAGES = [
 ];
 
 const ApplicationsSection = () => (
-  <section className="py-24 overflow-hidden">
+  <section data-component="ApplicationsSection" className="py-24 overflow-hidden">
     <div className="max-w-7xl mx-auto px-4 md:px-6">
       <motion.div
         initial={{ opacity: 0, y: 40 }}

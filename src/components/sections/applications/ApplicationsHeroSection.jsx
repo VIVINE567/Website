@@ -15,7 +15,7 @@ const HERO_PILLS = [
 ];
 
 const ApplicationsHeroSection = () => (
-  <header
+  <header data-component="ApplicationsHeroSection"
     className="relative overflow-hidden text-center pt-32 pb-20"
     style={{ background: 'var(--forest)' }}
   >

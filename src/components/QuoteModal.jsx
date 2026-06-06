@@ -56,7 +56,7 @@ const QuoteModal = ({ open, onClose }) => {
   };
 
   return (
-    <AnimatePresence>
+    <AnimatePresence data-component="QuoteModal">
       {open && (
         <motion.div
           initial={{ opacity: 0 }}

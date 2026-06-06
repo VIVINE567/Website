@@ -95,7 +95,7 @@ const MvCard = ({ icon, tag, title, body, pills, dark }) => (
 );
 
 const AboutMissionVisionSection = () => (
-  <section
+  <section data-component="AboutMissionVisionSection"
     id="mission"
     className="py-20 md:py-28 overflow-hidden"
     style={{ background: 'var(--cream)', borderTop: '1px solid rgba(201,168,76,0.2)' }}

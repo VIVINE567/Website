@@ -12,7 +12,7 @@ const HeroSection = () => {
   const [quoteOpen, setQuoteOpen] = useState(false);
 
   return (
-  <section className="relative hero-height flex items-center justify-center pt-28 md:pt-32 lg:pt-20 pb-12 md:pb-16 overflow-hidden">
+  <section data-component="HeroSection" className="relative hero-height flex items-center justify-center pt-28 md:pt-32 lg:pt-20 pb-12 md:pb-16 overflow-hidden">
     <div className="absolute inset-0 z-0">
       <video
         src={C.videoSrc}

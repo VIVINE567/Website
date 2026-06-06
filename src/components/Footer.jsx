@@ -16,7 +16,7 @@ const fadeUp = (delay = 0) => ({
 });
 
 const Footer = () => (
-  <footer className="luxury-section-radial pt-20 pb-10" style={S.footer}>
+  <footer data-component="Footer" className="luxury-section-radial pt-20 pb-10" style={S.footer}>
     <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
 
       {/* Gold top rule */}

@@ -7,7 +7,7 @@ import { motion } from 'motion/react';
  * Fast: no per-card stagger, instant viewport trigger, short 0.18s fade.
  */
 const AppCard = ({ emoji, label, desc, tag }) => (
-  <motion.article
+  <motion.article data-component="AppCard"
     initial={{ opacity: 0, y: 8 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, amount: 0 }}

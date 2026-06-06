@@ -32,7 +32,7 @@ const VALUES = [
 ];
 
 const AboutValuesSection = () => (
-  <section
+  <section data-component="AboutValuesSection"
     id="values"
     className="py-24 md:py-32 overflow-hidden"
     style={S.sectionDark}

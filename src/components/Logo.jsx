@@ -1,5 +1,5 @@
 const Logo = ({ className = "h-16 md:h-20" }) => (
-  <div className={`flex items-center ${className}`}>
+  <div data-component="Logo" className={`flex items-center ${className}`}>
     <picture>
       <source media="(min-width: 1024px)" srcSet="/VIVINE.svg" type="image/svg+xml" />
       <img

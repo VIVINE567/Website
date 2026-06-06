@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "clean": "rm -rf .next",
-    "lint": "echo 'No lint script configured'"
+    "lint": "echo 'No lint script configured'",
+    "add-data-component": "node scripts/add-data-component.mjs"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",

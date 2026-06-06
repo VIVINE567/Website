@@ -9,7 +9,7 @@ const PRODUCTS = (CONTENT.nav.links.find((l) => l.label === 'Products')?.subItem
   .map((s) => (typeof s === 'string' ? { label: s, href: `/${s.toLowerCase().replace(/\s+/g, '-')}` } : s));
 
 const ApplicationsPortfolioStrip = () => (
-  <section style={{ padding: '60px 1.5rem 0', background: 'var(--cream)' }}>
+  <section data-component="ApplicationsPortfolioStrip" style={{ padding: '60px 1.5rem 0', background: 'var(--cream)' }}>
     <div className="max-w-6xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 8 }}

@@ -50,7 +50,7 @@ const CheckItem = ({ strong, rest }) => (
 );
 
 const AboutIntroSection = () => (
-  <section
+  <section data-component="AboutIntroSection"
     id="about-intro"
     className="py-20 md:py-28 overflow-hidden"
     style={{ background: 'var(--cream)', borderTop: '1px solid rgba(201,168,76,0.2)' }}

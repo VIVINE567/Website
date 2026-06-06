@@ -81,7 +81,7 @@ const Preloader = () => {
   }, []);
 
   return (
-    <motion.div
+    <motion.div data-component="Preloader"
       initial={{ opacity: 1 }}
       exit={{ opacity: 0, scale: 1.1, filter: "blur(10px)", transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }}
       style={S.preloaderBg}

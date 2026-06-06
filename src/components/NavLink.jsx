@@ -41,7 +41,7 @@ const NavLink = ({ href, children, subItems }) => {
   };
 
   return (
-    <div
+    <div data-component="NavLink"
       className="relative group"
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}

@@ -101,7 +101,7 @@ const StatCard = ({ number, suffix, label, index }) => (
 );
 
 const AboutHeroSection = () => (
-  <section
+  <section data-component="AboutHeroSection"
     className="relative overflow-hidden min-h-[540px] flex items-end pt-28 pb-16 md:pb-20"
     style={{ background: 'var(--forest)' }}
   >
