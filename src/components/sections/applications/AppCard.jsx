@@ -6,7 +6,7 @@ import { motion } from 'motion/react';
  * AppCard — reusable card matching the HTML .app-card pattern.
  * Fast: no per-card stagger, instant viewport trigger, short 0.18s fade.
  */
-const AppCard = ({ emoji, label, desc, tag }) => (
+const AppCard = ({ emoji, image, label, desc, tag }) => (
   <motion.article data-component="AppCard"
     initial={{ opacity: 0, y: 8 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -22,16 +22,28 @@ const AppCard = ({ emoji, label, desc, tag }) => (
     }}
   >
     {/* Emoji / image area */}
-    <div
-      className="w-full flex items-center justify-center text-4xl border-b"
-      style={{
-        aspectRatio: '4/3',
-        background: 'var(--cream-dark)',
-        borderColor: 'rgba(201,168,76,0.18)',
-      }}
-    >
-      {emoji}
-    </div>
+    {image ? (
+      <div
+        className="w-full border-b overflow-hidden"
+        style={{
+          aspectRatio: '4/3',
+          borderColor: 'rgba(201,168,76,0.18)',
+        }}
+      >
+        <img src={image} alt={label} className="w-full h-full object-cover" />
+      </div>
+    ) : (
+      <div
+        className="w-full flex items-center justify-center text-4xl border-b"
+        style={{
+          aspectRatio: '4/3',
+          background: 'var(--cream-dark)',
+          borderColor: 'rgba(201,168,76,0.18)',
+        }}
+      >
+        {emoji}
+      </div>
+    )}
 
     {/* Body */}
     <div className="p-4">

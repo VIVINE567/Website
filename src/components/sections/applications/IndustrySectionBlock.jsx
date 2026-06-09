@@ -52,8 +52,8 @@ const IndustrySectionBlock = ({ id, title, desc, cards, alt = false }) => (
       {/* Card grid */}
       <div
         role="list"
-        className="grid gap-4"
-        style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(190px, 1fr))' }}
+        className="grid gap-5"
+        style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))' }}
       >
         {cards.map((card) => (
           <AppCard key={card.label} {...card} />

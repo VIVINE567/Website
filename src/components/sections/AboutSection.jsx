@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
+import Link from 'next/link';
 import { Globe, Truck } from 'lucide-react';
 import S from '../../styles/about';
 import { CONTENT } from '../../content';
@@ -50,14 +51,16 @@ const AboutSection = () => (
           })}
         </div>
 
-        <motion.button 
+        <motion.div
           whileHover={{ scale: 1.05, y: -2, boxShadow: '0 8px 24px rgba(201,168,76,0.3)' }}
           whileTap={{ scale: 0.98 }}
           transition={{ type: "spring", stiffness: 400, damping: 15 }}
-          className="btn-primary"
+          className="inline-block"
         >
-          {C.cta}
-        </motion.button>
+          <Link href="/products" className="btn-primary">
+            {C.cta}
+          </Link>
+        </motion.div>
       </motion.div>
 
       <motion.div

@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
+import Link from 'next/link';
 import S from '../../styles/applications';
 import { CONTENT } from '../../content';
 
@@ -11,6 +12,13 @@ const CATEGORY_IMAGES = [
   '/pharma.png',
   '/tech.png',
   '/personel_care.png',
+];
+
+const CATEGORY_LINKS = [
+  '/applications#applications-food',
+  '/applications#applications-pharma',
+  '/applications#applications-industrial',
+  '/applications#applications-cosmetics',
 ];
 
 const ApplicationsSection = () => (
@@ -41,31 +49,33 @@ const ApplicationsSection = () => (
             <p className="text-xl mb-10 leading-relaxed" style={S.appsBannerBody}>
               {C.body}
             </p>
-            <button className="btn-white">{C.cta}</button>
+            <Link href="/applications" className="btn-white">{C.cta}</Link>
           </motion.div>
 
           <div className="grid grid-cols-2 gap-3 sm:gap-4">
             {C.categories.map((app, idx) => (
-              <motion.div
-                key={app}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: false, amount: 0.1 }}
-                transition={{ duration: 0.5, delay: 0.3 + idx * 0.1 }}
-                className="relative rounded-xl overflow-hidden group cursor-default"
-              >
-                <img
-                  src={CATEGORY_IMAGES[idx]}
-                  alt={app}
-                  className="w-full aspect-[3/2] object-cover block scale-[1.25]"
-                  loading="lazy"
-                />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent pt-8 pb-3 px-2 sm:pb-4 sm:px-3">
-                  <span className="block text-center text-white font-bold uppercase tracking-wide text-[10px] min-[375px]:text-xs sm:text-sm md:text-base">
-                    {app}
-                  </span>
-                </div>
-              </motion.div>
+              <Link key={app} href={CATEGORY_LINKS[idx]}>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: false, amount: 0.1 }}
+                  transition={{ duration: 0.5, delay: 0.3 + idx * 0.1 }}
+                  whileHover={{ scale: 1.03 }}
+                  className="relative rounded-xl overflow-hidden group cursor-pointer"
+                >
+                  <img
+                    src={CATEGORY_IMAGES[idx]}
+                    alt={app}
+                    className="w-full aspect-[3/2] object-cover block scale-[1.25]"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent pt-8 pb-3 px-2 sm:pb-4 sm:px-3">
+                    <span className="block text-center text-white font-bold uppercase tracking-wide text-[10px] min-[375px]:text-xs sm:text-sm md:text-base">
+                      {app}
+                    </span>
+                  </div>
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>

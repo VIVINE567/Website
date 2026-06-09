@@ -54,10 +54,6 @@ export const CONTENT = {
             href: "/applications#applications-industrial",
           },
           { label: "Pet Food", href: "/applications#applications-petfood" },
-          {
-            label: "Life Sciences",
-            href: "/applications#applications-biotech",
-          },
         ],
       },
       { label: "Services", href: "/services" },
