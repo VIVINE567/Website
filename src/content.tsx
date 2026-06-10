@@ -4695,7 +4695,7 @@ export const CONTENT = {
         "Viscosity values are indicative at 1% aqueous solution, 25°C, Brookfield viscometer with 2–4 hours hydration. Actual viscosity varies with hydration time, temperature, agitation, pH, and electrolyte concentration. The EU maximum permitted level for Konjac Gum and Konjac Glucomannan is 10 g/kg in all permitted food categories. Contact VIVINE International for grade-specific TDS, SDS, COA, and sample requests.",
     },
     hpmc: {
-      layout: "rich",
+      layout: "hpmc",
       name: "Hydroxypropyl Methyl Cellulose (HPMC)",
       shortName: "HPMC",
       productTag: "Modified cellulose ether · E464",
@@ -4984,17 +4984,17 @@ export const CONTENT = {
     },
 
     hec: {
-      layout: "rich",
+      layout: "hec",
       name: "HEC — Hydroxyethyl Cellulose",
       shortName: "HEC",
       productTag:
         "Cellulose ether · Non-ionic · Water-soluble · Multi-industry thickener",
       synonyms:
-        "HEC, Hydroxyethyl Cellulose, Cellulose Hydroxyethyl Ether, INCI: Hydroxyethylcellulose",
+        "Cellulose, 2-hydroxyethyl ether · INCI: Hydroxyethylcellulose",
       tagline:
-        "Hydroxyethyl Cellulose (HEC) is a non-ionic, water-soluble cellulose ether that remains fully soluble across the entire temperature range — it does not gel on heating — making it the preferred cellulose ether for paints & coatings, oil & gas drilling, construction, personal care, detergents, and textile processing.",
+        "Hydroxyethyl Cellulose (HEC) is a non-ionic, water-soluble cellulose ether produced by the reaction of alkali cellulose with ethylene oxide. Unlike methylcellulose derivatives, HEC remains fully soluble across the entire temperature range — it does not gel on heating — making it the preferred cellulose ether for ambient and elevated-temperature applications. HEC dissolves readily in both hot and cold water to form clear, pseudoplastic solutions with excellent thickening, film-forming, and water-retention properties. It is the largest-volume cellulose ether in the global paints and coatings industry, and is equally critical in oil and gas drilling fluids, construction chemicals, personal care formulations, liquid detergents, and textile processing.",
       casNo: "9004-62-0",
-      eNo: "—",
+      eNo: "EC 618-391-8",
       origin:
         "Modified Cellulose (wood pulp / cotton linters + ethylene oxide)",
       moq: "25 kg",
@@ -5008,7 +5008,7 @@ export const CONTENT = {
         { val: "CAS 9004-62-0", label: "Chemical identity" },
         { val: "Non-ionic", label: "No gel on heating" },
         { val: "6 industries", label: "Served globally" },
-        { val: "USP-NF·EP·JP", label: "Pharma standards" },
+        { val: "0.1–1.5%", label: "Typical dosage (w/w)" },
       ],
       highlights: [
         { icon: "🎨", val: "Paints & Coatings", lbl: "Largest HEC market" },
@@ -5523,7 +5523,7 @@ export const CONTENT = {
     },
 
     mhec: {
-      layout: "rich",
+      layout: "mhec",
       name: "MHEC — Methyl Hydroxyethyl Cellulose",
       shortName: "MHEC",
       productTag:
@@ -6122,7 +6122,7 @@ export const CONTENT = {
     },
 
     hpmc: {
-      layout: "rich",
+      layout: "hpmc",
       name: "HPMC — Hydroxypropyl Methylcellulose",
       shortName: "HPMC",
       productTag:

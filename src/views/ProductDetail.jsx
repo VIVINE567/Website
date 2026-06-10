@@ -10,6 +10,9 @@ import { CONTENT } from '../content';
 import DefaultPage from '../components/DefaultPage';
 import FormInput from '../components/FormInput';
 import ProductDetailRich from './ProductDetailRich';
+import ProductDetailHpmc from './ProductDetailHpmc';
+import ProductDetailHec from './ProductDetailHec';
+import ProductDetailMhec from './ProductDetailMhec';
 import QuoteModal from '../components/QuoteModal';
 
 const ALL_PRODUCTS = Object.entries(CONTENT.productDetails).map(([slug, p]) => ({
@@ -143,8 +146,17 @@ const ProductDetail = () => {
 
   if (!product) return <DefaultPage />;
 
-  // Branch on layout — rich layout for the new cellulose-derivative products.
+  // Branch on layout — rich layout for cellulose-derivative products.
   // These return BEFORE the rest of this component's hooks/handlers run.
+  if (product.layout === 'hpmc') {
+    return <ProductDetailHpmc slug={slug} />;
+  }
+  if (product.layout === 'hec') {
+    return <ProductDetailHec slug={slug} product={product} />;
+  }
+  if (product.layout === 'mhec') {
+    return <ProductDetailMhec slug={slug} />;
+  }
   if (product.layout === 'rich') {
     return <ProductDetailRich slug={slug} product={product} />;
   }
