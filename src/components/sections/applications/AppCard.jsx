@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'motion/react';
 
 /**
@@ -24,13 +25,20 @@ const AppCard = ({ emoji, image, label, desc, tag }) => (
     {/* Emoji / image area */}
     {image ? (
       <div
-        className="w-full border-b overflow-hidden"
+        className="relative w-full border-b overflow-hidden"
         style={{
           aspectRatio: '4/3',
           borderColor: 'rgba(201,168,76,0.18)',
+          background: 'var(--cream-dark)',
         }}
       >
-        <img src={image} alt={label} className="w-full h-full object-cover" />
+        <Image
+          src={image}
+          alt={label}
+          fill
+          sizes="(max-width: 640px) 90vw, (max-width: 1280px) 33vw, 300px"
+          className="object-cover"
+        />
       </div>
     ) : (
       <div
