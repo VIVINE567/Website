@@ -136,7 +136,7 @@ export const CONTENT = {
           title: "Food Stabilizers (Blends & Systems)",
           desc: "We provide customized food stabilizer blends and systems developed to enhance texture, emulsification, stability, and overall product performance.",
           tags: "Our stabilizer solutions are widely used in Dairy, Beverages, Pet Food, Confectionery, Jelly, Sauces, Meat Products, Bakery, and Plant-Based Foods, helping manufacturers achieve better consistency and processing efficiency",
-          img: "/Food Stabilizers (Blends & Systems).png",
+          img: "/food-stabilizers-blends-systems.png",
           imgAlt: "Stabilizers",
           imgRight: false,
         },
