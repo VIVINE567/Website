@@ -1,0 +1,98 @@
+// CCS technical specifications and grade cards
+
+const IC = {
+  pharma: { bg: '#EAF0FB', tx: '#1A3A8C' },
+  nutri:  { bg: '#EAF5E8', tx: '#1E6B28' },
+  otc:    { bg: '#FFF4E8', tx: '#8A4A00' },
+  all:    { bg: '#EAEEfA', tx: '#1A3A8C' },
+};
+
+export const SPEC_TABLE = [
+  ['Full name', 'Croscarmellose Sodium'],
+  ['Chemical type', 'Cross-linked Sodium Carboxymethyl Cellulose (insoluble, cross-linked polymer)'],
+  ['CAS number', '74811-65-7'],
+  ['Molecular weight', 'High molecular weight polymer (cross-linked; MW not determinable by conventional methods)'],
+  ['Synonyms', 'CCS, Cross-linked Na-CMC, Modified CMC, Croscarmellose Sodium USP/NF'],
+  ['Source', 'Semi-synthetic — produced by cross-linking sodium carboxymethyl cellulose (from refined cellulose)'],
+  ['Appearance', 'White to off-white, odourless, hygroscopic powder'],
+  ['Solubility', 'Insoluble in water (swells without dissolving); insoluble in ethanol, acetone, common organic solvents'],
+  { section: 'Pharmacopoeial Specifications (USP/NF, Ph.Eur. 9.0)' },
+  ['pH (1% aqueous dispersion)', '5.0–7.0 (USP/NF); 5.0–7.0 (Ph.Eur.)'],
+  ['Sodium content', '7.3–10.8% (USP/NF); calculated on dry basis'],
+  ['Loss on drying', '≤ 10.0% (USP/NF, 105 °C, 3 h); ≤ 10.0% (Ph.Eur.)'],
+  ['Settling volume', '≥ 10.0 mL (USP/NF test — measures swelling capacity in water)'],
+  ['Chloride', '≤ 0.5% (USP/NF)'],
+  ['Heavy metals', '≤ 20 ppm (USP/NF); ≤ 10 ppm (Ph.Eur.)'],
+  ['Arsenic', '≤ 2 ppm (Ph.Eur.)'],
+  ['Lead', '≤ 5 ppm'],
+  ['Microbial limits — total aerobic count', '≤ 1,000 CFU/g (USP/NF, Ph.Eur.)'],
+  ['Microbial limits — yeasts & moulds', '≤ 100 CFU/g'],
+  ['E. coli / Salmonella', 'Absent (USP/NF, Ph.Eur.)'],
+  { section: 'Functional / Performance Properties' },
+  ['Swelling volume', '4–8× original volume in water'],
+  ['Typical use level — tablets', '0.5–5.0% w/w (most formulations 1–3%)'],
+  ['Typical use level — capsules', '10–25% of fill weight (hard gelatin capsules)'],
+  ['Compatible tablet processes', 'Wet granulation (WG), Direct compression (DC), Dry granulation / roller compaction'],
+  ['Addition method (WG)', 'Intragranular, extragranular, or split (recommended: 50% intra + 50% extra)'],
+  ['Addition method (DC)', 'Extragranular blend, added before final lubrication step'],
+  { section: 'Compliance & Regulatory' },
+  ['Pharmacopoeial monographs', 'USP/NF · European Pharmacopoeia (Ph.Eur.) · British Pharmacopoeia (BP) · Japanese Pharmacopoeia (JP XVII)'],
+  ['IPEC / EXCIPACT GMP', 'Produced under pharmaceutical excipient GMP (ICH Q7 aligned)'],
+  ['Drug Master File (DMF)', 'Available — US FDA DMF; EU EDMF available on request'],
+  ['Packaging', '20 kg / 25 kg double polyethylene-lined kraft bags; re-closable PE sacks on request'],
+];
+
+export const GRADES = [
+  {
+    id: 'std-pharma', name: 'Standard pharma grade', range: 'Use level: 0.5–5.0% w/w', viscPct: 90, featured: true,
+    industries: ['pharma', 'otc'],
+    badge: { ...IC.all, text: 'Major volume' },
+    specs: [
+      ['Use level', '0.5–5.0% w/w (optimum 1–3%)'],
+      ['pH (1% disp.)', '5.0–7.0'],
+      ['Loss on drying', '≤ 10.0%'],
+      ['Settling volume', '≥ 10.0 mL (USP)'],
+      ['Standards', 'USP/NF · Ph.Eur. · BP · JP'],
+    ],
+    apps: [{ l: 'Rx compressed tablets', i: 'pharma' }, { l: 'OTC tablets', i: 'otc' }, { l: 'Wet & DC granulation', i: 'pharma' }],
+  },
+  {
+    id: 'fine', name: 'Fine particle grade', range: 'Use level: 0.5–3.0% w/w', viscPct: 70, featured: false,
+    industries: ['pharma'],
+    badge: { ...IC.pharma, text: 'ODT / DC' },
+    specs: [
+      ['Use level', '0.5–3.0% w/w'],
+      ['Particle size', 'Reduced D90 vs. standard grade'],
+      ['pH (1% disp.)', '5.0–7.0'],
+      ['Best for', 'ODT, low-dose APIs, DC process'],
+      ['Standards', 'USP/NF · Ph.Eur. · BP · JP'],
+    ],
+    apps: [{ l: 'ODT tablets', i: 'pharma' }, { l: 'Low-dose API tablets', i: 'pharma' }, { l: 'Mini-tablets', i: 'pharma' }],
+  },
+  {
+    id: 'nutri', name: 'Nutraceutical grade', range: 'Use level: 0.5–4.0% w/w', viscPct: 80, featured: false,
+    industries: ['nutri'],
+    badge: { ...IC.nutri, text: 'Nutraceutical' },
+    specs: [
+      ['Use level', '0.5–4.0% w/w'],
+      ['pH (1% disp.)', '5.0–7.0'],
+      ['Loss on drying', '≤ 10.0%'],
+      ['Quality level', 'Meets USP specifications'],
+      ['Applications', 'Vitamins, minerals, herbal, sports'],
+    ],
+    apps: [{ l: 'Vitamin tablets', i: 'nutri' }, { l: 'Herbal supplements', i: 'nutri' }, { l: 'Sports nutrition tablets', i: 'nutri' }],
+  },
+  {
+    id: 'capsule', name: 'Capsule fill grade', range: 'Use level: 10–25% of fill wt', viscPct: 55, featured: false,
+    industries: ['pharma', 'otc', 'nutri'],
+    badge: { ...IC.otc, text: 'Capsule' },
+    specs: [
+      ['Use level', '10–25% of capsule fill weight'],
+      ['pH (1% disp.)', '5.0–7.0'],
+      ['Loss on drying', '≤ 10.0%'],
+      ['Compatible with', 'Hard gelatin, HPMC capsules'],
+      ['Standards', 'USP/NF · Ph.Eur. · BP · JP'],
+    ],
+    apps: [{ l: 'Powder-fill capsules', i: 'pharma' }, { l: 'Pellet capsules', i: 'pharma' }, { l: 'Supplement capsules', i: 'nutri' }],
+  },
+];

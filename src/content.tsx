@@ -7688,7 +7688,7 @@ export const CONTENT = {
     },
 
     "croscarmellose-sodium": {
-      layout: "rich",
+      layout: "ccs",
       name: "Croscarmellose Sodium (CCS)",
       shortName: "Croscarmellose Sodium",
       productTag:

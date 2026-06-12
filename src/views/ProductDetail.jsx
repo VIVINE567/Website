@@ -22,6 +22,7 @@ import ProductDetailPac from './ProductDetailPac';
 import ProductDetailKonjac from './ProductDetailKonjac';
 import ProductDetailXanthan from './ProductDetailXanthan';
 import ProductDetailGuar from './ProductDetailGuar';
+import ProductDetailCcs from './ProductDetailCcs';
 import QuoteModal from '../components/QuoteModal';
 
 const ALL_PRODUCTS = Object.entries(CONTENT.productDetails).map(([slug, p]) => ({
@@ -192,6 +193,9 @@ const ProductDetail = () => {
   }
   if (product.layout === 'guar') {
     return <ProductDetailGuar slug={slug} />;
+  }
+  if (product.layout === 'ccs') {
+    return <ProductDetailCcs slug={slug} />;
   }
   if (product.layout === 'rich') {
     return <ProductDetailRich slug={slug} product={product} />;
