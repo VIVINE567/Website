@@ -13,6 +13,9 @@ import ProductDetailRich from './ProductDetailRich';
 import ProductDetailHpmc from './ProductDetailHpmc';
 import ProductDetailHec from './ProductDetailHec';
 import ProductDetailMhec from './ProductDetailMhec';
+import ProductDetailCarrageenan from './ProductDetailCarrageenan';
+import ProductDetailPga from './ProductDetailPga';
+import ProductDetailPectin from './ProductDetailPectin';
 import QuoteModal from '../components/QuoteModal';
 
 const ALL_PRODUCTS = Object.entries(CONTENT.productDetails).map(([slug, p]) => ({
@@ -156,6 +159,15 @@ const ProductDetail = () => {
   }
   if (product.layout === 'mhec') {
     return <ProductDetailMhec slug={slug} />;
+  }
+  if (product.layout === 'carrageenan') {
+    return <ProductDetailCarrageenan slug={slug} />;
+  }
+  if (product.layout === 'pga') {
+    return <ProductDetailPga slug={slug} />;
+  }
+  if (product.layout === 'pectin') {
+    return <ProductDetailPectin slug={slug} />;
   }
   if (product.layout === 'rich') {
     return <ProductDetailRich slug={slug} product={product} />;

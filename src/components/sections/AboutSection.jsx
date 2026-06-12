@@ -74,6 +74,8 @@ const AboutSection = () => (
           <img
             src={C.img}
             alt={C.imgAlt}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover object-bottom hover:scale-105 transition-transform duration-700"
             referrerPolicy="no-referrer"
           />

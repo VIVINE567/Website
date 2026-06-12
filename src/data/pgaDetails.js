@@ -1,0 +1,16 @@
+// PGA SEO product description + footer note
+
+export const SEO_TITLE = 'Product description';
+
+// Paragraphs may contain inline <strong>/<em> markup (rendered via dangerouslySetInnerHTML)
+export const SEO_PARAS = [
+  '<strong>Propylene Glycol Alginate (PGA)</strong>, also known as Hydroxypropyl Alginate (CAS 9005-37-2, E405, INS 405), is the propylene glycol ester of alginic acid — a naturally occurring anionic polysaccharide extracted from brown seaweed species including <em>Macrocystis pyrifera</em>, <em>Laminaria hyperborea</em>, and <em>Ascophyllum nodosum</em>. PGA is manufactured by esterifying alginic acid with propylene oxide under controlled conditions, yielding a degree of esterification (DE) typically between 50% and 85%.',
+  'The defining functional advantage of PGA over other alginate salts (sodium alginate, potassium alginate) is its <strong>exceptional stability in acidic environments (pH 3–6)</strong>. While sodium alginate precipitates as insoluble alginic acid below pH 4, PGA remains fully soluble and functional — a property that makes it indispensable in acidic food and beverage formulations, acidic pharmaceutical preparations, and cosmetic products with low pH.',
+  "In the <strong>food &amp; beverage industry</strong>, PGA (E405) is approved under EU Regulation (EC) No 1333/2008, FDA 21 CFR 172.858 (GRAS), and JECFA (ADI 0–25 mg/kg bw/day). It is the food industry's preferred <strong>beer foam stabilizer</strong> (head retention and lacing), emulsifier in <strong>salad dressings and sauces</strong>, cloud and pulp stabilizer in <strong>fruit beverages</strong>, and structuring agent in <strong>dairy desserts, ice cream, and whipped toppings</strong>. Typical food use levels range from 0.01% (beer foam) to 0.5% (dressings/emulsions).",
+  'In <strong>pharmaceutical applications</strong>, PGA (USP/NF grade) serves as an excipient in tablet binding, controlled-release matrix systems, topical gels, and oral suspensions. Its acid stability allows performance in gastric-pH matrices where unmodified alginates are unsuitable. Heavy metal and microbiological specifications comply with USP/NF pharmacopoeial requirements.',
+  'In <strong>cosmetics and personal care</strong>, PGA (cosmetic/INCI grade) is used as an emulsifier, thickener, film former, and foam stabilizer in lotions, creams, shampoos, face serums, sunscreens, and toothpaste. It builds viscosity, stabilizes emulsions, and delivers a smooth, non-greasy skin feel. It is compatible with anionic, amphoteric, and nonionic surfactant systems.',
+  '<strong>VIVINE International</strong> supplies Propylene Glycol Alginate in food grade (E405/FCC/JECFA compliant), pharma grade (USP/NF), and cosmetic grade (INCI compliant), across low, medium, and high viscosity ranges. Full technical data sheets (TDS), Safety Data Sheets (SDS), Certificate of Analysis (COA), and compliance documentation are available on request. Halal and Kosher certification available upon request.',
+];
+
+export const FOOTER_NOTE =
+  'Viscosity values are indicative at 1% aqueous solution at 25°C using a Brookfield LV viscometer (Spindle 3, 30 rpm). Degree of esterification, viscosity, heavy metal limits, and regulatory compliance vary by grade. Contact VIVINE International for grade-specific TDS, SDS, COA, and sample requests.';

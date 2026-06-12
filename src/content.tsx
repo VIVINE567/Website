@@ -595,7 +595,7 @@ export const CONTENT = {
 
   productDetails: {
     carrageenan: {
-      layout: "rich",
+      layout: "carrageenan",
       name: "Carrageenan",
       shortName: "Carrageenan",
       productTag:
@@ -1595,7 +1595,7 @@ export const CONTENT = {
     },
 
     "propylene-glycol-alginate": {
-      layout: "rich",
+      layout: "pga",
       name: "Propylene Glycol Alginate (PGA)",
       shortName: "PGA",
       productTag: "Alginate ester · Anionic polysaccharide · E405",
@@ -1942,7 +1942,7 @@ export const CONTENT = {
     },
 
     pectin: {
-      layout: "rich",
+      layout: "pectin",
       name: "Pectin",
       shortName: "Pectin",
       productTag:

@@ -17,7 +17,9 @@ const HeroSection = () => {
     <div className="absolute inset-0 z-0">
       <video
         src={C.videoSrc}
+        poster="/food_inds.png"
         autoPlay loop muted playsInline
+        preload="metadata"
         className="w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-brand-primary/50" />

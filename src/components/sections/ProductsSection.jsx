@@ -19,6 +19,8 @@ const ProductCard = ({ product }) => {
     >
       <img
         src={product.img}
+        loading="lazy"
+        decoding="async"
         className={`w-full h-full object-cover transition-transform duration-700 scale-110${
           product.whiteBg ? ' group-hover:scale-120' : ' hover:scale-120'
         }`}

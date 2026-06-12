@@ -104,6 +104,8 @@ const CertificationsSection = () => (
             <img
               src={cert.src}
               alt={cert.alt}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-contain"
               style={{ transform: 'scale(3.0)', transformOrigin: cert.origin }}
             />
