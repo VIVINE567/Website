@@ -1,0 +1,121 @@
+// Konjac Gum technical specifications and grade cards
+
+// Key/value rows with section headers ({ section: '...' }) — "Technical specifications"
+// Food grade — EU E425 / EU Regulation No 231/2012 / FCC / JECFA
+export const SPEC_TABLE = [
+  { section: 'Identification & General' },
+  ['Common names', 'Konjac Gum, Konjac Glucomannan, KGM, Konjac Mannan, Konnyaku Flour'],
+  ['Botanical source', 'Amorphophallus konjac K. Koch — corms (underground storage tubers); East Asia origin'],
+  ['CAS number', '37220-17-0'],
+  ['E number', 'E425i (Konjac Gum) · E425ii (Konjac Glucomannan)'],
+  ['INS number', 'INS 425'],
+  ['Chemical class', 'Glucomannan polysaccharide (non-ionic)'],
+  ['Backbone composition', 'β-1,4-linked D-mannose and D-glucose units (M:G ≈ 1.6:1) with acetyl side groups'],
+  ['Appearance', 'White to cream to light tan, free-flowing odourless powder'],
+  ['Water absorption', 'Absorbs up to 200 times its own weight in water'],
+  { section: 'Solubility & Hydration' },
+  ['Cold water solubility', 'Dispersible in cold water; forms highly viscous solution at ambient temperature'],
+  ['Hot water solubility', 'Fully soluble; solubility increases significantly with heat and agitation'],
+  ['Hydration time', '2–4 hours for maximum viscosity at 25°C; 30–60 minutes at 60–80°C with agitation'],
+  ['pH of 1% solution', '4.0–7.0 (Konjac Gum E425i) · 5.0–7.0 (Konjac Glucomannan E425ii)'],
+  ['pH stability range', '4.0–10.0 (stable viscosity across wide pH)'],
+  { section: 'Chemical parameters — EU Regulation No 231/2012' },
+  ['Glucomannan content — E425i', 'Not less than 75% (on dry basis)'],
+  ['Glucomannan content — E425ii', 'Not less than 95% (on dry basis)'],
+  ['Viscosity — E425i (1%, 25°C)', 'Not less than 4,000 mPa·s (per EU specification)'],
+  ['Viscosity — E425ii (1%, 25°C)', 'Not less than 15,000 mPa·s (per EU specification)'],
+  ['Moisture content (loss on drying)', 'Not more than 15.0%'],
+  ['Protein content (N × 5.7)', 'Not more than 3% (E425i) · Not more than 1.5% (E425ii)'],
+  ['Starch content', 'Not more than 3% (E425i) · Not more than 1.5% (E425ii)'],
+  ['Total ash content', 'Not more than 5% (E425i) · Not more than 2% (E425ii)'],
+  ['Sulphur dioxide (SO₂)', 'Not more than 10 mg/kg'],
+  { section: 'Heavy metals — EU Regulation No 231/2012' },
+  ['Lead (Pb)', 'Not more than 2 mg/kg (E425i) · Not more than 1 mg/kg (E425ii)'],
+  ['Arsenic (As)', 'Not more than 3 mg/kg'],
+  ['Mercury (Hg)', 'Not more than 1 mg/kg'],
+  { section: 'Microbiological limits' },
+  ['Total aerobic microbial count', 'Not more than 5,000 colony-forming units per gram'],
+  ['Yeast and mould count', 'Not more than 500 colony-forming units per gram'],
+  ['Salmonella spp.', 'Absent in 25 grams'],
+  ['Escherichia coli', 'Absent in 1 gram'],
+  { section: 'Gelation parameters' },
+  ['Alkali-set gel (irreversible)', 'Calcium hydroxide at pH ≥ 11; heat-stable above 100°C'],
+  ['Synergistic gel with κ-carrageenan', 'Thermoreversible elastic gel; sets without alkali; optimal ratio 40:60 to 60:40 KGM:κ-carrageenan'],
+  ['Synergistic gel with xanthan gum', 'Soft, elastic, freeze-thaw stable gel; sets at ambient temperature'],
+  ['EU maximum permitted level (MPL) in food', '10 g/kg in all permitted food categories'],
+  { section: 'Packaging & storage' },
+  ['Packaging', '25 kg multi-wall paper bags with polyethylene liner'],
+  ['Storage', 'Cool, dry conditions (below 25°C); protect from moisture and direct sunlight'],
+  ['Shelf life', '24 months from date of manufacture in original sealed packaging'],
+];
+
+const IC = {
+  food:     { bg: '#EBF5E0', tx: '#3A5C20' },
+  pharma:   { bg: '#EAF0FB', tx: '#1A3A8C' },
+  cosmetic: { bg: '#FAE8F4', tx: '#7A1A6A' },
+  all:      { bg: '#EBF5E0', tx: '#3A5C20' },
+};
+
+// "Available grades" cards (filterable by industry). `viscPct` drives the bar fill.
+export const GRADES = [
+  {
+    id: 'kg-std', name: 'Konjac Gum — standard grade (E425i)', range: 'Viscosity ≥ 4,000 mPa·s (1%, 25°C)', viscPct: 38, featured: false,
+    industries: ['food', 'cosmetic'],
+    badge: { bg: IC.all.bg, tx: IC.all.tx, text: 'Food grade' },
+    specs: [
+      ['E number', 'E425i'],
+      ['Glucomannan', '≥ 75% (dry basis)'],
+      ['Viscosity', '≥ 4,000 mPa·s (1%, 25°C)'],
+      ['Protein', '≤ 3% / Starch ≤ 3%'],
+    ],
+    apps: [{ l: 'Konjac noodles', i: 'food' }, { l: 'Bakery — gluten-free', i: 'food' }, { l: 'Konjac jelly', i: 'food' }, { l: 'Konjac sponge', i: 'cosmetic' }],
+  },
+  {
+    id: 'kgm-std', name: 'Konjac Glucomannan — standard (E425ii)', range: 'Viscosity ≥ 15,000 mPa·s (1%, 25°C)', viscPct: 70, featured: true,
+    industries: ['food', 'pharma', 'cosmetic'],
+    badge: { bg: IC.all.bg, tx: IC.all.tx, text: 'Most popular' },
+    specs: [
+      ['E number', 'E425ii'],
+      ['Glucomannan', '≥ 95% (dry basis)'],
+      ['Viscosity', '15,000–25,000 mPa·s (1%, 25°C)'],
+      ['Protein', '≤ 1.5% / Starch ≤ 1.5%'],
+    ],
+    apps: [{ l: 'Vegan gelatin substitute', i: 'food' }, { l: 'Plant-based dairy', i: 'food' }, { l: 'Dietary fibre supplement', i: 'pharma' }, { l: 'Facial sheet mask', i: 'cosmetic' }, { l: 'Moisturisers & serums', i: 'cosmetic' }],
+  },
+  {
+    id: 'kgm-hv', name: 'Konjac Glucomannan — high viscosity (E425ii)', range: 'Viscosity ≥ 25,000 mPa·s (1%, 25°C)', viscPct: 100, featured: false,
+    industries: ['food', 'pharma'],
+    badge: { bg: IC.pharma.bg, tx: IC.pharma.tx, text: 'Premium KGM' },
+    specs: [
+      ['E number', 'E425ii'],
+      ['Glucomannan', '≥ 95% (dry basis)'],
+      ['Viscosity', '25,000–40,000+ mPa·s'],
+      ['Molecular weight', 'High MW fraction'],
+    ],
+    apps: [{ l: 'Sustained-release tablet', i: 'pharma' }, { l: 'Low-calorie premium food', i: 'food' }, { l: 'Functional beverages', i: 'food' }, { l: 'Gut health supplement', i: 'pharma' }],
+  },
+  {
+    id: 'pharma-grade', name: 'Pharmaceutical grade KGM', range: '≥ 95% KGM · USP / Ph.Eur. quality', viscPct: 75, featured: false,
+    industries: ['pharma'],
+    badge: { bg: IC.pharma.bg, tx: IC.pharma.tx, text: 'Pharma' },
+    specs: [
+      ['Grade', 'Pharmaceutical quality'],
+      ['Glucomannan', '≥ 95% (dry basis)'],
+      ['Microbial', 'Controlled — USP limits'],
+      ['Heavy metals', 'Compliant — 1 mg/kg Pb limit'],
+    ],
+    apps: [{ l: 'Weight management supplement', i: 'pharma' }, { l: 'Cholesterol management', i: 'pharma' }, { l: 'Prebiotic / gut health', i: 'pharma' }, { l: 'Oral drug delivery', i: 'pharma' }],
+  },
+  {
+    id: 'cosmetic-grade', name: 'Cosmetic grade KGM', range: 'Film-forming · Ultra-high purity', viscPct: 65, featured: false,
+    industries: ['cosmetic'],
+    badge: { bg: IC.cosmetic.bg, tx: IC.cosmetic.tx, text: 'Cosmetics' },
+    specs: [
+      ['Grade', 'Cosmetic / personal care'],
+      ['Glucomannan', '≥ 90% (dry basis)'],
+      ['Skin compatibility', 'Excellent'],
+      ['Film formation', 'Excellent (glass skin)'],
+    ],
+    apps: [{ l: 'Facial sheet mask', i: 'cosmetic' }, { l: 'Anti-aging serum', i: 'cosmetic' }, { l: 'Shampoo / conditioner', i: 'cosmetic' }, { l: 'Sunscreen formulation', i: 'cosmetic' }],
+  },
+];

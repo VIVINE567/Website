@@ -4141,7 +4141,7 @@ export const CONTENT = {
         "Gel strength values are indicative at 0.5% concentration with appropriate cations at 25°C. Actual gel strength, melting temperature, and clarity are highly dependent on gellan type (LA/HA), cation type and concentration, pH, temperature profile, and co-ingredients. Contact VIVINE International for grade-specific TDS, SDS, COA, samples, and formulation guidance.",
     },
     "konjac-gum": {
-      layout: "rich",
+      layout: "konjac",
       name: "Konjac Gum & Konjac Glucomannan",
       shortName: "Konjac Gum",
       productTag:
