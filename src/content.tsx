@@ -3171,7 +3171,7 @@ export const CONTENT = {
     },
 
     "guar-gum": {
-      layout: "rich",
+      layout: "guar",
       name: "Guar Gum",
       shortName: "Guar Gum",
       productTag:

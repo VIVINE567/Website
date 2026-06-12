@@ -17,6 +17,7 @@ import ProductDetailCarrageenan from './ProductDetailCarrageenan';
 import ProductDetailPga from './ProductDetailPga';
 import ProductDetailPectin from './ProductDetailPectin';
 import ProductDetailXanthan from './ProductDetailXanthan';
+import ProductDetailGuar from './ProductDetailGuar';
 import QuoteModal from '../components/QuoteModal';
 
 const ALL_PRODUCTS = Object.entries(CONTENT.productDetails).map(([slug, p]) => ({
@@ -172,6 +173,9 @@ const ProductDetail = () => {
   }
   if (product.layout === 'xanthan') {
     return <ProductDetailXanthan slug={slug} />;
+  }
+  if (product.layout === 'guar') {
+    return <ProductDetailGuar slug={slug} />;
   }
   if (product.layout === 'rich') {
     return <ProductDetailRich slug={slug} product={product} />;
