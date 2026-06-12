@@ -17,6 +17,8 @@ import ProductDetailCarrageenan from './ProductDetailCarrageenan';
 import ProductDetailPga from './ProductDetailPga';
 import ProductDetailPectin from './ProductDetailPectin';
 import ProductDetailGellan from './ProductDetailGellan';
+import ProductDetailCmc from './ProductDetailCmc';
+import ProductDetailPac from './ProductDetailPac';
 import ProductDetailKonjac from './ProductDetailKonjac';
 import ProductDetailXanthan from './ProductDetailXanthan';
 import ProductDetailGuar from './ProductDetailGuar';
@@ -175,6 +177,12 @@ const ProductDetail = () => {
   }
   if (product.layout === 'gellan') {
     return <ProductDetailGellan slug={slug} />;
+  }
+  if (product.layout === 'cmc') {
+    return <ProductDetailCmc slug={slug} />;
+  }
+  if (product.layout === 'pac') {
+    return <ProductDetailPac slug={slug} />;
   }
   if (product.layout === 'konjac') {
     return <ProductDetailKonjac slug={slug} />;

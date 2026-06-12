@@ -6753,7 +6753,7 @@ export const CONTENT = {
     },
 
     "sodium-cmc": {
-      layout: "rich",
+      layout: "cmc",
       name: "Sodium Carboxymethyl Cellulose (Sodium CMC)",
       shortName: "Sodium CMC",
       productTag: "Anionic cellulose ether · Cellulose Gum · E466",
@@ -7089,7 +7089,7 @@ export const CONTENT = {
     },
 
     "polyanionic-cellulose": {
-      layout: "rich",
+      layout: "pac",
       name: "Polyanionic Cellulose (PAC)",
       shortName: "PAC",
       productTag: "Anionic cellulose ether · High-DS CMC · API 13A / ISO 13500",
