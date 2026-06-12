@@ -2480,7 +2480,7 @@ export const CONTENT = {
     },
 
     "xanthan-gum": {
-      layout: "rich",
+      layout: "xanthan",
       name: "Xanthan Gum",
       shortName: "Xanthan Gum",
       productTag:
