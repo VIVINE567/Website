@@ -3635,7 +3635,7 @@ export const CONTENT = {
     },
 
     "gellan-gum": {
-      layout: "rich",
+      layout: "gellan",
       name: "Gellan Gum",
       shortName: "Gellan Gum",
       productTag:
