@@ -30,48 +30,21 @@ const ServicesWhySection = () => {
   return (
     <section data-component="ServicesWhySection" className="py-24 px-4 md:px-8 overflow-hidden" style={S.sectionDark}>
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        {/* Left column: Orbital visual ring */}
-        <div className="flex justify-center items-center relative aspect-square max-w-[380px] mx-auto w-full">
-          {/* Solid outer ring */}
-          <motion.div
-            className="absolute inset-0 rounded-full border"
-            style={{ borderColor: 'rgba(201,168,76,0.25)' }}
-            animate={{ rotate: 360 }}
-            transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
+        {/* Left column: Global logistics image */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className="flex justify-center items-center max-w-[480px] mx-auto w-full"
+        >
+          <img
+            src="/services-why-global.jpg"
+            alt="Global sourcing and logistics network"
+            className="w-full h-auto rounded-2xl shadow-xl"
+            style={{ border: '1px solid rgba(201,168,76,0.15)' }}
           />
-
-          {/* Dashed inner ring, rotating reverse */}
-          <motion.div
-            className="absolute inset-[12%] rounded-full border border-dashed"
-            style={{ borderColor: 'rgba(201,168,76,0.3)' }}
-            animate={{ rotate: -360 }}
-            transition={{ duration: 22, repeat: Infinity, ease: 'linear' }}
-          />
-
-          {/* Floating center gold/forest disk */}
-          <motion.div
-            className="relative z-10 w-[55%] aspect-square rounded-full flex flex-col justify-center items-center shadow-2xl"
-            style={{
-              background: 'linear-gradient(135deg, var(--forest), #2C3A23)',
-              boxShadow: '0 20px 60px rgba(44,58,35,0.3)',
-            }}
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: 'spring', stiffness: 300, damping: 15 }}
-          >
-            <span
-              className="text-4xl md:text-5xl font-light text-white leading-none mb-1 select-none"
-              style={{ fontFamily: "'Cinzel', serif", color: 'var(--gold-light)' }}
-            >
-              VI
-            </span>
-            <span
-              className="text-[10px] uppercase tracking-[0.2em] font-medium"
-              style={{ color: 'var(--cream)', fontFamily: "'Raleway', sans-serif" }}
-            >
-              International
-            </span>
-          </motion.div>
-        </div>
+        </motion.div>
 
         {/* Right column: Why content */}
         <motion.div

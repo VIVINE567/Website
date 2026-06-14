@@ -7,17 +7,16 @@ const ServicesHeroSection = () => (
     className="relative overflow-hidden text-center pt-32 pb-20 md:pb-28"
     style={{ background: 'var(--forest)' }}
   >
-    {/* Radial glows */}
-    <div
-      className="absolute inset-0 pointer-events-none"
-      style={{
-        background: `
-          radial-gradient(ellipse 70% 60% at 80% 30%, rgba(201,168,76,0.14) 0%, transparent 70%),
-          radial-gradient(ellipse 50% 70% at 20% 80%, rgba(45,74,53,0.7) 0%, transparent 60%),
-          linear-gradient(160deg, var(--forest) 0%, #3D4F2F 45%, var(--forest) 100%)
-        `,
-      }}
-    />
+    {/* Banner background image */}
+    <div className="absolute inset-0" style={{
+      backgroundImage: 'url(/services-hero-banner.jpg)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      opacity: 0.55,
+    }} />
+
+    {/* Dark overlay for text readability */}
+    <div className="absolute inset-0 bg-black/30 pointer-events-none" />
 
     {/* Spinning molecular/orbital ring */}
     <motion.div

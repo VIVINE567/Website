@@ -23,8 +23,17 @@ export default function ProductDetailCmc({ slug }) {
     <div className="pt-[72px]" style={{ background: 'var(--cream-dark)' }}>
 
       {/* Hero band — reuses the shared ProductDetailRich header */}
-      <section className="pb-12 pt-20 px-4 md:px-6 overflow-hidden" style={S.productDetailHero}>
-        <div className="max-w-7xl mx-auto w-full">
+      <section className="relative pb-12 pt-20 px-4 md:px-6 overflow-hidden" style={S.productDetailHero}>
+        {/* decorative gold glow + chemistry watermark */}
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: 'radial-gradient(ellipse 55% 60% at 80% 20%, rgba(201,168,76,0.18) 0%, transparent 65%)' }} />
+        <div
+          className="absolute pointer-events-none select-none hidden md:block"
+          aria-hidden="true"
+          style={{ right: '-1rem', top: '1.5rem', fontFamily: "'Cinzel', serif", fontWeight: 700, fontSize: '9rem', lineHeight: 1, color: 'rgba(232,201,122,0.06)', letterSpacing: '0.05em' }}
+        >
+          CMC
+        </div>
+        <div className="relative max-w-7xl mx-auto w-full">
           <motion.div {...fadeUp(0)} className="flex items-center gap-2 mb-6 uppercase" style={S.productDetailBreadcrumb}>
             <Link href="/" className="hover:opacity-80 transition-opacity">Home</Link>
             <ChevronRight className="w-3 h-3" style={{ opacity: 0.5 }} />

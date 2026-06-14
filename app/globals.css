@@ -327,6 +327,10 @@
     opacity: 1;
   }
 
+  .premix-feature-grid .corner-accent {
+    display: none !important;
+  }
+
   .feature-card-title {
     color: var(--forest);
     transition: color 0.5s ease;

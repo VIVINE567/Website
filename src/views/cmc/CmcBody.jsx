@@ -2,6 +2,7 @@
 
 import React, { useState, useRef } from 'react';
 import { motion } from 'motion/react';
+import { Sprout } from 'lucide-react';
 import S from '../../styles/products';
 import { IC, HIGHLIGHTS, INFO_CARDS, VISC_CHART } from '../../data/cmcContent';
 import { SPEC_TABLE, GRADES } from '../../data/cmcSpecs';
@@ -10,12 +11,33 @@ import { SEO_TITLE, SEO_PARAS, FOOTER_NOTE } from '../../data/cmcDetails';
 
 const fadeUp = { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, amount: 0.1 }, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } };
 
+// Branded section header — Sprout mark + serif title + animated gold rule (ties to site theme)
 const SectionHeader = ({ title, sub }) => (
-  <div className="mb-6 flex flex-col gap-1">
-    <h2 style={S.richSectionHeader}>{title}</h2>
-    {sub && <p style={S.richSectionSub}>{sub}</p>}
-  </div>
+  <motion.div {...fadeUp} className="mb-6">
+    <div className="flex items-start gap-2.5">
+      <Sprout className="w-5 h-5 shrink-0" style={{ color: 'var(--gold-dark)', marginTop: '0.3rem' }} />
+      <div className="flex flex-col gap-1">
+        <h2 style={S.richSectionHeader}>{title}</h2>
+        {sub && <p style={S.richSectionSub}>{sub}</p>}
+      </div>
+    </div>
+    <div className="relative mt-3 ml-[1.95rem]" style={{ height: 2, maxWidth: 320 }}>
+      <motion.div
+        initial={{ scaleX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        className="absolute inset-0 origin-left rounded-full"
+        style={{ background: 'linear-gradient(90deg, var(--gold) 0%, var(--gold-dark) 45%, transparent 100%)' }}
+      />
+    </div>
+  </motion.div>
 );
+
+const hoverLift = {
+  whileHover: { y: -4, borderColor: 'rgba(201,168,76,0.6)', boxShadow: '0 12px 30px -12px rgba(44,58,35,0.28)' },
+  transition: { duration: 0.25, ease: [0.22, 1, 0.36, 1] },
+};
 
 // HTML maps the "Detergent" filter to data-ind="industrial".
 const FILTERS = [
@@ -32,11 +54,17 @@ const FILTERS = [
 const Highlights = () => (
   <motion.div {...fadeUp} className="grid gap-2.5" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))' }}>
     {HIGHLIGHTS.map((h) => (
-      <div key={h.val} className="rounded-md border text-center p-3" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
+      <motion.div
+        key={h.val}
+        {...hoverLift}
+        className="rounded-xl border text-center p-3.5 relative overflow-hidden"
+        style={{ background: 'linear-gradient(160deg, var(--cream) 0%, var(--cream-dark) 100%)', borderColor: 'rgba(201,168,76,0.3)' }}
+      >
+        <div className="absolute top-0 left-0 right-0 h-[3px]" style={{ background: 'linear-gradient(90deg, transparent, var(--gold), transparent)' }} />
         <div style={S.richHlIcon}>{h.icon}</div>
         <div style={S.richHlVal}>{h.val}</div>
         <div style={S.richHlLbl}>{h.lbl}</div>
-      </div>
+      </motion.div>
     ))}
   </motion.div>
 );
@@ -46,9 +74,10 @@ const InfoCards = () => (
     <SectionHeader title="Key properties of CMC" sub="What sets it apart from other cellulose ethers" />
     <div className="grid gap-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}>
       {INFO_CARDS.map((c) => (
-        <motion.div key={c.title} {...fadeUp} className="rounded-md border p-4" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
-          <h3 style={{ ...S.richInfoTitle, marginBottom: '6px' }}>{c.title}</h3>
-          <p style={S.richInfoBody}>{c.body}</p>
+        <motion.div key={c.title} {...fadeUp} {...hoverLift} className="rounded-xl border p-4 relative overflow-hidden" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
+          <div className="absolute top-0 left-0 w-1 h-full" style={{ background: 'linear-gradient(180deg, var(--gold), var(--gold-dark))' }} />
+          <h3 style={{ ...S.richInfoTitle, marginBottom: '6px', paddingLeft: '0.4rem' }}>{c.title}</h3>
+          <p style={{ ...S.richInfoBody, paddingLeft: '0.4rem' }}>{c.body}</p>
         </motion.div>
       ))}
     </div>
@@ -58,13 +87,13 @@ const InfoCards = () => (
 const SpecTable = () => (
   <section>
     <SectionHeader title="Technical specifications" />
-    <motion.div {...fadeUp} className="rounded-md border overflow-hidden" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
+    <motion.div {...fadeUp} className="rounded-xl border overflow-hidden" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
       <table className="w-full text-[13px]" style={{ borderCollapse: 'collapse' }}>
         <tbody>
           {SPEC_TABLE.map((row, i) => (
-            <tr key={`r-${i}`} style={{ borderTop: i === 0 ? 'none' : '1px solid rgba(201,168,76,0.12)' }}>
-              <td className="px-4 py-2.5 w-2/5" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)', fontWeight: 500 }}>{row[0]}</td>
-              <td className="px-4 py-2.5" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--forest)', fontWeight: 500 }}>{row[1]}</td>
+            <tr key={`r-${i}`} style={{ borderTop: i === 0 ? 'none' : '1px solid rgba(201,168,76,0.12)', background: i % 2 ? 'rgba(201,168,76,0.04)' : 'transparent' }}>
+              <td className="px-4 py-2.5 w-2/5" style={S.richSpecKey}>{row[0]}</td>
+              <td className="px-4 py-2.5" style={{ fontFamily: "'Cormorant Garamond', serif", color: 'var(--forest)', fontWeight: 600, fontSize: '0.98rem' }}>{row[1]}</td>
             </tr>
           ))}
         </tbody>
@@ -79,23 +108,27 @@ const Grades = () => {
     <section>
       <SectionHeader title="Grade comparison" sub="Select an industry to highlight relevant grades" />
       <div className="flex flex-wrap gap-2 mb-4 items-center">
-        <span className="text-[11px] uppercase mr-1" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)', fontWeight: 700, letterSpacing: '0.04em' }}>Filter by industry:</span>
-        {FILTERS.map((f) => (
-          <button
-            key={f.key}
-            onClick={() => setFilter(f.id)}
-            className="px-3 py-1 rounded-full text-[12px] transition-all"
-            style={{
-              fontFamily: "'Raleway', sans-serif",
-              border: '1px solid rgba(201,168,76,0.4)',
-              background: filter === f.id ? 'var(--gold-dark)' : 'transparent',
-              color: filter === f.id ? 'var(--cream)' : 'var(--brown-warm)',
-              fontWeight: filter === f.id ? 600 : 500,
-            }}
-          >
-            {f.label}
-          </button>
-        ))}
+        <span style={S.richFilterLabel} className="mr-1">Filter by industry:</span>
+        {FILTERS.map((f) => {
+          const active = filter === f.id;
+          return (
+            <button
+              key={f.key}
+              onClick={() => setFilter(f.id)}
+              className="px-3.5 py-1.5 rounded-full text-[12px] transition-all"
+              style={{
+                fontFamily: "'Raleway', sans-serif",
+                border: active ? '1px solid var(--gold-dark)' : '1px solid rgba(201,168,76,0.4)',
+                background: active ? 'var(--gold-dark)' : 'transparent',
+                color: active ? 'var(--cream)' : 'var(--brown-warm)',
+                fontWeight: active ? 600 : 500,
+                boxShadow: active ? '0 4px 12px -4px rgba(154,122,46,0.5)' : 'none',
+              }}
+            >
+              {f.label}
+            </button>
+          );
+        })}
       </div>
       <div className="grid gap-3" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(215px, 1fr))' }}>
         {GRADES.map((g) => {
@@ -105,10 +138,11 @@ const Grades = () => {
               key={g.id}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: dim ? 0.22 : 1, y: 0 }}
+              whileHover={dim ? {} : { y: -4, boxShadow: '0 14px 32px -14px rgba(44,58,35,0.3)' }}
               transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-              className="rounded-md border p-4"
+              className="rounded-xl border p-4"
               style={{
-                background: 'var(--cream)',
+                background: g.featured ? 'linear-gradient(165deg, var(--cream) 0%, #F7EFD8 100%)' : 'var(--cream)',
                 borderColor: g.featured ? 'var(--gold-dark)' : 'rgba(201,168,76,0.25)',
                 borderWidth: g.featured ? 2 : 1,
                 pointerEvents: dim ? 'none' : 'auto',
@@ -118,23 +152,29 @@ const Grades = () => {
                 <div style={S.richGradeName}>{g.name}</div>
                 <span className="px-2 py-0.5 rounded-full" style={{ ...S.richGradeBadge, background: g.badge.bg, color: g.badge.tx }}>{g.badge.text}</span>
               </div>
-              <div className="text-[11.5px] mb-2" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)' }}>{g.range}</div>
-              <div className="h-1 rounded mb-3" style={{ background: 'var(--cream-dark)' }}>
-                <div style={{ width: `${g.viscPct}%`, height: '100%', background: 'var(--gold-dark)', borderRadius: 2 }} />
+              <div style={S.richViscRange}>{g.range}</div>
+              <div style={S.richVbarBg} className="mb-3">
+                <motion.div
+                  initial={{ width: 0 }}
+                  whileInView={{ width: `${g.viscPct}%` }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+                  style={{ height: '100%', borderRadius: 2, background: 'linear-gradient(90deg, var(--gold), var(--gold-dark))' }}
+                />
               </div>
               <div className="mt-2 pt-2" style={{ borderTop: '1px solid rgba(201,168,76,0.18)' }}>
                 {g.specs.map(([k, v]) => (
-                  <div key={k} className="flex justify-between gap-2 text-[11.5px] py-0.5" style={{ fontFamily: "'Raleway', sans-serif" }}>
-                    <span style={{ color: 'var(--brown-warm)' }}>{k}</span>
-                    <span style={{ color: 'var(--forest)', fontWeight: 600, textAlign: 'right' }}>{v}</span>
+                  <div key={k} className="flex justify-between gap-2 py-0.5" style={{ ...S.richGradeSpecRow, borderBottom: 'none' }}>
+                    <span style={S.richGradeSpecKey}>{k}</span>
+                    <span style={S.richGradeSpecVal}>{v}</span>
                   </div>
                 ))}
               </div>
               <div className="mt-3">
-                <div className="text-[10px] uppercase mb-1.5" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)', fontWeight: 700, letterSpacing: '0.06em' }}>Applications</div>
+                <div style={S.richAppsLbl}>Applications</div>
                 <div className="flex flex-wrap gap-1.5">
                   {g.apps.map((a) => (
-                    <span key={a.l} className="px-2 py-0.5 text-[10.5px] rounded" style={{ background: (IC[a.i] || IC.all).bg, color: (IC[a.i] || IC.all).tx, fontFamily: "'Raleway', sans-serif", fontWeight: 500 }}>{a.l}</span>
+                    <span key={a.l} style={{ ...S.richAppTag, background: (IC[a.i] || IC.all).bg, color: (IC[a.i] || IC.all).tx }}>{a.l}</span>
                   ))}
                 </div>
               </div>
@@ -150,25 +190,25 @@ const Grades = () => {
 const RefTable = () => (
   <section>
     <SectionHeader title="Quick reference table" sub="All grades at a glance" />
-    <motion.div {...fadeUp} className="rounded-md border overflow-x-auto" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
+    <motion.div {...fadeUp} className="rounded-xl border overflow-x-auto" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
       <table className="w-full text-[13px]" style={{ borderCollapse: 'collapse', minWidth: 820 }}>
         <thead>
-          <tr style={{ background: 'rgba(201,168,76,0.1)' }}>
+          <tr style={S.richRefTableHead}>
             {REF_COLS.map((h) => (
-              <th key={h} className="px-3.5 py-2.5 text-left text-[11px]" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)', fontWeight: 700, letterSpacing: '0.03em', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>{h}</th>
+              <th key={h} style={S.richRefTableTh}>{h}</th>
             ))}
           </tr>
         </thead>
         <tbody>
           {REF_TABLE.map((r) => (
-            <tr key={r.grade} style={{ borderTop: '1px solid rgba(201,168,76,0.12)', verticalAlign: 'top' }}>
-              <td className="px-3.5 py-2.5 whitespace-nowrap">
-                <span className="inline-block px-2 py-0.5 rounded-full text-[11px]" style={{ background: r.color.bg, color: r.color.tx, fontFamily: "'Raleway', sans-serif", fontWeight: 600 }}>{r.grade}</span>
+            <tr key={r.grade} className="transition-colors" style={{ verticalAlign: 'top' }}>
+              <td style={{ ...S.richRefTableTd, whiteSpace: 'nowrap' }}>
+                <span style={{ ...S.richTGrade, background: r.color.bg, color: r.color.tx }}>{r.grade}</span>
               </td>
-              <td className="px-3.5 py-2.5 whitespace-nowrap" style={{ fontFamily: "'DM Mono', 'Raleway', monospace", color: 'var(--forest)', fontWeight: 600 }}>{r.visc}</td>
-              <td className="px-3.5 py-2.5" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)', lineHeight: 1.5 }}>{r.standard}</td>
-              <td className="px-3.5 py-2.5" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)', lineHeight: 1.5 }}>{r.features}</td>
-              <td className="px-3.5 py-2.5" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)', lineHeight: 1.5 }}>{r.apps}</td>
+              <td style={{ ...S.richRefTableTd, fontFamily: "'DM Mono', 'Raleway', monospace", color: 'var(--forest)', fontWeight: 600, whiteSpace: 'nowrap' }}>{r.visc}</td>
+              <td style={S.richRefTableTd}>{r.standard}</td>
+              <td style={S.richRefTableTd}>{r.features}</td>
+              <td style={S.richRefTableTd}>{r.apps}</td>
             </tr>
           ))}
         </tbody>
@@ -177,7 +217,7 @@ const RefTable = () => (
   </section>
 );
 
-// "Viscosity comparison" — mirrors the HTML Chart.js logarithmic bar chart (solid bars, hover tooltip)
+// "Viscosity comparison" — logarithmic bar chart, gradient brand bars, hover tooltip
 const ViscChart = () => {
   const logMin = Math.log10(VISC_CHART.ticks[0]);
   const logMax = Math.log10(VISC_CHART.ticks[VISC_CHART.ticks.length - 1]);
@@ -191,10 +231,10 @@ const ViscChart = () => {
   return (
     <section>
       <SectionHeader title={VISC_CHART.header} sub={VISC_CHART.headerSub} />
-      <motion.div {...fadeUp} className="rounded-md border p-5 md:p-6" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
+      <motion.div {...fadeUp} className="rounded-xl border p-5 md:p-6" style={{ background: 'linear-gradient(170deg, var(--cream) 0%, var(--cream-dark) 100%)', borderColor: 'rgba(201,168,76,0.25)' }}>
         <div className="flex items-baseline justify-between flex-wrap gap-2 mb-5">
-          <span className="text-[14px]" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--forest)', fontWeight: 600 }}>{VISC_CHART.title}</span>
-          <span className="text-[11.5px]" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)' }}>{VISC_CHART.sub}</span>
+          <span style={S.richChartTitle}>{VISC_CHART.title}</span>
+          <span style={S.richChartSub}>{VISC_CHART.sub}</span>
         </div>
         {/* legend */}
         <div className="flex flex-wrap gap-x-4 gap-y-1.5 mb-4">
@@ -219,11 +259,11 @@ const ViscChart = () => {
               {/* pointer-following tooltip */}
               {tip && (
                 <div
-                  className="absolute z-20 pointer-events-none rounded-md px-3 py-2 whitespace-nowrap"
-                  style={{ left: tip.x, top: tip.y, transform: 'translate(-50%, calc(-100% - 14px))', background: 'rgba(24,28,32,0.92)', boxShadow: '0 6px 20px rgba(0,0,0,0.25)' }}
+                  className="absolute z-20 pointer-events-none rounded-lg px-3 py-2 whitespace-nowrap"
+                  style={{ left: tip.x, top: tip.y, transform: 'translate(-50%, calc(-100% - 14px))', background: 'linear-gradient(160deg, var(--forest) 0%, var(--forest-mid) 100%)', border: '1px solid rgba(201,168,76,0.5)', boxShadow: '0 8px 24px rgba(0,0,0,0.3)' }}
                 >
-                  <div className="text-[12.5px] mb-1" style={{ fontFamily: "'Raleway', sans-serif", color: '#fff', fontWeight: 600 }}>{tip.b.label}</div>
-                  <div className="flex items-center gap-1.5 text-[12px]" style={{ fontFamily: "'Raleway', sans-serif", color: 'rgba(255,255,255,0.92)' }}>
+                  <div className="text-[12.5px] mb-1" style={{ fontFamily: "'Cormorant Garamond', serif", color: 'var(--gold-light)', fontWeight: 700 }}>{tip.b.label}</div>
+                  <div className="flex items-center gap-1.5 text-[12px]" style={{ fontFamily: "'Raleway', sans-serif", color: 'rgba(245,238,224,0.92)' }}>
                     <span className="w-2.5 h-2.5 rounded-sm inline-block" style={{ background: tip.b.color }} />
                     Up to {tip.b.val.toLocaleString()} mPa·s
                   </div>
@@ -231,7 +271,7 @@ const ViscChart = () => {
               )}
               {/* gridlines */}
               {VISC_CHART.ticks.map((t) => (
-                <div key={t} className="absolute left-0 right-0" style={{ bottom: 28 + frac(t) * 252, borderTop: '1px solid rgba(0,0,0,0.05)' }} />
+                <div key={t} className="absolute left-0 right-0" style={{ bottom: 28 + frac(t) * 252, borderTop: '1px dashed rgba(201,168,76,0.25)' }} />
               ))}
               {/* bars */}
               <div className="absolute left-0 right-0 flex items-end justify-around gap-1.5" style={{ bottom: 28, top: 0 }}>
@@ -241,11 +281,13 @@ const ViscChart = () => {
                       initial={{ height: 0 }}
                       whileInView={{ height: `${frac(b.val) * 100}%` }}
                       viewport={{ once: true }}
-                      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                       onMouseMove={onBarMove(b)}
-                      className="w-full rounded-t cursor-pointer"
-                      style={{ background: b.color, maxWidth: 48 }}
-                    />
+                      className="w-full rounded-t cursor-pointer relative group"
+                      style={{ background: `linear-gradient(180deg, ${b.color} 0%, ${b.color}99 100%)`, maxWidth: 48, boxShadow: `inset 0 0 0 1px ${b.color}` }}
+                    >
+                      <span className="absolute -top-5 left-1/2 -translate-x-1/2 text-[9px] opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--forest)', fontWeight: 600 }}>{b.val.toLocaleString()}</span>
+                    </motion.div>
                   </div>
                 ))}
               </div>
@@ -265,7 +307,8 @@ const ViscChart = () => {
 
 const Seo = () => (
   <section>
-    <motion.div {...fadeUp} className="rounded-md border p-6" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
+    <motion.div {...fadeUp} className="rounded-xl border p-6 relative overflow-hidden" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
+      <div className="absolute top-0 left-0 right-0 h-[3px]" style={{ background: 'linear-gradient(90deg, var(--gold-dark), var(--gold), transparent)' }} />
       <h2 style={S.richSeoH2}>{SEO_TITLE}</h2>
       <div className="space-y-3.5" style={S.richSeoBody}>
         {SEO_PARAS.map((p, i) => (
@@ -277,7 +320,7 @@ const Seo = () => (
 );
 
 const FooterNote = () => (
-  <div className="rounded-md border p-3.5 flex items-start gap-2.5 text-[12.5px] leading-relaxed" style={{ background: 'rgba(201,168,76,0.1)', borderColor: 'rgba(201,168,76,0.35)', color: 'var(--gold-dark)', fontFamily: "'Raleway', sans-serif" }}>
+  <div className="rounded-xl border p-3.5 flex items-start gap-2.5 text-[12.5px] leading-relaxed" style={{ background: 'rgba(201,168,76,0.1)', borderColor: 'rgba(201,168,76,0.35)', color: 'var(--gold-dark)', fontFamily: "'Raleway', sans-serif" }}>
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 2 }}>
       <circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" />
     </svg>

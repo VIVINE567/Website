@@ -105,11 +105,17 @@ const AboutHeroSection = () => (
     className="relative overflow-hidden min-h-[540px] flex items-end pt-28 pb-16 md:pb-20"
     style={{ background: 'var(--forest)' }}
   >
-    {/* Dot pattern overlay */}
-    <div
-      className="absolute inset-0 opacity-[0.04] pointer-events-none"
-      style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '32px 32px' }}
-    />
+    {/* Banner background image */}
+    <div className="absolute inset-0" style={{
+      backgroundImage: 'url(/about-hero-banner.jpg)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      opacity: 0.45,
+    }} />
+
+    {/* Dark overlay for text readability */}
+    <div className="absolute inset-0 bg-black/30 pointer-events-none" />
+
     {/* Bottom gradient fade */}
     <div
       className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"

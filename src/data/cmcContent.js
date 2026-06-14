@@ -1,13 +1,15 @@
 // Sodium CMC content matching "sodium_cmc_product_page.html"
-// Industry color tokens (same palette as the HTML reference)
+// Industry color tokens — re-paletted into the VIVINE brand earth palette
+// (forest / gold / clay / stone) so chips, badges, and chart agree with the
+// rest of the site. `bar` drives the matching chart fill.
 export const IC = {
-  food:         { bg: '#EBF5E3', tx: '#2D6612' },
-  pharma:       { bg: '#EBF1FA', tx: '#1B4F8A' },
-  cosmetic:     { bg: '#FAEDF3', tx: '#8A1F4A' },
-  construction: { bg: '#FBF1E1', tx: '#8A5A0E' },
-  industrial:   { bg: '#F1EFE8', tx: '#444441' },
-  oilfield:     { bg: '#F5F0E8', tx: '#5C3D11' },
-  all:          { bg: '#FEF3E2', tx: '#92400E' },
+  food:         { bg: '#E7EDDB', tx: '#3D4F2F', bar: '#7E9A5A' },
+  pharma:       { bg: '#E0E8E2', tx: '#38564A', bar: '#5E8472' },
+  cosmetic:     { bg: '#F0E3DA', tx: '#8A5A4A', bar: '#B07F68' },
+  construction: { bg: '#F1E7CD', tx: '#9A7A2E', bar: '#C0954A' },
+  industrial:   { bg: '#E9E3D3', tx: '#6B6450', bar: '#9A8E70' },
+  oilfield:     { bg: '#ECE1CF', tx: '#6E4E2E', bar: '#8A6A42' },
+  all:          { bg: '#F2E7CB', tx: '#9A7A2E', bar: '#C9A84C' },
 };
 
 export const HERO = {
@@ -61,14 +63,15 @@ export const VISC_CHART = {
   headerSub: 'Max viscosity at 2% solution, 25°C',
   // logarithmic y-axis: only these ticks were labelled in the HTML
   ticks: [100, 1000, 8000],
+  // Bar colours drawn from the brand earth ramp (light gold → forest → clay → brown)
   bars: [
-    { label: 'Low', val: 200, color: '#F6C89A' },
-    { label: 'Medium', val: 800, color: '#E8913A' },
-    { label: 'High', val: 8000, color: '#C26A0A' },
-    { label: 'Food (E466)', val: 8000, color: '#C0DD97' },
-    { label: 'Pharma', val: 6000, color: '#85B7EB' },
-    { label: 'Cosmetic', val: 3000, color: '#ED93B1' },
-    { label: 'Industrial', val: 5000, color: '#A8B8A0' },
-    { label: 'Oilfield', val: 8000, color: '#8B6914' },
+    { label: 'Low', val: 200, color: '#E8C97A' },
+    { label: 'Medium', val: 800, color: '#C9A84C' },
+    { label: 'High', val: 8000, color: '#C0954A' },
+    { label: 'Food (E466)', val: 8000, color: '#7E9A5A' },
+    { label: 'Pharma', val: 6000, color: '#5E8472' },
+    { label: 'Cosmetic', val: 3000, color: '#B07F68' },
+    { label: 'Industrial', val: 5000, color: '#9A8E70' },
+    { label: 'Oilfield', val: 8000, color: '#8A6A42' },
   ],
 };

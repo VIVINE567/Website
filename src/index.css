@@ -354,6 +354,26 @@
     100% { transform: rotate(360deg) scale(1); }
   }
 
+  /* Premix compact 2-col grid — fully override the shared hover effect.
+     The global rule flips background to forest-green + scale(1.1) which
+     overflows into neighbours. Here we keep cream bg, subtle lift only. */
+  .premix-feature-grid .feature-card-animated:hover {
+    background: var(--cream) !important;
+    border-color: rgba(201,168,76,0.75) !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 32px -8px rgba(44,58,35,0.22), 0 0 0 1px rgba(201,168,76,0.3) !important;
+  }
+  .premix-feature-grid .corner-accent {
+    display: none !important;
+  }
+  .premix-feature-grid .feature-card-animated:hover .feature-card-title {
+    color: var(--forest) !important;
+  }
+  .premix-feature-grid .feature-card-animated:hover .feature-card-desc {
+    color: var(--brown-warm) !important;
+    opacity: 1 !important;
+  }
+
   /* === INQUIRY FORM === */
   .inquiry-form {
     @apply space-y-3;

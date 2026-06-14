@@ -11,6 +11,13 @@ const ProductsHeroSection = () => (
     className="relative flex flex-col items-center justify-center text-center overflow-hidden pt-32 pb-24 md:pt-36 md:pb-28"
     style={S.productsHero}
   >
+    <div className="absolute inset-0" style={{
+      backgroundImage: 'url(/products-hero-banner.jpg)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      opacity: 0.35,
+    }} />
+
     <div className="absolute inset-0 bg-black/20 pointer-events-none" />
 
     <div className="absolute inset-0 pointer-events-none" style={{

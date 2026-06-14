@@ -23,6 +23,7 @@ import ProductDetail from './views/ProductDetail';
 import Applications from './views/Applications';
 import About from './views/About';
 import Services from './views/Services';
+import Premix from './views/Premix';
 
 const Cn = CONTENT.nav;
 
@@ -122,6 +123,7 @@ export default function App() {
               <Route path="/applications" element={<Applications />} />
               <Route path="/services" element={<Services />} />
               <Route path="/about" element={<About />} />
+              <Route path="/premix" element={<Premix />} />
               <Route path="*" element={<DefaultPage />} />
             </Routes>
           </main>
