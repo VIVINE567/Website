@@ -9,7 +9,7 @@ const ServicesHeroSection = () => (
   >
     {/* Banner background image */}
     <div className="absolute inset-0" style={{
-      backgroundImage: 'url(/services-hero-banner.jpg)',
+      backgroundImage: 'url(/services-hero-banner-2.jpg)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       opacity: 0.55,
