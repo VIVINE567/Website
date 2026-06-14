@@ -28,8 +28,8 @@ const CERT_CARDS = [
 ];
 
 const REGIONS = [
-  { flag: '🌏', name: 'South & Southeast Asia',  detail: 'India, Indonesia, Malaysia, Thailand, Vietnam, Philippines, Bangladesh — our most active supply region.', tag: 'Primary Market',    tagColor: 'var(--gold)' },
-  { flag: '🌍', name: 'Middle East & Africa',     detail: 'UAE, Saudi Arabia, Egypt, Turkey and Sub-Saharan African markets. Halal-certified grades readily available.',   tag: 'Growing Region',    tagColor: 'var(--gold-dark)' },
+  { flag: '🌏', name: 'South & Southeast Asia',  detail: 'India, Indonesia, Malaysia, Thailand, Vietnam, Philippines — our most active supply region.', tag: 'Primary Market',    tagColor: 'var(--gold)' },
+  { flag: '🌍', name: 'Middle East & Africa',     detail: 'UAE, Saudi Arabia, Egypt, Morocco, Turkey and Sub-Saharan African markets. Halal-certified grades readily available.',   tag: 'Growing Region',    tagColor: 'var(--gold-dark)' },
   { flag: '🌎', name: 'Europe',                   detail: 'EU-compliant documentation for all products. Supply to Poland, Germany, Netherlands, France, Italy and the UK.', tag: 'EU Compliant',      tagColor: 'var(--forest)' },
   { flag: '🌐', name: 'Americas',                 detail: 'GRAS-listed grades with FDA-compatible documentation for US, Canada, Brazil and Latin American markets.',        tag: 'FDA Compatible',    tagColor: 'var(--forest)' },
   { flag: '🇨🇳', name: 'East Asia',              detail: 'Deep sourcing partnerships with manufacturers in China, Japan and South Korea.',                                   tag: 'Direct Sourcing',   tagColor: 'var(--brown-warm)' },

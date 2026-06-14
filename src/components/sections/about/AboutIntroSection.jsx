@@ -124,10 +124,7 @@ const AboutIntroSection = () => (
           </em>
         </h2>
         <p className="text-sm leading-loose mb-2 max-w-lg" style={{ fontFamily: "'Open Sans', sans-serif", color: 'var(--brown-warm)', fontWeight: 300 }}>
-          VIVINE International is an established international supplier of hydrocolloids, alginates
-          and cellulose derivatives, serving manufacturers and processors in over 40 countries. We
-          bridge the gap between high-quality raw material producers and the industries that depend
-          on reliable, specification-grade functional ingredients.
+          VIVINE International is a trusted global supplier of hydrocolloids, alginates, cellulose derivatives, and specialty ingredients, serving manufacturers and processors across diverse industries. We bridge the gap between leading raw material producers and businesses that rely on high-quality, specification-driven functional ingredients.
         </p>
         <p className="text-sm leading-loose mb-8 max-w-lg" style={{ fontFamily: "'Open Sans', sans-serif", color: 'var(--brown-warm)', fontWeight: 300 }}>
           Our comprehensive product portfolio includes{' '}
