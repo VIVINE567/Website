@@ -4,24 +4,28 @@ import { motion } from 'motion/react';
 
 const CHECKS = [
   {
-    strong: 'Comprehensive portfolio',
-    rest: ' spanning alginates, carrageenan, agar-agar, CMC, HPMC, HEC, xanthan, guar and pectin — all under one roof.',
+    strong: 'Comprehensive Product Portfolio',
+    rest: ' – Hydrocolloids, cellulose ethers, and specialty ingredients available under one roof.',
   },
   {
-    strong: 'Tailor-made solutions',
-    rest: ' — we work with your R&D team to formulate custom grades and blends that meet exact technical specifications.',
+    strong: 'Global Manufacturing Partnerships',
+    rest: ' – Direct relationships with trusted international manufacturers, ensuring consistent quality and reliable supply.',
   },
   {
-    strong: 'Quality you can count on',
-    rest: ' — all products sourced from GMP and HACCP certified manufacturers with full documentation on request.',
+    strong: 'Tailored Ingredient Solutions',
+    rest: ' – Supporting customers with customized grades and application-specific recommendations to meet technical requirements.',
   },
   {
-    strong: 'Flexible commercial terms',
-    rest: ' — competitive pricing, flexible MOQs and reliable international logistics tailored to your business.',
+    strong: 'Assured Quality Standards',
+    rest: ' – Products sourced from certified manufacturing facilities with technical and quality documentation available upon request.',
   },
   {
-    strong: '24-hour technical response',
-    rest: ' — our formulation experts guide grade selection, dosage optimisation and application troubleshooting.',
+    strong: 'Flexible Commercial Support',
+    rest: ' – Competitive pricing, adaptable order quantities, and dependable international logistics solutions.',
+  },
+  {
+    strong: 'Responsive Technical Assistance',
+    rest: ' – Expert support for product selection, application guidance, and formulation optimization.',
   },
 ];
 
@@ -119,12 +123,26 @@ const AboutIntroSection = () => (
             VIVINE International
           </em>
         </h2>
-        <p className="text-sm leading-loose mb-8 max-w-lg" style={{ fontFamily: "'Open Sans', sans-serif", color: 'var(--brown-warm)', fontWeight: 300 }}>
+        <p className="text-sm leading-loose mb-2 max-w-lg" style={{ fontFamily: "'Open Sans', sans-serif", color: 'var(--brown-warm)', fontWeight: 300 }}>
           VIVINE International is an established international supplier of hydrocolloids, alginates
           and cellulose derivatives, serving manufacturers and processors in over 40 countries. We
           bridge the gap between high-quality raw material producers and the industries that depend
           on reliable, specification-grade functional ingredients.
         </p>
+        <p className="text-sm leading-loose mb-8 max-w-lg" style={{ fontFamily: "'Open Sans', sans-serif", color: 'var(--brown-warm)', fontWeight: 300 }}>
+          Our comprehensive product portfolio includes{' '}
+          <strong style={{ color: 'var(--forest)', fontWeight: 500 }}>
+            alginates, carrageenan, propylene glycol alginate (PGA), locust bean gum, CMC, HPMC, MHEC, HEC, xanthan gum, PAC, guar gum, pectin, starch derivatives, and a wide range of specialty ingredients
+          </strong>
+          , all sourced through a trusted global network of leading manufacturers and suppliers.
+        </p>
+
+        <h3
+          className="text-base font-semibold mb-4"
+          style={{ fontFamily: "'Cinzel', serif", color: 'var(--forest)' }}
+        >
+          Why Choose VIVINE International?
+        </h3>
 
         <div className="flex flex-col gap-4">
           {CHECKS.map((c, i) => (

@@ -5,10 +5,10 @@ import { motion, useInView } from 'motion/react';
 import S from '../../../styles/modal';
 
 const STATS = [
-  { number: '4', suffix: '+', label: 'Countries Served Globally' },
-  { number: '200', suffix: '+', label: 'Ingredient Grades Supplied' },
-  { number: '15', suffix: '+', label: 'Years of Industry Experience' },
-  { number: '4', suffix: '', label: 'Core Industry Verticals' },
+  { number: '21', suffix: '+', label: 'Hydrocolloids & Cellulose Ethers' },
+  { number: '150', suffix: '+', label: 'Ingredient Grades Supplied' },
+  { number: '11', suffix: '+', label: 'Years of Industry Experience' },
+  { number: '5', suffix: '', label: 'Key Industries Served' },
 ];
 
 const AnimatedNumber = ({ value }) => {

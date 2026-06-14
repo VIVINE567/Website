@@ -37,11 +37,11 @@ const REGIONS = [
 ];
 
 const TIMELINE = [
-  { year: 'Founded',              event: 'VIVINE International established',         detail: 'Started as a specialised trader of seaweed-based hydrocolloids — agar-agar and carrageenan — for food manufacturers in South Asia.' },
-  { year: 'Expansion',           event: 'Portfolio extended to alginates & cellulose', detail: 'Added sodium alginate, potassium alginate, CMC and HPMC, opening pharmaceutical and industrial channels.' },
-  { year: 'International Growth',event: 'Export reach expanded to 40+ countries',   detail: 'Established distribution agreements and logistics partnerships across the Middle East, Europe and Southeast Asia.' },
+  { year: 'Founded',              event: 'VIVINE International Established',         detail: 'Built with a vision to connect global manufacturers with high-quality hydrocolloids, cellulose ethers, and specialty ingredients through reliable sourcing and supply solutions.' },
+  { year: 'Expansion',           event: 'Portfolio Expanded Across Key Ingredient Categories', detail: 'Broadened our offering from hydrocolloids to cellulose ethers and specialty ingredients, supporting customers across multiple industries and applications.' },
+  { year: 'International Growth',event: 'Expanded Global Supply Network',   detail: 'Established sourcing partnerships and logistics capabilities across Asia, Europe, the Middle East, and the Americas, enabling reliable international supply and distribution.' },
   { year: 'Quality Milestone',   event: 'Full certification programme launched',     detail: 'All supply chain partners audited and certified to ISO 9001, ISO 22000, HACCP, Halal and Kosher standards.' },
-  { year: 'Today',               event: '200+ grades across 15+ industries',         detail: 'VIVINE now offers a comprehensive portfolio serving food, pharma, cosmetics, personal care, construction and industrial sectors globally.' },
+  { year: 'Today',               event: '9+ grades across 6 industries',         detail: 'VIVINE now offers a comprehensive portfolio serving food, pharma, cosmetics, personal care, construction and industrial sectors globally.' },
 ];
 
 const TABS = [
@@ -234,9 +234,9 @@ const AboutTabsSection = () => {
               <>
                 <TabIntro
                   tag="Global Reach"
-                  heading="Delivering to"
-                  accentWord="40+ countries worldwide"
-                  body="VIVINE maintains an extensive international distribution network. From small specialty manufacturers to large multinationals — we deliver reliably with competitive lead times."
+                  heading="Delivering Globally with"
+                  accentWord="Trusted Supply Networks"
+                  body="VIVINE maintains an extensive international distribution network, connecting manufacturers and buyers across key global markets with reliable sourcing and efficient logistics."
                 />
                 <motion.div 
                   variants={containerVariants}

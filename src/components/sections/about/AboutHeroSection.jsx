@@ -5,9 +5,9 @@ import { motion, useInView } from 'motion/react';
 import Link from 'next/link';
 
 const STATS = [
-  { number: '4', suffix: '+', label: 'Countries served across Asia, Europe, Middle East & Americas' },
-  { number: '200', suffix: '+', label: 'Product grades across hydrocolloids, alginates & cellulose' },
-  { number: '15', suffix: '+', label: 'Industries served from food & beverage to construction' },
+  { number: '9', suffix: '+', label: 'Trusted Global Manufacturing Partners' },
+  { number: '150', suffix: '+', label: 'Product grades across hydrocolloids, alginates & cellulose' },
+  { number: '5', suffix: '+', label: 'Industries Served Across Food & Beverage, Pharma, Cosmetics & Construction' },
   { number: 'ISO', suffix: '', label: 'Certified supply chain with Halal, Kosher & FSSC 22000 compliant partners' },
 ];
 

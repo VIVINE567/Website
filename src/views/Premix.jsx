@@ -200,7 +200,7 @@ function ProductsGrid() {
     : PREMIX_PRODUCTS.filter(p => p.cat === activeCat);
 
   return (
-    <section id="premix-products" style={{ padding: '5rem 4rem 6rem', background: 'var(--cream-dark)' }}>
+    <section id="premix-products" className="px-4 py-16 md:px-16 md:py-20 md:pb-24" style={{ background: 'var(--cream-dark)' }}>
       <div className="text-center" style={{ marginBottom: '3.5rem' }}>
         <span className="gold-eyebrow" style={{ marginBottom: '1rem' }}>Our Products</span>
         <div className="gold-divider" style={{ margin: '1rem auto 1.5rem' }} />
@@ -244,7 +244,7 @@ function ProductsGrid() {
       </div>
 
       {/* Grid */}
-      <div className="grid gap-px" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', background: 'rgba(201,168,76,0.15)' }}>
+      <div className="grid gap-5" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))' }}>
         <AnimatePresence mode="popLayout">
           {filtered.map((p, i) => {
             const tagC = TAG_COLORS[p.cat] || TAG_COLORS.other;
@@ -257,8 +257,8 @@ function ProductsGrid() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.96 }}
                 transition={{ duration: 0.28, delay: i * 0.025 }}
-                className="group overflow-hidden cursor-pointer"
-                style={{ background: 'var(--cream)' }}
+                className="group overflow-hidden cursor-pointer rounded-xl"
+                style={{ background: 'var(--cream)', border: '1px solid rgba(201,168,76,0.15)' }}
               >
                 {/* Image area */}
                 <div className="relative w-full flex items-center justify-center"
