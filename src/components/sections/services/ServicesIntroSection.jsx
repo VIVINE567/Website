@@ -55,7 +55,7 @@ const ServicesIntroSection = () => {
           </span>
           <h2
             className="text-3xl md:text-4xl lg:text-5xl font-light leading-tight"
-            style={{ fontFamily: "'Cinzel', serif", color: 'var(--forest)' }}
+            style={{ fontFamily: "'Cinzel', serif", color: 'var(--gold)' }}
           >
             Your Trusted Partner in Hydrocolloids, Cellulose & Alginates
           </h2>

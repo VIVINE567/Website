@@ -63,7 +63,7 @@ const ServicesWhySection = () => {
             </span>
             <h2
               className="text-3xl md:text-4xl font-light"
-              style={{ fontFamily: "'Cinzel', serif", color: 'var(--forest)' }}
+              style={{ fontFamily: "'Cinzel', serif", color: 'var(--gold)' }}
             >
               The VIVINE Advantage
             </h2>
