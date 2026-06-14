@@ -2,7 +2,6 @@
 
 import React, { useState, useRef } from 'react';
 import { motion } from 'motion/react';
-import { Sprout } from 'lucide-react';
 import S from '../../styles/products';
 import { IC, HIGHLIGHTS, INFO_CARDS, VISC_CHART } from '../../data/alginateContent';
 import { VISC_GRADE_TABLE, SPEC_TABLE, GRADES } from '../../data/alginateSpecs';
@@ -19,7 +18,6 @@ const hoverLift = {
 const SectionHeader = ({ title, sub }) => (
   <motion.div {...fadeUp} className="mb-6">
     <div className="flex items-start gap-2.5">
-      <Sprout className="w-5 h-5 shrink-0" style={{ color: 'var(--gold-dark)', marginTop: '0.3rem' }} />
       <div className="flex flex-col gap-1">
         <h2 style={S.richSectionHeader}>{title}</h2>
         {sub && <p style={S.richSectionSub}>{sub}</p>}

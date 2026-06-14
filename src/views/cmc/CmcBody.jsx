@@ -2,7 +2,6 @@
 
 import React, { useState, useRef } from 'react';
 import { motion } from 'motion/react';
-import { Sprout } from 'lucide-react';
 import S from '../../styles/products';
 import { IC, HIGHLIGHTS, INFO_CARDS, VISC_CHART } from '../../data/cmcContent';
 import { SPEC_TABLE, GRADES } from '../../data/cmcSpecs';
@@ -11,11 +10,10 @@ import { SEO_TITLE, SEO_PARAS, FOOTER_NOTE } from '../../data/cmcDetails';
 
 const fadeUp = { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, amount: 0.1 }, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } };
 
-// Branded section header — Sprout mark + serif title + animated gold rule (ties to site theme)
+// Branded section header — serif title + animated gold rule (ties to site theme)
 const SectionHeader = ({ title, sub }) => (
   <motion.div {...fadeUp} className="mb-6">
     <div className="flex items-start gap-2.5">
-      <Sprout className="w-5 h-5 shrink-0" style={{ color: 'var(--gold-dark)', marginTop: '0.3rem' }} />
       <div className="flex flex-col gap-1">
         <h2 style={S.richSectionHeader}>{title}</h2>
         {sub && <p style={S.richSectionSub}>{sub}</p>}
