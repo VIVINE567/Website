@@ -23,16 +23,6 @@ const SectionHeader = ({ title, sub }) => (
         {sub && <p style={S.richSectionSub}>{sub}</p>}
       </div>
     </div>
-    <div className="relative mt-3 ml-[1.95rem]" style={{ height: 2, maxWidth: 320 }}>
-      <motion.div
-        initial={{ scaleX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute inset-0 origin-left rounded-full"
-        style={{ background: 'linear-gradient(90deg, var(--gold) 0%, var(--gold-dark) 45%, transparent 100%)' }}
-      />
-    </div>
   </motion.div>
 );
 
@@ -40,17 +30,11 @@ const SectionHeader = ({ title, sub }) => (
 const Highlights = () => (
   <motion.div {...fadeUp} className="grid gap-2.5" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))' }}>
     {HIGHLIGHTS.map((h) => (
-      <motion.div
-        key={h.val}
-        {...hoverLift}
-        className="rounded-xl border text-center p-3.5 relative overflow-hidden"
-        style={{ background: 'linear-gradient(160deg, var(--cream) 0%, var(--cream-dark) 100%)', borderColor: 'rgba(201,168,76,0.3)' }}
-      >
-        <div className="absolute top-0 left-0 right-0 h-[3px]" style={{ background: 'linear-gradient(90deg, transparent, var(--gold), transparent)' }} />
+      <div key={h.val} className="rounded-md border text-center p-3" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
         <div style={S.richHlIcon}>{h.icon}</div>
         <div style={S.richHlVal}>{h.val}</div>
         <div style={S.richHlLbl}>{h.lbl}</div>
-      </motion.div>
+      </div>
     ))}
   </motion.div>
 );
@@ -83,10 +67,9 @@ const InfoCards = () => (
     <SectionHeader title="Key properties of Sodium Alginate" sub="What makes it unique among food & industrial hydrocolloids" />
     <div className="grid gap-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}>
       {INFO_CARDS.map((c) => (
-        <motion.div key={c.title} {...fadeUp} {...hoverLift} className="rounded-xl border p-4 relative overflow-hidden" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
-          <div className="absolute top-0 left-0 w-1 h-full" style={{ background: 'linear-gradient(180deg, var(--gold), var(--gold-dark))' }} />
-          <h3 style={{ ...S.richInfoTitle, marginBottom: '6px', paddingLeft: '0.4rem' }}>{c.title}</h3>
-          <p style={{ ...S.richInfoBody, paddingLeft: '0.4rem' }}>{c.body}</p>
+        <motion.div key={c.title} {...fadeUp} className="rounded-md border p-4" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
+          <h3 style={{ ...S.richInfoTitle, marginBottom: '6px' }}>{c.title}</h3>
+          <p style={S.richInfoBody}>{c.body}</p>
         </motion.div>
       ))}
     </div>
