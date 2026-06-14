@@ -185,14 +185,19 @@ function ProductsGrid() {
   const [activeCat, setActiveCat] = useState('all');
 
   useEffect(() => {
-    const hash = window.location.hash.replace('#', '');
-    if (hash && PREMIX_CATEGORIES.some(c => c.key === hash)) {
-      setActiveCat(hash);
-      setTimeout(() => {
-        const el = document.getElementById('premix-products');
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 200);
-    }
+    const applyHash = () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash && PREMIX_CATEGORIES.some(c => c.key === hash)) {
+        setActiveCat(hash);
+        setTimeout(() => {
+          const el = document.getElementById('premix-products');
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 200);
+      }
+    };
+    applyHash();
+    window.addEventListener('hashchange', applyHash);
+    return () => window.removeEventListener('hashchange', applyHash);
   }, []);
 
   const filtered = activeCat === 'all'

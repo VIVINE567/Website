@@ -31,6 +31,10 @@ const NavLink = ({ href, children, subItems }) => {
       }
     };
     if (pathname === path) {
+      if (window.location.hash !== `#${id}`) {
+        window.history.replaceState(null, '', to);
+        window.dispatchEvent(new HashChangeEvent('hashchange'));
+      }
       doScroll();
     } else {
       router.push(to);
