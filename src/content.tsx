@@ -1252,7 +1252,7 @@ export const CONTENT = {
     },
 
     "sodium-alginate": {
-      layout: "rich",
+      layout: "alginate",
       name: "Sodium Alginate",
       productTag: "Seaweed polysaccharide · E401",
       synonyms: "Algin, Alginic acid sodium salt, Na-Alginate",

@@ -49,7 +49,7 @@ const ApplicationsSection = () => (
             <p className="text-xl mb-10 leading-relaxed" style={S.appsBannerBody}>
               {C.body}
             </p>
-            <Link href="/applications" className="btn-white">{C.cta}</Link>
+            <Link href="/applications" className="btn-white inline-block !px-4 !py-3 !text-xs !tracking-wider sm:!px-10 sm:!py-5 sm:!text-base sm:!tracking-widest whitespace-nowrap">{C.cta}</Link>
           </motion.div>
 
           <div className="grid grid-cols-2 gap-3 sm:gap-4">
