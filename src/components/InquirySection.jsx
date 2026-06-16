@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { XCircle, Frown, Angry, AlertCircle, Bell } from 'lucide-react';
+import { XCircle, Frown, Angry, Layers, ShieldQuestion, Bell } from 'lucide-react';
 import S from '../styles/inquiry';
 import FormInput from './FormInput';
 import { CONTENT } from '../content';
@@ -9,7 +9,7 @@ import { CONTENT } from '../content';
 const Ci = CONTENT.inquiry;
 const Cv = CONTENT.vision;
 
-const VISION_ICONS = [XCircle, Frown, Angry, AlertCircle, AlertCircle, Bell];
+const VISION_ICONS = [XCircle, Frown, Angry, Layers, ShieldQuestion, Bell];
 
 const InquirySection = () => {
   const handleSubmit = async (e) => {

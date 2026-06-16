@@ -96,17 +96,21 @@ export default function App() {
                 style={S.navMobileOverlay}
               >
                 <div className="flex flex-col gap-6 text-xl font-medium" style={S.navMobileLinks}>
-                  {Cn.mobilePages.map((page) => (
-                    <Link
-                      key={page}
-                      to={`/${page}`}
-                      onClick={() => setMobileMenuOpen(false)}
-                      style={S.navMobileLink}
-                      className="capitalize hover:opacity-60 transition-opacity"
-                    >
-                      {page.charAt(0).toUpperCase() + page.slice(1)}
-                    </Link>
-                  ))}
+                  {Cn.mobilePages.map((page) => {
+                    const href = typeof page === 'string' ? page : page.href;
+                    const label = typeof page === 'string' ? (page.charAt(0).toUpperCase() + page.slice(1)) : page.label;
+                    return (
+                      <Link
+                        key={href}
+                        to={`/${href}`}
+                        onClick={() => setMobileMenuOpen(false)}
+                        style={S.navMobileLink}
+                        className="capitalize hover:opacity-60 transition-opacity"
+                      >
+                        {label}
+                      </Link>
+                    );
+                  })}
                   <button className="btn-gold py-4 rounded-xl">{Cn.mobileCta}</button>
                 </div>
               </motion.div>

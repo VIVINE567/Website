@@ -58,7 +58,7 @@ export const CONTENT = {
       },
       { label: "Services", href: "/services" },
       {
-        label: "Premix",
+        label: "Premixes",
         href: "/premix",
         subItems: [
           { label: "Belgian Waffles", href: "/premix#waffle" },
@@ -84,7 +84,7 @@ export const CONTENT = {
       "products",
       "applications",
       "services",
-      "premix",
+      { label: "Premixes", href: "premix" },
       "contact",
     ],
   },
@@ -175,7 +175,7 @@ export const CONTENT = {
       headingPre: "Leading",
       headingAccent: "Hydrocolloid and Stabilizer",
       headingPost: "Solution Provider",
-      subtitle: "10+ Years of Experience As A Player In The Hydrocolloid World",
+      subtitle: "11+ Years of Experience As A Player In The Hydrocolloid World",
       points: [
         "VIVINE International provides high-performance hydrocolloid ingredients, food stabilizers, and customized functional blends for food, pharma, cosmetic, and industrial applications.",
         "We combine technical expertise, quality manufacturing, competitive pricing, and reliable worldwide supply to deliver complete ingredient solutions tailored to your business needs.",
@@ -239,9 +239,9 @@ export const CONTENT = {
       "Challenging to select trustworthy hydrocolloid manufacturer or supplier?",
       "Keeping up to date with the latest news and trends about the hydrocolloid world?",
     ],
-    subscribePre: "Subscribe to learn how",
+    subscribePre: "Contact us to learn how",
     subscribeAccent: "VIVINE",
-    subscribePost: "provides you the right solutions",
+    subscribePost: "can provide the right solutions for you.",
   },
 
   productsPage: {
@@ -5007,8 +5007,7 @@ export const CONTENT = {
       shortName: "HEC",
       productTag:
         "Cellulose ether · Non-ionic · Water-soluble · Multi-industry thickener",
-      synonyms:
-        "Cellulose, 2-hydroxyethyl ether · INCI: Hydroxyethylcellulose",
+      synonyms: "Cellulose, 2-hydroxyethyl ether · INCI: Hydroxyethylcellulose",
       tagline:
         "Hydroxyethyl Cellulose (HEC) is a non-ionic, water-soluble cellulose ether produced by the reaction of alkali cellulose with ethylene oxide. Unlike methylcellulose derivatives, HEC remains fully soluble across the entire temperature range — it does not gel on heating — making it the preferred cellulose ether for ambient and elevated-temperature applications. HEC dissolves readily in both hot and cold water to form clear, pseudoplastic solutions with excellent thickening, film-forming, and water-retention properties. It is the largest-volume cellulose ether in the global paints and coatings industry, and is equally critical in oil and gas drilling fluids, construction chemicals, personal care formulations, liquid detergents, and textile processing.",
       casNo: "9004-62-0",

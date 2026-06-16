@@ -11,6 +11,7 @@ const applicationsStyles = {
     fontStyle: "italic",
     fontWeight: 300,
     lineHeight: 1.9,
+    fontSize: '1.125rem',
   },
 };
 

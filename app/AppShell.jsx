@@ -93,17 +93,21 @@ export default function AppShell({ children }) {
                 style={S.navMobileOverlay}
               >
                 <div className="flex flex-col gap-6 text-xl font-medium" style={S.navMobileLinks}>
-                  {Cn.mobilePages.map((page) => (
-                    <Link
-                      key={page}
-                      href={`/${page}`}
-                      onClick={() => setMobileMenuOpen(false)}
-                      style={S.navMobileLink}
-                      className="capitalize hover:opacity-60 transition-opacity"
-                    >
-                      {page.charAt(0).toUpperCase() + page.slice(1)}
-                    </Link>
-                  ))}
+                  {Cn.mobilePages.map((page) => {
+                    const href = typeof page === 'string' ? page : page.href;
+                    const label = typeof page === 'string' ? (page.charAt(0).toUpperCase() + page.slice(1)) : page.label;
+                    return (
+                      <Link
+                        key={href}
+                        href={`/${href}`}
+                        onClick={() => setMobileMenuOpen(false)}
+                        style={S.navMobileLink}
+                        className="capitalize hover:opacity-60 transition-opacity"
+                      >
+                        {label}
+                      </Link>
+                    );
+                  })}
                   <button
                     onClick={() => { setMobileMenuOpen(false); setQuoteOpen(true); }}
                     className="btn-gold py-4 rounded-xl"
