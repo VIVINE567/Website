@@ -14,7 +14,7 @@ const ADVANTAGES = [
   },
   {
     title: 'Regulatory Compliance Support',
-    desc: 'We provide all necessary quality and compliance documentation — CoA, MSDS, Halal, Kosher, organic certifications — for smooth import clearance globally.',
+    desc: 'We provide all necessary quality and compliance documentation — COA, MSDS, Halal, Kosher, organic certifications — for smooth import clearance globally.',
   },
   {
     title: 'End-to-End Service',

@@ -95,7 +95,7 @@ const AboutIntroSection = () => (
             className="block text-3xl font-black text-white leading-none mb-1"
             style={{ fontFamily: "'Oswald', sans-serif" }}
           >
-            10<span style={{ color: 'var(--gold)', fontSize: '1.1rem' }}>+</span>
+            11<span style={{ color: 'var(--gold)', fontSize: '1.1rem' }}>+</span>
           </span>
           <p className="text-xs" style={{ color: 'rgba(255,255,255,0.6)', fontFamily: "'Open Sans', sans-serif" }}>
             Years of expertise in<br />functional ingredients
@@ -121,7 +121,7 @@ const AboutIntroSection = () => (
           </em>
         </h2>
         <p className="text-sm leading-loose mb-2 max-w-lg" style={{ fontFamily: "'Open Sans', sans-serif", color: 'var(--brown-warm)', fontWeight: 300 }}>
-          VIVINE International is a trusted global supplier of hydrocolloids, alginates, cellulose derivatives, and specialty ingredients, serving manufacturers and processors across diverse industries. We bridge the gap between leading raw material producers and businesses that rely on high-quality, specification-driven functional ingredients.
+          VIVINE International is a trusted global supplier of hydrocolloids, alginates, cellulose ethers, and specialty ingredients, serving manufacturers and processors across diverse industries. We bridge the gap between leading raw material producers and businesses that rely on high-quality, specification-driven functional ingredients.
         </p>
         <p className="text-sm leading-loose mb-8 max-w-lg" style={{ fontFamily: "'Open Sans', sans-serif", color: 'var(--brown-warm)', fontWeight: 300 }}>
           Our comprehensive product portfolio includes{' '}

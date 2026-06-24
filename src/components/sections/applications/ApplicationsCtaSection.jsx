@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 const CTA_CARDS = [
   { icon: '🌍', title: 'Global Supply', body: 'Reliable delivery to 4+ countries with flexible MOQ and lead times' },
   { icon: '🔬', title: 'Technical Support', body: 'Application-specific guidance from our formulation scientists' },
-  { icon: '📋', title: 'Documentation', body: 'TDS, MSDS, CoA, Halal, Kosher and organic certificates on request' },
+  { icon: '📋', title: 'Documentation', body: 'TDS, MSDS, COA, Halal, Kosher and organic certificates on request' },
   { icon: '⚗️', title: 'Custom Grades', body: 'Tailor-made blends and stabiliser systems for unique requirements' },
 ];
 

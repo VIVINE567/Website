@@ -50,14 +50,14 @@ function PremixHero() {
         </span>
 
         <h1 style={{
-          fontFamily: "'Cinzel', serif",
+          fontFamily: "'Playfair Display', 'Cormorant Garamond', Georgia, serif",
           fontSize: 'clamp(40px, 5.5vw, 72px)',
-          fontWeight: 600, lineHeight: 1.08,
+          fontWeight: 100, lineHeight: 1.08,
           color: 'var(--cream)', marginBottom: '1.5rem',
           letterSpacing: '0.02em',
         }}>
           Crafted for <br />
-          <em style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontStyle: 'italic', color: 'var(--gold)', fontWeight: 400, fontSize: '1.08em' }}>
+          <em style={{ fontFamily: "'Playfair Display', 'Cormorant Garamond', Georgia, serif", fontStyle: 'normal', color: 'var(--gold)', fontWeight: 200, fontSize: '1.08em' }}>
             Taste,
           </em>{' '}
           Built for Scale
@@ -68,14 +68,10 @@ function PremixHero() {
           fontSize: 15, fontWeight: 300, lineHeight: 1.8,
           color: 'rgba(245,238,224,0.65)', maxWidth: 440, marginBottom: '2.5rem',
         }}>
-          Premium eggless premixes — waffles, pancakes, cakes, churros, crepes, and our signature stabilizer systems. Consistent quality, every single batch.
+          Discover our range of premium eggless premixes — waffles, pancakes, cakes, churros, crepes, and more. Every premix is crafted for exceptional taste, consistent results, and effortless preparation.
         </p>
 
         <div className="flex items-center gap-4 mb-12">
-          <div className="flex items-center justify-center rounded-full"
-            style={{ width: 46, height: 46, background: 'var(--gold)', fontSize: 21 }}>
-            👨‍🍳
-          </div>
           <div className="flex flex-col">
             <span style={{ fontFamily: "'Raleway', sans-serif", fontSize: 13, fontWeight: 600, color: 'var(--cream)', letterSpacing: '0.04em' }}>Vivek Kolekar</span>
             <span style={{ fontFamily: "'Raleway', sans-serif", fontSize: 9, fontWeight: 300, letterSpacing: '.18em', color: 'rgba(245,238,224,0.45)', textTransform: 'uppercase' }}>Founder, VIVINE FOODS</span>
@@ -160,18 +156,35 @@ function AboutStrip() {
       </div>
       <div className="premix-feature-grid grid grid-cols-2 gap-5" style={{ flex: 1, minWidth: 260 }}>
         {PREMIX_FEATURES.map((f, i) => (
-          <div key={i} className="feature-card-animated" style={{ padding: '1.5rem', textAlign: 'left', borderRadius: 8 }}>
-            <div className="corner-accent corner-tl" />
-            <div className="corner-accent corner-br" />
-            <span className="feature-card-icon" style={{ fontSize: 26, marginBottom: 10, display: 'block' }}>{f.icon}</span>
-            <div className="feature-card-title" style={{
-              fontFamily: "'Cinzel', serif", fontSize: 11, fontWeight: 600,
-              letterSpacing: '.08em', marginBottom: 5, textTransform: 'uppercase',
-            }}>{f.title}</div>
-            <div className="feature-card-desc" style={{
-              fontFamily: "'Raleway', sans-serif", fontSize: 11, fontWeight: 300, lineHeight: 1.6,
-            }}>{f.desc}</div>
-          </div>
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.6, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] }}
+            whileHover={{ y: -8, rotateY: 5, rotateX: -3 }}
+            className="feature-card-animated group relative text-center"
+            style={{ perspective: '1000px' }}
+          >
+            <span className="corner-accent corner-tl" />
+            <span className="corner-accent corner-br" />
+            <span className="feature-card-number">0{i + 1}</span>
+
+            <div
+              className="feature-card-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+              style={{ background: 'rgba(201,168,76,0.12)', border: '10px solid rgba(201,168,76,0.25)', fontSize: 22 }}
+            >
+              {f.icon}
+            </div>
+
+            <h3 className="font-bold mb-4 feature-card-title" style={{ fontFamily: "'Cinzel', serif", fontSize: '1.2rem', letterSpacing: '0.1em' }}>
+              {f.title}
+            </h3>
+            <div className="w-10 h-[1px] mx-auto mb-4" style={{ background: 'linear-gradient(to right, transparent, var(--gold), transparent)' }} />
+            <p className="leading-relaxed feature-card-desc" style={{ fontStyle: 'italic', fontFamily: "'Cormorant Garamond', serif", fontSize: '1.05rem' }}>
+              {f.desc}
+            </p>
+          </motion.div>
         ))}
       </div>
     </section>

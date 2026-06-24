@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'motion/react';
 
 const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919999999999';
@@ -122,6 +123,17 @@ export default function ChatWidget() {
     setOpen(false);
     setWaPopup(true);
   };
+
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setOpen(true);
+      window.removeEventListener('scroll', handleScroll);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [pathname]);
 
   return (
     <div data-component="ChatWidget" style={{ position: 'fixed', bottom: 24, right: 24, zIndex: 9999 }}>

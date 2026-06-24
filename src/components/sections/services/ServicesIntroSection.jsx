@@ -71,7 +71,7 @@ const ServicesIntroSection = () => {
         >
           <div className="space-y-4 text-base md:text-lg font-light leading-relaxed" style={{ color: 'var(--forest-mid)' }}>
             <p>
-              At VIVINE International, our services are built around one goal: making complex ingredient sourcing seamless and reliable for our clients. Whether you are a global manufacturer or a specialty producer, our team of specialists brings decades of hands-on expertise in hydrocolloids, cellulose derivatives and alginate chemistry.
+              At VIVINE International, our services are built around one goal: making complex ingredient sourcing seamless and reliable for our clients. Whether you are a global manufacturer or a specialty producer, our team of specialists brings decades of hands-on expertise in hydrocolloids, cellulose ethers and alginate chemistry.
             </p>
             <p>
               We combine direct manufacturer relationships with deep application knowledge, so every client receives not just a product — but a complete ingredient solution tailored to their formulation, regulatory and commercial needs.

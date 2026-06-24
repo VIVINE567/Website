@@ -73,7 +73,7 @@ const ContactInfoPanel = () => (
         borderLeft: '3px solid rgba(201,168,76,0.3)',
       }}
     >
-      Contact VIVINE International to discover the right hydrocolloids, gums, cellulose derivatives,
+      Contact VIVINE International to discover the right hydrocolloids, gums, cellulose ethers,
       pharmaceutical excipients, cosmetic ingredients, industrial additives, technical products,
       and customized stabilizer systems tailored to your application needs. Take your brand further
       with VIVINE's quality, experience, and efficiency — talk to our team today and find out how

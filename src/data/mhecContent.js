@@ -83,7 +83,7 @@ export const INFO_CARDS = [
   },
   {
     title: 'Why non-ionic matters',
-    body: 'Unlike carboxymethyl cellulose (CMC, anionic) or cationic cellulose derivatives, MHEC carries no net charge. This makes it fully compatible with high-ionic-strength systems such as Portland cement, gypsum plaster, calcium hydroxide (slaked lime), and salt-containing oilfield fluids — environments where ionic cellulose ethers can precipitate or lose viscosity due to electrolyte interaction.',
+    body: 'Unlike carboxymethyl cellulose (CMC, anionic) or cationic cellulose ethers, MHEC carries no net charge. This makes it fully compatible with high-ionic-strength systems such as Portland cement, gypsum plaster, calcium hydroxide (slaked lime), and salt-containing oilfield fluids — environments where ionic cellulose ethers can precipitate or lose viscosity due to electrolyte interaction.',
   },
   {
     title: 'Thermal gelation & cloud point',

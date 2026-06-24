@@ -145,4 +145,4 @@ export const SEO_PARAS = [
   'VIVINE International supplies construction-grade, food-grade, and pharma-grade HPMC across a comprehensive viscosity range (5 mPa·s to 200,000 mPa·s) with supporting documentation including TDS, SDS, COA, and application-specific grade selection guidance. Contact our technical team for samples, formulation support, and pricing.',
 ];
 
-export const FOOTER_NOTE = 'All technical data is indicative and based on standard reference conditions (Brookfield 2% solution, 20°C). Pharmaceutical applications require pharmacopoeial-grade HPMC (Hypromellose) with full CoA and DMF support — contact VIVINE International to confirm grade availability. Food-grade supply conforms to E464 / INS 464 / FDA 21 CFR requirements.';
+export const FOOTER_NOTE = 'All technical data is indicative and based on standard reference conditions (Brookfield 2% solution, 20°C). Pharmaceutical applications require pharmacopoeial-grade HPMC (Hypromellose) with full COA and DMF support — contact VIVINE International to confirm grade availability. Food-grade supply conforms to E464 / INS 464 / FDA 21 CFR requirements.';

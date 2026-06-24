@@ -13,7 +13,7 @@ const WHY_CARDS = [
   { icon: '🚚', title: 'Reliable logistics',          body: 'Flexible MOQ, efficient international shipping and real-time order tracking — minimising lead times and supply chain disruption.' },
   { icon: '🤝', title: 'Long-term partnerships',      body: 'We invest in understanding your business. Our account managers provide continuity, transparency and proactive market intelligence.' },
   { icon: '✅', title: 'Quality assurance',           body: 'Every batch sourced from GMP and HACCP certified facilities. Rigorous incoming quality checks at our end before dispatch.' },
-  { icon: '💡', title: 'One-stop solution',           body: 'From hydrocolloids to cellulose derivatives, access over 200 product grades from a single, trusted international supplier.' },
+  { icon: '💡', title: 'One-stop solution',           body: 'From hydrocolloids to cellulose ethers, access over 200 product grades from a single, trusted international supplier.' },
 ];
 
 const CERT_CARDS = [
@@ -24,7 +24,7 @@ const CERT_CARDS = [
   { icon: '🌿', title: 'Non-GMO',                   body: 'Non-GMO verified grades available across our plant-based hydrocolloid range.' },
   { icon: '📦', title: 'GMP & HACCP',               body: 'Good Manufacturing Practice and Hazard Analysis certified production facilities.' },
   { icon: '🌱', title: 'COSMOS / Organic',          body: 'Organic-certified grades for natural cosmetics and food formulations.' },
-  { icon: '📄', title: 'Full Documentation',        body: 'CoA, TDS, MSDS and all compliance documents available on request within 24 hours.' },
+  { icon: '📄', title: 'Full Documentation',        body: 'COA, TDS, MSDS and all compliance documents available on request within 24 hours.' },
 ];
 
 const REGIONS = [

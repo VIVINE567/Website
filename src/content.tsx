@@ -305,7 +305,6 @@ export const CONTENT = {
       "HEC",
       "MHEC",
       "Sodium CMC",
-      "Food Stabilizers",
     ],
     categories: [
       {
@@ -568,50 +567,6 @@ export const CONTENT = {
               {
                 name: "High Viscosity Sodium Alginate",
                 desc: "Industrial, gels, thickening systems.",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: "food-stabilizers",
-        title: "Food Stabilizers",
-        products: [
-          {
-            name: "Jelly Thickener",
-            desc: "Specialized stabilizer blends designed for jelly and dessert production, providing optimal gel texture, clarity, and mouthfeel.",
-            img: "/product-images/Konjac-Gum-36000.jpg",
-            subProducts: [
-              {
-                name: "Jelly Powder",
-                desc: "Ready-to-use powder blend for quick jelly preparation.",
-              },
-              {
-                name: "Konjac Jelly Powder",
-                desc: "Konjac-based blend for firm, chewy jelly textures.",
-              },
-            ],
-          },
-          {
-            name: "Plant-Based Stabilizers",
-            desc: "Custom-formulated stabilizer systems for the growing plant-based food market, optimizing texture and stability in dairy and meat alternatives.",
-            img: "/product-images/Flaxseed-Gum-2.jpg",
-            subProducts: [
-              {
-                name: "Plant-Based Yogurt Stabilizers",
-                desc: "For creamy texture and stability in plant-based yogurts.",
-              },
-              {
-                name: "Plant-Based Meat Stabilizers",
-                desc: "Binding and texture solutions for meat alternatives.",
-              },
-              {
-                name: "Plant-Based Cheese Stabilizers",
-                desc: "Meltability and stretch for vegan cheese products.",
-              },
-              {
-                name: "Vegan Gummies Stabilizers",
-                desc: "Gelatin-free gelling solutions for gummy confections.",
               },
             ],
           },
@@ -1827,7 +1782,7 @@ export const CONTENT = {
       chartLabels: ["Food Low", "Food Med", "Food High", "Pharma", "Cosmetic"],
       chartValues: [100, 400, 1000, 600, 1000],
       seoDescription:
-        "Propylene Glycol Alginate (PGA), also known as Hydroxypropyl Alginate (CAS 9005-37-2, E405, INS 405), is the propylene glycol ester of alginic acid — a naturally occurring anionic polysaccharide extracted from brown seaweed species including <em>Macrocystis pyrifera</em>, <em>Laminaria hyperborea</em>, and <em>Ascophyllum nodosum</em>.<br><br>The defining functional advantage of PGA over other alginate salts is its <strong>exceptional stability in acidic environments (pH 3–6)</strong>. While sodium alginate precipitates as insoluble alginic acid below pH 4, PGA remains fully soluble and functional — indispensable in acidic food and beverage formulations, acidic pharmaceutical preparations, and cosmetic products with low pH.<br><br>In the <strong>food & beverage industry</strong>, PGA (E405) is the preferred <strong>beer foam stabilizer</strong> (head retention and lacing), emulsifier in <strong>salad dressings and sauces</strong>, cloud and pulp stabilizer in <strong>fruit beverages</strong>, and structuring agent in <strong>dairy desserts, ice cream, and whipped toppings</strong>. Approved under EU E405, FDA 21 CFR 172.858 (Food Approved), and JECFA (ADI 0–25 mg/kg bw/day).<br><br>In <strong>pharmaceutical applications</strong>, PGA (USP/NF grade) serves as an excipient in tablet binding, controlled-release matrix systems, topical gels, and oral suspensions. In <strong>cosmetics and personal care</strong>, PGA is used as an emulsifier, thickener, film former, and foam stabilizer in lotions, creams, shampoos, face serums, sunscreens, and toothpaste.<br><br><strong>VIVINE International</strong> supplies Propylene Glycol Alginate in food grade (E405/FCC/JECFA), pharma grade (USP/NF), and cosmetic grade (INCI compliant), across low, medium, and high viscosity ranges. Full TDS, SDS, CoA, and compliance documentation available on request. Halal and Kosher certification available upon request.",
+        "Propylene Glycol Alginate (PGA), also known as Hydroxypropyl Alginate (CAS 9005-37-2, E405, INS 405), is the propylene glycol ester of alginic acid — a naturally occurring anionic polysaccharide extracted from brown seaweed species including <em>Macrocystis pyrifera</em>, <em>Laminaria hyperborea</em>, and <em>Ascophyllum nodosum</em>.<br><br>The defining functional advantage of PGA over other alginate salts is its <strong>exceptional stability in acidic environments (pH 3–6)</strong>. While sodium alginate precipitates as insoluble alginic acid below pH 4, PGA remains fully soluble and functional — indispensable in acidic food and beverage formulations, acidic pharmaceutical preparations, and cosmetic products with low pH.<br><br>In the <strong>food & beverage industry</strong>, PGA (E405) is the preferred <strong>beer foam stabilizer</strong> (head retention and lacing), emulsifier in <strong>salad dressings and sauces</strong>, cloud and pulp stabilizer in <strong>fruit beverages</strong>, and structuring agent in <strong>dairy desserts, ice cream, and whipped toppings</strong>. Approved under EU E405, FDA 21 CFR 172.858 (Food Approved), and JECFA (ADI 0–25 mg/kg bw/day).<br><br>In <strong>pharmaceutical applications</strong>, PGA (USP/NF grade) serves as an excipient in tablet binding, controlled-release matrix systems, topical gels, and oral suspensions. In <strong>cosmetics and personal care</strong>, PGA is used as an emulsifier, thickener, film former, and foam stabilizer in lotions, creams, shampoos, face serums, sunscreens, and toothpaste.<br><br><strong>VIVINE International</strong> supplies Propylene Glycol Alginate in food grade (E405/FCC/JECFA), pharma grade (USP/NF), and cosmetic grade (INCI compliant), across low, medium, and high viscosity ranges. Full TDS, SDS, COA, and compliance documentation available on request. Halal and Kosher certification available upon request.",
       regulatoryBadges: [
         { icon: "🇺🇸", title: "FDA / Food Approved", sub: "21 CFR 172.858" },
         { icon: "🇪🇺", title: "EU E405", sub: "Regulation (EC) No 1333/2008" },
@@ -1985,7 +1940,7 @@ export const CONTENT = {
       description: [
         "Pectin is a naturally occurring structural polysaccharide found in the cell walls of higher plants, commercially extracted from citrus peel (Citrus sinensis, C. limon) and apple pomace — both sustainable by-products of juice processing. Available in three types — High Methoxyl (HM), Low Methoxyl (LM), and Amidated Low Methoxyl (LMA).",
         "Pectin functions as a gelling agent, thickener, stabilizer, and emulsifier across jams, jellies, beverages, dairy, confectionery, and bakery applications. All grades comply with EU E440, FDA 21 CFR 184.1588 (Food Approved), FCC, and JECFA standards.",
-        "VIVINE International supplies Pectin in all three types — HM Rapid-Set, HM Slow-Set, LM Conventional, LM Amidated (LMA), and Beverage grade — with full TDS, SDS, CoA, and compliance documentation on request.",
+        "VIVINE International supplies Pectin in all three types — HM Rapid-Set, HM Slow-Set, LM Conventional, LM Amidated (LMA), and Beverage grade — with full TDS, SDS, COA, and compliance documentation on request.",
       ],
       statPills: [
         { val: "E440 / Food Approved", label: "EU · FDA approved" },
@@ -5612,7 +5567,7 @@ export const CONTENT = {
         },
         {
           title: "Why non-ionic matters",
-          body: "MHEC carries no net charge. Unlike CMC (anionic) or cationic cellulose derivatives, it is fully compatible with high-ionic-strength systems such as Portland cement, gypsum plaster, calcium hydroxide, and salt-containing oilfield fluids — environments where ionic cellulose ethers can precipitate or lose viscosity due to electrolyte interaction.",
+          body: "MHEC carries no net charge. Unlike CMC (anionic) or cationic cellulose ethers, it is fully compatible with high-ionic-strength systems such as Portland cement, gypsum plaster, calcium hydroxide, and salt-containing oilfield fluids — environments where ionic cellulose ethers can precipitate or lose viscosity due to electrolyte interaction.",
         },
         {
           title: "Thermal gelation & cloud point",
@@ -6773,9 +6728,9 @@ export const CONTENT = {
         { label: "Dosage", field: "applications" },
       ],
       seoDescription:
-        "Hydroxypropyl Methylcellulose (HPMC), internationally recognised under the INN Hypromellose, is the most versatile cellulose ether commercially available — the only product in its class approved and optimised for simultaneous use in construction chemicals, pharmaceutical formulations, food products, and personal care applications.<br><br>In the global <strong>construction industry</strong>, HPMC is a key functional additive in the dry-mix mortar sector. HPMC in tile adhesives, wall putty, gypsum plasters, and EIFS render systems provides the water retention, workability, and anti-sag performance that separates high-performance formulations from basic site-mixed mortars.<br><br>In <strong>pharmaceutical manufacturing</strong>, HPMC (Hypromellose) serves as the backbone of both the tablet coating and the controlled-release tablet industries. The shift from solvent-based coatings to aqueous HPMC film coating systems has been one of the defining technical changes in pharmaceutical manufacturing — driven by HPMC's excellent film properties and regulatory acceptance across all major pharmacopoeias (USP-NF, Ph.Eur., JP).<br><br>In the <strong>food industry</strong>, HPMC (E464, Food Approved) functions as a thickener, stabiliser, emulsifier, and fat replacer in gluten-free baking, frying batters (reducing oil absorption by 15–40%), sauces, and edible coatings.<br><br><strong>VIVINE International</strong> supplies construction-grade, food-grade, and pharma-grade HPMC across a comprehensive viscosity range (5 mPa·s to 200,000 mPa·s) with full TDS, SDS, CoA, and application-specific grade selection guidance.",
+        "Hydroxypropyl Methylcellulose (HPMC), internationally recognised under the INN Hypromellose, is the most versatile cellulose ether commercially available — the only product in its class approved and optimised for simultaneous use in construction chemicals, pharmaceutical formulations, food products, and personal care applications.<br><br>In the global <strong>construction industry</strong>, HPMC is a key functional additive in the dry-mix mortar sector. HPMC in tile adhesives, wall putty, gypsum plasters, and EIFS render systems provides the water retention, workability, and anti-sag performance that separates high-performance formulations from basic site-mixed mortars.<br><br>In <strong>pharmaceutical manufacturing</strong>, HPMC (Hypromellose) serves as the backbone of both the tablet coating and the controlled-release tablet industries. The shift from solvent-based coatings to aqueous HPMC film coating systems has been one of the defining technical changes in pharmaceutical manufacturing — driven by HPMC's excellent film properties and regulatory acceptance across all major pharmacopoeias (USP-NF, Ph.Eur., JP).<br><br>In the <strong>food industry</strong>, HPMC (E464, Food Approved) functions as a thickener, stabiliser, emulsifier, and fat replacer in gluten-free baking, frying batters (reducing oil absorption by 15–40%), sauces, and edible coatings.<br><br><strong>VIVINE International</strong> supplies construction-grade, food-grade, and pharma-grade HPMC across a comprehensive viscosity range (5 mPa·s to 200,000 mPa·s) with full TDS, SDS, COA, and application-specific grade selection guidance.",
       footerNote:
-        "All technical data is indicative and based on standard reference conditions (Brookfield 2% solution, 20°C). Pharmaceutical applications require pharmacopoeial-grade HPMC (Hypromellose) with full CoA and DMF support. Food-grade supply conforms to E464 / INS 464 / FDA requirements. Contact VIVINE International for grade-specific datasheets and samples.",
+        "All technical data is indicative and based on standard reference conditions (Brookfield 2% solution, 20°C). Pharmaceutical applications require pharmacopoeial-grade HPMC (Hypromellose) with full COA and DMF support. Food-grade supply conforms to E464 / INS 464 / FDA requirements. Contact VIVINE International for grade-specific datasheets and samples.",
     },
 
     "sodium-cmc": {
@@ -7629,7 +7584,7 @@ export const CONTENT = {
         },
       ],
       seoDescription:
-        "<strong>Polyanionic Cellulose (PAC)</strong> is a high-purity, high-Degree of Substitution (DS 0.85–1.40) sodium carboxymethyl cellulose derivative (CAS 9004-32-4), produced from refined cotton linters or high-alpha-cellulose wood pulp. PAC is engineered for demanding industrial and oilfield environments where standard CMC (DS 0.65–0.90) is technically insufficient. The elevated DS delivers superior water solubility, electrolyte tolerance, thermal stability, and viscosification efficiency compared to all commodity cellulose derivatives.<br><br><strong>Oilfield drilling applications</strong> represent the largest commercial volume segment for PAC globally. PAC is the API 13A / ISO 13500-compliant standard fluid loss additive for water-based drilling muds (WBM). VIVINE International supplies <strong>PAC-R (Regular viscosity, 600–1,000 mPa·s at 1%)</strong> — used specifically for fluid loss reduction (API FL ≤ 15 mL/30 min) with minimal impact on mud viscosity; and <strong>PAC-UHV / PAC-HV (1,000–8,000+ mPa·s)</strong> for combined fluid loss control and rheology building, suitable for HTHP wells up to 150 °C. PAC performs in freshwater muds, seawater muds, KCl-inhibitive brines (up to 3%), and NaCl-saturated brines.<br><br>In the <strong>construction chemicals industry</strong>, PAC functions as a water retention agent, thickener, and workability enhancer in dry-mix mortars, cementitious tile adhesives (EN 12004), cement renders, gypsum plasters, self-levelling underlayments, and EIFS systems. In <strong>textile processing</strong>, PAC is used as a warp yarn sizing agent on cotton, viscose, and blended yarns, and as a reactive dye print paste thickener. For <strong>industrial chemical distributors</strong>, PAC provides high-performance thickening, binding, dispersing, and film-forming functionality in paper coating, laundry detergents, agricultural chemical formulations, ceramic binders, and mineral processing.<br><br><strong>VIVINE International</strong> supplies Polyanionic Cellulose in PAC-R, PAC-HV, and PAC-UHV (oilfield, API 13A / ISO 13500 compliant), plus construction, textile, and industrial grades. API 13A test reports, TDS, SDS, and COA available on request.",
+        "<strong>Polyanionic Cellulose (PAC)</strong> is a high-purity, high-Degree of Substitution (DS 0.85–1.40) sodium carboxymethyl cellulose derivative (CAS 9004-32-4), produced from refined cotton linters or high-alpha-cellulose wood pulp. PAC is engineered for demanding industrial and oilfield environments where standard CMC (DS 0.65–0.90) is technically insufficient. The elevated DS delivers superior water solubility, electrolyte tolerance, thermal stability, and viscosification efficiency compared to all commodity cellulose ethers.<br><br><strong>Oilfield drilling applications</strong> represent the largest commercial volume segment for PAC globally. PAC is the API 13A / ISO 13500-compliant standard fluid loss additive for water-based drilling muds (WBM). VIVINE International supplies <strong>PAC-R (Regular viscosity, 600–1,000 mPa·s at 1%)</strong> — used specifically for fluid loss reduction (API FL ≤ 15 mL/30 min) with minimal impact on mud viscosity; and <strong>PAC-UHV / PAC-HV (1,000–8,000+ mPa·s)</strong> for combined fluid loss control and rheology building, suitable for HTHP wells up to 150 °C. PAC performs in freshwater muds, seawater muds, KCl-inhibitive brines (up to 3%), and NaCl-saturated brines.<br><br>In the <strong>construction chemicals industry</strong>, PAC functions as a water retention agent, thickener, and workability enhancer in dry-mix mortars, cementitious tile adhesives (EN 12004), cement renders, gypsum plasters, self-levelling underlayments, and EIFS systems. In <strong>textile processing</strong>, PAC is used as a warp yarn sizing agent on cotton, viscose, and blended yarns, and as a reactive dye print paste thickener. For <strong>industrial chemical distributors</strong>, PAC provides high-performance thickening, binding, dispersing, and film-forming functionality in paper coating, laundry detergents, agricultural chemical formulations, ceramic binders, and mineral processing.<br><br><strong>VIVINE International</strong> supplies Polyanionic Cellulose in PAC-R, PAC-HV, and PAC-UHV (oilfield, API 13A / ISO 13500 compliant), plus construction, textile, and industrial grades. API 13A test reports, TDS, SDS, and COA available on request.",
       comparisonTable: {
         title: "PAC vs. Standard CMC — performance comparison",
         sub: "Understanding the technical gap for industrial selection",
@@ -8368,11 +8323,26 @@ export const CONTENT = {
     products: {
       heading: "Products",
       items: [
-        { label: "Alginates", to: "/alginates" },
-        { label: "Celluloses", to: "/celluloses" },
-        { label: "Carrageenan Gum", to: "/carrageenan-gum" },
-        { label: "Xanthan Gum", to: "/xanthan-gum" },
-        { label: "Gellan Gum", to: "/gellan-gum" },
+        { label: "Carrageenan", to: "/products/carrageenan" },
+        { label: "Sodium Alginate", to: "/products/sodium-alginate" },
+        {
+          label: "Propylene Glycol Alginate",
+          to: "/products/propylene-glycol-alginate",
+        },
+        { label: "Pectin", to: "/products/pectin" },
+        { label: "Xanthan Gum", to: "/products/xanthan-gum" },
+        { label: "Guar Gum", to: "/products/guar-gum" },
+        { label: "Gellan Gum", to: "/products/gellan-gum" },
+        { label: "Konjac Gum", to: "/products/konjac-gum" },
+        { label: "HPMC", to: "/products/hpmc" },
+        { label: "HEC", to: "/products/hec" },
+        { label: "MHEC", to: "/products/mhec" },
+        { label: "Sodium CMC", to: "/products/sodium-cmc" },
+        { label: "PAC", to: "/products/polyanionic-cellulose" },
+        {
+          label: "Croscarmellose Sodium (CCS)",
+          to: "/products/croscarmellose-sodium",
+        },
       ],
     },
   },

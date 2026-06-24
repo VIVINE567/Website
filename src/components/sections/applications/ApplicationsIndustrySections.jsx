@@ -5,7 +5,7 @@ import IndustrySectionBlock from './IndustrySectionBlock';
 // ─── All application data from vivine-applications.html ──────────────────────
 
 const FOOD_CARDS = [
-  { image: '/applications/confectionery.png', label: 'Confectionery', desc: 'Gelling and texturising agents for gummies, jellies, marshmallows and sugar-coated products. Carrageenan, agar and alginates.', tag: 'Carrageenan · Gellan Gum · Pectin' },
+  { image: '/applications/confectionery.png', label: 'Confectionery', desc: 'Gelling and texturising agents for gummies, jellies, marshmallows and sugar-coated products. Carrageenan, alginates.', tag: 'Carrageenan · Gellan Gum · Pectin' },
   { image: '/applications/jelly-pudding.png', label: 'Jelly & Pudding', desc: 'Precision gelation, heat stability and glossy clarity in dessert gels and pudding systems.', tag: 'Carrageenan · Pectin · Gellan Gum' },
   { image: '/applications/dairy.png', label: 'Dairy & Dairy Alternatives', desc: 'Syneresis prevention, body and mouthfeel in yoghurts, cheese, cream and plant-based dairy.', tag: 'Carrageenan · Sodium CMC · Guar Gum' },
   { image: '/applications/frozen-desserts.png', label: 'Frozen Desserts & Ice Cream', desc: 'Ice crystal control, overrun stability, heat-shock resistance and creaminess enhancement.', tag: 'Locust Bean Gum (LBG) · Guar Gum · Carrageenan · Sodium CMC' },
@@ -19,7 +19,7 @@ const FOOD_CARDS = [
 const PHARMA_CARDS = [
   { image: '/applications/tablet-excipients.png', label: 'Tablet Excipients', desc: 'Binders, disintegrants and matrix-formers for immediate and controlled-release tablets. HPMC, CMC and alginates.', tag: 'HPMC · Sodium CMC · Croscarmellose Sodium · Sodium Alginate' },
   { image: '/applications/vegan-capsule-shells.png', label: 'Vegan Capsule Shells', desc: 'HPMC-based hard capsule shells as a plant-derived alternative to bovine gelatin — suitable for vegetarian and Halal markets.', tag: 'HPMC' },
-  { image: '/applications/wound-care-medical.png', label: 'Oral Liquid & Syrup Formulations', desc: 'Suspension stability, viscosity control, mouthfeel enhancement and active ingredient uniformity for oral liquid and syrup formulations.', tag: 'Sodium CMC · HPMC · Xanthan Gum' },
+  { image: '/applications/wound-care-medical_1.png', label: 'Oral Liquid & Syrup Formulations', desc: 'Suspension stability, viscosity control, mouthfeel enhancement and active ingredient uniformity for oral liquid and syrup formulations.', tag: 'Sodium CMC · HPMC · Xanthan Gum' },
   { image: '/applications/drug-encapsulation.png', label: 'Drug Encapsulation', desc: 'Microencapsulation and nanoparticle matrices for bioavailability enhancement and targeted delivery.', tag: 'Sodium Alginate · Pectin · HPMC' },
   { image: '/applications/nutraceuticals.png', label: 'Nutraceuticals & Supplements', desc: 'Dietary fibre enrichment, gelling carriers for omega-3 and probiotic encapsulation, and softgel alternatives.', tag: 'Sodium Alginate · Pectin · HPMC' },
   { image: '/applications/dental-impression.png', label: 'Dental & Impression', desc: 'Alginate impression materials for dental prosthetics and orthodontics with controlled setting times.', tag: 'Sodium Alginate' },
@@ -46,7 +46,7 @@ const INDUSTRIAL_CARDS = [
 ];
 
 const PET_FOOD_CARDS = [
-  { image: '/applications/wet-pet-food.jpeg', label: 'Wet Pet Food', desc: 'Gelling and gravy-forming agents for canned and pouched cat and dog food. Improves palatability and texture.', tag: 'Carrageenan · Agar · LBG' },
+  { image: '/applications/wet-pet-food.jpeg', label: 'Wet Pet Food', desc: 'Gelling and gravy-forming agents for canned and pouched cat and dog food. Improves palatability and texture.', tag: 'Carrageenan · LBG' },
   { image: '/applications/pet-treats.jpeg', label: 'Treats & Semi-moist', desc: 'Moisture retention, binding and chewy texture for snack treats, training rewards and dental sticks.', tag: 'CMC · Guar · Alginate' },
   { image: '/applications/wet-pet-food.jpeg', label: 'Cattle & Buffalo Feed', desc: 'Feed pellet binding, moisture management and ingredient stabilization for cattle, buffalo and dairy nutrition formulations.', tag: 'Sodium CMC · Guar Gum · Xanthan Gum' },
   { image: '/applications/pet-treats.jpeg', label: 'Poultry Feed', desc: 'Pellet durability improvement, dust reduction and feed processing enhancement for broiler and layer feed formulations.', tag: 'Sodium CMC · Guar Gum · Sodium Alginate' },
@@ -66,14 +66,14 @@ const INDUSTRY_SECTIONS = [
   {
     id: 'applications-pharma',
     title: 'Pharmaceutical & Nutraceutical',
-    desc: 'VIVINE International supplies pharmacopoeial-grade hydrocolloids and cellulose derivatives that meet USP, BP and EP monograph requirements. Our excipients are used in solid dosage forms, controlled-release matrices, wound care and encapsulation across regulated global markets.',
+    desc: 'VIVINE International supplies pharmacopoeial-grade hydrocolloids and cellulose ethers that meet USP, BP and EP monograph requirements. Our excipients are used in solid dosage forms, controlled-release matrices, wound care and encapsulation across regulated global markets.',
     cards: PHARMA_CARDS,
     alt: true,
   },
   {
     id: 'applications-cosmetics',
     title: 'Cosmetics & Personal Care',
-    desc: 'As viscosity-control polymers, film-formers and skin-conditioning agents, VIVINE International hydrocolloids and cellulose derivatives are trusted by cosmetic formulators worldwide. Our grades are COSMOS-compatible and comply with EU and ASEAN cosmetic regulations.',
+    desc: 'As viscosity-control polymers, film-formers and skin-conditioning agents, VIVINE International hydrocolloids and cellulose ethers are trusted by cosmetic formulators worldwide. Our grades are COSMOS-compatible and comply with EU and ASEAN cosmetic regulations.',
     cards: COSMETICS_CARDS,
     alt: false,
   },
@@ -87,7 +87,7 @@ const INDUSTRY_SECTIONS = [
   {
     id: 'applications-petfood',
     title: 'Animal Nutrition',
-    desc: 'VIVINE International supplies hydrocolloids, alginates and cellulose derivatives for animal nutrition applications, supporting pellet durability, moisture retention, feed binding, texture improvement and processing efficiency across pet food, livestock feed and poultry nutrition.',
+    desc: 'VIVINE International supplies hydrocolloids, alginates and cellulose ethers for animal nutrition applications, supporting pellet durability, moisture retention, feed binding, texture improvement and processing efficiency across pet food, livestock feed and poultry nutrition.',
     cards: PET_FOOD_CARDS,
     alt: false,
   },

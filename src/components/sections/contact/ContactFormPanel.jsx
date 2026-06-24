@@ -13,7 +13,7 @@ const INDUSTRIES = [
   'Construction Chemicals',
   'Textile Chemicals',
   'Industrial / Manufacturing',
-  'Agriculture / Agrochemicals',
+  'Animal Nutrition',
   'Other',
 ];
 
