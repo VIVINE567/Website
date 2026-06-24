@@ -65,7 +65,7 @@ const ProductsSection = () => (
         className="text-center mb-20"
       >
         <div className="gold-eyebrow mb-6">{C.eyebrow}</div>
-        <h2 style={S.productsH2} className="uppercase">
+        <h2 style={S.productsH2} className="uppercase break-words">
           VIVINE'S&nbsp;<em style={{ color: 'var(--gold-dark)', fontStyle: 'italic', fontWeight: 400 }}>Products</em>
         </h2>
         <div className="gold-divider mt-6" />

@@ -7,7 +7,7 @@ const productsStyles = {
     letterSpacing: "0.08em",
     fontWeight: 900,
     fontStyle: "normal",
-    fontSize: "clamp(2rem, 4vw, 2.8rem)",
+    fontSize: "clamp(1.4rem, 7.5vw, 2.8rem)",
   },
   productImgBg: { background: "var(--cream-dark)" },
   productBadge: {

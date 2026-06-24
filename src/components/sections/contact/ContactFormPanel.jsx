@@ -28,6 +28,7 @@ const PRODUCTS = [
   'Konjac Gum',
   'HPMC',
   'HEC',
+  'MHEC',
   'Sodium CMC',
   'PAC',
   'Croscarmellose Sodium (CCS)',

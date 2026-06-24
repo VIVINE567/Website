@@ -34,7 +34,7 @@ const CertificationsSection = () => (
       {/* Heading */}
       <motion.h2
         {...fadeUp(0)}
-        className="text-4xl md:text-5xl mb-5"
+        className="text-4xl md:text-5xl mb-5 break-words"
         style={S.productsH2}
       >
         VIVINE&nbsp;

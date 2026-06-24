@@ -181,7 +181,7 @@ export const CONTENT = {
         "We combine technical expertise, quality manufacturing, competitive pricing, and reliable worldwide supply to deliver complete ingredient solutions tailored to your business needs.",
       ],
       cta: "Explore More",
-      img: "/Leading Hydrocolloid and Stabilizer.png",
+      img: "/home_med.jpeg",
       imgAlt: "VIVINE powder product",
     },
 
@@ -258,7 +258,7 @@ export const CONTENT = {
       {
         icon: "Leaf",
         title: "Plant-Based Gums",
-        items: ["Pectin", "Konjac Gum", "Citrus Fiber"],
+        items: ["Pectin", "Konjac Gum", "Guar Gum", "Locust Bean Gum"],
       },
       {
         icon: "Waves",
@@ -266,6 +266,8 @@ export const CONTENT = {
         items: [
           "Carrageenan",
           "Sodium Alginate",
+          "Calcium Alginate",
+          "Alginic Acid",
           "Propylene Glycol Alginate (PGA)",
         ],
       },
@@ -277,12 +279,19 @@ export const CONTENT = {
       {
         icon: "FlaskConical",
         title: "Cellulose Ethers",
-        items: ["HPMC", "HEC", "MHEC", "Sodium CMC", "Sodium Alginate"],
+        items: [
+          "HPMC",
+          "HEC",
+          "MHEC",
+          "Sodium CMC",
+          "PAC",
+          "Croscarmellose Sodium (CCS)",
+        ],
       },
       {
         icon: "ChefHat",
         title: "Food Solutions",
-        items: ["Ingredients", "Formulas", "Insights"],
+        items: ["Dairy Systems", "Ice Cream Systems", "Beverage Systems"],
       },
     ],
     quickLinks: [

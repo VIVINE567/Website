@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'motion/react';
 
 const STATS = [
-  { number: '4', suffix: '+', label: 'Countries Served' },
-  { number: '200', suffix: '+', label: 'Product Grades' },
-  { number: '15', suffix: '+', label: 'Industries' },
+  { number: '9', suffix: '+', label: 'Countries Served' },
+  { number: '150', suffix: '+', label: 'Product Grades' },
+  { number: '5', suffix: '+', label: 'Industries' },
   { number: 'ISO', suffix: '', label: 'Certified Supplier' },
   { number: '24', suffix: 'hr', label: 'Technical Response' },
 ];

@@ -23,7 +23,7 @@ const CATEGORY_LINKS = [
 
 const ApplicationsSection = () => (
   <section data-component="ApplicationsSection" className="py-24 overflow-hidden">
-    <div className="max-w-7xl mx-auto px-4 md:px-6">
+    <div className="max-w-7xl mx-auto px-2 md:px-6">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -36,7 +36,7 @@ const ApplicationsSection = () => (
           style={{ backgroundImage: `url('${C.bannerImg}')` }}
         />
 
-        <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center p-8 md:p-12">
+        <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center p-2 sm:p-8 md:p-12">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -52,7 +52,7 @@ const ApplicationsSection = () => (
             <Link href="/applications" className="btn-white inline-block !px-4 !py-3 !text-xs !tracking-wider sm:!px-10 sm:!py-5 sm:!text-base sm:!tracking-widest whitespace-nowrap">{C.cta}</Link>
           </motion.div>
 
-          <div className="grid grid-cols-2 gap-3 sm:gap-4">
+          <div className="grid grid-cols-2 gap-1.5 sm:gap-4">
             {C.categories.map((app, idx) => (
               <Link key={app} href={CATEGORY_LINKS[idx]}>
                 <motion.div
@@ -69,8 +69,8 @@ const ApplicationsSection = () => (
                     className="w-full aspect-[3/2] object-cover block scale-[1.25]"
                     loading="lazy"
                   />
-                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent pt-8 pb-3 px-2 sm:pb-4 sm:px-3">
-                    <span className="block text-center text-white font-bold uppercase tracking-wide text-[10px] min-[375px]:text-xs sm:text-sm md:text-base">
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent pt-8 pb-1.5 px-1.5 sm:pb-4 sm:px-3">
+                    <span className="block text-center text-white font-bold uppercase tracking-wide break-words text-[clamp(0.5rem,2.6vw,1rem)] sm:text-sm md:text-base">
                       {app}
                     </span>
                   </div>

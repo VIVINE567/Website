@@ -70,13 +70,13 @@ const AboutSection = () => (
         transition={{ duration: 0.8 }}
         whileHover={{ y: -8 }}
       >
-        <div className="overflow-hidden shadow-xl h-[490px]" style={{ ...S.aboutImgFrame, borderColor: 'rgba(201,168,76,0.35)', boxShadow: '0 20px 40px rgba(0,0,0,0.3)' }}>
+        <div className="overflow-hidden shadow-xl aspect-[3/2]" style={{ ...S.aboutImgFrame, borderColor: 'rgba(201,168,76,0.35)', boxShadow: '0 20px 40px rgba(0,0,0,0.3)' }}>
           <img
             src={C.img}
             alt={C.imgAlt}
             loading="lazy"
             decoding="async"
-            className="w-full h-full object-cover object-bottom hover:scale-105 transition-transform duration-700"
+            className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
             referrerPolicy="no-referrer"
           />
         </div>

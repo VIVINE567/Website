@@ -8,19 +8,19 @@ const PRODUCTS = [
     badge: 'Hydrocolloids',
     title: 'Hydrocolloid Systems',
     desc: 'A comprehensive range of hydrocolloids providing viscosity, gelation, emulsification and stabilization across food, pharmaceutical and cosmetic applications.',
-    tags: ['Xanthan Gum', 'Guar Gum', 'Carrageenan', 'Locust Bean Gum', 'Pectin'],
+    tags: ['Xanthan Gum', 'Guar Gum', 'Carrageenan', 'Locust Bean Gum', 'Pectin','Gellan Gum','Konjac Gum'],
   },
   {
     badge: 'Cellulose',
     title: 'Cellulose Derivatives',
     desc: 'High-performance cellulose ethers and microcrystalline cellulose grades for controlled release, binding, coating and rheology modification in diverse formulations.',
-    tags: ['HPMC', 'CMC', 'MCC', 'HEC', 'EC'],
+    tags: ['HPMC','MHEC','HEC', 'Sodium CMC', 'Calcium CMC',  'Croscarmellose Sodium','PAC','MCC'],
   },
   {
     badge: 'Alginates',
     title: 'Alginate Solutions',
-    desc: 'Marine-sourced alginates offering exceptional gelling, thickening and film-forming properties for food, wound care, textile printing and encapsulation applications.',
-    tags: ['Sodium Alginate', 'Potassium Alginate', 'Propylene Glycol Alginate', 'Alginic Acid'],
+    desc: 'Marine-sourced alginates offering exceptional gelling, thickening and film-forming properties for food, pharmaceutical, textile printing, cosmetic and industrial applications.',
+    tags: ['Sodium Alginate', 'Calcium Alginate', 'Propylene Glycol Alginate', 'Alginic Acid'],
   },
 ];
 

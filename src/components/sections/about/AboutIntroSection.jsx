@@ -73,17 +73,14 @@ const AboutIntroSection = () => (
           }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
           className="w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-gold/10"
-          style={{ background: 'linear-gradient(135deg, #0f2410 0%, #1a3d1a 50%, #254d25 100%)' }}
         >
-          <motion.div
-            variants={{
-              hover: { rotate: [0, 6, -6, 0], scale: 1.1 }
-            }}
-            transition={{ duration: 1.8, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" }}
-            className="flex items-center justify-center h-full text-7xl opacity-20"
-          >
-            🌿
-          </motion.div>
+          <img
+            src="/aboutSection.png"
+            alt="VIVINE International ingredients"
+            loading="lazy"
+            decoding="async"
+            className="w-full h-full object-cover"
+          />
         </motion.div>
         {/* Badge */}
         <motion.div
