@@ -32,6 +32,10 @@ const ProductsIntroSection = () => (
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {C.categoryOverview.map((cat, idx) => {
           const Icon = iconMap[cat.icon];
+          const handleClick = () => {
+            if (!cat.id) return;
+            document.getElementById(cat.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          };
           return (
             <motion.div
               key={cat.title}
@@ -40,8 +44,9 @@ const ProductsIntroSection = () => (
               viewport={{ once: false, amount: 0.1 }}
               transition={{ duration: 0.6, delay: idx * 0.12, ease: [0.22, 1, 0.36, 1] }}
               whileHover={{ y: -8, rotateY: 5, rotateX: -3 }}
+              onClick={handleClick}
               className="feature-card-animated text-center relative"
-              style={S.featureCardPerspective}
+              style={{ ...S.featureCardPerspective, cursor: cat.id ? 'pointer' : undefined }}
             >
               <span className="corner-accent corner-tl" />
               <span className="corner-accent corner-br" />

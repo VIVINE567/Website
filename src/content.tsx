@@ -258,11 +258,13 @@ export const CONTENT = {
       {
         icon: "Leaf",
         title: "Plant-Based Gums",
+        id: "plant-based",
         items: ["Pectin", "Konjac Gum", "Guar Gum", "Locust Bean Gum"],
       },
       {
         icon: "Waves",
         title: "Seaweed-Based Gums",
+        id: "seaweed-based",
         items: [
           "Carrageenan",
           "Sodium Alginate",
@@ -274,11 +276,13 @@ export const CONTENT = {
       {
         icon: "FlaskConical",
         title: "Microbial Gums",
+        id: "microbial",
         items: ["Xanthan Gum", "Gellan Gum"],
       },
       {
         icon: "FlaskConical",
         title: "Cellulose Ethers",
+        id: "cellulose-ethers",
         items: [
           "HPMC",
           "HEC",
@@ -358,6 +362,63 @@ export const CONTENT = {
               {
                 name: "Propylene Glycol Alginate",
                 desc: "Modified alginate ester used as emulsifier and stabilizer in beverages and dressings.",
+              },
+            ],
+          },
+          {
+            name: "Calcium Alginate",
+            desc: "A water-insoluble alginate salt formed by cross-linking sodium alginate with calcium ions. Valued for its gelling, encapsulation, and film-forming properties across food, pharmaceutical, and technical applications.",
+            img: "/product-images/Sodium-Alginate-HF.jpg",
+            subProducts: [
+              {
+                name: "Calcium Alginate Fiber Grade",
+                desc: "Used in wound-care dressings and technical fiber applications for its absorbent, gel-forming properties.",
+              },
+              {
+                name: "Calcium Alginate Encapsulation Grade",
+                desc: "Forms stable beads and gels for controlled-release encapsulation in food and pharma.",
+              },
+              {
+                name: "Calcium Alginate Industrial Grade",
+                desc: "Technical-grade material for binding, film-forming, and specialty industrial uses.",
+              },
+            ],
+          },
+          {
+            name: "Alginic Acid",
+            desc: "The purified parent polysaccharide of the alginate family, extracted from brown seaweed. Used as a thickener, stabilizer, and tablet disintegrant across food, pharmaceutical, and technical applications.",
+            img: "/product-images/Sodium-Alginate-LF.jpg",
+            subProducts: [
+              {
+                name: "Alginic Acid Food Grade",
+                desc: "Thickening and stabilizing agent for food formulations requiring acid stability.",
+              },
+              {
+                name: "Alginic Acid Pharma Grade",
+                desc: "Used as a tablet disintegrant and binder in pharmaceutical formulations.",
+              },
+              {
+                name: "Alginic Acid Technical Grade",
+                desc: "Suitable for technical and industrial thickening and stabilizing applications.",
+              },
+            ],
+          },
+          {
+            name: "Propylene Glycol Alginate",
+            desc: "Propylene Glycol Alginate (PGA) is the propylene glycol ester of alginic acid, uniquely stable in acidic conditions (pH 3–6). Functions as a high-performance emulsifier, thickener, stabilizer, and foam stabilizer across food, cosmetic, and pharmaceutical applications.",
+            img: "/product-images/Sodium-Alginate-HF.jpg",
+            subProducts: [
+              {
+                name: "PGA Food Grade (E405)",
+                desc: "Acid-stable emulsifier and foam stabilizer for beverages, dressings, and beer.",
+              },
+              {
+                name: "PGA Pharma Grade (USP/NF)",
+                desc: "Pharmacopoeial-grade PGA for pharmaceutical emulsions and suspensions.",
+              },
+              {
+                name: "PGA Cosmetic Grade",
+                desc: "Used as a stabilizer and thickener in cosmetic and personal care emulsions.",
               },
             ],
           },
@@ -457,6 +518,44 @@ export const CONTENT = {
               },
             ],
           },
+          {
+            name: "Guar Gum",
+            desc: "A natural galactomannan polysaccharide extracted from the endosperm of guar beans (Cyamopsis tetragonoloba), Guar Gum dissolves readily in cold and hot water to form highly viscous, pseudoplastic solutions used across food, pharmaceutical, and oilfield applications.",
+            img: "/product-images/Flaxseed-Gum-1.jpg",
+            subProducts: [
+              {
+                name: "Food grade — standard viscosity",
+                desc: "E412/FCC/JECFA-compliant grade for sauces, ice cream, bakery, and dairy applications.",
+              },
+              {
+                name: "Food grade — high viscosity",
+                desc: "Higher-viscosity grade suited to gluten-free bakery, frozen desserts, and meat processing.",
+              },
+              {
+                name: "Pharmaceutical grade",
+                desc: "USP/NF/Ph.Eur.-compliant grade for tablet binding, sustained-release matrices, and oral suspensions.",
+              },
+              {
+                name: "Fast Hydrating Guar Gum (FHG)",
+                desc: "Reaches full viscosity in 5–10 minutes — used in hydraulic fracturing and cross-linked gel fluids.",
+              },
+            ],
+          },
+          {
+            name: "Locust Bean Gum",
+            desc: "Also known as Carob Bean Gum, Locust Bean Gum is a galactomannan extracted from the seeds of the carob tree (Ceratonia siliqua). It forms synergistic, elastic gels with carrageenan and xanthan gum, and is widely used as a thickener and stabilizer in food applications.",
+            img: "/product-images/Flaxseed-Gum-2.jpg",
+            subProducts: [
+              {
+                name: "Locust Bean Gum — Food Grade",
+                desc: "Standard food-grade LBG for dairy, ice cream, and processed cheese applications.",
+              },
+              {
+                name: "Locust Bean Gum — Synergy Grade",
+                desc: "Optimized for synergistic gel formation with carrageenan and xanthan gum systems.",
+              },
+            ],
+          },
         ],
       },
       {
@@ -552,21 +651,40 @@ export const CONTENT = {
             ],
           },
           {
-            name: "Sodium Alginate",
-            desc: "Naturally derived polysaccharide extracted from brown seaweed, widely used as a thickener, stabilizer, gelling agent, and film-forming agent across food, pharma, textile, and industrial applications.",
-            img: "/product-images/Sodium-Alginate-LF.jpg",
+            name: "Polyanionic Cellulose",
+            desc: "Polyanionic Cellulose (PAC) is a high-purity, high-Degree of Substitution sodium carboxymethyl cellulose engineered for demanding industrial environments, delivering superior salt tolerance, thermal stability, and fluid loss control across oilfield, construction, and textile applications.",
+            img: "/product-images/Konjac-Gum-36000.jpg",
             subProducts: [
               {
-                name: "Low Viscosity Sodium Alginate",
-                desc: "Beverages, sauces, textile printing.",
+                name: "PAC-R (Regular)",
+                desc: "Standard API 13A / ISO 13500 oilfield grade for water-based drilling muds.",
               },
               {
-                name: "Medium Viscosity Sodium Alginate",
-                desc: "Dairy, bakery, pharmaceuticals.",
+                name: "PAC-HV (High Viscosity)",
+                desc: "High-viscosity grade for enhanced fluid loss control in drilling fluids.",
               },
               {
-                name: "High Viscosity Sodium Alginate",
-                desc: "Industrial, gels, thickening systems.",
+                name: "PAC-UHV (Ultra-High Viscosity)",
+                desc: "Ultra-high-viscosity grade for the most demanding oilfield applications.",
+              },
+            ],
+          },
+          {
+            name: "Croscarmellose Sodium",
+            desc: "Croscarmellose Sodium (CCS) is a cross-linked polymer of sodium carboxymethyl cellulose — the gold-standard pharmaceutical superdisintegrant, swelling 4–8× its original volume to deliver rapid tablet and capsule disintegration.",
+            img: "/product-images/Xanthan-Gum-200-Mesh.jpg",
+            subProducts: [
+              {
+                name: "Standard Pharmaceutical Grade",
+                desc: "USP/NF, Ph.Eur.-compliant grade for general tablet and capsule disintegration.",
+              },
+              {
+                name: "Fine Particle Grade",
+                desc: "Finer particle size for direct-compression tablet formulations.",
+              },
+              {
+                name: "Nutraceutical Grade",
+                desc: "For dietary supplement tablets and capsules.",
               },
             ],
           },
