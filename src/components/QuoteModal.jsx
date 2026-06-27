@@ -7,7 +7,8 @@ import { CONTENT } from '../content';
 
 // Source products from the Products nav dropdown — single source of truth
 const PRODUCTS = (CONTENT.nav.links.find((l) => l.label === 'Products')?.subItems || [])
-  .map((s) => (typeof s === 'string' ? s : s.label));
+  .map((s) => (typeof s === 'string' ? s : s.label))
+  .concat(['Alginic Acid', 'LBG', 'Cellulose Powder', 'Modified Starch']);
 
 const QuoteModal = ({ open, onClose }) => {
   const [form, setForm] = useState({ name: '', email: '', requirements: '' });

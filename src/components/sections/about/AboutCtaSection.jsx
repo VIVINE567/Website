@@ -77,7 +77,7 @@ const AboutCtaSection = () => (
 
       <motion.div {...fadeUp(0.18)} className="flex flex-col sm:flex-row gap-3 justify-center">
         <motion.a
-          href="mailto:info@vivineinternational.com"
+          href="mailto:sales@vivineinternational.com"
           whileHover={{ scale: 1.05, y: -2, boxShadow: '0 8px 24px rgba(201,168,76,0.45)' }}
           whileTap={{ scale: 0.98 }}
           transition={{ type: "spring", stiffness: 400, damping: 15 }}
@@ -87,7 +87,7 @@ const AboutCtaSection = () => (
           Request a Product Sample
         </motion.a>
         <motion.a
-          href="mailto:info@vivineinternational.com"
+          href="mailto:sales@vivineinternational.com"
           whileHover={{ scale: 1.05, y: -2, borderColor: 'rgba(255,255,255,0.6)', color: '#fff', backgroundColor: 'rgba(255,255,255,0.05)' }}
           whileTap={{ scale: 0.98 }}
           transition={{ type: "spring", stiffness: 400, damping: 15 }}

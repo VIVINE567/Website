@@ -48,8 +48,8 @@ const INDUSTRIAL_CARDS = [
 const PET_FOOD_CARDS = [
   { image: '/applications/wet-pet-food.jpeg', label: 'Wet Pet Food', desc: 'Gelling and gravy-forming agents for canned and pouched cat and dog food. Improves palatability and texture.', tag: 'Carrageenan · LBG' },
   { image: '/applications/pet-treats.jpeg', label: 'Treats & Semi-moist', desc: 'Moisture retention, binding and chewy texture for snack treats, training rewards and dental sticks.', tag: 'CMC · Guar · Alginate' },
-  { image: '/applications/wet-pet-food.jpeg', label: 'Cattle & Buffalo Feed', desc: 'Feed pellet binding, moisture management and ingredient stabilization for cattle, buffalo and dairy nutrition formulations.', tag: 'Sodium CMC · Guar Gum · Xanthan Gum' },
-  { image: '/applications/pet-treats.jpeg', label: 'Poultry Feed', desc: 'Pellet durability improvement, dust reduction and feed processing enhancement for broiler and layer feed formulations.', tag: 'Sodium CMC · Guar Gum · Sodium Alginate' },
+  { image: '/applications/cow_v.png', label: 'Cattle & Buffalo Feed', desc: 'Feed pellet binding, moisture management and ingredient stabilization for cattle, buffalo and dairy nutrition formulations.', tag: 'Sodium CMC · Guar Gum · Xanthan Gum' },
+  { image: '/applications/hen_v.png', label: 'Poultry Feed', desc: 'Pellet durability improvement, dust reduction and feed processing enhancement for broiler and layer feed formulations.', tag: 'Sodium CMC · Guar Gum · Sodium Alginate' },
 ];
 
 

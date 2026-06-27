@@ -1,6 +1,6 @@
 export const PREMIX_PRODUCTS = [
   // BELGIAN WAFFLES
-  { cat: "waffle", emoji: "🧇", image: "/premix-images/Vanilla_flavour.png", tag: "Belgian Waffle Premix", name: "Belgian Waffle Premix — Vanilla Flavour", desc: "Classic golden Belgian waffle premix with warm vanilla notes. Light, crispy exterior with a soft, airy interior." },
+  { cat: "waffle", emoji: "🧇", image: "/premix-images/belgian-waffle-premix-vanilla.jpg", tag: "Belgian Waffle Premix", name: "Belgian Waffle Premix — Vanilla Flavour", desc: "Classic golden Belgian waffle premix with warm vanilla notes. Light, crispy exterior with a soft, airy interior." },
   { cat: "waffle", emoji: "🍫", image: "/premix-images/belgian-waffle-premix-chocolate.jpg", tag: "Belgian Waffle Premix", name: "Belgian Waffle Premix — Chocolate Flavour", desc: "Rich cocoa-infused Belgian waffle premix for indulgent, deep chocolate-flavoured waffles with a satisfying crunch." },
   { cat: "waffle", emoji: "🍯", image: "/premix-images/Honeycomb_waffle.png", tag: "Belgian Waffle Premix", name: "Honeycomb Waffle Premix", desc: "Distinctive honeycomb-patterned waffle premix delivering a uniquely textured waffle with a golden, caramel-like finish." },
   { cat: "waffle", emoji: "🫧", image: "/premix-images/Bubble_waffle.png", tag: "Belgian Waffle Premix", name: "Bubble Waffle Premix", desc: "Hong Kong-style bubble waffle premix producing signature egg-puff bubbles — crispy outside, light and chewy inside." },
@@ -9,7 +9,7 @@ export const PREMIX_PRODUCTS = [
 
   // WAFFLE CONES
   { cat: "cone", emoji: "🍦", image: "/premix-images/Butterscotch_waffle_cone.png", tag: "Waffle Cone Premix", name: "Waffle Cone Premix — Butterscotch Flavour", desc: "Crispy, fragrant butterscotch waffle cone premix — ideal for ice cream parlours, dessert cafes, and takeaway dessert counters." },
-  { cat: "cone", emoji: "🍧", image: "/premix-images/Vanilla Flavour.png", tag: "Waffle Cone Premix", name: "Waffle Cone Premix — Vanilla Flavour", desc: "Classic vanilla-flavoured waffle cone premix producing thin, crispy, golden cones with a delicate sweetness." },
+  { cat: "cone", emoji: "🍧", image: "/premix-images/Vanilla_flavour.png", tag: "Waffle Cone Premix", name: "Waffle Cone Premix — Vanilla Flavour", desc: "Classic vanilla-flavoured waffle cone premix producing thin, crispy, golden cones with a delicate sweetness." },
   { cat: "cone", emoji: "🖤", image: "/premix-images/Black_charcoal.png", tag: "Waffle Cone Premix", name: "Waffle Cone Premix — Black Charcoal Flavour", desc: "Dramatic activated charcoal black waffle cone premix — visually striking, perfect for Instagram-worthy dessert presentations." },
   { cat: "cone", emoji: "🍓", image: "/premix-images/Red_velvet_replace_with_strawberry.png", tag: "Waffle Cone & Waffle Mix", name: "Strawberry Flavour Waffle Cone Premix", desc: "Fruity strawberry-infused waffle cone and waffle combination premix — vibrant pink colour and light berry flavour." },
 

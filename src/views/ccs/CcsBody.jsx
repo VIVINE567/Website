@@ -249,9 +249,9 @@ const DisintChart = () => {
           ))}
         </div>
         <div className="flex gap-2">
-          <div className="relative pb-7 text-[10px]" style={{ height: 280, width: 30, fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)' }}>
+          <div className="relative pb-7 text-[10px] shrink-0" style={{ height: 280, width: 26, fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)' }}>
             {ticks.map((t) => (
-              <span key={t} className="absolute right-0" style={{ bottom: 28 + frac(t) * 252, transform: 'translateY(50%)' }}>{t}</span>
+              <span key={t} className="absolute right-0" style={{ bottom: 38 + frac(t) * 242, transform: 'translateY(50%)' }}>{t}</span>
             ))}
           </div>
           <div className="flex-1 min-w-0">
@@ -269,11 +269,11 @@ const DisintChart = () => {
                 </div>
               )}
               {ticks.map((t) => (
-                <div key={t} className="absolute left-0 right-0" style={{ bottom: 28 + frac(t) * 252, borderTop: '1px solid rgba(0,0,0,0.05)' }} />
+                <div key={t} className="absolute left-0 right-0" style={{ bottom: 38 + frac(t) * 242, borderTop: '1px solid rgba(0,0,0,0.05)' }} />
               ))}
-              <div className="absolute left-0 right-0 flex items-end justify-around gap-1.5" style={{ bottom: 28, top: 0 }}>
+              <div className="absolute left-0 right-0 flex items-end justify-around gap-1 sm:gap-1.5" style={{ bottom: 38, top: 0 }}>
                 {DISINT_CHART.bars.map((b) => (
-                  <div key={b.label} className="flex flex-col items-center justify-end flex-1 h-full">
+                  <div key={b.label} className="flex flex-col items-center justify-end flex-1 min-w-0 h-full">
                     <motion.div
                       initial={{ height: 0 }}
                       whileInView={{ height: `${frac(b.val) * 100}%` }}
@@ -286,9 +286,9 @@ const DisintChart = () => {
                   </div>
                 ))}
               </div>
-              <div className="absolute left-0 right-0 bottom-0 flex items-start justify-around gap-1.5" style={{ height: 28 }}>
+              <div className="absolute left-0 right-0 bottom-0 flex items-start justify-around gap-1 sm:gap-1.5" style={{ height: 38 }}>
                 {DISINT_CHART.bars.map((b) => (
-                  <div key={b.label} className="flex-1 text-center leading-tight pt-1.5 text-[9.5px] font-semibold" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--forest)' }}>
+                  <div key={b.label} className="flex-1 min-w-0 text-center leading-tight pt-1.5 text-[8px] sm:text-[9.5px] font-semibold break-words" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--forest)' }}>
                     {b.label.split('\n').map((line, li) => (<span key={li}>{line}{li === 0 && b.label.includes('\n') ? <br /> : null}</span>))}
                   </div>
                 ))}

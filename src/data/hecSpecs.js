@@ -35,6 +35,25 @@ export const SPEC_TABLE = [
   ['REACH', 'Compliant (cellulose ether, SVHC-free)'],
 ];
 
+export const VISC_CHART = {
+  header: 'Viscosity grade guide by industry',
+  headerSub: 'Indicative viscosity ranges — Brookfield 2% aqueous, 25°C',
+  title: 'HEC viscosity grades and primary application segments',
+  sub: 'Indicative — actual values may vary by lot; request TDS for precise data',
+  yMin: 100,
+  yMax: 100000,
+  yLabel: 'Viscosity mPa·s (log scale) — Brookfield 2% 25°C',
+  bars: [
+    { label: '100–300\nPharma · Textile sizing', val: 200, color: '#C07820' },
+    { label: '1,000–3,000\nShampoo · Body wash · Pharma', val: 2000, color: '#B86018' },
+    { label: '5,000–10,000\nShampoo · Lotion · Toothpaste · Detergent', val: 7500, color: '#A85010' },
+    { label: '15,000–30,000\nEmulsion paint · Hair gel · Grout', val: 22500, color: '#2A7A40' },
+    { label: '60,000\nArchitectural paint · Drilling fluid', val: 60000, color: '#C03880' },
+    { label: '100,000\nPremium paint · Oilfield WBM', val: 100000, color: '#1870B0' },
+    { label: 'Pharma / Eye drops\nOphthalmic drops · Oral suspension', val: 500, color: '#5030A0' },
+  ],
+};
+
 export const GRADES = [
   {
     id: 'g100', name: 'HEC 100–300 mPa·s', range: 'Low viscosity · Pharma / textile base',

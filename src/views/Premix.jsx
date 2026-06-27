@@ -128,9 +128,9 @@ function StatsBar() {
    ═══════════════════════════════════════════════════ */
 function AboutStrip() {
   return (
-    <section id="premix-about" className="flex items-center justify-between gap-16 flex-wrap"
-      style={{ background: 'var(--cream)', padding: '5rem' }}>
-      <div style={{ flex: 1, minWidth: 280 }}>
+    <section id="premix-about" className="flex items-center justify-between gap-12 lg:gap-16 flex-wrap px-6 sm:px-10 lg:px-20 py-16 lg:py-20"
+      style={{ background: 'var(--cream)' }}>
+      <div className="w-full lg:flex-1" style={{ minWidth: 0 }}>
         <span className="gold-eyebrow" style={{ justifyContent: 'flex-start', marginBottom: '1.25rem' }}>
           Who We Are
         </span>
@@ -154,7 +154,7 @@ function AboutStrip() {
           VIVINE FOODS is a premium food premix company founded by Vivek Kolekar, built on the belief that great taste should never require compromise. Our entire range is 100% eggless — designed for cafes, restaurants, cloud kitchens, and home bakers who demand consistent quality and effortless preparation every single time.
         </p>
       </div>
-      <div className="premix-feature-grid grid grid-cols-2 gap-5" style={{ flex: 1, minWidth: 260 }}>
+      <div className="premix-feature-grid grid grid-cols-1 sm:grid-cols-2 gap-5 w-full lg:flex-1" style={{ minWidth: 0 }}>
         {PREMIX_FEATURES.map((f, i) => (
           <motion.div
             key={i}
@@ -420,13 +420,22 @@ function FeaturedSection() {
       {/* Visual grid */}
       <div className="grid grid-cols-2 grid-rows-2 gap-px rounded overflow-hidden"
         style={{ border: '1px solid rgba(201,168,76,0.2)' }}>
-        {['🧇','🍦','🥞','🍰'].map((e, i) => (
-          <div key={i} className="flex items-center justify-center"
+        {[
+          { emoji: '🧇', image: '/premix-images/waffel_creme.png' },
+          { emoji: '🍦', image: '/premix-images/v_ice_creme.png' },
+          { emoji: '🥞', image: '/premix-images/pancake_v.png' },
+          { emoji: '🍰', image: '/premix-images/cake_v.png' },
+        ].map((item, i) => (
+          <div key={i} className="flex items-center justify-center overflow-hidden"
             style={{
               aspectRatio: '1', fontSize: 64,
               background: i % 2 === 0 ? 'rgba(201,168,76,0.1)' : 'rgba(44,58,35,0.6)',
             }}>
-            {e}
+            {item.image ? (
+              <img src={item.image} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            ) : (
+              item.emoji
+            )}
           </div>
         ))}
       </div>

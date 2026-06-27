@@ -31,6 +31,25 @@ export const SPEC_TABLE = [
   ['Recommended dosage', '0.1–0.5% w/w of dry formulation (application dependent)'],
 ];
 
+export const VISC_CHART = {
+  header: 'Viscosity grade guide',
+  headerSub: 'Indicative viscosity ranges and recommended application segments',
+  title: 'MHEC viscosity grades vs application suitability',
+  sub: 'Measured: Brookfield 2% aqueous, 20°C — indicative ranges shown',
+  yMax: 165000,
+  yLabel: 'Viscosity (mPa·s) — indicative, Brookfield 2% 20°C',
+  bars: [
+    { label: '20,000\nGypsum · SLC', val: 20000, color: '#3A9040' },
+    { label: '40,000\nTile adh. · Putty · Render', val: 40000, color: '#42A840' },
+    { label: '60,000\nPutty · Tile adh. LFT', val: 60000, color: '#4CC048' },
+    { label: '75,000\nTile adh. RD · Skim · Render', val: 75000, color: '#28A070' },
+    { label: '100,000\nSkim coat · Tile C2', val: 100000, color: '#2880C8' },
+    { label: '150,000\nSkim coat premium', val: 150000, color: '#1868B0' },
+    { label: 'Paint 40–60k\nPaints & coatings', val: 50000, color: '#9060C0' },
+    { label: 'Oilfield 40–100k\nOilfield fluid loss', val: 70000, color: '#C04820' },
+  ],
+};
+
 export const GRADES = [
   {
     id: 'g20k', name: 'MHEC 20,000 mPa·s', range: 'Low viscosity · High flow systems',

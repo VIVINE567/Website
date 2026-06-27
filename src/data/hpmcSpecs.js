@@ -37,6 +37,25 @@ export const SPEC_TABLE = [
 
 import { IC } from './hpmcContent';
 
+export const VISC_CHART = {
+  header: 'Viscosity grade guide by application',
+  headerSub: 'Brookfield 2% aqueous, 20°C — indicative ranges',
+  title: 'HPMC viscosity grades and primary application segments',
+  sub: 'Log scale — range spans 5 to 200,000 mPa·s',
+  yMin: 5,
+  yMax: 200000,
+  yLabel: 'Viscosity mPa·s (log scale) — Brookfield 2% 20°C',
+  bars: [
+    { label: '5–15\nTablet film coating · Ophthalmic drops', val: 10, color: '#A060C8' },
+    { label: '400–4k\nPharma binder · Food thickener · Hair gel', val: 2000, color: '#7840A8' },
+    { label: '4k–15k\nGluten-free baking · Frying · Ceramic binder · SLC', val: 9500, color: '#1890A8' },
+    { label: '15k–40k\nGypsum plaster · Tile adhesive · CR tablet', val: 27500, color: '#0C7088' },
+    { label: '75,000\nTile adhesive C1/C2 · Wall putty · EIFS', val: 75000, color: '#0A5870' },
+    { label: '100,000\nWall putty premium · Skim coat · LFT adhesive', val: 100000, color: '#084858' },
+    { label: '200,000\nSkim coat premium · Thin-coat plaster', val: 200000, color: '#303888' },
+  ],
+};
+
 export const GRADES = [
   {
     id: 'g5', name: 'HPMC 5–15 mPa·s', range: 'Ultra-low viscosity · Pharma coating',

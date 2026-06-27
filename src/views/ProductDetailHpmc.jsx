@@ -9,6 +9,7 @@ import ProductSidebar from '../components/ProductSidebar';
 import { HERO, HIGHLIGHTS, MARKET_RANK, CE_COMPARE } from '../data/hpmcContent';
 import HpmcSubstAndInfo from './hpmc/HpmcSubstAndInfo';
 import HpmcSpecsAndGrades from './hpmc/HpmcSpecsAndGrades';
+import HpmcViscosityChart from './hpmc/HpmcViscosityChart';
 import HpmcAppsTable from './hpmc/HpmcAppsTable';
 import HpmcAppDetails from './hpmc/HpmcAppDetails';
 import HpmcRegulatory from './hpmc/HpmcRegulatory';
@@ -140,6 +141,7 @@ export default function ProductDetailHpmc({ slug }) {
             <CeCompare />
             <HpmcSubstAndInfo />
             <HpmcSpecsAndGrades />
+            <HpmcViscosityChart />
             <HpmcAppsTable />
             <HpmcAppDetails />
             <HpmcRegulatory />

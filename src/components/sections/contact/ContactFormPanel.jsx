@@ -32,6 +32,10 @@ const PRODUCTS = [
   'Sodium CMC',
   'PAC',
   'Croscarmellose Sodium (CCS)',
+  'Alginic Acid',
+  'LBG',
+  'Cellulose Powder',
+  'Modified Starch',
 ];
 
 const inputBase = {

@@ -103,7 +103,7 @@ const ApplicationsCtaSection = () => (
         className="flex flex-col sm:flex-row gap-3 justify-center"
       >
         <motion.a
-          href="mailto:info@vivineinternational.com"
+          href="mailto:sales@vivineinternational.com"
           whileHover={{ scale: 1.04, y: -2, boxShadow: '0 8px 24px rgba(201,168,76,0.45)' }}
           whileTap={{ scale: 0.98 }}
           transition={{ type: 'spring', stiffness: 400, damping: 20 }}
@@ -113,7 +113,7 @@ const ApplicationsCtaSection = () => (
           Request a Product Sample
         </motion.a>
         <motion.a
-          href="mailto:info@vivineinternational.com"
+          href="mailto:sales@vivineinternational.com"
           whileHover={{ scale: 1.04, y: -2, borderColor: 'rgba(255,255,255,0.6)', color: '#fff', backgroundColor: 'rgba(255,255,255,0.05)' }}
           whileTap={{ scale: 0.98 }}
           transition={{ type: 'spring', stiffness: 400, damping: 20 }}
@@ -133,8 +133,8 @@ const ApplicationsCtaSection = () => (
         className="mt-9 text-xs tracking-wider"
         style={{ fontFamily: "'Raleway', sans-serif", color: 'rgba(255,255,255,0.28)' }}
       >
-        <a href="mailto:info@vivineinternational.com" className="hover:underline" style={{ color: 'rgba(201,168,76,0.65)' }}>
-          info@vivineinternational.com
+        <a href="mailto:sales@vivineinternational.com" className="hover:underline" style={{ color: 'rgba(201,168,76,0.65)' }}>
+          sales@vivineinternational.com
         </a>{' '}— we respond within 24 hours
       </motion.p>
     </div>
