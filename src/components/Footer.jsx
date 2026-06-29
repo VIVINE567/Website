@@ -10,7 +10,7 @@ const C = CONTENT.footer;
 
 const FOOTER_CONTACTS = [
   { Icon: Mail, label: 'Email', value: 'sales@vivineinternational.com', href: 'mailto:sales@vivineinternational.com' },
-  { Icon: Phone, label: 'Phone', value: '+91 91524 80570', href: 'tel:+919152480570' },
+  { Icon: Phone, label: 'Phone', value: '+91 9619661133', href: 'tel:+919619661133' },
   { Icon: Clock, label: 'Business hours', value: 'Monday – Saturday, 9:00 AM – 6:00 PM IST', href: null },
 ];
 

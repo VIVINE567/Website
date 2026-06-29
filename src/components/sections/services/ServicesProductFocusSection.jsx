@@ -12,7 +12,7 @@ const PRODUCTS = [
   },
   {
     badge: 'Cellulose',
-    title: 'Cellulose Derivatives',
+    title: 'Cellulose ethers',
     desc: 'High-performance cellulose ethers and microcrystalline cellulose grades for controlled release, binding, coating and rheology modification in diverse formulations.',
     tags: ['HPMC','MHEC','HEC', 'Sodium CMC', 'Calcium CMC',  'Croscarmellose Sodium','PAC','MCC'],
   },

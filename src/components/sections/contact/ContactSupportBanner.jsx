@@ -26,11 +26,11 @@ const ContactSupportBanner = () => (
     >
       Need help? Call our team directly at{' '}
       <a
-        href="tel:+919152480570"
+        href="tel:+919619661133"
         className="font-semibold transition-opacity hover:opacity-100"
         style={{ color: 'var(--gold)', borderBottom: '1px solid rgba(201,168,76,0.5)', paddingBottom: 1 }}
       >
-        +91 91524 80570
+        +91 96196 61133
       </a>
       <span style={{ color: 'rgba(245,238,224,0.4)', margin: '0 8px' }}>·</span>
       Email:{' '}

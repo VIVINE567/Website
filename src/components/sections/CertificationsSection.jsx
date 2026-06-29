@@ -12,6 +12,21 @@ const CERTS = [
   { code: 'KOSHER',num: '',       label: 'Kosher Certified'         },
 ];
 
+// Crops/zooms a badge image toward `origin` by genuinely enlarging its layout box
+// (rather than CSS `transform: scale`, which stretches an already-rasterized bitmap
+// and renders blurry/pixelated on mobile browsers).
+const zoomStyle = (origin, scale = 3) => {
+  const [ox, oy] = origin.split(' ').map((v) => parseFloat(v));
+  return {
+    position: 'absolute',
+    width: `${scale * 100}%`,
+    height: `${scale * 100}%`,
+    maxWidth: 'none',
+    left: `${-(scale - 1) * ox}%`,
+    top: `${-(scale - 1) * oy}%`,
+  };
+};
+
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 22 },
   whileInView: { opacity: 1, y: 0 },
@@ -98,7 +113,7 @@ const CertificationsSection = () => (
         ].map((cert) => (
           <div
             key={cert.src}
-            className="flex items-center justify-center"
+            className="relative overflow-hidden flex items-center justify-center"
             style={{ width: '100%', aspectRatio: '1 / 1' }}
           >
             <img
@@ -106,8 +121,8 @@ const CertificationsSection = () => (
               alt={cert.alt}
               loading="lazy"
               decoding="async"
-              className="w-full h-full object-contain"
-              style={{ transform: 'scale(3.0)', transformOrigin: cert.origin }}
+              className="object-contain"
+              style={zoomStyle(cert.origin)}
             />
           </div>
         ))}
