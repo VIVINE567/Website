@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 const CHECKS = [
   {
     strong: 'Comprehensive Product Portfolio',
-    rest: ' – Hydrocolloids, cellulose ethers, and specialty ingredients available under one roof.',
+    rest: ' – Hydrocolloids, cellulose Ethers, and specialty ingredients available under one roof.',
   },
   {
     strong: 'Global Manufacturing Partnerships',
@@ -121,7 +121,7 @@ const AboutIntroSection = () => (
           </em>
         </h2>
         <p className="text-sm leading-loose mb-2 max-w-lg" style={{ fontFamily: "'Open Sans', sans-serif", color: 'var(--brown-warm)', fontWeight: 300 }}>
-          VIVINE International is a trusted global supplier of hydrocolloids, alginates, cellulose ethers, and specialty ingredients, serving manufacturers and processors across diverse industries. We bridge the gap between leading raw material producers and businesses that rely on high-quality, specification-driven functional ingredients.
+          VIVINE International is a trusted global supplier of hydrocolloids, alginates, cellulose Ethers, and specialty ingredients, serving manufacturers and processors across diverse industries. We bridge the gap between leading raw material producers and businesses that rely on high-quality, specification-driven functional ingredients.
         </p>
         <p className="text-sm leading-loose mb-8 max-w-lg" style={{ fontFamily: "'Open Sans', sans-serif", color: 'var(--brown-warm)', fontWeight: 300 }}>
           Our comprehensive product portfolio includes{' '}

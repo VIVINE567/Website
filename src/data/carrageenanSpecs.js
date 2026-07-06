@@ -30,7 +30,7 @@ export const SPEC_TABLE = [
   { section: 'Semi-Refined Carrageenan / PES Specifications (E407a)' },
   ['Acid-insoluble residue (cellulose)', '8–15% (E407a — cellulose from seaweed cell walls retained)'],
   ['Moisture content', '≤ 15.0%'],
-  ['Primary use', 'Pet food, processed meat, industrial food applications'],
+  ['Primary use', 'Animal Nitrition, processed meat, industrial food applications'],
   { section: 'Regulatory Approvals' },
   ['EU approval (RC)', 'E407 — Regulation (EC) No 1333/2008 (quantum satis in most food categories)'],
   ['EU approval (SRC/PES)', 'E407a — Regulation (EC) No 1333/2008'],
@@ -101,7 +101,7 @@ export const GRADES = [
   {
     id: 'kappa-src', name: 'Kappa — SRC / PES (E407a)', range: 'Semi-refined · Cost-effective',
     viscPct: 75, featured: false, industries: ['petfood', 'meat', 'food'],
-    badge: { ...IC.petfood, text: 'Pet food / Meat' },
+    badge: { ...IC.petfood, text: 'Animal Nitrition / Meat' },
     specs: [
       ['Type', 'Kappa (κ) — semi-refined'],
       ['Grade', 'SRC / PES (E407a)'],
@@ -111,7 +111,7 @@ export const GRADES = [
       ['Standard', 'JECFA E407a'],
     ],
     apps: [
-      { l: 'Wet pet food', i: 'petfood' },
+      { l: 'Wet Animal Nitrition', i: 'petfood' },
       { l: 'Processed meat', i: 'meat' },
       { l: 'Industrial food', i: 'food' },
     ],

@@ -1,4 +1,4 @@
-// Gellan Gum content matching "gellan_gum_vivine_international.html"
+// Gellan Gum content matching "gellan_gum_VIVINE_international.html"
 // Industry color tokens (same palette as the HTML reference)
 export const IC = {
   food:       { bg: '#E4F4F0', tx: '#0A4A42' },

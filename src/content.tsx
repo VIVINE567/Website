@@ -34,6 +34,7 @@ export const CONTENT = {
             label: "Croscarmellose Sodium (CCS)",
             href: "/products/croscarmellose-sodium",
           },
+          { label: "Locust Bean Gum (LBG)", href: "/products/locust-bean-gum" },
         ],
       },
       {
@@ -53,7 +54,7 @@ export const CONTENT = {
             label: "Technical & Industrial",
             href: "/applications#applications-industrial",
           },
-          { label: "Pet Food", href: "/applications#applications-petfood" },
+          { label: "Animal Nutrition", href: "/applications#applications-petfood" },
         ],
       },
       { label: "Services", href: "/services" },
@@ -153,7 +154,7 @@ export const CONTENT = {
         {
           title: "Food Stabilizers (Blends & Systems)",
           desc: "We provide customized food stabilizer blends and systems developed to enhance texture, emulsification, stability, and overall product performance.",
-          tags: "Our stabilizer solutions are widely used in Dairy, Beverages, Pet Food, Confectionery, Jelly, Sauces, Meat Products, Bakery, and Plant-Based Foods, helping manufacturers achieve better consistency and processing efficiency",
+          tags: "Our stabilizer solutions are widely used in Dairy, Beverages, Animal Nutrition, Confectionery, Jelly, Sauces, Meat Products, Bakery, and Plant-Based Foods, helping manufacturers achieve better consistency and processing efficiency",
           img: "/food-stabilizers-blends-systems.png",
           imgAlt: "Stabilizers",
           imgRight: false,
@@ -282,13 +283,13 @@ export const CONTENT = {
       {
         icon: "FlaskConical",
         title: "Cellulose Ethers",
-        id: "cellulose-ethers",
+        id: "cellulose-Ethers",
         items: [
-          "HPMC",
-          "HEC",
-          "MHEC",
-          "Sodium CMC",
-          "PAC",
+          "Hydroxypropyl Methyl Cellulose (HPMC)",
+          "Hydroxyethyl Cellulose (HEC)",
+          "Methyl Hydroxyethyl Cellulose (MHEC)",
+          "Sodium Carboxymethyl Cellulose (CMC)",
+          "Polyanionic Cellulose (PAC)",
           "Croscarmellose Sodium (CCS)",
         ],
       },
@@ -301,14 +302,21 @@ export const CONTENT = {
     quickLinks: [
       "Carrageenan",
       "Sodium Alginate",
+      "Calcium Alginate",
+      "Alginic Acid",
+      "Propylene Glycol Alginate (PGA)",
       "Gellan Gum",
       "Xanthan Gum",
       "Pectin",
       "Konjac Gum",
-      "HPMC",
-      "HEC",
-      "MHEC",
-      "Sodium CMC",
+      "Guar Gum",
+      "Locust Bean Gum (LBG)",
+      "Hydroxypropyl Methyl Cellulose (HPMC)",
+      "Hydroxyethyl Cellulose (HEC)",
+      "Methyl Hydroxyethyl Cellulose (MHEC)",
+      "Sodium Carboxymethyl Cellulose (CMC)",
+      "Polyanionic Cellulose (PAC)",
+      "Croscarmellose Sodium (CCS)",
     ],
     categories: [
       {
@@ -334,7 +342,7 @@ export const CONTENT = {
               },
               {
                 name: "Iota Semi-Refined Carrageenan",
-                desc: "Suitable for water-based gels and pet food applications.",
+                desc: "Suitable for water-based gels and Animal Nutrition applications.",
               },
               {
                 name: "Instant Carrageenan",
@@ -554,12 +562,16 @@ export const CONTENT = {
                 name: "Locust Bean Gum — Synergy Grade",
                 desc: "Optimized for synergistic gel formation with carrageenan and xanthan gum systems.",
               },
+              {
+                name: "Locust Bean Gum — High Purity Grade",
+                desc: "High-purity LBG for demanding dairy and stabilizer systems that require clean flavour, smooth texture, and reliable gel performance.",
+              },
             ],
           },
         ],
       },
       {
-        id: "cellulose-ethers",
+        id: "cellulose-Ethers",
         title: "Cellulose Ethers",
         products: [
           {
@@ -705,7 +717,7 @@ export const CONTENT = {
       synonyms:
         "Carrageenan Gum, Irish Moss Extract, Carrageen, INCI: Carrageenan",
       tagline:
-        "The world's most important dairy hydrocolloid — natural sulphated polysaccharide from red seaweed delivering firm gels (κ), elastic freeze-thaw-stable gels (ι), and cold-process thickening (λ) across dairy, meat, plant-based, pharmaceutical, and pet food applications.",
+        "The world's most important dairy hydrocolloid — natural sulphated polysaccharide from red seaweed delivering firm gels (κ), elastic freeze-thaw-stable gels (ι), and cold-process thickening (λ) across dairy, meat, plant-based, pharmaceutical, and Animal Nutrition applications.",
       statPills: [
         { val: "E407 / Food Approved", label: "Global food approval" },
         { val: "3 types", label: "κ · ι · λ" },
@@ -729,7 +741,7 @@ export const CONTENT = {
         { icon: "✅", val: "E407 / E407a", lbl: "RC & SRC/PES grades" },
         { icon: "🌿", val: "Natural · Vegan", lbl: "Non-GMO · Gluten-free" },
         { icon: "🥩", val: "Meat processing", lbl: "Water binding · Yield" },
-        { icon: "🐾", val: "Pet food grade", lbl: "Wet food gelling" },
+        { icon: "🐾", val: "Animal Nutrition grade", lbl: "Wet food gelling" },
       ],
       keyProperties: [
         {
@@ -743,7 +755,7 @@ export const CONTENT = {
         {
           title:
             "Refined (RC, E407) vs Semi-Refined Carrageenan (SRC/PES, E407a)",
-          body: "Refined Carrageenan (RC, E407) undergoes full alcohol or KCl precipitation purification — producing ≥ 97% purity on dry basis with acid-insoluble residue (cellulose) ≤ 2%. Semi-Refined Carrageenan (SRC/PES, E407a) retains 8–15% cellulose from the seaweed cell wall. RC is used in dairy, pharmaceuticals, and cosmetics; SRC/PES offers a cost-effective alternative for pet food, processed meat, and industrial food applications.",
+          body: "Refined Carrageenan (RC, E407) undergoes full alcohol or KCl precipitation purification — producing ≥ 97% purity on dry basis with acid-insoluble residue (cellulose) ≤ 2%. Semi-Refined Carrageenan (SRC/PES, E407a) retains 8–15% cellulose from the seaweed cell wall. RC is used in dairy, pharmaceuticals, and cosmetics; SRC/PES offers a cost-effective alternative for Animal Nutrition, processed meat, and industrial food applications.",
         },
         {
           title: "Exceptional cocoa / particle suspension in beverages",
@@ -755,7 +767,7 @@ export const CONTENT = {
         },
         {
           title: "Synergy with LBG, KCl, and casein",
-          body: "Kappa-carrageenan combined with Locust Bean Gum (LBG) produces gels 5–10× firmer than carrageenan alone — a synergistic interaction exploited in processed cheese, dairy desserts, and wet pet food. Combined with potassium chloride (KCl), kappa-carrageenan gel strength and melting temperature increase. Interaction with milk casein provides the unique dairy stabilisation mechanism in chocolate milk and ice cream at ultra-low concentrations (0.01–0.025%).",
+          body: "Kappa-carrageenan combined with Locust Bean Gum (LBG) produces gels 5–10× firmer than carrageenan alone — a synergistic interaction exploited in processed cheese, dairy desserts, and wet Animal Nutrition. Combined with potassium chloride (KCl), kappa-carrageenan gel strength and melting temperature increase. Interaction with milk casein provides the unique dairy stabilisation mechanism in chocolate milk and ice cream at ultra-low concentrations (0.01–0.025%).",
         },
       ],
       specRows: [
@@ -832,7 +844,7 @@ export const CONTENT = {
         { key: "Moisture content", val: "≤ 15.0%" },
         {
           key: "Primary use",
-          val: "Pet food, processed meat, industrial food applications",
+          val: "Animal Nutrition, processed meat, industrial food applications",
         },
         { type: "section", label: "Regulatory Approvals" },
         {
@@ -942,7 +954,7 @@ export const CONTENT = {
           viscPct: 75,
           featured: false,
           industries: ["petfood", "meat", "food"],
-          badge: { color: "petfood", text: "Pet food / Meat" },
+          badge: { color: "petfood", text: "Animal Nutrition / Meat" },
           specs: [
             ["Type", "Kappa (κ) — semi-refined"],
             ["Grade", "SRC / PES (E407a)"],
@@ -952,7 +964,7 @@ export const CONTENT = {
             ["Standard", "JECFA E407a"],
           ],
           apps: [
-            { l: "Wet pet food", i: "petfood" },
+            { l: "Wet Animal Nutrition", i: "petfood" },
             { l: "Processed meat", i: "meat" },
             { l: "Industrial food", i: "food" },
           ],
@@ -1064,7 +1076,7 @@ export const CONTENT = {
           ["Sulphate content", "~20–25%", "~28–35%", "~32–38%"],
           [
             "Key uses",
-            "Dairy, processed cheese, pet food, meat, plant-based",
+            "Dairy, processed cheese, Animal Nutrition, meat, plant-based",
             "Dairy desserts, dressings, cosmetics, infant formula",
             "Chocolate milk, beverages, dairy thickening, cosmetics",
           ],
@@ -1137,10 +1149,10 @@ export const CONTENT = {
           applications: "0.1–1.0%",
         },
         {
-          grade: "Pet Food & Animal Nutrition",
+          grade: "Animal Nutrition & Animal Nutrition",
           color: "petfood",
           viscosity:
-            "Wet cat & dog food, canned pet food, pet food pouches, pet treats",
+            "Wet cat & dog food, canned Animal Nutrition, Animal Nutrition pouches, pet treats",
           standard: "κ (SRC/PES, E407a)",
           features:
             "Gelling, water binding, retort stability, texture after sterilisation",
@@ -1308,17 +1320,17 @@ export const CONTENT = {
           ],
         },
         {
-          industry: "Pet Food & Animal Nutrition",
+          industry: "Animal Nutrition & Animal Nutrition",
           color: "petfood",
           icon: "🐾",
           items: [
             {
               name: "Wet Cat & Dog Food — Pâté & Loaf Formats",
-              desc: "Kappa-carrageenan (SRC/PES, E407a, 0.2–0.4%) is the industry-standard gelling agent for retorted wet pet food in pâté and loaf format. When blended with LBG (0.1–0.3%), forms the classic pâté gel that binds meat and fish ingredients into a cohesive, sliceable loaf surviving 121°C retort sterilisation. The κ-carrageenan + LBG system is unrivalled in wet pet food for performance and cost-efficiency.",
+              desc: "Kappa-carrageenan (SRC/PES, E407a, 0.2–0.4%) is the industry-standard gelling agent for retorted wet Animal Nutrition in pâté and loaf format. When blended with LBG (0.1–0.3%), forms the classic pâté gel that binds meat and fish ingredients into a cohesive, sliceable loaf surviving 121°C retort sterilisation. The κ-carrageenan + LBG system is unrivalled in wet Animal Nutrition for performance and cost-efficiency.",
             },
             {
-              name: "Wet Pet Food — Chunk-in-Jelly & Chunk-in-Gravy",
-              desc: "In jelly-format wet pet food, kappa-carrageenan forms the surrounding jelly that holds meat chunks in suspension — providing visual appeal, moisture, and product integrity in the can. In gravy formats, lower carrageenan levels (0.05–0.15%) with starch or xanthan thicken the sauce and provide cling on meat pieces.",
+              name: "Wet Animal Nutrition — Chunk-in-Jelly & Chunk-in-Gravy",
+              desc: "In jelly-format wet Animal Nutrition, kappa-carrageenan forms the surrounding jelly that holds meat chunks in suspension — providing visual appeal, moisture, and product integrity in the can. In gravy formats, lower carrageenan levels (0.05–0.15%) with starch or xanthan thicken the sauce and provide cling on meat pieces.",
             },
             {
               name: "Pet Treats & Semi-Moist Snacks",
@@ -1328,7 +1340,7 @@ export const CONTENT = {
         },
       ],
       seoDescription:
-        "<strong>Carrageenan</strong> (CAS 9000-07-1, E407 / E407a, INS 407 / INS 407a) is a family of natural, high-molecular-weight sulphated polysaccharides extracted from specific species of red seaweed (Rhodophyta) — principally <em>Eucheuma cottonii</em> (primary source of kappa-carrageenan), <em>Eucheuma spinosum</em> (iota-carrageenan), and <em>Chondrus crispus</em> / <em>Gigartina</em> species (lambda-carrageenan). The three commercially important types — kappa (κ), iota (ι), and lambda (λ) — differ in their degree of sulphation, helical conformation, and gelation behaviour, enabling precise functional tuning for each application.<br><br><strong>Kappa-carrageenan</strong> (~20–25% sulphate) forms firm, brittle, thermoreversible gels activated by potassium ions (K⁺) — gelling at ~40°C and melting at ~60°C. Most widely used carrageenan type globally, deployed in dairy products, chocolate milk, processed cheese, ice cream, meat processing, plant-based foods, pet food, and cosmetics. <strong>Iota-carrageenan</strong> (28–35% sulphate) forms soft, elastic, freeze-thaw stable gels activated by calcium ions (Ca²⁺) — preferred for dairy desserts, infant formula, cosmetic gels, and applications requiring no syneresis on freeze-thaw cycling. <strong>Lambda-carrageenan</strong> (32–38% sulphate) does not gel under any conditions, providing cold-process pseudoplastic thickening in dairy beverages, dressings, sauces, and cosmetic formulations.<br><br>Carrageenan's defining commercial advantage in the <strong>dairy industry</strong> is its unique electrostatic interaction with casein micelles — enabling stabilisation of chocolate milk at 0.01–0.025%, far below the level of any other hydrocolloid. In ice cream, κ-carrageenan (0.01–0.02%) combined with locust bean gum (0.1–0.2%) provides the industry-standard stabiliser system for ice crystal control and heat-shock resistance. In <strong>processed meat</strong>, κ-carrageenan at 0.1–0.5% improves cook yield by 5–15% through water binding in ham, sausage, and reformed meat systems. In <strong>plant-based foods</strong>, the κ-carrageenan + LBG synergistic gel system replicates dairy-equivalent textures in vegan cheese and plant-based meat analogues. In <strong>cosmetics</strong>, lambda-carrageenan is the standard thickener and binder in toothpaste globally.<br><br><strong>VIVINE International</strong> supplies Carrageenan in refined food grade (E407), semi-refined/PES grade (E407a), pharma grade, and cosmetic grade — in kappa, iota, lambda, and standardised commercial blend formulations with full TDS, SDS, and COA documentation.",
+        "<strong>Carrageenan</strong> (CAS 9000-07-1, E407 / E407a, INS 407 / INS 407a) is a family of natural, high-molecular-weight sulphated polysaccharides extracted from specific species of red seaweed (Rhodophyta) — principally <em>Eucheuma cottonii</em> (primary source of kappa-carrageenan), <em>Eucheuma spinosum</em> (iota-carrageenan), and <em>Chondrus crispus</em> / <em>Gigartina</em> species (lambda-carrageenan). The three commercially important types — kappa (κ), iota (ι), and lambda (λ) — differ in their degree of sulphation, helical conformation, and gelation behaviour, enabling precise functional tuning for each application.<br><br><strong>Kappa-carrageenan</strong> (~20–25% sulphate) forms firm, brittle, thermoreversible gels activated by potassium ions (K⁺) — gelling at ~40°C and melting at ~60°C. Most widely used carrageenan type globally, deployed in dairy products, chocolate milk, processed cheese, ice cream, meat processing, plant-based foods, Animal Nutrition, and cosmetics. <strong>Iota-carrageenan</strong> (28–35% sulphate) forms soft, elastic, freeze-thaw stable gels activated by calcium ions (Ca²⁺) — preferred for dairy desserts, infant formula, cosmetic gels, and applications requiring no syneresis on freeze-thaw cycling. <strong>Lambda-carrageenan</strong> (32–38% sulphate) does not gel under any conditions, providing cold-process pseudoplastic thickening in dairy beverages, dressings, sauces, and cosmetic formulations.<br><br>Carrageenan's defining commercial advantage in the <strong>dairy industry</strong> is its unique electrostatic interaction with casein micelles — enabling stabilisation of chocolate milk at 0.01–0.025%, far below the level of any other hydrocolloid. In ice cream, κ-carrageenan (0.01–0.02%) combined with locust bean gum (0.1–0.2%) provides the industry-standard stabiliser system for ice crystal control and heat-shock resistance. In <strong>processed meat</strong>, κ-carrageenan at 0.1–0.5% improves cook yield by 5–15% through water binding in ham, sausage, and reformed meat systems. In <strong>plant-based foods</strong>, the κ-carrageenan + LBG synergistic gel system replicates dairy-equivalent textures in vegan cheese and plant-based meat analogues. In <strong>cosmetics</strong>, lambda-carrageenan is the standard thickener and binder in toothpaste globally.<br><br><strong>VIVINE International</strong> supplies Carrageenan in refined food grade (E407), semi-refined/PES grade (E407a), pharma grade, and cosmetic grade — in kappa, iota, lambda, and standardised commercial blend formulations with full TDS, SDS, and COA documentation.",
       footerNote:
         "Gel strength values are indicative. Actual performance is highly dependent on carrageenan type (κ/ι/λ), grade (RC/SRC), cation concentration (K⁺/Ca²⁺), temperature, pH, and the presence of synergistic hydrocolloids (LBG, xanthan) and proteins (casein, whey). Contact VIVINE International for grade-specific TDS, SDS, COA, samples, and formulation guidance.",
     },
@@ -2807,7 +2819,7 @@ export const CONTENT = {
             { l: "Salad dressings", i: "food" },
             { l: "Ice cream", i: "dairy" },
             { l: "Gluten-free bakery", i: "food" },
-            { l: "Pet food gravy", i: "petfood" },
+            { l: "Animal Nutrition gravy", i: "petfood" },
           ],
         },
         {
@@ -3029,10 +3041,10 @@ export const CONTENT = {
           applications: "Food / industrial grade",
         },
         {
-          grade: "Pet Food & Animal Nutrition",
+          grade: "Animal Nutrition & Animal Nutrition",
           color: "petfood",
           viscosity:
-            "Wet pet food, canned pet food, pet food gravies and sauces, pet treats",
+            "Wet Animal Nutrition, canned Animal Nutrition, Animal Nutrition gravies and sauces, pet treats",
           standard: "Viscosity, suspension, gravy/sauce thickening, texture",
           features: "0.1–0.5%",
           applications: "Food grade (E415)",
@@ -3217,7 +3229,7 @@ export const CONTENT = {
             },
             {
               name: "Tile Adhesives & Construction Coatings",
-              desc: "In water-based tile adhesives and construction surface coatings, xanthan gum contributes sag resistance and workability. Used at 0.05–0.2% alongside cellulose ethers (HPMC) in premium tile adhesive formulations to extend open time while maintaining anti-sag properties on vertical tile installations.",
+              desc: "In water-based tile adhesives and construction surface coatings, xanthan gum contributes sag resistance and workability. Used at 0.05–0.2% alongside cellulose Ethers (HPMC) in premium tile adhesive formulations to extend open time while maintaining anti-sag properties on vertical tile installations.",
             },
           ],
         },
@@ -3241,21 +3253,21 @@ export const CONTENT = {
           ],
         },
         {
-          industry: "Pet Food & Animal Nutrition",
+          industry: "Animal Nutrition & Animal Nutrition",
           color: "petfood",
           icon: "🐾",
           items: [
             {
-              name: "Wet Pet Food — Gravies & Sauces",
-              desc: "Xanthan gum (0.1–0.3%) thickens gravy and sauce in chunk-in-gravy and chunk-in-sauce wet pet food formats — providing sauce cling on meat chunks that creates visual appeal and moisture perception in the bowl. Unlike carrageenan (which gels), xanthan provides a stable, pourable-but-clinging sauce viscosity that survives retort processing at 121°C.",
+              name: "Wet Animal Nutrition — Gravies & Sauces",
+              desc: "Xanthan gum (0.1–0.3%) thickens gravy and sauce in chunk-in-gravy and chunk-in-sauce wet Animal Nutrition formats — providing sauce cling on meat chunks that creates visual appeal and moisture perception in the bowl. Unlike carrageenan (which gels), xanthan provides a stable, pourable-but-clinging sauce viscosity that survives retort processing at 121°C.",
             },
             {
-              name: "Wet Pet Food — Suspension Stability",
-              desc: "In canned and pouch wet pet food, xanthan (0.05–0.2%) prevents vegetable, grain, and supplement particle sedimentation during processing and shelf life. Its yield stress network ensures particles remain uniformly distributed in the can contents — critical for products marketed as 'with vegetables' or containing visible fruit/vegetable inclusions.",
+              name: "Wet Animal Nutrition — Suspension Stability",
+              desc: "In canned and pouch wet Animal Nutrition, xanthan (0.05–0.2%) prevents vegetable, grain, and supplement particle sedimentation during processing and shelf life. Its yield stress network ensures particles remain uniformly distributed in the can contents — critical for products marketed as 'with vegetables' or containing visible fruit/vegetable inclusions.",
             },
             {
-              name: "Pet Food Broths & Toppers",
-              desc: "In refrigerated and ambient pet food broths, bone broths, and food toppers, xanthan gum provides body and mouthfeel at very low concentrations (0.02–0.08%) — making thin broths appear more substantial without adding starch or fat. Compatible with the high salt and mineral content of broth-based pet food formats.",
+              name: "Animal Nutrition Broths & Toppers",
+              desc: "In refrigerated and ambient Animal Nutrition broths, bone broths, and food toppers, xanthan gum provides body and mouthfeel at very low concentrations (0.02–0.08%) — making thin broths appear more substantial without adding starch or fat. Compatible with the high salt and mineral content of broth-based Animal Nutrition formats.",
             },
             {
               name: "Semi-Moist Pet Treats & Functional Chews",
@@ -3265,7 +3277,7 @@ export const CONTENT = {
         },
       ],
       seoDescription:
-        "<strong>Xanthan Gum</strong> (CAS 11138-66-2, E415, INS 415) is a high-molecular-weight anionic heteropolysaccharide produced by the controlled aerobic fermentation of carbohydrate substrates using the bacterium <em>Xanthomonas campestris</em> NRRL B-1459. The polymer consists of a cellulose-like β-1,4-linked D-glucose backbone with trisaccharide side chains containing D-mannose, D-glucuronic acid, and D-mannose. The terminal mannose is frequently modified by pyruvate groups (≥ 1.5% per JECFA specification).<br><br>Xanthan gum's most commercially valuable property is its exceptional <strong>pseudoplasticity (shear-thinning behaviour)</strong> — solutions are highly viscous at low shear rates and become far less viscous under high shear (pumping, stirring, squeezing), recovering full viscosity instantly when shear is removed. At 1% concentration, xanthan viscosity at 0.1 s⁻¹ shear rate is typically 10,000–100,000 mPa·s, dropping to 10–50 mPa·s at 100 s⁻¹. This unique flow profile underpins its functionality in salad dressings, oilfield drilling, paints, and toothpaste.<br><br>In the <strong>food and beverage industry</strong>, xanthan (E415) is approved under EU Regulation (EC) No 1333/2008 (quantum satis), FDA Food Approved (21 CFR 172.695), and JECFA INS 415 (ADI not specified). Key food applications include salad dressings and sauces (0.1–0.3%), gluten-free bakery products (0.2–0.5%), fruit beverages (0.02–0.1%), soups, gravies, and condiments. In <strong>dairy applications</strong>, xanthan stabilises ice cream, flavoured milks, and yogurt. Xanthan + LBG synergistic gels provide freeze-thaw stable elastic gel systems for premium ice cream stabiliser blends.<br><br>In the <strong>oil and gas industry</strong>, xanthan gum (XC polymer, API 13A Section 4 / ISO 13500 compliant) is the standard biopolymer viscosifier in water-based drilling muds. At 0.25% in 1% KCl solution, API 13A-compliant xanthan delivers ≥ 600 mPa·s viscosity (Brookfield LVT, 60 rpm, 25°C). Xanthan-based biopolymer muds cause minimal formation damage compared to bentonite-based systems — preferred for horizontal drilling and completion operations.<br><br>In <strong>pharmaceuticals</strong>, high-purity xanthan functions as a controlled-release matrix polymer in tablets (15–40% w/w), a suspension agent in oral liquids (0.1–0.5%), a viscosity builder in ophthalmic drops (0.1–0.3%), and a dermal gel base (0.5–2.0%). In <strong>cosmetics</strong>, xanthan (INCI: Xanthan Gum) is used in toothpaste (0.5–1.5%), moisturising creams (0.1–0.5%), shampoos (0.2–0.6%), face serums (0.1–0.3%), and sunscreens. In <strong>industrial applications</strong> — paints, coatings, detergents, agricultural chemicals, and textile printing — xanthan's pH (1–13) and salt tolerance make it uniquely stable compared to cellulose ethers, carbomers, or natural gums.<br><br><strong>VIVINE International</strong> supplies Xanthan Gum in food grade (E415/FCC/JECFA), oilfield grade (API 13A compliant), pharma grade, cosmetic grade (INCI), and industrial grade with full TDS, SDS, COA, and API 13A test reports.",
+        "<strong>Xanthan Gum</strong> (CAS 11138-66-2, E415, INS 415) is a high-molecular-weight anionic heteropolysaccharide produced by the controlled aerobic fermentation of carbohydrate substrates using the bacterium <em>Xanthomonas campestris</em> NRRL B-1459. The polymer consists of a cellulose-like β-1,4-linked D-glucose backbone with trisaccharide side chains containing D-mannose, D-glucuronic acid, and D-mannose. The terminal mannose is frequently modified by pyruvate groups (≥ 1.5% per JECFA specification).<br><br>Xanthan gum's most commercially valuable property is its exceptional <strong>pseudoplasticity (shear-thinning behaviour)</strong> — solutions are highly viscous at low shear rates and become far less viscous under high shear (pumping, stirring, squeezing), recovering full viscosity instantly when shear is removed. At 1% concentration, xanthan viscosity at 0.1 s⁻¹ shear rate is typically 10,000–100,000 mPa·s, dropping to 10–50 mPa·s at 100 s⁻¹. This unique flow profile underpins its functionality in salad dressings, oilfield drilling, paints, and toothpaste.<br><br>In the <strong>food and beverage industry</strong>, xanthan (E415) is approved under EU Regulation (EC) No 1333/2008 (quantum satis), FDA Food Approved (21 CFR 172.695), and JECFA INS 415 (ADI not specified). Key food applications include salad dressings and sauces (0.1–0.3%), gluten-free bakery products (0.2–0.5%), fruit beverages (0.02–0.1%), soups, gravies, and condiments. In <strong>dairy applications</strong>, xanthan stabilises ice cream, flavoured milks, and yogurt. Xanthan + LBG synergistic gels provide freeze-thaw stable elastic gel systems for premium ice cream stabiliser blends.<br><br>In the <strong>oil and gas industry</strong>, xanthan gum (XC polymer, API 13A Section 4 / ISO 13500 compliant) is the standard biopolymer viscosifier in water-based drilling muds. At 0.25% in 1% KCl solution, API 13A-compliant xanthan delivers ≥ 600 mPa·s viscosity (Brookfield LVT, 60 rpm, 25°C). Xanthan-based biopolymer muds cause minimal formation damage compared to bentonite-based systems — preferred for horizontal drilling and completion operations.<br><br>In <strong>pharmaceuticals</strong>, high-purity xanthan functions as a controlled-release matrix polymer in tablets (15–40% w/w), a suspension agent in oral liquids (0.1–0.5%), a viscosity builder in ophthalmic drops (0.1–0.3%), and a dermal gel base (0.5–2.0%). In <strong>cosmetics</strong>, xanthan (INCI: Xanthan Gum) is used in toothpaste (0.5–1.5%), moisturising creams (0.1–0.5%), shampoos (0.2–0.6%), face serums (0.1–0.3%), and sunscreens. In <strong>industrial applications</strong> — paints, coatings, detergents, agricultural chemicals, and textile printing — xanthan's pH (1–13) and salt tolerance make it uniquely stable compared to cellulose Ethers, carbomers, or natural gums.<br><br><strong>VIVINE International</strong> supplies Xanthan Gum in food grade (E415/FCC/JECFA), oilfield grade (API 13A compliant), pharma grade, cosmetic grade (INCI), and industrial grade with full TDS, SDS, COA, and API 13A test reports.",
       footerNote:
         "Viscosity values are indicative at 1% aqueous solution, 25°C, Brookfield LVT (Spindle 3, 60 rpm). API 13A oilfield viscosity per 0.25% in 1% KCl. Actual performance depends on grade, shear rate, pH, temperature, ionic environment, and co-formulation ingredients. Contact VIVINE International for grade-specific TDS, SDS, COA, API 13A test reports, samples, and formulation guidance.",
     },
@@ -3730,8 +3742,41 @@ export const CONTENT = {
       ],
       seoDescription:
         "<strong>Guar Gum</strong> (CAS 9000-30-0, E412) is a natural galactomannan polysaccharide derived from the endosperm of guar beans (<em>Cyamopsis tetragonoloba</em>), cultivated extensively in Rajasthan and Gujarat, India — approximately 80% of global production. The guar seeds are mechanically dehusked, milled, and screened to separate the high-galactomannan endosperm yielding a white to yellowish-white, nearly odourless galactomannan with M:G ≈ 2:1, molecular weight of 200,000–300,000 Da, and viscosity of 2,700–3,500 mPa·s at 1% (25°C).<br><br>In the <strong>food and beverage industry</strong>, Guar Gum (E412) is used as a thickener, stabiliser, water binder, and texture improver across sauces, ketchup, salad dressings, ice cream, yoghurt, bread, cakes, gluten-free bakery, beverages, instant soups, noodles, processed meat, and confectionery. It provides 5–8× the thickening efficiency of starch at equivalent concentration.<br><br>In the <strong>oil and gas drilling and hydraulic fracturing industry</strong>, Guar Gum represents the largest single commercial volume application globally (~70–75% of global consumption in peak years). Fast Hydrating Guar Gum (FHG) is the dominant polymer in hydraulic fracturing fluid design, cross-linked with borate, zirconate, or titanate to produce viscoelastic gels capable of transporting proppant at 50–150 barrels per minute.<br><br>In <strong>pharmaceuticals</strong>, Guar Gum is recognised in USP/NF, Ph.Eur., and British Pharmacopoeia. It functions as a tablet binder, disintegrant, sustained-release matrix former, and suspending agent in oral liquids.<br><br><strong>VIVINE International</strong> supplies Guar Gum in food grade (E412/FCC/JECFA), pharmaceutical grade (USP/NF/Ph.Eur.), and oilfield/drilling grade with full TDS, SDS, and COA documentation.",
-      footerNote:
-        "Viscosity values are indicative at 1% aqueous solution, 25°C, Brookfield LV viscometer (spindle 3, 30 rpm, 2-hour hydration). Actual viscosity varies with hydration time, temperature, agitation speed, pH, and electrolyte concentration. Contact VIVINE International for grade-specific TDS, SDS, COA, and sample requests.",
+footerNote:
+        "Viscosity values are indicative at 1% aqueous solution, 25°C, Brookfield LV viscometer (spindle 3, 60 rpm). Actual viscosity varies with hydration time, temperature, agitation speed, pH, and electrolyte concentration. Contact VIVINE International for grade-specific TDS, SDS, COA, and sample requests.",
+    },
+
+    "locust-bean-gum": {
+      layout: "lbg",
+      name: "Locust Bean Gum (LBG)",
+      shortName: "Locust Bean Gum",
+      productTag: "Galactomannan · Natural hydrocolloid · E410 · GRAS",
+      casNo: "9000-40-6",
+      eNo: "E410 · INS 410",
+      synonyms: "Carob Bean Gum, Carobin, Carob Gum",
+      tagline:
+        "Natural galactomannan from carob seeds — powerful synergy with κ-carrageenan and xanthan gum for ice cream, dairy, plant-based foods, pharmaceuticals, cosmetics, and pet food.",
+      statPills: [
+        { val: "E410 / GRAS", label: "Global food approval" },
+        { val: "M:G ≈ 4:1", label: "Mannose:Galactose" },
+        { val: "5 grades", label: "Available" },
+        { val: "≥ 80 °C", label: "Full hydration temp." },
+      ],
+      description: [
+        "Locust Bean Gum (LBG, E410) is a natural galactomannan polysaccharide extracted from the endosperm of carob seeds (Ceratonia siliqua L.), a leguminous tree cultivated in Mediterranean regions.",
+        "Its M:G ratio of ~4:1 produces fewer galactose branches than guar gum — enabling powerful synergistic interactions with κ-carrageenan (5-10× gel firmness) and xanthan gum (freeze-thaw stable gels).",
+        "LBG requires heating (≥80°C) for full viscosity development. Most important application: ice cream stabilizer globally, used with κ-carrageenan at 0.1-0.2%.",
+      ],
+      highlights: [
+        { icon: "🌿", val: "Natural origin", lbl: "Carob tree seed" },
+        { icon: "❄️", val: "Ice cream stabilizer", lbl: "Controls ice crystals" },
+        { icon: "🔗", val: "Synergy partner", lbl: "κ-Carrageenan · Xanthan" },
+        { icon: "✅", val: "E410 / GRAS", lbl: "Global food approval" },
+        { icon: "🐄", val: "Dairy & vegan", lbl: "Dairy & plant-based" },
+        { icon: "🌡️", val: "Freeze-thaw stable", lbl: "LBG + xanthan blend" },
+        { icon: "🔬", val: "Gluten-free", lbl: "Celiac-safe ingredient" },
+        { icon: "🐾", val: "Pet food grade", lbl: "Wet food & treats" },
+      ],
     },
 
     "gellan-gum": {
@@ -4848,7 +4893,7 @@ export const CONTENT = {
         },
         {
           title: "Outstanding water retention",
-          body: "HPMC's ability to retain water in mortar, plaster, and tile adhesives is unmatched among cellulose ethers, dramatically improving workability, open time, and adhesion in construction.",
+          body: "HPMC's ability to retain water in mortar, plaster, and tile adhesives is unmatched among cellulose Ethers, dramatically improving workability, open time, and adhesion in construction.",
         },
         {
           title: "Methoxy/hydroxypropoxy control",
@@ -5078,7 +5123,7 @@ export const CONTENT = {
       chartLabels: ["Low", "Medium", "High", "Ultra-High"],
       chartValues: [100, 10000, 100000, 200000],
       seoDescription:
-        "Hydroxypropyl Methyl Cellulose (HPMC), also known as Hypromellose (CAS 9004-65-3, E464), is one of the most widely produced and versatile water-soluble cellulose ethers globally. As a non-ionic modified cellulose, HPMC provides multifunctionality across a broad range of industries.<br><br>In the <strong>construction industry</strong>, HPMC serves as a thickener, water-retention agent, and binder in tile adhesives, cement mortar, wall putty, gypsum products, plasters, and self-leveling compounds — improving workability, adhesion strength, open time, and sag resistance. In <strong>pharmaceuticals</strong>, it functions as a tablet binder, film-coating agent, and controlled-release polymer in tablets, capsules, ophthalmic solutions, and sustained-release systems, meeting USP, BP, EP, and IP standards. In the <strong>food industry</strong> (E464), HPMC is used as a thickener, stabilizer, emulsifier, and fat replacer in bakery, dairy, beverages, and plant-based foods. In <strong>cosmetics & personal care</strong>, it thickens and stabilizes creams, lotions, shampoos, toothpaste, and skin-care formulations. In <strong>paints & coatings</strong>, it improves viscosity control, pigment suspension, workability, and sag resistance.<br><br>We supply HPMC in food, pharma, construction, and industrial grades across low, medium, high, and ultra-high viscosity ranges, with full TDS, MSDS, and compliance documentation on request.",
+        "Hydroxypropyl Methyl Cellulose (HPMC), also known as Hypromellose (CAS 9004-65-3, E464), is one of the most widely produced and versatile water-soluble cellulose Ethers globally. As a non-ionic modified cellulose, HPMC provides multifunctionality across a broad range of industries.<br><br>In the <strong>construction industry</strong>, HPMC serves as a thickener, water-retention agent, and binder in tile adhesives, cement mortar, wall putty, gypsum products, plasters, and self-leveling compounds — improving workability, adhesion strength, open time, and sag resistance. In <strong>pharmaceuticals</strong>, it functions as a tablet binder, film-coating agent, and controlled-release polymer in tablets, capsules, ophthalmic solutions, and sustained-release systems, meeting USP, BP, EP, and IP standards. In the <strong>food industry</strong> (E464), HPMC is used as a thickener, stabilizer, emulsifier, and fat replacer in bakery, dairy, beverages, and plant-based foods. In <strong>cosmetics & personal care</strong>, it thickens and stabilizes creams, lotions, shampoos, toothpaste, and skin-care formulations. In <strong>paints & coatings</strong>, it improves viscosity control, pigment suspension, workability, and sag resistance.<br><br>We supply HPMC in food, pharma, construction, and industrial grades across low, medium, high, and ultra-high viscosity ranges, with full TDS, MSDS, and compliance documentation on request.",
       footerNote:
         "Viscosity values may vary depending on concentration and testing method. Contact our technical team for grade-specific datasheets, TDS, MSDS, and sample requests.",
     },
@@ -5616,7 +5661,7 @@ export const CONTENT = {
         },
       ],
       seoDescription:
-        "Hydroxyethyl Cellulose (HEC) is one of the most industrially versatile water-soluble polymers in use globally. Unlike synthetic thickeners, HEC is derived from cellulose — a renewable natural raw material — and combines broad chemical compatibility with robust, predictable rheological performance across a wide range of pH values, temperatures, and electrolyte environments.<br><br>HEC's defining property — full water solubility at all temperatures without thermal gelation — distinguishes it from methyl-substituted cellulose ethers (MC, MHEC, HPMC) and makes it the first choice for applications where solution consistency must be maintained under variable or elevated temperature conditions.<br><br>In <strong>paints & coatings</strong>, HEC is the largest-volume cellulose ether globally — primary thickener and rheology modifier in emulsion paints. In <strong>oil & gas</strong>, critical for fluid loss control and viscosity in drilling and completion fluids. In <strong>personal care</strong>, the non-ionic thickener of choice for shampoos, lotions, and styling gels. In <strong>detergents</strong>, provides thickening and anti-redeposition. In <strong>textile</strong>, controls dye migration in printing pastes.<br><br><strong>VIVINE International</strong> supplies HEC in a comprehensive viscosity range (100–100,000 mPa·s) in industrial, cosmetic, and pharmaceutical grades with full TDS, SDS, and COA documentation.",
+        "Hydroxyethyl Cellulose (HEC) is one of the most industrially versatile water-soluble polymers in use globally. Unlike synthetic thickeners, HEC is derived from cellulose — a renewable natural raw material — and combines broad chemical compatibility with robust, predictable rheological performance across a wide range of pH values, temperatures, and electrolyte environments.<br><br>HEC's defining property — full water solubility at all temperatures without thermal gelation — distinguishes it from methyl-substituted cellulose Ethers (MC, MHEC, HPMC) and makes it the first choice for applications where solution consistency must be maintained under variable or elevated temperature conditions.<br><br>In <strong>paints & coatings</strong>, HEC is the largest-volume cellulose ether globally — primary thickener and rheology modifier in emulsion paints. In <strong>oil & gas</strong>, critical for fluid loss control and viscosity in drilling and completion fluids. In <strong>personal care</strong>, the non-ionic thickener of choice for shampoos, lotions, and styling gels. In <strong>detergents</strong>, provides thickening and anti-redeposition. In <strong>textile</strong>, controls dye migration in printing pastes.<br><br><strong>VIVINE International</strong> supplies HEC in a comprehensive viscosity range (100–100,000 mPa·s) in industrial, cosmetic, and pharmaceutical grades with full TDS, SDS, and COA documentation.",
       footerNote:
         "All technical data is indicative and based on standard reference conditions (Brookfield 2% solution, 25°C). Actual performance depends on formulation matrix, pH, electrolyte level, process temperature, and co-additives. Contact VIVINE International for application-specific grade recommendations, TDS, and product samples.",
     },
@@ -5685,7 +5730,7 @@ export const CONTENT = {
         },
         {
           title: "Why non-ionic matters",
-          body: "MHEC carries no net charge. Unlike CMC (anionic) or cationic cellulose ethers, it is fully compatible with high-ionic-strength systems such as Portland cement, gypsum plaster, calcium hydroxide, and salt-containing oilfield fluids — environments where ionic cellulose ethers can precipitate or lose viscosity due to electrolyte interaction.",
+          body: "MHEC carries no net charge. Unlike CMC (anionic) or cationic cellulose Ethers, it is fully compatible with high-ionic-strength systems such as Portland cement, gypsum plaster, calcium hydroxide, and salt-containing oilfield fluids — environments where ionic cellulose Ethers can precipitate or lose viscosity due to electrolyte interaction.",
         },
         {
           title: "Thermal gelation & cloud point",
@@ -6228,7 +6273,7 @@ export const CONTENT = {
         "Cellulose ether · Non-ionic · Construction · Pharma · Food · Broadest application range",
       synonyms: "HPMC, Hypromellose, Hydroxypropyl Methyl Cellulose",
       tagline:
-        "Hydroxypropyl Methylcellulose (HPMC), also known as Hypromellose, is a non-ionic cellulose ether with the broadest application range of all commercial cellulose ethers — serving construction, pharmaceutical, food, personal care, paints, and ceramics industries.",
+        "Hydroxypropyl Methylcellulose (HPMC), also known as Hypromellose, is a non-ionic cellulose ether with the broadest application range of all commercial cellulose Ethers — serving construction, pharmaceutical, food, personal care, paints, and ceramics industries.",
       casNo: "9004-65-3",
       eNo: "E464",
       origin: "Modified Cellulose (wood pulp / cotton linters)",
@@ -6236,7 +6281,7 @@ export const CONTENT = {
       hsCode: "3912.39",
       description: [
         "Hydroxypropyl Methylcellulose (HPMC), internationally recognised under the INN Hypromellose, is produced by the sequential or simultaneous etherification of alkali cellulose with methyl chloride and propylene oxide. The combination of methyl (–OCH₃) and hydroxypropyl (–OCH₂CHOHCH₃) substituents produces a cellulose ether with uniquely broad functionality: cold-water solubility, thermal gelation above a cloud point, excellent film-forming ability, surface activity, and full compatibility across construction, pharmaceutical, food, and personal care industries.",
-        "HPMC has the broadest application range of all commercial cellulose ethers — serving as a critical functional ingredient from dry-mix mortar systems and pharmaceutical tablet coatings to food emulsions and hair care products.",
+        "HPMC has the broadest application range of all commercial cellulose Ethers — serving as a critical functional ingredient from dry-mix mortar systems and pharmaceutical tablet coatings to food emulsions and hair care products.",
         "VIVINE International supplies construction-grade, food-grade, and pharma-grade HPMC across a comprehensive viscosity range (5 mPa·s to 200,000 mPa·s) with supporting documentation including TDS, SDS, COA, and application-specific grade selection guidance.",
       ],
       statPills: [
@@ -6608,7 +6653,7 @@ export const CONTENT = {
       chartValues: [10, 2000, 9500, 27500, 75000, 100000, 200000],
       regulatoryBadgesTitle: "Standards & regulatory status",
       regulatoryBadgesSub:
-        "HPMC holds the broadest regulatory approvals of all cellulose ethers",
+        "HPMC holds the broadest regulatory approvals of all cellulose Ethers",
       regulatoryBadges: [
         {
           icon: "💊",
@@ -6897,7 +6942,7 @@ export const CONTENT = {
       ],
       keyProperties: [
         {
-          title: "Anionic — unique among cellulose ethers",
+          title: "Anionic — unique among cellulose Ethers",
           body: "Unlike HPMC and HEC (non-ionic), CMC carries a negative charge. This makes it highly effective as a soil anti-redeposition agent in detergents, a dispersant in ceramics, and a binder in battery electrode manufacturing.",
         },
         {
@@ -7182,7 +7227,7 @@ export const CONTENT = {
       ],
       chartValues: [200, 800, 8000, 8000, 6000, 3000, 5000, 8000],
       seoDescription:
-        "Sodium Carboxymethyl Cellulose (Sodium CMC), also known as Cellulose Gum (CAS 9004-32-4, E466), is one of the most widely produced and versatile water-soluble cellulose ethers in the world. As an anionic hydrocolloid derived from natural cellulose, CMC provides unmatched multifunctionality across a broad range of industries.<br><br>In the <strong>food industry</strong>, CMC (E466) serves as a thickener, stabilizer, and emulsifier in ice cream, instant noodles, bread, sauces, beverages, and dairy products — approved under FDA (Food Approved), EU (E466), and JECFA regulations. In <strong>pharmaceuticals</strong>, it acts as a tablet binder, disintegrant, viscosity modifier, and suspension stabilizer in oral liquids and ophthalmic solutions, meeting USP, BP, and EP standards. In <strong>cosmetics & personal care</strong>, CMC thickens and stabilizes toothpaste, shampoos, creams, and lotions while forming protective films. In <strong>detergents</strong>, its anionic nature makes it an outstanding anti-redeposition agent that prevents soil from re-settling on fabrics during washing. In <strong>paper & textile</strong>, CMC is used for paper surface sizing and as a textile sizing agent for warp protection during weaving. In <strong>oilfield drilling</strong>, high-viscosity CMC controls fluid loss and provides viscosity in water-based drilling muds.<br><br>We supply Sodium CMC in food grade (≥99.5% purity, E466/FCC), pharma grade (USP/BP/EP), and industrial / technical grade, across low, medium, and high viscosity ranges, with full TDS, MSDS, and compliance documentation on request.",
+        "Sodium Carboxymethyl Cellulose (Sodium CMC), also known as Cellulose Gum (CAS 9004-32-4, E466), is one of the most widely produced and versatile water-soluble cellulose Ethers in the world. As an anionic hydrocolloid derived from natural cellulose, CMC provides unmatched multifunctionality across a broad range of industries.<br><br>In the <strong>food industry</strong>, CMC (E466) serves as a thickener, stabilizer, and emulsifier in ice cream, instant noodles, bread, sauces, beverages, and dairy products — approved under FDA (Food Approved), EU (E466), and JECFA regulations. In <strong>pharmaceuticals</strong>, it acts as a tablet binder, disintegrant, viscosity modifier, and suspension stabilizer in oral liquids and ophthalmic solutions, meeting USP, BP, and EP standards. In <strong>cosmetics & personal care</strong>, CMC thickens and stabilizes toothpaste, shampoos, creams, and lotions while forming protective films. In <strong>detergents</strong>, its anionic nature makes it an outstanding anti-redeposition agent that prevents soil from re-settling on fabrics during washing. In <strong>paper & textile</strong>, CMC is used for paper surface sizing and as a textile sizing agent for warp protection during weaving. In <strong>oilfield drilling</strong>, high-viscosity CMC controls fluid loss and provides viscosity in water-based drilling muds.<br><br>We supply Sodium CMC in food grade (≥99.5% purity, E466/FCC), pharma grade (USP/BP/EP), and industrial / technical grade, across low, medium, and high viscosity ranges, with full TDS, MSDS, and compliance documentation on request.",
       footerNote:
         "Viscosity values are indicative at 2% aqueous solution at 25°C using a Brookfield viscometer. DS range, purity, and regulatory compliance vary by grade. Contact our technical team for grade-specific datasheets, TDS, MSDS, and sample requests.",
     },
@@ -7702,7 +7747,7 @@ export const CONTENT = {
         },
       ],
       seoDescription:
-        "<strong>Polyanionic Cellulose (PAC)</strong> is a high-purity, high-Degree of Substitution (DS 0.85–1.40) sodium carboxymethyl cellulose derivative (CAS 9004-32-4), produced from refined cotton linters or high-alpha-cellulose wood pulp. PAC is engineered for demanding industrial and oilfield environments where standard CMC (DS 0.65–0.90) is technically insufficient. The elevated DS delivers superior water solubility, electrolyte tolerance, thermal stability, and viscosification efficiency compared to all commodity cellulose ethers.<br><br><strong>Oilfield drilling applications</strong> represent the largest commercial volume segment for PAC globally. PAC is the API 13A / ISO 13500-compliant standard fluid loss additive for water-based drilling muds (WBM). VIVINE International supplies <strong>PAC-R (Regular viscosity, 600–1,000 mPa·s at 1%)</strong> — used specifically for fluid loss reduction (API FL ≤ 15 mL/30 min) with minimal impact on mud viscosity; and <strong>PAC-UHV / PAC-HV (1,000–8,000+ mPa·s)</strong> for combined fluid loss control and rheology building, suitable for HTHP wells up to 150 °C. PAC performs in freshwater muds, seawater muds, KCl-inhibitive brines (up to 3%), and NaCl-saturated brines.<br><br>In the <strong>construction chemicals industry</strong>, PAC functions as a water retention agent, thickener, and workability enhancer in dry-mix mortars, cementitious tile adhesives (EN 12004), cement renders, gypsum plasters, self-levelling underlayments, and EIFS systems. In <strong>textile processing</strong>, PAC is used as a warp yarn sizing agent on cotton, viscose, and blended yarns, and as a reactive dye print paste thickener. For <strong>industrial chemical distributors</strong>, PAC provides high-performance thickening, binding, dispersing, and film-forming functionality in paper coating, laundry detergents, agricultural chemical formulations, ceramic binders, and mineral processing.<br><br><strong>VIVINE International</strong> supplies Polyanionic Cellulose in PAC-R, PAC-HV, and PAC-UHV (oilfield, API 13A / ISO 13500 compliant), plus construction, textile, and industrial grades. API 13A test reports, TDS, SDS, and COA available on request.",
+        "<strong>Polyanionic Cellulose (PAC)</strong> is a high-purity, high-Degree of Substitution (DS 0.85–1.40) sodium carboxymethyl cellulose derivative (CAS 9004-32-4), produced from refined cotton linters or high-alpha-cellulose wood pulp. PAC is engineered for demanding industrial and oilfield environments where standard CMC (DS 0.65–0.90) is technically insufficient. The elevated DS delivers superior water solubility, electrolyte tolerance, thermal stability, and viscosification efficiency compared to all commodity cellulose Ethers.<br><br><strong>Oilfield drilling applications</strong> represent the largest commercial volume segment for PAC globally. PAC is the API 13A / ISO 13500-compliant standard fluid loss additive for water-based drilling muds (WBM). VIVINE International supplies <strong>PAC-R (Regular viscosity, 600–1,000 mPa·s at 1%)</strong> — used specifically for fluid loss reduction (API FL ≤ 15 mL/30 min) with minimal impact on mud viscosity; and <strong>PAC-UHV / PAC-HV (1,000–8,000+ mPa·s)</strong> for combined fluid loss control and rheology building, suitable for HTHP wells up to 150 °C. PAC performs in freshwater muds, seawater muds, KCl-inhibitive brines (up to 3%), and NaCl-saturated brines.<br><br>In the <strong>construction chemicals industry</strong>, PAC functions as a water retention agent, thickener, and workability enhancer in dry-mix mortars, cementitious tile adhesives (EN 12004), cement renders, gypsum plasters, self-levelling underlayments, and EIFS systems. In <strong>textile processing</strong>, PAC is used as a warp yarn sizing agent on cotton, viscose, and blended yarns, and as a reactive dye print paste thickener. For <strong>industrial chemical distributors</strong>, PAC provides high-performance thickening, binding, dispersing, and film-forming functionality in paper coating, laundry detergents, agricultural chemical formulations, ceramic binders, and mineral processing.<br><br><strong>VIVINE International</strong> supplies Polyanionic Cellulose in PAC-R, PAC-HV, and PAC-UHV (oilfield, API 13A / ISO 13500 compliant), plus construction, textile, and industrial grades. API 13A test reports, TDS, SDS, and COA available on request.",
       comparisonTable: {
         title: "PAC vs. Standard CMC — performance comparison",
         sub: "Understanding the technical gap for industrial selection",
@@ -8461,6 +8506,7 @@ export const CONTENT = {
           label: "Croscarmellose Sodium (CCS)",
           to: "/products/croscarmellose-sodium",
         },
+        { label: "Locust Bean Gum (LBG)", to: "/products/locust-bean-gum" },
       ],
     },
   },

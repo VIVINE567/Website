@@ -1,4 +1,4 @@
-// Guar Gum (E412) content matching "guar_gum_vivine_international.html"
+// Guar Gum (E412) content matching "guar_gum_VIVINE_international.html"
 // Industry color tokens (same palette as the HTML reference)
 export const IC = {
   food:   { bg: '#EAF5E0', tx: '#2C5F0E' },

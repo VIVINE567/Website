@@ -24,6 +24,7 @@ import ProductDetailXanthan from './ProductDetailXanthan';
 import ProductDetailGuar from './ProductDetailGuar';
 import ProductDetailCcs from './ProductDetailCcs';
 import ProductDetailAlginate from './ProductDetailAlginate';
+import ProductDetailLbg from './ProductDetailLbg';
 import QuoteModal from '../components/QuoteModal';
 
 const ALL_PRODUCTS = Object.entries(CONTENT.productDetails).map(([slug, p]) => ({
@@ -200,6 +201,9 @@ const ProductDetail = () => {
   }
   if (product.layout === 'alginate') {
     return <ProductDetailAlginate slug={slug} />;
+  }
+  if (product.layout === 'lbg') {
+    return <ProductDetailLbg slug={slug} />;
   }
   if (product.layout === 'rich') {
     return <ProductDetailRich slug={slug} product={product} />;

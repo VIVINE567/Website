@@ -1,18 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
-import Link from 'next/link';
-import S from '../../../styles';
 
-const HERO_PILLS = [
-  { label: 'Alginates', href: '/products#seaweed-based' },
-  { label: 'Carrageenan', href: '/products#seaweed-based' },
-  { label: 'CMC · HEC · HPMC · MCC', href: '/products#cellulose-ethers' },
-  { label: 'Xanthan Gum', href: '/products#microbial' },
-  { label: 'Guar Gum', href: '/products#plant-based' },
-  { label: 'Locust Bean Gum', href: '/products#plant-based' },
-  { label: 'Pectin', href: '/products#plant-based' },
-];
 
 const ApplicationsHeroSection = () => (
   <header data-component="ApplicationsHeroSection"
@@ -75,40 +64,6 @@ const ApplicationsHeroSection = () => (
       >
         From food stabilisation and pharma excipients to personal care actives and industrial binders — precision-grade functional ingredients trusted by manufacturers in over 40 countries.
       </motion.p>
-
-      {/* Product pills */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.25, delay: 0.1, ease: 'easeOut' }}
-        className="flex flex-wrap justify-center gap-2 mb-9"
-      >
-        {HERO_PILLS.map((pill) => (
-          <Link
-            key={pill.label}
-            href={pill.href}
-            className="text-xs px-4 py-1.5 rounded-full transition-all duration-200 hover:scale-105 cursor-pointer"
-            style={{
-              color: 'rgba(255,255,255,0.7)',
-              border: '1px solid rgba(255,255,255,0.15)',
-              background: 'rgba(255,255,255,0.05)',
-              letterSpacing: '0.02em',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = 'rgba(201,168,76,0.25)';
-              e.currentTarget.style.borderColor = 'rgba(201,168,76,0.5)';
-              e.currentTarget.style.color = 'var(--gold-light)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
-              e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)';
-              e.currentTarget.style.color = 'rgba(255,255,255,0.7)';
-            }}
-          >
-            {pill.label}
-          </Link>
-        ))}
-      </motion.div>
 
       {/* CTA buttons */}
       <motion.div

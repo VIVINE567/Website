@@ -25,7 +25,7 @@ const FILTERS = [
   { id: 'plantbased', label: 'Plant-Based' },
   { id: 'pharma', label: 'Pharma' },
   { id: 'cosmetic', label: 'Cosmetics' },
-  { id: 'petfood', label: 'Pet Food' },
+  { id: 'petfood', label: 'Animal Nitrition' },
 ];
 
 const Highlights = () => (

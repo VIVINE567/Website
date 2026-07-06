@@ -25,7 +25,7 @@ export const HIGHLIGHTS = [
   { icon: '💊',  val: 'Pharmaceuticals',          lbl: 'Ph.Eur. · USP-NF · Antacid rafts · Wound care' },
   { icon: '🎨',  val: 'Textile Printing',         lbl: 'Reactive dye · Industry standard thickener' },
   { icon: '🧴',  val: 'Personal Care',            lbl: 'INCI · Face masks · Toothpaste · Skincare' },
-  { icon: '🐾',  val: 'Animal Nutrition',         lbl: 'Aquaculture · Wet pet food · Probiotic beads' },
+  { icon: '🐾',  val: 'Animal Nutrition',         lbl: 'Aquaculture · Wet Animal Nitrition · Probiotic beads' },
   { icon: '🌊',  val: 'Brown seaweed',            lbl: '100% natural origin' },
   { icon: '🔗',  val: 'Ca²⁺ ionotropic gel',      lbl: 'Instant · Irreversible · Thermostable' },
   { icon: '🌿',  val: 'Vegan · Halal · Kosher',   lbl: 'Certified — available on request' },
@@ -38,7 +38,7 @@ export const INFO_CARDS = [
   },
   {
     title: 'Thermostable gel — does not melt on heating',
-    body: 'Unlike gelatin (~32°C), carrageenan (~60–75°C), agar (~85°C), and HPMC thermal gels, calcium alginate gels are stable up to ~150°C and do not melt — they remain intact during retort sterilisation (121°C). This makes alginate uniquely suited for retort-stable restructured foods, canned pet food, autoclavable pharmaceutical devices, and high-temperature textile printing.',
+    body: 'Unlike gelatin (~32°C), carrageenan (~60–75°C), agar (~85°C), and HPMC thermal gels, calcium alginate gels are stable up to ~150°C and do not melt — they remain intact during retort sterilisation (121°C). This makes alginate uniquely suited for retort-stable restructured foods, canned Animal Nitrition, autoclavable pharmaceutical devices, and high-temperature textile printing.',
   },
   {
     title: 'G-block / M-block ratio — gel character control',
@@ -69,14 +69,14 @@ export const VISC_CHART = {
   vals:   [60, 250, 600, 250, 600, 100, 350, 900, 250],
   appLabels: [
     'Beverages / Salad dressings / Dairy',
-    'Ice cream / Spherification / Pet food jelly',
+    'Ice cream / Spherification / Animal Nitrition jelly',
     'Restructured meat / Noodles / Aquaculture feed',
     'Tablet binder / Oral suspensions / Mucoadhesive gels',
     'Antacid raft system / Dental impressions / Wound dressings',
     'Fine-line reactive print on lightweight cotton',
     'Rotary & flat screen reactive printing — standard',
     'Heavy fabric / Terry / Carpet reactive printing',
-    'Aquaculture pellets / Pet food / Probiotic encapsulation',
+    'Aquaculture pellets / Animal Nitrition / Probiotic encapsulation',
   ],
   colors: ['#7E9A5A', '#5E8472', '#3D6B50', '#C9A84C', '#A08030', '#C0954A', '#9A7A2E', '#B07F68', '#8A6A42'],
 };

@@ -7,7 +7,7 @@ const SERVICES = [
   {
     num: '01',
     title: 'Price Support & Cost Optimization',
-    desc: 'We maintain direct relationships with leading manufacturers of hydrocolloids, cellulose ethers and alginates worldwide. Leveraging high-volume consolidated purchasing, we negotiate the most competitive prices and pass those savings to you — reducing your procurement cost without compromising quality.',
+    desc: 'We maintain direct relationships with leading manufacturers of hydrocolloids, cellulose Ethers and alginates worldwide. Leveraging high-volume consolidated purchasing, we negotiate the most competitive prices and pass those savings to you — reducing your procurement cost without compromising quality.',
   },
   {
     num: '02',

@@ -53,7 +53,7 @@ const Highlights = () => (
 
 const InfoCards = () => (
   <section>
-    <SectionHeader title="Key properties of CMC" sub="What sets it apart from other cellulose ethers" />
+    <SectionHeader title="Key properties of CMC" sub="What sets it apart from other cellulose Ethers" />
     <div className="grid gap-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}>
       {INFO_CARDS.map((c) => (
         <motion.div key={c.title} {...fadeUp} className="rounded-md border p-4" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>

@@ -15,7 +15,7 @@ const Applications = () => (
     {/* Portfolio strip — "Our Portfolio" label + 16 product chips */}
     <ApplicationsPortfolioStrip />
 
-    {/* All 6 industry sections — Food, Pharma, Cosmetics, Industrial, Pet Food, Biotech */}
+    {/* All 6 industry sections — Food, Pharma, Cosmetics, Industrial, Animal Nitrition, Biotech */}
     <ApplicationsIndustrySections />
 
     {/* CTA — 4 capability cards + 2 action buttons */}

@@ -45,8 +45,8 @@ export const INDUSTRY_TABLE = [
     use: '0.1–1.0%',
   },
   {
-    name: 'Pet Food & Animal Nutrition', color: IC.petfood,
-    apps: 'Wet cat & dog food, canned pet food, pet food pouches, pet treats',
+    name: 'Animal Nitrition & Animal Nutrition', color: IC.petfood,
+    apps: 'Wet cat & dog food, canned Animal Nitrition, Animal Nitrition pouches, pet treats',
     type: 'κ (SRC/PES, E407a)',
     func: 'Gelling, water binding, retort stability, texture after sterilisation',
     use: '0.1–0.5%',
@@ -69,7 +69,7 @@ export const COMPARISON = {
     ['Typical use level (gel)', '0.3–1.0%', 'Synergy: 0.05–0.3% with κ-carrageenan', '1.0–3.0%', '0.5–2.0%', '0.3–1.5%'],
     ['Chocolate milk stabilisation', { t: 'Excellent — 0.01–0.025%', hl: 'good' }, 'Not suitable alone', 'Not used', 'Not used', 'Not used'],
     ['Meat water binding', { t: 'Excellent (κ)', hl: 'good' }, 'Moderate', 'Good', 'Poor', 'Not used'],
-    ['Pet food gelling', { t: 'Industry standard (κ)', hl: 'good' }, 'With carrageenan', 'Limited (cost)', 'Poor (too firm)', 'Not used'],
+    ['Animal Nitrition gelling', { t: 'Industry standard (κ)', hl: 'good' }, 'With carrageenan', 'Limited (cost)', 'Poor (too firm)', 'Not used'],
   ],
   note: 'Note: Carrageenan is uniquely positioned for dairy stabilisation and meat processing due to its protein interaction and water-binding capabilities. LBG synergy with κ-carrageenan enhances gel elasticity and firmness significantly — these two are frequently used together in commercial stabiliser systems.',
 };

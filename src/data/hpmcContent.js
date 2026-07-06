@@ -1,4 +1,4 @@
-// HPMC-specific content matching hpmc_vivine_international.html
+// HPMC-specific content matching hpmc_VIVINE_international.html
 // Industry color tokens (same as in HTML reference)
 export const IC = {
   const:  { bg: '#DDF0F4', tx: '#0A4050', border: '#88C8D8' },
@@ -14,7 +14,7 @@ export const HERO = {
   productTag: 'Cellulose ether · Non-ionic · Construction · Pharma · Food · Broadest application range',
   title: 'HPMC — Hydroxypropyl Methylcellulose',
   cas: 'CAS 9004-65-3 · EC 618-389-7 · Hypromellose (INN) · E464 (food) · Cellulose, 2-hydroxypropyl methyl ether',
-  desc: 'Hydroxypropyl Methylcellulose (HPMC), also known as Hypromellose, is a non-ionic cellulose ether produced by the sequential or simultaneous etherification of alkali cellulose with methyl chloride and propylene oxide. The combination of methyl (–OCH₃) and hydroxypropyl (–OCH₂CHOHCH₃) substituents produces a cellulose ether with uniquely broad functionality: cold-water solubility, thermal gelation above a cloud point, excellent film-forming ability, surface activity, and full compatibility across the construction, pharmaceutical, food, and personal care industries. HPMC has the broadest application range of all commercial cellulose ethers — serving as a critical functional ingredient from dry-mix mortar systems and pharmaceutical tablet coatings to food emulsions and hair care products.',
+  desc: 'Hydroxypropyl Methylcellulose (HPMC), also known as Hypromellose, is a non-ionic cellulose ether produced by the sequential or simultaneous etherification of alkali cellulose with methyl chloride and propylene oxide. The combination of methyl (–OCH₃) and hydroxypropyl (–OCH₂CHOHCH₃) substituents produces a cellulose ether with uniquely broad functionality: cold-water solubility, thermal gelation above a cloud point, excellent film-forming ability, surface activity, and full compatibility across the construction, pharmaceutical, food, and personal care industries. HPMC has the broadest application range of all commercial cellulose Ethers — serving as a critical functional ingredient from dry-mix mortar systems and pharmaceutical tablet coatings to food emulsions and hair care products.',
   statPills: [
     { val: 'CAS 9004-65-3', lbl: 'Chemical identity' },
     { val: 'E464', lbl: 'Food additive number' },

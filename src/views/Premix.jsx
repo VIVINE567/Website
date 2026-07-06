@@ -5,7 +5,7 @@ import {
   PREMIX_FEATURES, PREMIX_WHY, CAT_GRADIENTS, TAG_COLORS,
 } from '../data/premixData';
 
-/* ── category accent colors that harmonise with the Vivine palette ── */
+/* ── category accent colors that harmonise with the VIVINE palette ── */
 const CAT_ACCENT = {
   waffle:  '#B8860B', cone: '#8B6914', pancake: '#9A4E2A',
   cake:    '#8B3A52', churro: '#7A5A00', crepe: '#3A6A2A',
@@ -483,7 +483,7 @@ function CtaContact() {
             </div>
           ))}
         </div>
-        <a href="mailto:info@vivinefoods.com" className="btn-primary no-underline inline-block"
+        <a href="mailto:info@VIVINEfoods.com" className="btn-primary no-underline inline-block"
           style={{ fontFamily: "'Raleway', sans-serif", fontSize: 11, letterSpacing: '.2em', padding: '14px 38px', borderRadius: 3 }}>
           Send an Enquiry
         </a>

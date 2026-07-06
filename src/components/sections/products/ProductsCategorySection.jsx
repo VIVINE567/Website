@@ -13,15 +13,18 @@ const toSlug = (name) => name.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g
 const ProductCard = ({ product, index }) => {
   const fromLeft = index % 2 === 0;
   const slug = toSlug(product.name);
+  const id = `product-${slug}`;
   const hasPage = VALID_SLUGS.has(slug);
 
   const card = (
     <motion.div
+      id={id}
       initial={{ opacity: 0, x: fromLeft ? -30 : 30 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: false, amount: 0.1 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       className="bg-brand-bg border border-brand-gold/20 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow cursor-pointer"
+      style={{ scrollMarginTop: '96px' }}
     >
       <div
         className="h-48 flex items-center justify-center relative overflow-hidden"
@@ -39,7 +42,7 @@ const ProductCard = ({ product, index }) => {
         <h3 className="text-base uppercase font-bold" style={S.productsCardName}>
           {product.name}
         </h3>
-        <div className="w-10 h-[1px]" style={{ background: 'linear-gradient(to right, var(--gold), transparent)' }} />
+        <div className="w-10 h-px" style={{ background: 'linear-gradient(to right, var(--gold), transparent)' }} />
         <p className="text-sm leading-relaxed" style={S.productsCardDesc}>
           {product.desc}
         </p>

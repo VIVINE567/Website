@@ -1,4 +1,4 @@
-// Croscarmellose Sodium (CCS) content — mirrors "ccs_croscarmellose_sodium_vivine.html"
+// Croscarmellose Sodium (CCS) content — mirrors "ccs_croscarmellose_sodium_VIVINE.html"
 
 export const IC = {
   pharma: { bg: '#EAF0FB', tx: '#1A3A8C' },

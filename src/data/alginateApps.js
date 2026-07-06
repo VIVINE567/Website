@@ -30,7 +30,7 @@ export const RANK = [
   {
     num: '05',
     name: 'Animal Nutrition',
-    apps: 'Aquaculture pellet binder, wet pet food jelly, probiotic encapsulation, veterinary medicated feed',
+    apps: 'Aquaculture pellet binder, wet Animal Nitrition jelly, probiotic encapsulation, veterinary medicated feed',
     star: false,
     bg: '#E9E3D3', border: '#9A8E70', tx: '#6B6450',
   },
@@ -96,7 +96,7 @@ export const HYDRO_COMPARE = [
     name: 'Carrageenan',
     sub: 'Red seaweed · CAS 9000-07-1 · E407',
     tag: '#1 for dairy gelation',
-    desc: 'Thermoreversible gel (sets on cooling, melts on heating). Unique casein interaction in dairy — stabilises chocolate milk at 0.01–0.025%. Standard in ice cream, processed meat, pet food. Three types (kappa, iota, lambda) with distinct gel profiles.',
+    desc: 'Thermoreversible gel (sets on cooling, melts on heating). Unique casein interaction in dairy — stabilises chocolate milk at 0.01–0.025%. Standard in ice cream, processed meat, Animal Nitrition. Three types (kappa, iota, lambda) with distinct gel profiles.',
     bg: '#E0E8E2', border: '#5E8472', tx: '#38564A',
   },
   {
@@ -216,11 +216,11 @@ export const REF_TABLE = [
     dose: '0.5–2.0%',
   },
   {
-    industry: 'Wet Pet Food — Jelly & Gravy',
+    industry: 'Wet Animal Nitrition — Jelly & Gravy',
     iStyle: { bg: '#E9E3D3', tx: '#6B6450' },
     products: 'Cat food pouches, dog food cans and pouches — jelly and gravy formats',
     grade: 'Medium viscosity, food grade',
-    fn: 'Ca²⁺ from meat ingredients cross-links alginate to form jelly structure in wet pet food — retort-stable at 121°C (does not melt during can sterilisation); produces clean, visually appealing jelly layers; maintains gel integrity through entire shelf life',
+    fn: 'Ca²⁺ from meat ingredients cross-links alginate to form jelly structure in wet Animal Nitrition — retort-stable at 121°C (does not melt during can sterilisation); produces clean, visually appealing jelly layers; maintains gel integrity through entire shelf life',
     dose: '0.2–0.8%',
   },
   {

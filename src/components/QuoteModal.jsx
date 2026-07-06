@@ -105,7 +105,7 @@ const QuoteModal = ({ open, onClose }) => {
                   fontWeight: 700,
                 }}
               >
-                Contact <span style={{ color: 'var(--gold-dark)' }}>Vivine</span> to Get Innovative Products and Competitive Prices
+                Contact <span style={{ color: 'var(--gold-dark)' }}>VIVINE</span> to Get Innovative Products and Competitive Prices
               </h3>
 
               <div

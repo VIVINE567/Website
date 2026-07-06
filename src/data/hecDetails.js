@@ -17,7 +17,7 @@ export const APP_DETAILS = [
       },
       {
         name: 'Industrial & Wood Coatings',
-        desc: 'In water-borne industrial and wood coatings, HEC at lower viscosity grades (5,000–15,000 mPa·s) contributes rheology control without over-thickening, improving levelling (reduction of brush or roller marks) and compatibility with co-solvents such as glycol ethers. Its thermal stability (no gelation) is an advantage in oven-cure systems and high-temperature spray application environments.',
+        desc: 'In water-borne industrial and wood coatings, HEC at lower viscosity grades (5,000–15,000 mPa·s) contributes rheology control without over-thickening, improving levelling (reduction of brush or roller marks) and compatibility with co-solvents such as glycol Ethers. Its thermal stability (no gelation) is an advantage in oven-cure systems and high-temperature spray application environments.',
       },
     ],
   },
@@ -138,7 +138,7 @@ export const REGULATORY = [
 export const SEO_TITLE = 'HEC — Hydroxyethyl Cellulose: technical overview';
 export const SEO_PARAS = [
   '<strong>Hydroxyethyl Cellulose (HEC)</strong> is one of the most industrially versatile water-soluble polymers in use globally. Unlike synthetic thickeners such as carbomers or associative polyurethanes, HEC is derived from cellulose — a renewable natural raw material — and combines broad chemical compatibility with robust, predictable rheological performance across a wide range of pH values, temperatures, and electrolyte environments.',
-  'HEC\'s defining property — full water solubility at all temperatures without thermal gelation — distinguishes it from methyl-substituted cellulose ethers (MC, MHEC, HPMC) and makes it the first choice for applications where solution consistency must be maintained under variable or elevated temperature conditions. Combined with its non-ionic character, this makes HEC uniquely suitable for formulations where anionic and cationic active ingredients coexist, such as shampoos containing anionic surfactants and cationic conditioning agents, or oilfield brines containing multivalent cations.',
+  'HEC\'s defining property — full water solubility at all temperatures without thermal gelation — distinguishes it from methyl-substituted cellulose Ethers (MC, MHEC, HPMC) and makes it the first choice for applications where solution consistency must be maintained under variable or elevated temperature conditions. Combined with its non-ionic character, this makes HEC uniquely suitable for formulations where anionic and cationic active ingredients coexist, such as shampoos containing anionic surfactants and cationic conditioning agents, or oilfield brines containing multivalent cations.',
   'VIVINE International supplies HEC in a comprehensive viscosity range — from low-viscosity grades (100–1,000 mPa·s) for pharmaceutical and textile applications to high-viscosity grades (30,000–100,000 mPa·s) for architectural paint and oilfield drilling applications. Industrial-grade, cosmetic-grade, and pharmaceutical-grade variants are available with supporting documentation including TDS, SDS, and COA. Samples and technical consultation are available upon request.',
 ];
 

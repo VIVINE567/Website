@@ -1,4 +1,4 @@
-// Pectin-specific content matching "pectin_vivine_international.html"
+// Pectin-specific content matching "pectin_VIVINE_international.html"
 // Industry color tokens (same palette as the HTML reference)
 export const IC = {
   jam:           { bg: '#FFF8E8', tx: '#7A4F00' },

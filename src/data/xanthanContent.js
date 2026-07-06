@@ -1,4 +1,4 @@
-// Xanthan Gum content matching "xanthan_gum_vivine_international.html"
+// Xanthan Gum content matching "xanthan_gum_VIVINE_international.html"
 // Industry color tokens (same palette as the HTML reference)
 export const IC = {
   food:       { bg: '#E6F4E8', tx: '#0E4E18' },

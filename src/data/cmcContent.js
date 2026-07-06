@@ -13,44 +13,54 @@ export const IC = {
 };
 
 export const HERO = {
-  productTag: 'Anionic cellulose ether · Cellulose Gum · E466',
+  productTag: 'Anionic cellulose ether · Water-soluble · E466 · API 13A · Ph.Eur. · USP-NF · Broadest industrial range',
   title: 'Sodium Carboxymethyl Cellulose (CMC)',
   cas: 'CAS 9004-32-4 · E466 · Cellulose Gum / Na-CMC / Sodium CMC',
-  desc: 'Sodium CMC is a water-soluble anionic cellulose ether derived from natural wood pulp or cotton cellulose. It functions as a thickener, binder, stabilizer, emulsifier, film-former, and suspending agent across food, pharmaceutical, cosmetic, construction, textile, paper, detergent, and oilfield applications. Available in food grade, pharma grade, and industrial grade with a wide range of viscosity and DS options.',
+  desc: 'Sodium Carboxymethyl Cellulose (Sodium CMC), also widely known as Cellulose Gum, is an anionic, water-soluble cellulose ether produced by the carboxymethylation of alkali cellulose with monochloroacetic acid. The degree of substitution (DS) and molecular weight — expressed as solution viscosity — are the two primary parameters that define performance. Sodium CMC dissolves readily in cold water to form stable, pseudoplastic, salt-tolerant solutions. Its unique combination of high water-binding capacity, electrostatic stabilisation, film-forming ability, and rheology modification makes it indispensable across 8 major industries — from food thickening and oilfield drilling fluids to pharmaceutical tablet binders, textile sizing, detergent anti-redeposition agents, and ceramic binders.',
   statPills: [
-    { val: 'E466 / GRAS', lbl: 'Food approved' },
-    { val: '8 grades', lbl: 'Available' },
-    { val: '25–8,000+', lbl: 'mPa·s range' },
-    { val: 'USP·BP·EP', lbl: 'Pharma standards' },
+    { val: 'CAS 9004-32-4', lbl: 'Chemical identity' },
+    { val: 'E466 / GRAS', lbl: 'Food approval' },
+    { val: '8 industries', lbl: 'Broadest range' },
+    { val: 'DS 0.4–1.4', lbl: 'Substitution range' },
   ],
 };
 
 export const HIGHLIGHTS = [
-  { icon: '💧', val: 'Cold water soluble', lbl: 'Hot & cold dispersible' },
-  { icon: '⚡', val: 'Anionic polymer', lbl: 'Charge-active' },
-  { icon: '🌿', val: 'Plant-derived', lbl: 'Wood / cotton cellulose' },
-  { icon: '✅', val: 'E466 / GRAS', lbl: 'Food & pharma approved' },
-  { icon: '🔬', val: 'DS 0.4–1.4', lbl: 'Tunable substitution' },
-  { icon: '♻️', val: 'Biodegradable', lbl: 'Eco-friendly' },
+  { icon: '🍽️', val: 'Food & Beverage', lbl: 'E466 · Thickener · Stabiliser' },
+  { icon: '⛽', val: 'Oil & Gas Drilling', lbl: 'API 13A · Fluid loss control' },
+  { icon: '📄', val: 'Paper & Board', lbl: 'Surface sizing · Coating' },
+  { icon: '🧵', val: 'Textile', lbl: 'Warp sizing · Print paste' },
+  { icon: '🧼', val: 'Detergents', lbl: 'Anti-redeposition · Builder' },
+  { icon: '💊', val: 'Pharmaceuticals', lbl: 'Tablet binder · Ophthalmic' },
+  { icon: '🧴', val: 'Personal & Oral Care', lbl: 'Toothpaste · Gels' },
+  { icon: '🏺', val: 'Ceramics', lbl: 'Binder · Suspension' },
 ];
 
-// "Key properties of CMC" — "What sets it apart from other cellulose ethers"
+// "Key properties of CMC" — "What sets it apart from other cellulose Ethers"
 export const INFO_CARDS = [
   {
-    title: 'Anionic — unique among cellulose ethers',
-    body: 'Unlike HPMC and HEC (non-ionic), CMC carries a negative charge. This makes it highly effective as a soil anti-redeposition agent in detergents, a dispersant in ceramics, and a binder in battery electrode manufacturing.',
+    title: 'Anionic water-soluble polymer',
+    body: 'The carboxymethyl (–CH₂–COO⁻Na⁺) groups on the cellulose backbone make Sodium CMC anionic — providing electrostatic repulsion that stabilises oil droplets and pigment particles. Its anionic charge is the basis for anti-redeposition function in detergents and suspension stability in drilling muds and paper coatings.',
   },
   {
-    title: 'DS controls performance',
-    body: 'The Degree of Substitution (DS 0.4–1.4) controls solubility, acid resistance, and salt compatibility. Higher DS grades offer better solubility and salt tolerance — critical for oilfield and detergent applications.',
+    title: 'Degree of substitution (DS) — critical parameter',
+    body: 'DS is the average number of carboxymethyl groups per anhydroglucose unit (range: 0.0–3.0; practical commercial range 0.4–1.4). DS controls solubility, salt tolerance, and ionic character. DS ≥ 0.4 is fully water-soluble. DS 0.6–0.95 suits standard food and industrial grades. DS > 0.9 supports high-purity pharma and oilfield grades.',
   },
   {
-    title: 'Cold water soluble — no heating needed',
-    body: 'CMC dissolves readily in cold and hot water without heating. It does not form a thermal gel like HPMC, making it ideal for cold-process formulations in food, pharma, and cosmetics.',
+    title: 'Pseudoplastic (shear-thinning) rheology',
+    body: 'Sodium CMC solutions are strongly pseudoplastic — viscosity drops substantially under shear (pumping, printing, mixing) and recovers on standing. This is ideal for drilling muds, textile print pastes, and food systems that require pourability under shear and body at rest.',
   },
   {
-    title: 'Wide pH stability',
-    body: 'CMC solutions are stable across pH 5–11, with optimum performance at pH 7–9. Below pH 4, CMC precipitates as carboxymethyl cellulose acid — important to consider in acidic food and pharma formulations.',
+    title: 'Outstanding water-binding & retention',
+    body: 'Sodium CMC has a high affinity for water — it binds and retains water in food systems, pharmaceuticals, and paper coatings. In ice cream, it is one of the most effective ice crystal growth inhibitors among approved hydrocolloids at equivalent dosage.',
+  },
+  {
+    title: 'High salt tolerance (oilfield grade)',
+    body: 'High DS Sodium CMC grades (DS ≥ 0.9–1.2) maintain viscosity and fluid-loss control in saturated saline drilling muds (NaCl, KCl, CaCl₂ brines). This is a defining requirement for API 13A-certified oilfield CMC grades.',
+  },
+  {
+    title: 'Film-forming & adhesion',
+    body: 'When dried, Sodium CMC forms transparent, oxygen-barrier films — used in paper surface sizing, textile warp sizing, and pharmaceutical tablets. The dried film dissolves cleanly in water, enabling easy wash-off in paper and textile processing.',
   },
 ];
 

@@ -4,7 +4,7 @@ export const VISC_GRADE_TABLE = {
   cols: ['Viscosity Grade', 'Viscosity at 1% (mPa·s)', 'Molecular weight (indicative)', 'G/M character', 'Primary applications', 'Available grades'],
   rows: [
     ['Low viscosity (LV)', '20–100 mPa·s', '~90,000–150,000 Da', 'Balanced / High-M', 'Beverages, dairy drinks, salad dressings, cosmetic serums, paper sizing, pharma suspensions', 'Food / Pharma / Cosmetic'],
-    ['Medium viscosity (MV)', '100–400 mPa·s', '~200,000–350,000 Da', 'Balanced / High-G or High-M', 'Ice cream, yogurt, sauces, restructured foods, spherification, face masks, shampoo, wet pet food', 'Food / Pharma / Cosmetic / Animal'],
+    ['Medium viscosity (MV)', '100–400 mPa·s', '~200,000–350,000 Da', 'Balanced / High-G or High-M', 'Ice cream, yogurt, sauces, restructured foods, spherification, face masks, shampoo, wet Animal Nitrition', 'Food / Pharma / Cosmetic / Animal'],
     ['High viscosity (HV)', '400–800 mPa·s', '~350,000–500,000 Da', 'High-G or Balanced', 'Noodles, restructured meat, pharma beads & antacid rafts, textile rotary print paste, aquaculture pellets', 'Food / Pharma / Textile / Animal'],
     ['Very High viscosity (VHV)', '800–1,200 mPa·s', '~500,000–700,000 Da', 'High-G or High-M', 'Textile printing (coarse mesh, heavy fabric), wound dressing fibre, dental impressions, high-solid food gels', 'Textile / Pharma / Food'],
   ],
@@ -85,7 +85,7 @@ export const GRADES = [
       ['pH (1% sol.)', '6.0–8.0'],
       ['E number', 'E401'],
     ],
-    apps: [{ l: 'Ice cream', i: 'food' }, { l: 'Spherification', i: 'food' }, { l: 'Face masks', i: 'care' }, { l: 'Pet food jelly', i: 'animal' }],
+    apps: [{ l: 'Ice cream', i: 'food' }, { l: 'Spherification', i: 'food' }, { l: 'Face masks', i: 'care' }, { l: 'Animal Nitrition jelly', i: 'animal' }],
   },
   {
     id: 'food-hv',
@@ -208,9 +208,9 @@ export const GRADES = [
       ['Viscosity (1%)', '100–400 mPa·s'],
       ['Heavy metals', '≤ 20 ppm'],
       ['Key function', 'Water-stable pellet binder'],
-      ['Applications', 'Aquaculture, pet food, probiotic beads'],
+      ['Applications', 'Aquaculture, Animal Nitrition, probiotic beads'],
       ['Standard', 'FAMI-QS / JECFA compatible'],
     ],
-    apps: [{ l: 'Aquaculture pellets', i: 'animal' }, { l: 'Wet pet food jelly', i: 'animal' }, { l: 'Probiotic encapsulation', i: 'animal' }, { l: 'Medicated feed', i: 'animal' }],
+    apps: [{ l: 'Aquaculture pellets', i: 'animal' }, { l: 'Wet Animal Nitrition jelly', i: 'animal' }, { l: 'Probiotic encapsulation', i: 'animal' }, { l: 'Medicated feed', i: 'animal' }],
   },
 ];

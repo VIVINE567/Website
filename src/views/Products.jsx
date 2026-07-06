@@ -8,6 +8,14 @@ import { CONTENT } from '../content';
 import S from '../styles/products';
 
 const C = CONTENT.productsPage;
+const QUICK_LINK_TARGETS = {
+  'Propylene Glycol Alginate (PGA)': 'Propylene Glycol Alginate',
+  'Locust Bean Gum (LBG)': 'Locust Bean Gum',
+  'Hydroxypropyl Methyl Cellulose (HPMC)': 'HPMC',
+  'Hydroxyethyl Cellulose (HEC)': 'HEC',
+  'Methyl Hydroxyethyl Cellulose (MHEC)': 'MHEC',
+  'Sodium Carboxymethyl Cellulose (CMC)': 'Sodium CMC',
+};
 
 const Products = () => (
   <>
@@ -15,7 +23,7 @@ const Products = () => (
     <ProductsIntroSection />
 
     {/* Quick Links Bar */}
-    <section className="py-6 sticky top-[72px] z-dropdown" style={{ background: 'var(--cream)', borderBottom: '1px solid rgba(201,168,76,0.2)', borderTop: '1px solid rgba(201,168,76,0.15)' }}>
+    <section className="py-6 sticky top-18 z-dropdown" style={{ background: 'var(--cream)', borderBottom: '1px solid rgba(201,168,76,0.2)', borderTop: '1px solid rgba(201,168,76,0.15)' }}>
       <div className="max-w-6xl mx-auto px-4 overflow-x-auto scrollbar-hide">
         <motion.div
           initial={{ opacity: 0 }}
@@ -25,14 +33,23 @@ const Products = () => (
           className="flex items-center gap-3 min-w-max justify-center"
         >
           {C.quickLinks.map((link) => {
-            const targetId = link.toLowerCase().replace(/\s+/g, '-');
+            const name = QUICK_LINK_TARGETS[link] || link;
+            const slug = name.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '');
+            const targetId = `product-${slug}`;
             const categoryId = C.categories.find((cat) =>
-              cat.products.some((p) => p.name === link)
-            )?.id || targetId;
+              cat.products.some((p) => p.name === link || p.name === name)
+            )?.id;
             return (
               <button
                 key={link}
-                onClick={() => document.getElementById(categoryId)?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => {
+                  const target = document.getElementById(targetId);
+                  if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    return;
+                  }
+                  document.getElementById(categoryId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }}
                 className="px-4 py-1.5 rounded-full border border-brand-gold/40 text-brand-primary hover:bg-brand-gold hover:text-brand-bg transition-all uppercase whitespace-nowrap"
                 style={S.productsQuickLink}
               >

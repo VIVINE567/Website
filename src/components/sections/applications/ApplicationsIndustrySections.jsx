@@ -2,7 +2,7 @@
 
 import IndustrySectionBlock from './IndustrySectionBlock';
 
-// ─── All application data from vivine-applications.html ──────────────────────
+// ─── All application data from VIVINE-applications.html ──────────────────────
 
 const FOOD_CARDS = [
   { image: '/applications/confectionery.png', label: 'Confectionery', desc: 'Gelling and texturising agents for gummies, jellies, marshmallows and sugar-coated products. Carrageenan, alginates.', tag: 'Carrageenan · Gellan Gum · Pectin' },
@@ -35,7 +35,7 @@ const COSMETICS_CARDS = [
 ];
 
 const INDUSTRIAL_CARDS = [
-  { image: '/applications/gypsum-plaster.png', label: 'Gypsum Boards & Plaster', desc: 'Cellulose ethers as water-retention agents and workability improvers in gypsum board slurries and plasterwork, preventing premature drying and improving adhesion.', tag: 'HPMC · MHEC · HEC · Sodium CMC' },
+  { image: '/applications/gypsum-plaster.png', label: 'Gypsum Boards & Plaster', desc: 'Cellulose Ethers as water-retention agents and workability improvers in gypsum board slurries and plasterwork, preventing premature drying and improving adhesion.', tag: 'HPMC · MHEC · HEC · Sodium CMC' },
   { image: '/applications/white-putty-wall-filler.png', label: 'White Putty & Wall Filler', desc: 'Rheology modifiers providing sag resistance, open-time control and smooth application in interior and exterior white putty and tile adhesive formulations.', tag: 'HPMC · MHEC · HEC · Sodium CMC' },
   { image: '/applications/paints-coatings.png', label: 'Paints & Coatings', desc: 'Thickening, sag control, levelling and open-time extension in water-based architectural and industrial paint systems.', tag: 'HEC · MHEC · Sodium CMC · Xanthan Gum' },
   { image: '/applications/textiles.png', label: 'Textiles', desc: 'Warp sizing, print paste thickeners and surface treatment agents for cotton, synthetic and blended fabrics. Excellent film strength and easy washout.', tag: 'Sodium Alginate · Sodium CMC · Guar Gum' },
@@ -46,7 +46,7 @@ const INDUSTRIAL_CARDS = [
 ];
 
 const PET_FOOD_CARDS = [
-  { image: '/applications/wet-pet-food.jpeg', label: 'Wet Pet Food', desc: 'Gelling and gravy-forming agents for canned and pouched cat and dog food. Improves palatability and texture.', tag: 'Carrageenan · LBG' },
+  { image: '/applications/wet-pet-food.jpeg', label: 'Wet Animal Nitrition', desc: 'Gelling and gravy-forming agents for canned and pouched cat and dog food. Improves palatability and texture.', tag: 'Carrageenan · LBG' },
   { image: '/applications/pet-treats.jpeg', label: 'Treats & Semi-moist', desc: 'Moisture retention, binding and chewy texture for snack treats, training rewards and dental sticks.', tag: 'CMC · Guar · Alginate' },
   { image: '/applications/cow_v.png', label: 'Cattle & Buffalo Feed', desc: 'Feed pellet binding, moisture management and ingredient stabilization for cattle, buffalo and dairy nutrition formulations.', tag: 'Sodium CMC · Guar Gum · Xanthan Gum' },
   { image: '/applications/hen_v.png', label: 'Poultry Feed', desc: 'Pellet durability improvement, dust reduction and feed processing enhancement for broiler and layer feed formulations.', tag: 'Sodium CMC · Guar Gum · Sodium Alginate' },
@@ -66,28 +66,28 @@ const INDUSTRY_SECTIONS = [
   {
     id: 'applications-pharma',
     title: 'Pharmaceutical & Nutraceutical',
-    desc: 'VIVINE International supplies pharmacopoeial-grade hydrocolloids and cellulose ethers that meet USP, BP and EP monograph requirements. Our excipients are used in solid dosage forms, controlled-release matrices, wound care and encapsulation across regulated global markets.',
+    desc: 'VIVINE International supplies pharmacopoeial-grade hydrocolloids and cellulose Ethers that meet USP, BP and EP monograph requirements. Our excipients are used in solid dosage forms, controlled-release matrices, wound care and encapsulation across regulated global markets.',
     cards: PHARMA_CARDS,
     alt: true,
   },
   {
     id: 'applications-cosmetics',
     title: 'Cosmetics & Personal Care',
-    desc: 'As viscosity-control polymers, film-formers and skin-conditioning agents, VIVINE International hydrocolloids and cellulose ethers are trusted by cosmetic formulators worldwide. Our grades are COSMOS-compatible and comply with EU and ASEAN cosmetic regulations.',
+    desc: 'As viscosity-control polymers, film-formers and skin-conditioning agents, VIVINE International hydrocolloids and cellulose Ethers are trusted by cosmetic formulators worldwide. Our grades are COSMOS-compatible and comply with EU and ASEAN cosmetic regulations.',
     cards: COSMETICS_CARDS,
     alt: false,
   },
   {
     id: 'applications-industrial',
     title: 'Technical & Industrial',
-    desc: 'VIVINE International industrial-grade hydrocolloids and cellulose ethers are engineered for demanding technical applications. Their high molecular weight, water-binding capacity and film-forming ability make them essential performance additives in construction, coatings, textiles and beyond.',
+    desc: 'VIVINE International industrial-grade hydrocolloids and cellulose Ethers are engineered for demanding technical applications. Their high molecular weight, water-binding capacity and film-forming ability make them essential performance additives in construction, coatings, textiles and beyond.',
     cards: INDUSTRIAL_CARDS,
     alt: true,
   },
   {
     id: 'applications-petfood',
     title: 'Animal Nutrition',
-    desc: 'VIVINE International supplies hydrocolloids, alginates and cellulose ethers for animal nutrition applications, supporting pellet durability, moisture retention, feed binding, texture improvement and processing efficiency across pet food, livestock feed and poultry nutrition.',
+    desc: 'VIVINE International supplies hydrocolloids, alginates and cellulose Ethers for animal nutrition applications, supporting pellet durability, moisture retention, feed binding, texture improvement and processing efficiency across Animal Nitrition, livestock feed and poultry nutrition.',
     cards: PET_FOOD_CARDS,
     alt: false,
   },

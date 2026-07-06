@@ -91,7 +91,16 @@
   }
 
   .glass-dropdown {
-    @apply bg-brand-bg border border-brand-primary/10 shadow-xl rounded-lg py-2;
+    @apply bg-brand-bg border border-brand-primary/10 shadow-xl rounded-[1rem] py-2;
+    min-width: 18rem;
+  }
+
+  .glass-dropdown a {
+    @apply block px-6 py-3 text-sm text-brand-primary/70 transition-colors;
+  }
+
+  .glass-dropdown a:hover {
+    @apply bg-brand-primary/5 text-brand-primary;
   }
 
   .glass-tag {

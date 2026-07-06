@@ -68,7 +68,7 @@ export const GRADES = [
       ['pH (1% solution)', '6.0–8.0'],
       ['Standard', 'E415 / JECFA / FCC / GRAS'],
     ],
-    apps: [{ l: 'Salad dressings', i: 'food' }, { l: 'Ice cream', i: 'dairy' }, { l: 'Gluten-free bakery', i: 'food' }, { l: 'Pet food gravy', i: 'petfood' }],
+    apps: [{ l: 'Salad dressings', i: 'food' }, { l: 'Ice cream', i: 'dairy' }, { l: 'Gluten-free bakery', i: 'food' }, { l: 'Animal Nitrition gravy', i: 'petfood' }],
   },
   {
     id: 'food-hv', name: 'Food grade — High Viscosity', range: '1,500–1,800 mPa·s (1%, 25°C)', viscPct: 100, featured: false,
@@ -149,6 +149,6 @@ export const IND_REF_TABLE = {
     { ind: { text: 'Industrial & Cleaning', bg: '#F2F0E8', tx: '#4A4220' }, apps: 'Liquid detergents, industrial cleaners, car wash products, water-based cleaners', fn: 'Thickening, suspension of abrasives/actives, rheology control', use: '0.1–0.5%', grade: 'Industrial grade' },
     { ind: { text: 'Paints & Coatings', bg: '#F0EAF8', tx: '#401880' }, apps: 'Water-based paints, architectural coatings, wood stains, tile adhesives', fn: 'Sag resistance, pigment suspension, brush drag, levelling', use: '0.1–0.5%', grade: 'Industrial / coating grade' },
     { ind: { text: 'Textile Printing', bg: '#E8F4F8', tx: '#1A4A78' }, apps: 'Reactive dye printing pastes, pigment printing, discharge printing', fn: 'Print paste viscosity, sharp print definition, colour yield, wash-off', use: '0.5–2.0%', grade: 'Food / industrial grade' },
-    { ind: { text: 'Pet Food & Animal Nutrition', bg: '#EDF0F8', tx: '#1A3880' }, apps: 'Wet pet food, canned pet food, pet food gravies and sauces, pet treats', fn: 'Viscosity, suspension, gravy/sauce thickening, texture', use: '0.1–0.5%', grade: 'Food grade (E415)' },
+    { ind: { text: 'Animal Nitrition & Animal Nutrition', bg: '#EDF0F8', tx: '#1A3880' }, apps: 'Wet Animal Nitrition, canned Animal Nitrition, Animal Nitrition gravies and sauces, pet treats', fn: 'Viscosity, suspension, gravy/sauce thickening, texture', use: '0.1–0.5%', grade: 'Food grade (E415)' },
   ],
 };

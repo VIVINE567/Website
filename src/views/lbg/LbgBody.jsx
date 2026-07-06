@@ -3,10 +3,10 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'motion/react';
 import S from '../../styles/products';
-import { IC, HIGHLIGHTS, RHEOLOGY, INFO_CARDS, VISC_CHART } from '../../data/xanthanContent';
-import { SPEC_TABLE, GRADES, IND_REF_TABLE } from '../../data/xanthanSpecs';
-import { REGULATORY, SYNERGY, COMPARE_TABLE, APP_DETAILS } from '../../data/xanthanApps';
-import { SEO_TITLE, SEO_PARAS, FOOTER_NOTE } from '../../data/xanthanDetails';
+import { IC, HIGHLIGHTS, INFO_CARDS, VISC_CHART } from '../../data/lbgContent';
+import { SPEC_TABLE, GRADES, REF_TABLE } from '../../data/lbgSpecs';
+import { REGULATORY, APP_DETAILS, SYNERGY } from '../../data/lbgApps';
+import { SEO_TITLE, SEO_PARAS, FOOTER_NOTE } from '../../data/lbgDetails';
 
 const fadeUp = { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, amount: 0.1 }, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } };
 
@@ -21,17 +21,16 @@ const FILTERS = [
   { id: 'all', label: 'All grades' },
   { id: 'food', label: 'Food & Beverage' },
   { id: 'dairy', label: 'Dairy & Frozen' },
+  { id: 'plantbased', label: 'Plant-Based' },
   { id: 'pharma', label: 'Pharma' },
   { id: 'cosmetic', label: 'Cosmetics' },
-  { id: 'oilfield', label: 'Oil & Gas' },
-  { id: 'industrial', label: 'Industrial' },
-  { id: 'petfood', label: 'Animal Nitrition' },
+  { id: 'petfood', label: 'Pet Food' },
 ];
 
 const Highlights = () => (
   <motion.div {...fadeUp} className="grid gap-2.5" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))' }}>
     {HIGHLIGHTS.map((h) => (
-      <div key={h.val} className="rounded-md border text-center p-3" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
+      <div key={h.lbl} className="rounded-md border text-center p-3" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
         <div style={S.richHlIcon}>{h.icon}</div>
         <div style={S.richHlVal}>{h.val}</div>
         <div style={S.richHlLbl}>{h.lbl}</div>
@@ -40,24 +39,26 @@ const Highlights = () => (
   </motion.div>
 );
 
-const Rheology = () => (
+const Regulatory = () => (
   <section>
-    <SectionHeader title="What makes Xanthan Gum unique — rheological properties" />
-    <div className="grid gap-2.5" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}>
-      {RHEOLOGY.map((r) => (
-        <motion.div key={r.title} {...fadeUp} className="rounded-md border p-4" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
-          <div className="text-2xl mb-1.5">{r.icon}</div>
-          <h3 className="mb-1 text-[13px]" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--forest)', fontWeight: 700 }}>{r.title}</h3>
-          <p style={S.richInfoBody}>{r.desc}</p>
-        </motion.div>
+    <SectionHeader title="Regulatory approvals & certifications" sub="All grades comply with the following standards" />
+    <motion.div {...fadeUp} className="grid gap-2.5" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))' }}>
+      {REGULATORY.map((r) => (
+        <div key={r.title} className="rounded-md border p-3 flex items-start gap-2.5" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
+          <div className="text-lg">{r.icon}</div>
+          <div className="flex flex-col">
+            <strong className="text-[13px]" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--forest)', fontWeight: 700 }}>{r.title}</strong>
+            <span className="text-[11.5px]" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)' }}>{r.sub}</span>
+          </div>
+        </div>
       ))}
-    </div>
+    </motion.div>
   </section>
 );
 
 const InfoCards = () => (
   <section>
-    <SectionHeader title="Key functional properties" sub="Six properties that make xanthan gum irreplaceable across nine industries" />
+    <SectionHeader title="Key functional properties of Locust Bean Gum" sub="What defines LBG's unique position among hydrocolloids" />
     <div className="grid gap-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}>
       {INFO_CARDS.map((c) => (
         <motion.div key={c.title} {...fadeUp} className="rounded-md border p-4" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
@@ -71,7 +72,7 @@ const InfoCards = () => (
 
 const SpecTable = () => (
   <section>
-    <SectionHeader title="Technical specifications" />
+    <SectionHeader title="Technical specifications" sub="Food grade — E410 / JECFA / FCC / EU Regulation No 1333/2008" />
     <motion.div {...fadeUp} className="rounded-md border overflow-hidden" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
       <table className="w-full text-[13px]" style={{ borderCollapse: 'collapse' }}>
         <tbody>
@@ -96,58 +97,11 @@ const SpecTable = () => (
   </section>
 );
 
-const Regulatory = () => (
-  <section>
-    <SectionHeader title="Regulatory approvals & certifications" />
-    <motion.div {...fadeUp} className="grid gap-2.5" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))' }}>
-      {REGULATORY.map((r) => (
-        <div key={r.title} className="rounded-md border p-3 flex items-start gap-2.5" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
-          <div className="text-lg">{r.icon}</div>
-          <div className="flex flex-col">
-            <strong className="text-[13px]" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--forest)', fontWeight: 700 }}>{r.title}</strong>
-            <span className="text-[11.5px]" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)' }}>{r.sub}</span>
-          </div>
-        </div>
-      ))}
-    </motion.div>
-  </section>
-);
-
-const IndRefTable = () => (
-  <section>
-    <SectionHeader title="Industry applications — at a glance" />
-    <motion.div {...fadeUp} className="rounded-md border overflow-x-auto" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
-      <table className="w-full text-[13px]" style={{ borderCollapse: 'collapse', minWidth: 880 }}>
-        <thead>
-          <tr style={{ background: 'rgba(201,168,76,0.1)' }}>
-            {IND_REF_TABLE.cols.map((h) => (
-              <th key={h} className="px-3.5 py-2.5 text-left text-[11px]" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)', fontWeight: 700, letterSpacing: '0.03em', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>{h}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {IND_REF_TABLE.rows.map((row, i) => (
-            <tr key={i} style={{ borderTop: '1px solid rgba(201,168,76,0.12)', verticalAlign: 'top' }}>
-              <td className="px-3.5 py-2.5">
-                <span className="inline-block px-2 py-0.5 rounded-full text-[11px] whitespace-nowrap" style={{ background: row.ind.bg, color: row.ind.tx, fontFamily: "'Raleway', sans-serif", fontWeight: 600 }}>{row.ind.text}</span>
-              </td>
-              <td className="px-3.5 py-2.5" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)', lineHeight: 1.5 }}>{row.apps}</td>
-              <td className="px-3.5 py-2.5" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)', lineHeight: 1.5 }}>{row.fn}</td>
-              <td className="px-3.5 py-2.5 whitespace-nowrap" style={{ fontFamily: "'DM Mono', monospace", color: 'var(--forest)' }}>{row.use}</td>
-              <td className="px-3.5 py-2.5" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--forest)', fontWeight: 600 }}>{row.grade}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </motion.div>
-  </section>
-);
-
 const Grades = () => {
   const [filter, setFilter] = useState('all');
   return (
     <section>
-      <SectionHeader title="Grade comparison" sub="Select an industry to highlight relevant grades" />
+      <SectionHeader title="Available grades" sub="Select an industry to highlight relevant LBG grades" />
       <div className="flex flex-wrap gap-2 mb-4 items-center">
         <span className="text-[11px] uppercase mr-1" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)', fontWeight: 700, letterSpacing: '0.04em' }}>Filter by industry:</span>
         {FILTERS.map((f) => (
@@ -230,13 +184,12 @@ const ViscChart = () => {
   };
   return (
     <section>
-      <SectionHeader title="Viscosity comparison by grade" sub="Typical viscosity at 1% aqueous solution, 25°C, Brookfield LVT, 60 rpm" />
+      <SectionHeader title="Viscosity comparison by grade" sub="Indicative viscosity at 1% aqueous solution, 25°C, Brookfield LV viscometer" />
       <motion.div {...fadeUp} className="rounded-md border p-5 md:p-6" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
         <div className="flex items-baseline justify-between flex-wrap gap-2 mb-4">
           <span className="text-[14px]" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--forest)', fontWeight: 600 }}>{C.title}</span>
           <span className="text-[11.5px]" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)' }}>{C.sub}</span>
         </div>
-        {/* legend */}
         <div className="flex flex-wrap gap-x-4 gap-y-1.5 mb-4">
           {C.bars.map((b) => (
             <span key={b.label} className="flex items-center gap-1.5 text-[11.5px]" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)' }}>
@@ -245,8 +198,7 @@ const ViscChart = () => {
           ))}
         </div>
         <div className="flex gap-2">
-          {/* Y axis */}
-          <div className="relative" style={{ width: 40, height: PLOT_H }}>
+          <div className="relative" style={{ width: 44, height: PLOT_H }}>
             {C.ticks.map((t) => (
               <span
                 key={t}
@@ -257,10 +209,8 @@ const ViscChart = () => {
               </span>
             ))}
           </div>
-          {/* Plot */}
           <div className="flex-1 min-w-0">
             <div ref={plotRef} className="relative" style={{ height: PLOT_H }} onMouseLeave={() => setTip(null)}>
-              {/* pointer-following tooltip */}
               {tip && (
                 <div
                   className="absolute z-20 pointer-events-none rounded-md px-3 py-2 whitespace-nowrap"
@@ -273,11 +223,9 @@ const ViscChart = () => {
                   </div>
                 </div>
               )}
-              {/* gridlines */}
               {C.ticks.map((t) => (
                 <div key={t} className="absolute left-0 right-0" style={{ bottom: X_AXIS + frac(t) * BARS_H, borderTop: '1px solid rgba(0,0,0,0.05)' }} />
               ))}
-              {/* bars (single value, faded full-scale track behind for context) */}
               <div className="absolute left-0 right-0 flex items-end justify-around gap-2" style={{ bottom: X_AXIS, top: 0 }}>
                 {C.bars.map((b) => (
                   <div key={b.label} className="flex flex-col items-center justify-end flex-1 h-full">
@@ -286,7 +234,6 @@ const ViscChart = () => {
                       style={{ height: '100%', maxWidth: 56 }}
                       onMouseMove={onBarMove(b)}
                     >
-                      {/* solid bar: 0 → value (matches HTML — no faded track) */}
                       <motion.div
                         initial={{ height: 0 }}
                         whileInView={{ height: `${frac(b.value) * 100}%` }}
@@ -299,7 +246,6 @@ const ViscChart = () => {
                   </div>
                 ))}
               </div>
-              {/* x labels */}
               <div className="absolute left-0 right-0 bottom-0 flex items-start justify-around gap-2" style={{ height: X_AXIS }}>
                 {C.bars.map((b) => (
                   <div key={b.label} className="flex-1 text-center leading-tight text-[9.5px] pt-1.5" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--forest)', fontWeight: 600 }}>
@@ -311,30 +257,28 @@ const ViscChart = () => {
             <div className="text-center mt-2 text-[10px]" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)' }}>{C.axisLabel}</div>
           </div>
         </div>
+        <p className="mt-4 text-[12px] italic" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)' }}>{C.note}</p>
       </motion.div>
     </section>
   );
 };
 
-const Synergy = () => (
+const SynergySection = () => (
   <section>
-    <SectionHeader title="Key synergistic interactions" />
-    <div className="grid gap-2.5" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}>
-      {SYNERGY.map((s) => (
-        <motion.div key={s.effect} {...fadeUp} className="rounded-md border p-4" style={{ background: 'var(--cream-dark)', borderColor: 'rgba(201,168,76,0.25)' }}>
-          <div className="flex items-center gap-1.5 flex-wrap mb-1.5">
-            {s.partners.map((p, pi) => (
-              <React.Fragment key={p.text}>
-                {pi > 0 && <span style={{ color: 'var(--brown-warm)' }}>+</span>}
-                <span className="px-2 py-0.5 text-[10.5px] rounded" style={{ background: p.bg, color: p.tx, fontFamily: "'Raleway', sans-serif", fontWeight: 600 }}>{p.text}</span>
-              </React.Fragment>
+    <SectionHeader title="Synergistic interactions — LBG's defining commercial advantage" sub="How LBG enhances other hydrocolloids" />
+    <motion.div {...fadeUp} className="grid gap-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}>
+      {SYNERGY.map((s, i) => (
+        <div key={i} className="rounded-md border p-4" style={{ background: 'var(--cream-dark)', borderColor: 'rgba(201,168,76,0.2)' }}>
+          <div className="mb-2 flex items-center gap-2 flex-wrap">
+            {s.partners.map((p, j) => (
+              <span key={j} className="px-2 py-0.5 rounded-full text-[11px] font-semibold" style={{ background: p.bg, color: p.tx, fontFamily: "'DM Mono', monospace" }}>{p.label}</span>
             ))}
           </div>
-          <div className="text-[11.5px] mb-1" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--forest)', fontWeight: 600 }}>{s.effect}</div>
-          <div style={S.richInfoBody}>{s.desc}</div>
-        </motion.div>
+          <div className="text-[12.5px] font-semibold mb-1.5" style={{ color: 'var(--forest)', fontFamily: "'Raleway', sans-serif" }}>{s.effect}</div>
+          <div className="text-[11.5px]" style={{ color: 'var(--brown-warm)', fontFamily: "'Raleway', sans-serif", lineHeight: 1.5 }}>{s.desc}</div>
+        </div>
       ))}
-    </div>
+    </motion.div>
   </section>
 );
 
@@ -346,8 +290,8 @@ const AppDetails = () => (
     <div className="flex flex-col gap-5">
       {APP_DETAILS.map((ind) => (
         <motion.div key={ind.title} {...fadeUp} className="rounded-md border overflow-hidden" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
-          <div className="px-4 py-2.5 text-sm" style={{ background: ind.color.bg, color: ind.color.tx, fontFamily: "'Raleway', sans-serif", fontWeight: 700 }}>
-            <span className="mr-2">{ind.icon}</span>{ind.title}
+          <div className="px-4 py-2.5 text-sm flex items-center flex-wrap gap-2" style={{ background: ind.color.bg, color: ind.color.tx, fontFamily: "'Raleway', sans-serif", fontWeight: 700 }}>
+            <span><span className="mr-2">{ind.icon}</span>{ind.title}</span>
           </div>
           <div className="p-4 grid gap-3.5" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(205px, 1fr))' }}>
             {ind.items.map((it) => (
@@ -360,6 +304,36 @@ const AppDetails = () => (
         </motion.div>
       ))}
     </div>
+  </section>
+);
+
+const RefTable = () => (
+  <section>
+    <SectionHeader title="Industry applications — at a glance" sub="All LBG grades at a glance" />
+    <motion.div {...fadeUp} className="rounded-md border overflow-x-auto" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
+      <table className="w-full text-[13px]" style={{ borderCollapse: 'collapse', minWidth: 880 }}>
+        <thead>
+          <tr style={{ background: 'rgba(201,168,76,0.1)' }}>
+            {REF_TABLE.cols.map((h) => (
+              <th key={h} className="px-3.5 py-2.5 text-left text-[11px]" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)', fontWeight: 700, letterSpacing: '0.03em', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>{h}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {REF_TABLE.rows.map((row, i) => (
+            <tr key={i} style={{ borderTop: '1px solid rgba(201,168,76,0.12)', verticalAlign: 'top' }}>
+              <td className="px-3.5 py-2.5">
+                <span className="inline-block px-2 py-0.5 rounded-full text-[11px] whitespace-nowrap" style={{ background: row.grade.bg, color: row.grade.tx, fontFamily: "'Raleway', sans-serif", fontWeight: 600 }}>{row.grade.text}</span>
+              </td>
+              <td className="px-3.5 py-2.5" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)', lineHeight: 1.5 }}>{row.viscosity}</td>
+              <td className="px-3.5 py-2.5" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)', lineHeight: 1.5 }}>{row.standard}</td>
+              <td className="px-3.5 py-2.5 whitespace-nowrap" style={{ fontFamily: "'DM Mono', monospace", color: 'var(--forest)' }}>{row.feature}</td>
+              <td className="px-3.5 py-2.5" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)', lineHeight: 1.5 }}>{row.applications}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </motion.div>
   </section>
 );
 
@@ -376,39 +350,6 @@ const Seo = () => (
   </section>
 );
 
-const CompareTable = () => (
-  <section>
-    <SectionHeader title="Xanthan Gum vs. comparable thickeners & stabilisers" sub="Selecting the right rheology modifier for your application" />
-    <motion.div {...fadeUp} className="rounded-md border overflow-x-auto" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
-      <table className="w-full text-[12.5px]" style={{ borderCollapse: 'collapse', minWidth: 860 }}>
-        <thead>
-          <tr style={{ background: 'rgba(201,168,76,0.1)' }}>
-            {COMPARE_TABLE.cols.map((h) => (
-              <th key={h} className="px-3.5 py-2.5 text-left text-[11px]" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)', fontWeight: 700, letterSpacing: '0.04em', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>{h}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {COMPARE_TABLE.rows.map((row, ri) => (
-            <tr key={ri} style={{ borderTop: '1px solid rgba(201,168,76,0.12)', verticalAlign: 'top' }}>
-              {row.map((cell, ci) => {
-                const obj = typeof cell === 'object';
-                const text = obj ? cell.t : cell;
-                const color = ci === 0 ? 'var(--brown-warm)' : obj && cell.hl === 'good' ? '#1A6830' : obj && cell.hl === 'no' ? '#8A2020' : 'var(--forest)';
-                const weight = ci === 0 ? 500 : obj && cell.hl ? 600 : obj ? 500 : 400;
-                return (
-                  <td key={ci} className="px-3.5 py-2.5" style={{ fontFamily: "'Raleway', sans-serif", color, fontWeight: weight, lineHeight: 1.5 }}>{text}</td>
-                );
-              })}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      <p className="px-3.5 py-2.5 text-[12px] italic" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)' }}>{COMPARE_TABLE.note}</p>
-    </motion.div>
-  </section>
-);
-
 const FooterNote = () => (
   <div className="rounded-md border p-3.5 flex items-start gap-2.5 text-[12.5px] leading-relaxed" style={{ background: 'rgba(201,168,76,0.1)', borderColor: 'rgba(201,168,76,0.35)', color: 'var(--gold-dark)', fontFamily: "'Raleway', sans-serif" }}>
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 2 }}>
@@ -418,21 +359,19 @@ const FooterNote = () => (
   </div>
 );
 
-export default function XanthanBody() {
+export default function LbgBody() {
   return (
     <div className="min-w-0 flex flex-col gap-12">
       <Highlights />
-      <Rheology />
+      <Regulatory />
       <InfoCards />
       <SpecTable />
-      <Regulatory />
-      <IndRefTable />
       <Grades />
       <ViscChart />
-      <Synergy />
+      <SynergySection />
       <AppDetails />
+      <RefTable />
       <Seo />
-      <CompareTable />
       <FooterNote />
     </div>
   );

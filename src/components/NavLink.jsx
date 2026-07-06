@@ -46,14 +46,14 @@ const NavLink = ({ href, children, subItems }) => {
 
   return (
     <div data-component="NavLink"
-      className="relative group"
+      className="relative group inline-block"
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
       <Link
         href={isDefaultPage ? `/${children.toLowerCase().replace(/\s+/g, '-')}` : href}
         style={S.navLink}
-        className="nav-ripple flex items-center gap-1 py-4 text-xs font-medium transition-colors uppercase"
+        className="nav-ripple flex items-center gap-1 py-4 px-2 text-xs font-medium transition-colors uppercase"
       >
         {children}
         {subItems && <ChevronDown className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />}
@@ -66,7 +66,7 @@ const NavLink = ({ href, children, subItems }) => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}
-              className="absolute left-0 w-64 glass-dropdown z-dropdown"
+              className="absolute left-1/2 top-full mt-2 w-72 -translate-x-1/2 glass-dropdown z-dropdown"
             >
               {subItems.map((item) => {
                 const label = typeof item === 'string' ? item : item.label;
@@ -78,7 +78,7 @@ const NavLink = ({ href, children, subItems }) => {
                     key={label}
                     href={to}
                     onClick={(e) => handleHashNavigate(e, to)}
-                    className="block px-6 py-2 text-sm text-brand-primary/70 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors"
+                    className="block px-6 py-3 text-sm text-brand-primary/70 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors"
                   >
                     {label}
                   </Link>

@@ -12,7 +12,7 @@ export default function HpmcRegulatory() {
     <section className="mb-8">
       <div className="mb-6">
         <h2 style={S.richSectionHeader}>Standards & regulatory status</h2>
-        <p style={S.richSectionSub}>HPMC holds the broadest regulatory approvals of all cellulose ethers</p>
+        <p style={S.richSectionSub}>HPMC holds the broadest regulatory approvals of all cellulose Ethers</p>
       </div>
       <motion.div {...fadeUp} className="grid gap-2.5" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))' }}>
         {REGULATORY.map((r) => (

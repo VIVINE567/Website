@@ -5,7 +5,7 @@ import { Mail, Phone, Clock, Shield } from 'lucide-react';
 
 const PRODUCT_CATS = [
   'Hydrocolloids & Gums',
-  'Cellulose ethers',
+  'Cellulose Ethers',
   'Pharmaceutical Excipients',
   'Cosmetic Ingredients',
   'Industrial Additives',
@@ -15,7 +15,7 @@ const PRODUCT_CATS = [
 ];
 
 const CONTACTS = [
-  { Icon: Mail,  label: 'Email',          value: 'sales@vivineinternational.com', href: 'mailto:sales@vivineinternational.com' },
+  { Icon: Mail,  label: 'Email',          value: 'sales@VIVINEinternational.com', href: 'mailto:sales@VIVINEinternational.com' },
   { Icon: Phone, label: 'Phone',          value: '+91 9619661133',               href: 'tel:+919619661133' },
   { Icon: Clock, label: 'Business hours', value: 'Monday – Saturday, 9:00 AM – 6:00 PM IST', href: null },
 ];
@@ -73,7 +73,7 @@ const ContactInfoPanel = () => (
         borderLeft: '3px solid rgba(201,168,76,0.3)',
       }}
     >
-      Contact VIVINE International to discover the right hydrocolloids, gums, cellulose ethers,
+      Contact VIVINE International to discover the right hydrocolloids, gums, cellulose Ethers,
       pharmaceutical excipients, cosmetic ingredients, industrial additives, technical products,
       and customized stabilizer systems tailored to your application needs. Take your brand further
       with VIVINE's quality, experience, and efficiency — talk to our team today and find out how

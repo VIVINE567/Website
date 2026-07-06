@@ -1,4 +1,4 @@
-// Carrageenan-specific content matching carrageenan_vivine_international.html
+// Carrageenan-specific content matching carrageenan_VIVINE_international.html
 // Industry color tokens (same palette as the HTML reference)
 export const IC = {
   food:       { bg: '#E4EEF8', tx: '#0A3A5A' },
@@ -47,7 +47,7 @@ export const HIGHLIGHTS = [
   { icon: '✅', val: 'E407 / E407a', lbl: 'RC & SRC/PES grades' },
   { icon: '🌿', val: 'Natural · Vegan', lbl: 'Non-GMO · Gluten-free' },
   { icon: '🥩', val: 'Meat processing', lbl: 'Water binding · Yield' },
-  { icon: '🐾', val: 'Pet food grade', lbl: 'Wet food gelling' },
+  { icon: '🐾', val: 'Animal Nitrition grade', lbl: 'Wet food gelling' },
 ];
 
 // Three types of carrageenan — κ, ι, λ (type-banner in HTML)
@@ -62,7 +62,7 @@ export const TYPE_COMPARE = [
       ['Seaweed source', 'Eucheuma cottonii'],
       ['Gel strength', 'High (200–2000 g/cm²)'],
       ['Freeze-thaw', 'Poor (syneresis)'],
-      ['Key uses', 'Dairy, processed cheese, pet food, meat, plant-based'],
+      ['Key uses', 'Dairy, processed cheese, Animal Nitrition, meat, plant-based'],
     ],
   },
   {
@@ -104,7 +104,7 @@ export const INFO_CARDS = [
   },
   {
     title: 'Refined (RC, E407) vs Semi-Refined Carrageenan (SRC/PES, E407a)',
-    body: 'Refined Carrageenan (RC, E407) undergoes full alcohol or KCl precipitation purification — producing a high-purity (≥ 97% on dry basis), low-cellulose powder. Semi-Refined Carrageenan (SRC, also called Processed Eucheuma Seaweed, PES, E407a) retains 8–15% cellulose from the seaweed cell wall. RC is used in dairy, pharmaceuticals, and cosmetics; SRC/PES offers a cost-effective alternative for pet food, processed meat, and industrial food applications.',
+    body: 'Refined Carrageenan (RC, E407) undergoes full alcohol or KCl precipitation purification — producing a high-purity (≥ 97% on dry basis), low-cellulose powder. Semi-Refined Carrageenan (SRC, also called Processed Eucheuma Seaweed, PES, E407a) retains 8–15% cellulose from the seaweed cell wall. RC is used in dairy, pharmaceuticals, and cosmetics; SRC/PES offers a cost-effective alternative for Animal Nitrition, processed meat, and industrial food applications.',
   },
   {
     title: 'Exceptional cocoa / particle suspension in beverages',
@@ -116,6 +116,6 @@ export const INFO_CARDS = [
   },
   {
     title: 'Synergy with LBG, KCl, and casein',
-    body: 'Kappa-carrageenan combined with Locust Bean Gum (LBG) produces gels 5–10× firmer than carrageenan alone — a synergistic interaction exploited in processed cheese, dairy desserts, and wet pet food. Combined with potassium chloride (KCl), kappa-carrageenan gel strength and melting temperature increase. Interaction with milk casein provides the unique dairy stabilisation mechanism in chocolate milk and ice cream at ultra-low concentrations (0.01–0.025%).',
+    body: 'Kappa-carrageenan combined with Locust Bean Gum (LBG) produces gels 5–10× firmer than carrageenan alone — a synergistic interaction exploited in processed cheese, dairy desserts, and wet Animal Nitrition. Combined with potassium chloride (KCl), kappa-carrageenan gel strength and melting temperature increase. Interaction with milk casein provides the unique dairy stabilisation mechanism in chocolate milk and ice cream at ultra-low concentrations (0.01–0.025%).',
   },
 ];

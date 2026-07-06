@@ -1,4 +1,4 @@
-// Konjac Gum content matching "konjac_gum_vivine_international.html"
+// Konjac Gum content matching "konjac_gum_VIVINE_international.html"
 // Industry color tokens (same palette as the HTML reference)
 export const IC = {
   food:     { bg: '#EBF5E0', tx: '#3A5C20' },

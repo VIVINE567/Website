@@ -9,7 +9,7 @@ export const APP_DETAILS = [
     items: [
       {
         name: 'Tile Adhesives',
-        desc: 'HPMC is one of the two principal cellulose ethers (alongside MHEC) used in cement-based tile adhesive dry-mix systems. At 0.25–0.45% of the dry formulation, HPMC provides water retention values of ≥ 97% (per DIN 18555), preventing premature water absorption into porous substrates such as concrete blocks or brick. This ensures adequate cement hydration, develops the required bond strength (≥ 0.5 N/mm² for C1, ≥ 1.0 N/mm² for C2 per EN 12004), and extends open time to ≥ 20 minutes. HPMC grades of 40,000–100,000 mPa·s are standard; higher viscosity grades are used for large-format tile (LFT) systems where superior sag resistance is required.',
+        desc: 'HPMC is one of the two principal cellulose Ethers (alongside MHEC) used in cement-based tile adhesive dry-mix systems. At 0.25–0.45% of the dry formulation, HPMC provides water retention values of ≥ 97% (per DIN 18555), preventing premature water absorption into porous substrates such as concrete blocks or brick. This ensures adequate cement hydration, develops the required bond strength (≥ 0.5 N/mm² for C1, ≥ 1.0 N/mm² for C2 per EN 12004), and extends open time to ≥ 20 minutes. HPMC grades of 40,000–100,000 mPa·s are standard; higher viscosity grades are used for large-format tile (LFT) systems where superior sag resistance is required.',
       },
       {
         name: 'Wall Putty',

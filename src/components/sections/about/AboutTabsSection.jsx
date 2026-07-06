@@ -13,7 +13,7 @@ const WHY_CARDS = [
   { icon: '🚚', title: 'Reliable logistics',          body: 'Flexible MOQ, efficient international shipping and real-time order tracking — minimising lead times and supply chain disruption.' },
   { icon: '🤝', title: 'Long-term partnerships',      body: 'We invest in understanding your business. Our account managers provide continuity, transparency and proactive market intelligence.' },
   { icon: '✅', title: 'Quality assurance',           body: 'Every batch sourced from GMP and HACCP certified facilities. Rigorous incoming quality checks at our end before dispatch.' },
-  { icon: '💡', title: 'One-stop solution',           body: 'From hydrocolloids to cellulose ethers, access over 200 product grades from a single, trusted international supplier.' },
+  { icon: '💡', title: 'One-stop solution',           body: 'From hydrocolloids to cellulose Ethers, access over 200 product grades from a single, trusted international supplier.' },
 ];
 
 const CERT_CARDS = [
@@ -37,8 +37,8 @@ const REGIONS = [
 ];
 
 const TIMELINE = [
-  { year: 'Founded',              event: 'VIVINE International Established',         detail: 'Built with a vision to connect global manufacturers with high-quality hydrocolloids, cellulose ethers, and specialty ingredients through reliable sourcing and supply solutions.' },
-  { year: 'Expansion',           event: 'Portfolio Expanded Across Key Ingredient Categories', detail: 'Broadened our offering from hydrocolloids to cellulose ethers and specialty ingredients, supporting customers across multiple industries and applications.' },
+  { year: 'Founded',              event: 'VIVINE International Established',         detail: 'Built with a vision to connect global manufacturers with high-quality hydrocolloids, cellulose Ethers, and specialty ingredients through reliable sourcing and supply solutions.' },
+  { year: 'Expansion',           event: 'Portfolio Expanded Across Key Ingredient Categories', detail: 'Broadened our offering from hydrocolloids to cellulose Ethers and specialty ingredients, supporting customers across multiple industries and applications.' },
   { year: 'International Growth',event: 'Expanded Global Supply Network',   detail: 'Established sourcing partnerships and logistics capabilities across Asia, Europe, the Middle East, and the Americas, enabling reliable international supply and distribution.' },
   { year: 'Quality Milestone',   event: 'Full certification programme launched',     detail: 'All supply chain partners audited and certified to ISO 9001, ISO 22000, HACCP, Halal and Kosher standards.' },
   { year: 'Today',               event: '9+ grades across 6 industries',         detail: 'VIVINE now offers a comprehensive portfolio serving food, pharma, cosmetics, personal care, construction and industrial sectors globally.' },

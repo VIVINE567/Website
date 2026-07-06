@@ -1,4 +1,4 @@
-// HEC-specific content matching hec_vivine_international.html
+// HEC-specific content matching hec_VIVINE_international.html
 // Industry color tokens (same palette as the HTML reference)
 export const IC = {
   paint:  { bg: '#FBF0E4', tx: '#7A3800', border: '#D8B888' },
