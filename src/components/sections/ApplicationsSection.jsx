@@ -8,10 +8,10 @@ import { CONTENT } from '../../content';
 const C = CONTENT.home.applications;
 
 const CATEGORY_IMAGES = [
-  '/food_inds.png',
-  '/pharma.png',
-  '/tech.png',
-  '/personel_care.png',
+  'https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783142464/food_inds_a0cgm2.png',
+  'https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783142415/pharma_u0fr3r.png',
+  'https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783142455/tech_cv06rx.png',
+  'https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783142417/personel_care_c5t0gk.png',
 ];
 
 const CATEGORY_LINKS = [

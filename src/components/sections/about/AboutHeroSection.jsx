@@ -107,7 +107,7 @@ const AboutHeroSection = () => (
   >
     {/* Banner background image */}
     <div className="absolute inset-0" style={{
-      backgroundImage: 'url(/about-hero-banner.jpg)',
+      backgroundImage: 'url(https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783142456/about-hero-banner_likskk.jpg)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       opacity: 0.45,

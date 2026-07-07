@@ -4,7 +4,7 @@ import AppShell from './AppShell';
 export const metadata = {
   title: 'VIVINE International - Hydrocolloid Solutions',
   icons: {
-    icon: '/thumbnail.png',
+    icon: 'https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783142416/thumbnail_rzwvfj.png',
   },
 };
 

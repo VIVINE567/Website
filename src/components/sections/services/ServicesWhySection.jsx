@@ -39,7 +39,7 @@ const ServicesWhySection = () => {
           className="flex justify-center items-center max-w-[480px] mx-auto w-full"
         >
           <img
-            src="/services-why-global.jpg"
+            src="https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783142414/services-why-global_zw0gjl.jpg"
             alt="Global sourcing and logistics network"
             className="w-full h-auto rounded-2xl shadow-xl"
             style={{ border: '1px solid rgba(201,168,76,0.15)' }}

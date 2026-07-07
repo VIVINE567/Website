@@ -31,7 +31,7 @@ function PremixHero() {
 
       {/* hero banner image */}
       <div className="absolute inset-0" style={{
-        backgroundImage: 'url(/premix-hero-banner.jpg)',
+        backgroundImage: 'url(https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783142410/premix-hero-banner_ywovrx.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         opacity: 0.35,
@@ -421,10 +421,10 @@ function FeaturedSection() {
       <div className="grid grid-cols-2 grid-rows-2 gap-px rounded overflow-hidden"
         style={{ border: '1px solid rgba(201,168,76,0.2)' }}>
         {[
-          { emoji: '🧇', image: '/premix-images/waffel_creme.png' },
-          { emoji: '🍦', image: '/premix-images/v_ice_creme.png' },
-          { emoji: '🥞', image: '/premix-images/pancake_v.png' },
-          { emoji: '🍰', image: '/premix-images/cake_v.png' },
+          { emoji: '🧇', image: 'https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783143815/premix-images/waffel_creme_la2umy.png' },
+          { emoji: '🍦', image: 'https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783143805/premix-images/v_ice_creme_rrnj6x.png' },
+          { emoji: '🥞', image: 'https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783143786/premix-images/pancake_v_rlorat.png' },
+          { emoji: '🍰', image: 'https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783143781/premix-images/cake_v_ylbllx.png' },
         ].map((item, i) => (
           <div key={i} className="flex items-center justify-center overflow-hidden"
             style={{

@@ -75,7 +75,7 @@ const AboutIntroSection = () => (
           className="w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-gold/10"
         >
           <img
-            src="/aboutSection.png"
+            src="https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783142458/aboutSection_f9b1hp.jpg"
             alt="VIVINE International ingredients"
             loading="lazy"
             decoding="async"

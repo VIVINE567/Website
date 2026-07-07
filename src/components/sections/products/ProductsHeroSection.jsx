@@ -12,7 +12,7 @@ const ProductsHeroSection = () => (
     style={S.productsHero}
   >
     <div className="absolute inset-0" style={{
-      backgroundImage: 'url(/products-hero-banner.jpg)',
+      backgroundImage: 'url(https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783142410/products-hero-banner_prtwct.jpg)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       opacity: 0.35,

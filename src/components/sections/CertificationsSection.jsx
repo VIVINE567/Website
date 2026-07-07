@@ -4,28 +4,13 @@ import { motion } from 'motion/react';
 import S from '../../styles/products';
 
 const CERTS = [
-  { code: 'ISO',   num: '9001',   label: 'Quality Management'      },
-  { code: 'ISO',   num: '22000',  label: 'Food Safety Management'   },
-  { code: 'FSSC',  num: '22000',  label: 'Food Safety System'       },
-  { code: 'BRC',   num: 'Global', label: 'Food Safety Standard'     },
-  { code: 'HALAL', num: '',       label: 'Halal Certified'          },
-  { code: 'KOSHER',num: '',       label: 'Kosher Certified'         },
+  { code: 'ISO', num: '9001', label: 'Quality Management' },
+  { code: 'ISO', num: '22000', label: 'Food Safety Management' },
+  { code: 'FSSC', num: '22000', label: 'Food Safety System' },
+  { code: 'BRC', num: 'Global', label: 'Food Safety Standard' },
+  { code: 'HALAL', num: '', label: 'Halal Certified' },
+  { code: 'KOSHER', num: '', label: 'Kosher Certified' },
 ];
-
-// Crops/zooms a badge image toward `origin` by genuinely enlarging its layout box
-// (rather than CSS `transform: scale`, which stretches an already-rasterized bitmap
-// and renders blurry/pixelated on mobile browsers).
-const zoomStyle = (origin, scale = 3) => {
-  const [ox, oy] = origin.split(' ').map((v) => parseFloat(v));
-  return {
-    position: 'absolute',
-    width: `${scale * 100}%`,
-    height: `${scale * 100}%`,
-    maxWidth: 'none',
-    left: `${-(scale - 1) * ox}%`,
-    top: `${-(scale - 1) * oy}%`,
-  };
-};
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 22 },
@@ -35,18 +20,16 @@ const fadeUp = (delay = 0) => ({
 });
 
 const CertificationsSection = () => (
-  <section data-component="CertificationsSection"
+  <section
+    data-component="CertificationsSection"
     className="py-24 overflow-hidden"
     style={{ background: 'var(--cream)', borderTop: '1px solid rgba(201,168,76,0.2)' }}
   >
     <div className="max-w-7xl mx-auto px-4 md:px-6 text-center">
-
-      {/* Eyebrow */}
       <div className="gold-eyebrow mb-6" style={{ color: 'var(--gold)', justifyContent: 'center' }}>
         Quality Assurance
       </div>
 
-      {/* Heading */}
       <motion.h2
         {...fadeUp(0)}
         className="text-4xl md:text-5xl mb-5 break-words"
@@ -58,7 +41,6 @@ const CertificationsSection = () => (
         </em>
       </motion.h2>
 
-      {/* Quote */}
       <motion.p
         {...fadeUp(0.08)}
         className="text-xl md:text-2xl mb-6"
@@ -74,7 +56,6 @@ const CertificationsSection = () => (
 
       <div className="gold-divider mb-10" />
 
-      {/* Body */}
       <motion.div
         {...fadeUp(0.12)}
         className="max-w-3xl mx-auto mb-16 space-y-4"
@@ -98,36 +79,67 @@ const CertificationsSection = () => (
         </p>
       </motion.div>
 
-      {/* Certification badges — 5 always in one row */}
       <motion.div
         {...fadeUp(0.1)}
-        className="grid grid-cols-5 max-w-4xl mx-auto"
-        style={{ gap: 'clamp(4px, 2vw, 32px)' }}
+        className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 max-w-5xl mx-auto"
+        style={{ gap: 'clamp(10px, 2vw, 20px)' }}
       >
-        {[
-          { src: '/iso_9001.svg',   alt: 'ISO 9001 Certified',  origin: '45.07% 43%'    },
-          { src: '/iso_22000.svg',  alt: 'ISO 22000 Certified', origin: '52.01% 47.84%' },
-          { src: '/brg_cert.svg',   alt: 'BRC Certified Food',  origin: '54.06% 47.51%' },
-          { src: '/halal_cert.svg', alt: 'Halal Certified',     origin: '48.31% 47.84%' },
-          { src: '/kesher_cert.svg', alt: 'Kosher Certified',   origin: '50.40% 48.01%' },
-        ].map((cert) => (
+        {CERTS.map((cert) => (
           <div
-            key={cert.src}
-            className="relative overflow-hidden flex items-center justify-center"
-            style={{ width: '100%', aspectRatio: '1 / 1' }}
+            key={`${cert.code}-${cert.num || cert.label}`}
+            className="relative overflow-hidden flex flex-col items-center justify-center rounded-xl"
+            style={{
+              minHeight: 132,
+              padding: '18px 10px',
+              background: 'rgba(255,255,255,0.38)',
+              border: '1px solid rgba(201,168,76,0.32)',
+              boxShadow: '0 12px 28px rgba(44,58,35,0.08)',
+            }}
           >
-            <img
-              src={cert.src}
-              alt={cert.alt}
-              loading="lazy"
-              decoding="async"
-              className="object-contain"
-              style={zoomStyle(cert.origin)}
-            />
+            <span
+              className="uppercase"
+              style={{
+                fontFamily: "'Cinzel', serif",
+                fontSize: cert.num ? 'clamp(1.35rem, 2.5vw, 2rem)' : 'clamp(1.05rem, 2vw, 1.35rem)',
+                fontWeight: 700,
+                letterSpacing: '0.08em',
+                color: 'var(--forest)',
+                lineHeight: 1,
+              }}
+            >
+              {cert.code}
+            </span>
+            {cert.num && (
+              <span
+                style={{
+                  fontFamily: "'Raleway', sans-serif",
+                  fontSize: '0.9rem',
+                  fontWeight: 700,
+                  letterSpacing: '0.16em',
+                  color: 'var(--gold-dark)',
+                  marginTop: 8,
+                }}
+              >
+                {cert.num}
+              </span>
+            )}
+            <span
+              style={{
+                fontFamily: "'Raleway', sans-serif",
+                fontSize: '0.68rem',
+                fontWeight: 600,
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                color: 'var(--brown-warm)',
+                marginTop: 12,
+                lineHeight: 1.45,
+              }}
+            >
+              {cert.label}
+            </span>
           </div>
         ))}
       </motion.div>
-
     </div>
   </section>
 );

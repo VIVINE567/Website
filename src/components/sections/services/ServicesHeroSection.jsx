@@ -9,7 +9,7 @@ const ServicesHeroSection = () => (
   >
     {/* Banner background image */}
     <div className="absolute inset-0" style={{
-      backgroundImage: 'url(/services-hero-banner-2.jpg)',
+      backgroundImage: 'url(https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783142414/services-hero-banner-2_rdha06.jpg)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       opacity: 0.55,

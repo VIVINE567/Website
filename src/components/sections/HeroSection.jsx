@@ -17,7 +17,7 @@ const HeroSection = () => {
     <div className="absolute inset-0 z-0">
       <video
         src={C.videoSrc}
-        poster="/food_inds.png"
+        poster="https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783142464/food_inds_a0cgm2.png"
         autoPlay loop muted playsInline
         preload="metadata"
         className="w-full h-full object-cover"

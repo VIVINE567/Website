@@ -15,7 +15,7 @@ const ContactBannerSection = () => (
   >
     {/* Banner background image */}
     <div className="absolute inset-0" style={{
-      backgroundImage: 'url(/contact-hero-banner.jpg)',
+      backgroundImage: 'url(https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783142457/contact-hero-banner_dfzqud.jpg)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       opacity: 0.45,
