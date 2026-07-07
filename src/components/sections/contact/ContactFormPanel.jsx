@@ -72,6 +72,7 @@ const ContactFormPanel = () => {
   const [selectedProducts, setSelectedProducts] = useState([]);
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState('');
 
   const toggleProduct = (p) => {
     setSelectedProducts((prev) =>
@@ -79,13 +80,49 @@ const ContactFormPanel = () => {
     );
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setError('');
+
+    if (!selectedProducts.length) {
+      setError('Please select at least one product.');
+      return;
+    }
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const data = {
+      formType: 'Quick Quotes Request',
+      name: String(formData.get('name') || '').trim(),
+      company: String(formData.get('company') || '').trim(),
+      email: String(formData.get('email') || '').trim(),
+      phone: String(formData.get('phone') || '').trim(),
+      industry: String(formData.get('industry') || '').trim(),
+      products: selectedProducts,
+      message: String(formData.get('message') || '').trim(),
+    };
+
     setSending(true);
-    setTimeout(() => {
-      setSending(false);
+    try {
+      const res = await fetch('/api/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      const result = await res.json().catch(() => ({}));
+
+      if (!res.ok || result.status === 'error') {
+        throw new Error(result.message || 'Unable to send your inquiry.');
+      }
+
       setSent(true);
-    }, 900);
+      setSelectedProducts([]);
+      form.reset();
+    } catch (err) {
+      setError(err.message || 'Something went wrong. Please try again.');
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -134,30 +171,31 @@ const ContactFormPanel = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
           <div>
             <Label required>Name</Label>
-            <input type="text" placeholder="Your full name" required style={inputBase} />
+            <input type="text" name="name" placeholder="Your full name" required style={inputBase} />
           </div>
           <div>
             <Label>Company</Label>
-            <input type="text" placeholder="Company name" style={inputBase} />
+            <input type="text" name="company" placeholder="Company name" style={inputBase} />
           </div>
         </div>
 
         {/* Email */}
         <div className="mb-4">
           <Label required>Email</Label>
-          <input type="email" placeholder="your@email.com" required style={inputBase} />
+          <input type="email" name="email" placeholder="your@email.com" required style={inputBase} />
         </div>
 
         {/* Phone */}
         <div className="mb-4">
           <Label>Phone</Label>
-          <input type="tel" placeholder="+91 XXXXX XXXXX" style={inputBase} />
+          <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" style={inputBase} />
         </div>
 
         {/* Industry select */}
         <div className="mb-4">
           <Label>Industry / Application</Label>
           <select
+            name="industry"
             defaultValue=""
             style={{
               ...inputBase,
@@ -242,12 +280,28 @@ const ContactFormPanel = () => {
         <div className="mb-4">
           <Label required>Request / Inquiry Details</Label>
           <textarea
+            name="message"
             placeholder="For better quotations, kindly enter your inquiry details such as requirements, application field, order quantity, specification needs, etc."
             required
             rows={4}
             style={{ ...inputBase, minHeight: 100, resize: 'vertical', lineHeight: 1.55 }}
           />
         </div>
+
+        {error && (
+          <p
+            role="alert"
+            className="mb-3"
+            style={{
+              color: '#a43422',
+              fontFamily: "'Open Sans', sans-serif",
+              fontSize: 12.5,
+              lineHeight: 1.5,
+            }}
+          >
+            {error}
+          </p>
+        )}
 
         {/* Submit / Success */}
         {!sent ? (

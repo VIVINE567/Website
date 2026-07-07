@@ -16,6 +16,7 @@ const InquirySection = () => {
     e.preventDefault();
     const form = e.target;
     const data = {
+      formType: 'Quick Inquiry',
       firstName: form.firstName.value,
       lastName:  form.lastName.value,
       email:     form.email.value,
@@ -33,7 +34,7 @@ const InquirySection = () => {
         body: JSON.stringify(data),
       });
       const result = await res.json();
-      if (result.status === 'error') throw new Error(result.message);
+      if (!res.ok || result.status === 'error') throw new Error(result.message);
       btn.textContent = 'Submitted ✓';
       form.reset();
       setTimeout(() => { btn.textContent = Ci.submitButton; btn.disabled = false; }, 3000);

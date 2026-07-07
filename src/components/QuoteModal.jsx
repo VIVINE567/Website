@@ -15,6 +15,7 @@ const QuoteModal = ({ open, onClose }) => {
   const [selectedProducts, setSelectedProducts] = useState([]);
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
   const toggleProduct = (p) =>
     setSelectedProducts((prev) =>
@@ -24,6 +25,7 @@ const QuoteModal = ({ open, onClose }) => {
   useEffect(() => {
     if (open) {
       document.body.style.overflow = 'hidden';
+      setError('');
     } else {
       document.body.style.overflow = '';
     }
@@ -35,13 +37,30 @@ const QuoteModal = ({ open, onClose }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError('');
+
+    if (!selectedProducts.length) {
+      setError('Please select at least one product.');
+      return;
+    }
+
     setSubmitting(true);
     try {
-      await fetch('/api/submit', {
+      const res = await fetch('/api/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, products: selectedProducts }),
+        body: JSON.stringify({
+          formType: 'Quote Modal Request',
+          ...form,
+          products: selectedProducts,
+        }),
       });
+      const result = await res.json().catch(() => ({}));
+
+      if (!res.ok || result.status === 'error') {
+        throw new Error(result.message || 'Unable to send your request.');
+      }
+
       setSubmitted(true);
       setTimeout(() => {
         setSubmitted(false);
@@ -49,8 +68,8 @@ const QuoteModal = ({ open, onClose }) => {
         setSelectedProducts([]);
         onClose();
       }, 2500);
-    } catch {
-      alert('Something went wrong. Please try again.');
+    } catch (err) {
+      setError(err.message || 'Something went wrong. Please try again.');
     } finally {
       setSubmitting(false);
     }
@@ -273,6 +292,21 @@ const QuoteModal = ({ open, onClose }) => {
                       }}
                     />
                   </div>
+
+                  {error && (
+                    <p
+                      role="alert"
+                      style={{
+                        color: '#a43422',
+                        fontFamily: "'Open Sans', sans-serif",
+                        fontSize: 12.5,
+                        lineHeight: 1.5,
+                        marginTop: '-0.5rem',
+                      }}
+                    >
+                      {error}
+                    </p>
+                  )}
 
                   <button
                     type="submit"

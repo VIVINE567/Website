@@ -12,9 +12,6 @@ export default function CloudinaryImage({ src, alt = '', ...props }) {
       src={resolvedSrc || src}
       alt={alt}
       referrerPolicy="no-referrer"
-
-
-      
       {...props}
     />
   );
