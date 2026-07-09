@@ -646,7 +646,7 @@ export const CONTENT = {
           {
             name: "Sodium CMC",
             desc: "Sodium Carboxymethyl Cellulose (E466) — an anionic water-soluble cellulose ether used as a thickener, stabilizer, binder, and water-retention agent across food, pharma, personal care, detergent, paper, and oilfield applications.",
-            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783578817/VIVINE_Products_Photos/polyanionic-cellulose.jpg",
+            img: "https://res.cloudinary.com/wiofsjuh/image/upload/v1783593570/WhatsApp_Image_2026-07-09_at_4.07.18_PM_mc0xxx.jpg",
             subProducts: [
               {
                 name: "Low Viscosity Sodium CMC",
