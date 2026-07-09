@@ -161,7 +161,7 @@ const AboutHeroSection = () => (
             Discover Our Story
           </motion.a>
           <motion.a
-            href="mailto:sales@VIVINEinternational.com"
+            href="mailto:sales@vivineinternational.com"
             whileHover={{ scale: 1.05, y: -2, borderColor: 'rgba(255,255,255,0.6)', color: '#fff', backgroundColor: 'rgba(255,255,255,0.05)' }}
             whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 400, damping: 15 }}

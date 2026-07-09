@@ -15,7 +15,7 @@ const PRODUCT_CATS = [
 ];
 
 const CONTACTS = [
-  { Icon: Mail,  label: 'Email',          value: 'sales@VIVINEinternational.com', href: 'mailto:sales@VIVINEinternational.com' },
+  { Icon: Mail,  label: 'Email',          value: 'sales@vivineinternational.com', href: 'mailto:sales@vivineinternational.com' },
   { Icon: Phone, label: 'Phone',          value: '+91 9619661133',               href: 'tel:+919619661133' },
   { Icon: Clock, label: 'Business hours', value: 'Monday – Saturday, 9:00 AM – 6:00 PM IST', href: null },
 ];

@@ -35,11 +35,11 @@ const ContactSupportBanner = () => (
       <span style={{ color: 'rgba(245,238,224,0.4)', margin: '0 8px' }}>·</span>
       Email:{' '}
       <a
-        href="mailto:sales@VIVINEinternational.com"
+        href="mailto:sales@vivineinternational.com"
         className="font-semibold transition-opacity hover:opacity-100"
         style={{ color: 'var(--gold)', borderBottom: '1px solid rgba(201,168,76,0.5)', paddingBottom: 1 }}
       >
-        sales@VIVINEinternational.com
+        sales@vivineinternational.com
       </a>
     </div>
   </motion.div>
