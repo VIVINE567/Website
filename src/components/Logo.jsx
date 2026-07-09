@@ -1,35 +1,15 @@
-'use client';
-
-import { useEffect, useRef } from 'react';
-
-const Logo = ({ className = "h-16 md:h-20" }) => {
-  const videoRef = useRef(null);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.playbackRate = 0.75;
-    }
-  }, []);
-
-  return (
-    <div
-      data-component="Logo"
-      className={`flex items-center justify-center overflow-hidden ${className}`}
-    >
-      <video
-        ref={videoRef}
-        src="https://res.cloudinary.com/wiofsjuh/video/upload/v1783599887/WhatsApp_Video_2026-07-09_at_5.42.55_PM_wlb8f2.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        className="h-full w-auto max-w-[220px] object-contain"
-      >
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  );
-};
+const Logo = ({ className = "h-16 md:h-20" }) => (
+  <div data-component="Logo" className={`flex items-center ${className}`}>
+    <picture>
+      <source media="(min-width: 1024px)" srcSet="https://res.cloudinary.com/wiofsjuh/image/upload/v1783140648/VIVINE_hahciz.svg" type="image/svg+xml" />
+      <img
+        src="https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783142457/VIVINE_altvwa.png"
+        alt="VIVINE International"
+        className="w-[170px] mt-2 md:w-[180px] lg:w-[240px] h-auto object-contain !max-w-none"
+        referrerPolicy="no-referrer"
+      />
+    </picture>
+  </div>
+);
 
 export default Logo;
