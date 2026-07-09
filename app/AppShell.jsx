@@ -86,13 +86,17 @@ export default function AppShell({ children }) {
           {/* Mobile Menu Overlay */}
           <AnimatePresence>
             {mobileMenuOpen && (
-              <motion.div
-                initial={{ opacity: 0, x: '100%' }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: '100%' }}
-                className="fixed inset-0 z-mobile lg:hidden pt-24 px-6"
-                style={S.navMobileOverlay}
-              >
+            <motion.div
+  initial={{ opacity: 0, x: '100%' }}
+  animate={{ opacity: 1, x: 0 }}
+  exit={{ opacity: 0, x: '100%' }}
+  className="fixed inset-0 z-mobile lg:hidden pt-24 px-6 overflow-y-auto"
+  style={{
+    ...S.navMobileOverlay,
+    height: "100vh",
+    WebkitOverflowScrolling: "touch",
+  }}
+>
                 <div className="flex flex-col gap-5 text-xl font-medium" style={S.navMobileLinks}>
   {Cn.mobilePages.map((page) => {
     const href = typeof page === "string" ? page : page.href;
