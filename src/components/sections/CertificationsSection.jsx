@@ -4,12 +4,26 @@ import { motion } from 'motion/react';
 import S from '../../styles/products';
 
 const CERTS = [
-  { code: 'ISO', num: '9001', label: 'Quality Management' },
-  { code: 'ISO', num: '22000', label: 'Food Safety Management' },
-  { code: 'FSSC', num: '22000', label: 'Food Safety System' },
-  { code: 'BRC', num: 'Global', label: 'Food Safety Standard' },
-  { code: 'HALAL', num: '', label: 'Halal Certified' },
-  { code: 'KOSHER', num: '', label: 'Kosher Certified' },
+  {
+    label: 'ISO 9001 Certified',
+    img: 'https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783580104/certificates/iso-9001-certified.png',
+  },
+  {
+    label: 'ISO 22000 Certified',
+    img: 'https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783580102/certificates/iso-22000-certified.png',
+  },
+  {
+    label: 'BRC Certified Food',
+    img: 'https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783580097/certificates/halal-certified.png',
+  },
+  {
+    label: 'Halal Certified',
+    img: 'https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783580101/certificates/brc-certified-food.png',
+  },
+  {
+    label: 'Kosher Certified',
+    img: 'https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783580099/certificates/kosher-certified.png',
+  },
 ];
 
 const fadeUp = (delay = 0) => ({
@@ -81,62 +95,26 @@ const CertificationsSection = () => (
 
       <motion.div
         {...fadeUp(0.1)}
-        className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 max-w-5xl mx-auto"
-        style={{ gap: 'clamp(10px, 2vw, 20px)' }}
+        className="grid grid-cols-5 items-center justify-items-center max-w-4xl mx-auto"
+        style={{ gap: 'clamp(8px, 2vw, 28px)' }}
       >
         {CERTS.map((cert) => (
           <div
-            key={`${cert.code}-${cert.num || cert.label}`}
-            className="relative overflow-hidden flex flex-col items-center justify-center rounded-xl"
+            key={cert.label}
+            className="relative overflow-hidden flex items-center justify-center"
             style={{
-              minHeight: 132,
-              padding: '18px 10px',
-              background: 'rgba(255,255,255,0.38)',
-              border: '1px solid rgba(201,168,76,0.32)',
-              boxShadow: '0 12px 28px rgba(44,58,35,0.08)',
+              width: '100%',
+              height: 'clamp(42px, 10vw, 88px)',
             }}
           >
-            <span
-              className="uppercase"
-              style={{
-                fontFamily: "'Cinzel', serif",
-                fontSize: cert.num ? 'clamp(1.35rem, 2.5vw, 2rem)' : 'clamp(1.05rem, 2vw, 1.35rem)',
-                fontWeight: 700,
-                letterSpacing: '0.08em',
-                color: 'var(--forest)',
-                lineHeight: 1,
-              }}
-            >
-              {cert.code}
-            </span>
-            {cert.num && (
-              <span
-                style={{
-                  fontFamily: "'Raleway', sans-serif",
-                  fontSize: '0.9rem',
-                  fontWeight: 700,
-                  letterSpacing: '0.16em',
-                  color: 'var(--gold-dark)',
-                  marginTop: 8,
-                }}
-              >
-                {cert.num}
-              </span>
-            )}
-            <span
-              style={{
-                fontFamily: "'Raleway', sans-serif",
-                fontSize: '0.68rem',
-                fontWeight: 600,
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-                color: 'var(--brown-warm)',
-                marginTop: 12,
-                lineHeight: 1.45,
-              }}
-            >
-              {cert.label}
-            </span>
+            <img
+              src={cert.img}
+              alt={cert.label}
+              className="w-full h-full object-contain"
+              style={{ objectPosition: 'center center' }}
+              loading="lazy"
+              referrerPolicy="no-referrer"
+            />
           </div>
         ))}
       </motion.div>
