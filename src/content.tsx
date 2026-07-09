@@ -9,7 +9,7 @@ export const CONTENT = {
       { label: "About", href: "/about" },
       {
         label: "Products",
-        href: "#",
+        href: "/products",
         subItems: [
           { label: "Carrageenan", href: "/products/carrageenan" },
           { label: "Sodium Alginate", href: "/products/sodium-alginate" },

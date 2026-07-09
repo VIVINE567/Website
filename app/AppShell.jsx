@@ -27,6 +27,8 @@ export default function AppShell({ children }) {
   const isProductDetail = pathname.startsWith('/products/') && pathname !== '/products/';
   const isContact = pathname === '/contact';
   const [productsOpen, setProductsOpen] = useState(false);
+const [applicationsOpen, setApplicationsOpen] = useState(false);
+const [premixesOpen, setPremixesOpen] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -105,52 +107,84 @@ export default function AppShell({ children }) {
         ? page.charAt(0).toUpperCase() + page.slice(1)
         : page.label;
 
-    // Products Dropdown
-    if (label === "Products") {
-      const products = Cn.links.find((l) => l.label === "Products");
+    const dropdownPages = [
+  {
+    label: "Products",
+    open: productsOpen,
+    setOpen: setProductsOpen,
+  },
+  {
+    label: "Applications",
+    open: applicationsOpen,
+    setOpen: setApplicationsOpen,
+  },
+  {
+    label: "Premixes",
+    open: premixesOpen,
+    setOpen: setPremixesOpen,
+  },
+];
 
-      return (
-        <div key="products">
-          <button
-            onClick={() => setProductsOpen(!productsOpen)}
-            className="w-full flex items-center justify-between py-2 text-left"
-            style={S.navMobileLink}
+const dropdownItem = dropdownPages.find(
+  (d) => d.label.toLowerCase() === label.toLowerCase()
+);
+
+if (dropdownItem) {
+  const menu = Cn.links.find(
+    (l) => l.label.toLowerCase() === dropdownItem.label.toLowerCase()
+  );
+
+  return (
+    <div key={dropdownItem.label}>
+      <div className="flex items-center justify-between">
+        <Link
+          href={menu.href}
+          onClick={() => setMobileMenuOpen(false)}
+          className="flex-1 py-2"
+          style={S.navMobileLink}
+        >
+          {menu.label}
+        </Link>
+
+        <button
+          onClick={() => dropdownItem.setOpen(!dropdownItem.open)}
+          className="px-2 py-2"
+        >
+          <span
+            className={`transition-transform duration-300 ${
+              dropdownItem.open ? "rotate-180" : ""
+            }`}
           >
-            <span>Products</span>
-            <span
-              className={`transition-transform duration-300 ${
-                productsOpen ? "rotate-180" : ""
-              }`}
-            >
-              ▼
-            </span>
-          </button>
+            ▼
+          </span>
+        </button>
+      </div>
 
-          <AnimatePresence>
-            {productsOpen && (
-              <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.25 }}
-                className="overflow-hidden ml-4 mt-2 border-l border-gray-300 pl-4 flex flex-col gap-3"
+      <AnimatePresence>
+        {dropdownItem.open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="overflow-hidden ml-4 mt-2 border-l border-gray-300 pl-4 flex flex-col gap-3"
+          >
+            {menu.subItems?.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-base hover:text-yellow-500 transition"
               >
-                {products.subItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="text-base hover:text-yellow-500 transition"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      );
-    }
+                {item.label}
+              </Link>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
 
     return (
       <Link
