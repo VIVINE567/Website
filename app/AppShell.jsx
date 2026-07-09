@@ -26,6 +26,7 @@ export default function AppShell({ children }) {
   const pathname = usePathname();
   const isProductDetail = pathname.startsWith('/products/') && pathname !== '/products/';
   const isContact = pathname === '/contact';
+  const [productsOpen, setProductsOpen] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -92,29 +93,84 @@ export default function AppShell({ children }) {
                 className="fixed inset-0 z-mobile lg:hidden pt-24 px-6"
                 style={S.navMobileOverlay}
               >
-                <div className="flex flex-col gap-6 text-xl font-medium" style={S.navMobileLinks}>
-                  {Cn.mobilePages.map((page) => {
-                    const href = typeof page === 'string' ? page : page.href;
-                    const label = typeof page === 'string' ? (page.charAt(0).toUpperCase() + page.slice(1)) : page.label;
-                    return (
-                      <Link
-                        key={href}
-                        href={`/${href}`}
-                        onClick={() => setMobileMenuOpen(false)}
-                        style={S.navMobileLink}
-                        className="capitalize hover:opacity-60 transition-opacity"
-                      >
-                        {label}
-                      </Link>
-                    );
-                  })}
-                  <button
-                    onClick={() => { setMobileMenuOpen(false); setQuoteOpen(true); }}
-                    className="btn-gold py-4 rounded-xl"
+                <div className="flex flex-col gap-5 text-xl font-medium" style={S.navMobileLinks}>
+  {Cn.mobilePages.map((page) => {
+    const href = typeof page === "string" ? page : page.href;
+    const label =
+      typeof page === "string"
+        ? page.charAt(0).toUpperCase() + page.slice(1)
+        : page.label;
+
+    // Products Dropdown
+    if (label === "Products") {
+      const products = Cn.links.find((l) => l.label === "Products");
+
+      return (
+        <div key="products">
+          <button
+            onClick={() => setProductsOpen(!productsOpen)}
+            className="w-full flex items-center justify-between py-2 text-left"
+            style={S.navMobileLink}
+          >
+            <span>Products</span>
+            <span
+              className={`transition-transform duration-300 ${
+                productsOpen ? "rotate-180" : ""
+              }`}
+            >
+              ▼
+            </span>
+          </button>
+
+          <AnimatePresence>
+            {productsOpen && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.25 }}
+                className="overflow-hidden ml-4 mt-2 border-l border-gray-300 pl-4 flex flex-col gap-3"
+              >
+                {products.subItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="text-base hover:text-yellow-500 transition"
                   >
-                    {Cn.mobileCta}
-                  </button>
-                </div>
+                    {item.label}
+                  </Link>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      );
+    }
+
+    return (
+      <Link
+        key={href}
+        href={`/${href}`}
+        onClick={() => setMobileMenuOpen(false)}
+        style={S.navMobileLink}
+        className="capitalize hover:opacity-60 transition-opacity"
+      >
+        {label}
+      </Link>
+    );
+  })}
+
+  <button
+    onClick={() => {
+      setMobileMenuOpen(false);
+      setQuoteOpen(true);
+    }}
+    className="btn-gold py-4 rounded-xl"
+  >
+    {Cn.mobileCta}
+  </button>
+</div>
               </motion.div>
             )}
           </AnimatePresence>
