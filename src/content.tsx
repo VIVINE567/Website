@@ -326,7 +326,7 @@ export const CONTENT = {
           {
             name: "Carrageenan",
             desc: "Extracted from seaweed, Carrageenan provides unique functional characteristics to gel, thicken, and stabilize food and non-food systems. It plays an important role in modern-day formulations providing texture, structure, and physical stability.",
-            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783147596/product-images/Kappa-Carrageenan_cirlhm.jpg",
+            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783578782/VIVINE_Products_Photos/carrageenan.jpg",
             subProducts: [
               {
                 name: "Kappa Refined Carrageenan",
@@ -353,7 +353,7 @@ export const CONTENT = {
           {
             name: "Sodium Alginate",
             desc: "Obtained mainly from brown algae (Phaeophyceae), Sodium Alginate is used as a thickener, stabilizer, emulsifier, film-forming agent, binder, dispersant, and coagulant across multiple industries.",
-            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783147615/product-images/Sodium-Alginate-LF_tqkjgi.jpg",
+            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783578801/VIVINE_Products_Photos/sodium-alginate.jpg",
             subProducts: [
               {
                 name: "Sodium Alginate Low Viscosity",
@@ -376,7 +376,7 @@ export const CONTENT = {
           {
             name: "Calcium Alginate",
             desc: "A water-insoluble alginate salt formed by cross-linking sodium alginate with calcium ions. Valued for its gelling, encapsulation, and film-forming properties across food, pharmaceutical, and technical applications.",
-            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783147616/product-images/Sodium-Alginate-HF_om7s1k.jpg",
+            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783578826/VIVINE_Products_Photos/white-food-grade-sodium-alginate.png",
             subProducts: [
               {
                 name: "Calcium Alginate Fiber Grade",
@@ -395,7 +395,7 @@ export const CONTENT = {
           {
             name: "Alginic Acid",
             desc: "The purified parent polysaccharide of the alginate family, extracted from brown seaweed. Used as a thickener, stabilizer, and tablet disintegrant across food, pharmaceutical, and technical applications.",
-            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783147615/product-images/Sodium-Alginate-LF_tqkjgi.jpg",
+            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783578815/VIVINE_Products_Photos/alginic-acid.jpg",
             subProducts: [
               {
                 name: "Alginic Acid Food Grade",
@@ -414,7 +414,7 @@ export const CONTENT = {
           {
             name: "Propylene Glycol Alginate",
             desc: "Propylene Glycol Alginate (PGA) is the propylene glycol ester of alginic acid, uniquely stable in acidic conditions (pH 3–6). Functions as a high-performance emulsifier, thickener, stabilizer, and foam stabilizer across food, cosmetic, and pharmaceutical applications.",
-            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783147616/product-images/Sodium-Alginate-HF_om7s1k.jpg",
+            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783578824/VIVINE_Products_Photos/propylene-glycol-alginate.jpg",
             subProducts: [
               {
                 name: "PGA Food Grade (E405)",
@@ -439,7 +439,7 @@ export const CONTENT = {
           {
             name: "Gellan Gum",
             desc: "Manufactured by fermentation from a carbohydrate source, Gellan Gum is used to bind, stabilize, or texturize processed foods. It is similar to other gelling agents including guar gum, carrageenan, and xanthan gum.",
-            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783147612/product-images/High-Acyl-Gellan-Gum_iq3eyu.jpg",
+            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783578800/VIVINE_Products_Photos/gellan-gum.jpg",
             subProducts: [
               {
                 name: "High Acyl Gellan Gum",
@@ -454,7 +454,7 @@ export const CONTENT = {
           {
             name: "Xanthan Gum",
             desc: "Produced by fermentation of Xanthomonas campestris, Xanthan Gum is a versatile hydrocolloid used as a thickener, stabilizer, and emulsifier in food, pharmaceutical, and industrial applications.",
-            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783147618/product-images/Xanthan-Gum-200-Mesh_ytrsid.jpg",
+            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783578808/VIVINE_Products_Photos/xanthan-gum.jpg",
             subProducts: [
               {
                 name: "Xanthan Gum 200 Mesh",
@@ -479,7 +479,7 @@ export const CONTENT = {
           {
             name: "Pectin",
             desc: "A natural polysaccharide extracted from citrus peel and apple pomace, Pectin is widely used as a gelling, thickening, and stabilizing agent in jams, jellies, beverages, and confectionery products.",
-            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783147595/product-images/Citrus-Pectin_hwjqw3.jpg",
+            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783578790/VIVINE_Products_Photos/pectin.jpg",
             subProducts: [
               {
                 name: "HM Citrus Pectin",
@@ -506,7 +506,7 @@ export const CONTENT = {
           {
             name: "Konjac Gum",
             desc: "Extracted from the tuber of Amorphophallus konjac, Konjac Gum is a high-viscosity dietary fiber used as a thickener, gelling agent, and fat replacer in food and health products.",
-            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783147608/product-images/Konjac-Gum-18000_pwq6sa.jpg",
+            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783578813/VIVINE_Products_Photos/konjac-gum.jpg",
             subProducts: [
               {
                 name: "Konjac Gum 18000",
@@ -529,7 +529,7 @@ export const CONTENT = {
           {
             name: "Guar Gum",
             desc: "A natural galactomannan polysaccharide extracted from the endosperm of guar beans (Cyamopsis tetragonoloba), Guar Gum dissolves readily in cold and hot water to form highly viscous, pseudoplastic solutions used across food, pharmaceutical, and oilfield applications.",
-            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783147599/product-images/Flaxseed-Gum-1_xpdih3.jpg",
+            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783578818/VIVINE_Products_Photos/guar-gum.jpg",
             subProducts: [
               {
                 name: "Food grade — standard viscosity",
@@ -552,7 +552,7 @@ export const CONTENT = {
           {
             name: "Locust Bean Gum",
             desc: "Also known as Carob Bean Gum, Locust Bean Gum is a galactomannan extracted from the seeds of the carob tree (Ceratonia siliqua). It forms synergistic, elastic gels with carrageenan and xanthan gum, and is widely used as a thickener and stabilizer in food applications.",
-            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783147615/product-images/Flaxseed-Gum-2_v9pgrp.jpg",
+            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783578821/VIVINE_Products_Photos/locust-bean-gum.jpg",
             subProducts: [
               {
                 name: "Locust Bean Gum — Food Grade",
@@ -577,7 +577,7 @@ export const CONTENT = {
           {
             name: "HPMC",
             desc: "Hydroxypropyl Methyl Cellulose — a versatile modified cellulose ether widely used as a thickener, binder, film-former, and water-retention agent across food, pharmaceutical, construction, and personal care industries.",
-            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783147596/product-images/Kappa-Carrageenan_cirlhm.jpg",
+            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783578819/VIVINE_Products_Photos/hpmc.jpg",
             subProducts: [
               {
                 name: "Low Viscosity HPMC",
@@ -600,7 +600,7 @@ export const CONTENT = {
           {
             name: "HEC",
             desc: "Hydroxyethyl Cellulose — a non-ionic cellulose ether prized for viscosity control, rheology modification, and suspension stability across paints & coatings, personal care, pharmaceuticals, and oilfield applications.",
-            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783147615/product-images/Sodium-Alginate-LF_tqkjgi.jpg",
+            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783578820/VIVINE_Products_Photos/hec.jpg",
             subProducts: [
               {
                 name: "Low Viscosity HEC",
@@ -623,7 +623,7 @@ export const CONTENT = {
           {
             name: "MHEC",
             desc: "Methyl Hydroxyethyl Cellulose (MHEC / MHEC-RD) — the dominant cellulose ether in construction chemicals, providing water retention, workability, and anti-sag performance in tile adhesives, wall putty, skim coat, gypsum plaster, and dry-mix mortars.",
-            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783147596/product-images/Kappa-Carrageenan_cirlhm.jpg",
+            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783578823/VIVINE_Products_Photos/mhec.jpg",
             subProducts: [
               {
                 name: "MHEC 20,000–40,000 mPa·s",
@@ -646,7 +646,7 @@ export const CONTENT = {
           {
             name: "Sodium CMC",
             desc: "Sodium Carboxymethyl Cellulose (E466) — an anionic water-soluble cellulose ether used as a thickener, stabilizer, binder, and water-retention agent across food, pharma, personal care, detergent, paper, and oilfield applications.",
-            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783147608/product-images/Konjac-Gum-18000_pwq6sa.jpg",
+            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783578817/VIVINE_Products_Photos/polyanionic-cellulose.jpg",
             subProducts: [
               {
                 name: "Low Viscosity Sodium CMC",
@@ -665,7 +665,7 @@ export const CONTENT = {
           {
             name: "Polyanionic Cellulose",
             desc: "Polyanionic Cellulose (PAC) is a high-purity, high-Degree of Substitution sodium carboxymethyl cellulose engineered for demanding industrial environments, delivering superior salt tolerance, thermal stability, and fluid loss control across oilfield, construction, and textile applications.",
-            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783147602/product-images/Konjac-Gum-36000_m6tvq3.jpg",
+            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783578817/VIVINE_Products_Photos/polyanionic-cellulose.jpg",
             subProducts: [
               {
                 name: "PAC-R (Regular)",
@@ -684,7 +684,7 @@ export const CONTENT = {
           {
             name: "Croscarmellose Sodium",
             desc: "Croscarmellose Sodium (CCS) is a cross-linked polymer of sodium carboxymethyl cellulose — the gold-standard pharmaceutical superdisintegrant, swelling 4–8× its original volume to deliver rapid tablet and capsule disintegration.",
-            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783147618/product-images/Xanthan-Gum-200-Mesh_ytrsid.jpg",
+            img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783578816/VIVINE_Products_Photos/croscarmellose-sodium.jpg",
             subProducts: [
               {
                 name: "Standard Pharmaceutical Grade",
