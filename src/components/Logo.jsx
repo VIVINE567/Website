@@ -18,7 +18,7 @@ const Logo = ({ className = "h-16 md:h-20" }) => {
     >
       <video
         ref={videoRef}
-        src="https://res.cloudinary.com/wiofsjuh/video/upload/v1783595431/WhatsApp_Video_2026-07-09_at_4.39.10_PM_typsfg.mp4"
+        src="https://res.cloudinary.com/wiofsjuh/video/upload/v1783599887/WhatsApp_Video_2026-07-09_at_5.42.55_PM_wlb8f2.mp4"
         autoPlay
         loop
         muted
