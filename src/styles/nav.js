@@ -14,7 +14,10 @@ const navStyles = {
     background: "var(--cream)",
     borderLeft: "1px solid rgba(201,168,76,0.2)",
   },
-  navMobileLinks: { fontFamily: "'Oswald', sans-serif" },
+  navMobileLinks: {
+  fontFamily: "'Oswald', sans-serif",
+  lineHeight: "1.2",
+},
   navMobileLink: { color: "var(--forest)" },
 };
 

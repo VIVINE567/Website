@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
+import Link from 'next/link';
 import S from '../../styles/products';
 import { CONTENT } from '../../content';
 
@@ -77,9 +78,11 @@ const ProductsSection = () => (
         ))}
       </div>
 
-      <div className="mt-12 flex justify-center">
-        <button className="btn-outline-primary">{C.cta}</button>
-      </div>
+     <div className="mt-12 flex justify-center">
+  <Link href="/products" className="btn-outline-primary">
+    {C.cta}
+  </Link>
+</div>
     </div>
   </section>
 );

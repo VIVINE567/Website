@@ -99,7 +99,7 @@ const [premixesOpen, setPremixesOpen] = useState(false);
     WebkitOverflowScrolling: "touch",
   }}
 >
-                <div className="flex flex-col gap-5 text-xl font-medium" style={S.navMobileLinks}>
+                <div className="flex flex-col gap-2 text-lg font-medium" style={S.navMobileLinks}>
   {Cn.mobilePages.map((page) => {
     const href = typeof page === "string" ? page : page.href;
     const label =
@@ -135,12 +135,12 @@ if (dropdownItem) {
   );
 
   return (
-    <div key={dropdownItem.label}>
-      <div className="flex items-center justify-between">
+   <div key={dropdownItem.label} className="flex flex-col gap-2">
+  <div className="flex items-center justify-between py-1">
         <Link
           href={menu.href}
           onClick={() => setMobileMenuOpen(false)}
-          className="flex-1 py-2"
+          className="flex-1 py-1"
           style={S.navMobileLink}
         >
           {menu.label}
@@ -148,7 +148,7 @@ if (dropdownItem) {
 
         <button
           onClick={() => dropdownItem.setOpen(!dropdownItem.open)}
-          className="px-2 py-2"
+          className="px-2 py-1"
         >
           <span
             className={`transition-transform duration-300 ${
@@ -163,11 +163,11 @@ if (dropdownItem) {
       <AnimatePresence>
         {dropdownItem.open && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25 }}
-            className="overflow-hidden ml-4 mt-2 border-l border-gray-300 pl-4 flex flex-col gap-3"
+                 initial={{ height: 0, opacity: 0 }}
+        animate={{ height: "auto", opacity: 1 }}
+        exit={{ height: 0, opacity: 0 }}
+        transition={{ duration: 0.25 }}
+        className="overflow-hidden ml-4 border-l border-gray-300 pl-4 flex flex-col gap-2"
           >
             {menu.subItems?.map((item) => (
               <Link
@@ -192,7 +192,7 @@ if (dropdownItem) {
         href={`/${href}`}
         onClick={() => setMobileMenuOpen(false)}
         style={S.navMobileLink}
-        className="capitalize hover:opacity-60 transition-opacity"
+        className="capitalize hover:opacity-60 transition-opacity py-1 block"
       >
         {label}
       </Link>
