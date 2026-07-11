@@ -146,7 +146,7 @@ export const CONTENT = {
         {
           title: "Hydrocolloid Gums",
           desc: "VIVINE International supplies high-quality hydrocolloid gums designed to improve texture, viscosity, stability, suspension, and mouthfeel across food and industrial applications.",
-          tags: "Our premium product range includes Alginates, Celluloses, Carrageenan Gum, Locust Bean Gum, Pectin, Gellan Gum, Xanthan Gum, Guar Gum, Konjac Gum, and more — developed to deliver consistent performance and superior product quality.",
+          tags: "Our premium product range includes Alginates, Celluloses, Carrageenan Gum, Locust Bean Gum, Pectin, Gellan Gum, Xanthan Gum, Guar Gum, Konjac Gum, Modified Starch and more — developed to deliver consistent performance and superior product quality.",
           img: "https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783142479/Hydrocolloid_Gums_dahctf.png",
           imgAlt: "Hydrocolloid Gums Products",
           imgRight: true,

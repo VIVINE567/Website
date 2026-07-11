@@ -9,6 +9,7 @@ import S from '../styles/nav';
 
 const NavLink = ({ href, children, subItems }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [hoveredItem, setHoveredItem] = useState(null);
   const isDefaultPage = href === '#' || href === '' || !href;
   const pathname = usePathname();
   const router = useRouter();
@@ -60,34 +61,65 @@ const NavLink = ({ href, children, subItems }) => {
       </Link>
 
       {subItems && (
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 10 }}
-              className="absolute left-1/2 top-full mt-2 w-72 -translate-x-1/2 glass-dropdown z-dropdown"
-            >
-              {subItems.map((item) => {
-                const label = typeof item === 'string' ? item : item.label;
-                const to = typeof item === 'string'
-                  ? `/${item.toLowerCase().replace(/\s+/g, '-')}`
-                  : item.href;
-                return (
-                  <Link
-                    key={label}
-                    href={to}
-                    onClick={(e) => handleHashNavigate(e, to)}
-                    className="block px-6 py-3 text-sm text-brand-primary/70 hover:bg-brand-primary/5 hover:text-brand-primary transition-colors"
-                  >
-                    {label}
-                  </Link>
-                );
-              })}
-            </motion.div>
-          )}
-        </AnimatePresence>
-      )}
+  <AnimatePresence>
+    {isOpen && (
+      <motion.div
+        initial={{ opacity: 0, y: 12, scale: 0.98 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        exit={{ opacity: 0, y: 12, scale: 0.98 }}
+        transition={{
+          duration: 0.25,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+        className="absolute left-1/2 top-full mt-2 w-80 -translate-x-1/2 glass-dropdown z-dropdown rounded-3xl shadow-2xl max-h-[420px] overflow-y-auto overflow-x-hidden"
+      >
+        {subItems.map((item) => {
+          const label = typeof item === "string" ? item : item.label;
+          const to =
+            typeof item === "string"
+              ? `/${item.toLowerCase().replace(/\s+/g, "-")}`
+              : item.href;
+
+          return (
+            <Link
+  key={label}
+  href={to}
+  onClick={(e) => handleHashNavigate(e, to)}
+  onMouseEnter={() => setHoveredItem(label)}
+  onMouseLeave={() => setHoveredItem(null)}
+  className="
+    relative
+    flex
+    items-center
+    w-full
+    px-6
+    py-4
+    transition-all
+    duration-300
+    hover:bg-[#EFE8D8]
+  "
+>
+  <span className="text-[16px] text-brand-primary/75">
+    {label}
+  </span>
+
+  {hoveredItem === label && (
+    <motion.div
+      layoutId="dropdown-indicator"
+      className="absolute right-2 top-3 bottom-3 w-[4px] rounded-full bg-[#556B2F]"
+      initial={{ opacity: 0, scaleY: 0.4 }}
+      animate={{ opacity: 1, scaleY: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.2 }}
+    />
+  )}
+</Link>
+          );
+        })}
+      </motion.div>
+    )}
+  </AnimatePresence>
+)}
     </div>
   );
 };
