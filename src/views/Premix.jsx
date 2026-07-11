@@ -1,3 +1,4 @@
+'use client';
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
@@ -30,12 +31,24 @@ function PremixHero() {
       }} />
 
       {/* hero banner image */}
-      <div className="absolute inset-0" style={{
-        backgroundImage: 'url(https://res.cloudinary.com/wiofsjuh/image/upload/f_auto,q_auto/v1783142410/premix-hero-banner_ywovrx.jpg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        opacity: 0.35,
-      }} />
+     {/* Hero Background Video */}
+<video
+  autoPlay
+  loop
+  muted
+  playsInline
+  preload="auto"
+  className="absolute inset-0 w-full h-full object-cover"
+  style={{
+    opacity: 0.45,
+    zIndex: 0,
+  }}
+>
+  <source
+    src="https://res.cloudinary.com/wiofsjuh/video/upload/v1783771408/WhatsApp_Video_2026-07-11_at_5.32.58_PM_xhjius.mp4"
+    type="video/mp4"
+  />
+</video>
 
       <motion.div
         className="relative z-10"
