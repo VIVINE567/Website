@@ -37,42 +37,42 @@ export const HIGHLIGHTS = [
 export const INFO_CARDS = [
   {
     title: 'Galactomannan structure — M:G ratio 4:1',
-    body: 'LBG consists of a β-1,4-linked mannose backbone with α-1,6-linked galactose side chains at a mannose-to-galactose (M:G) ratio of approximately 4:1. This ratio is critical — fewer galactose branches mean more "bare" mannose regions, enabling stronger intermolecular associations (synergy) with other hydrocolloids.',
+    body: 'LBG consists of a β-1,4-linked mannose backbone with α-1,6-linked galactose side chains at a mannose-to-galactose (M:G) ratio of approximately 4:1. This ratio is critical — fewer galactose branches mean more "bare" mannose regions, enabling stronger intermolecular associations (synergy) with other hydrocolloids. Guar gum (M:G ≈ 2:1) has more galactose branches, giving it higher cold-water solubility but weaker synergistic gelation.',
   },
   {
     title: 'Hot dispersibility — full hydration at ≥ 80 °C',
-    body: 'LBG is only partially soluble in cold water (it swells and thickens). Full dispersion and maximum viscosity development requires heating to ≥ 80 °C (176 °F) for at least 10 minutes. This property is advantageous in pasteurized and UHT-processed food systems.',
+    body: 'LBG is only partially soluble in cold water (it swells and thickens). Full dispersion and maximum viscosity development requires heating to ≥ 80 °C (176 °F) for at least 10 minutes. This property is advantageous in pasteurized and UHT-processed food systems, as the thermal processing step simultaneously hydrates LBG without requiring additional unit operations. On cooling, viscosity increases further.',
   },
   {
     title: 'Powerful synergy with κ-Carrageenan',
-    body: 'The most commercially important property of LBG is its synergistic interaction with kappa-carrageenan. When blended, LBG intercalates into the helical junctions of carrageenan during gelation, producing a gel with up to 5–10× the firmness of carrageenan alone.',
+    body: 'The most commercially important property of LBG is its synergistic interaction with kappa-carrageenan. When blended, LBG intercalates into the helical junctions of carrageenan during gelation, producing a gel with up to 5–10× the firmness of carrageenan alone — at the same total hydrocolloid concentration. This synergy reduces total gum usage, improves texture, and produces more elastic, cohesive gels used in processed cheese, dairy desserts, and meat analogues.',
   },
   {
     title: 'Synergy with xanthan gum — freeze-thaw stability',
-    body: 'LBG and xanthan gum form a unique synergistic gel — LBG\'s bare mannose regions interact with xanthan\'s side chains to form a soft, elastic, freeze-thaw stable gel. Unlike many gelling systems, LBG-xanthan gels survive multiple freeze-thaw cycles without syneresis.',
+    body: 'LBG and xanthan gum form a unique synergistic gel — LBG\'s bare mannose regions interact with xanthan\'s side chains to form a soft, elastic, freeze-thaw stable gel. Unlike many gelling systems, LBG-xanthan gels survive multiple freeze-thaw cycles without syneresis (water separation). This property is essential in frozen food applications, plant-based desserts, and sauces that undergo temperature fluctuation in the cold chain.',
   },
   {
     title: 'Ice crystal control in frozen desserts',
-    body: 'In ice cream and frozen desserts, LBG (typically 0.1–0.2% with carrageenan) forms a semi-structured network in the aqueous phase that limits ice crystal growth during storage and temperature fluctuation. This extends product shelf life and maintains smooth texture.',
+    body: 'In ice cream and frozen desserts, LBG (typically 0.1–0.2% with carrageenan) forms a semi-structured network in the aqueous phase that limits ice crystal growth (recrystallisation) during storage and temperature fluctuation. This extends product shelf life, maintains smooth texture, and reduces the sandiness that consumers perceive when ice crystals exceed ~50 µm. LBG also improves overrun stability and body in dairy and non-dairy ice cream systems.',
   },
   {
     title: 'Clean label, non-GMO, gluten-free, vegan',
-    body: 'LBG is derived from the carob tree (Ceratonia siliqua), a leguminous tree cultivated primarily in Mediterranean regions. It is non-GMO, vegan, halal, kosher certifiable, and gluten-free — meeting clean-label positioning.',
+    body: 'LBG is derived from the carob tree (Ceratonia siliqua), a leguminous tree cultivated primarily in Mediterranean regions. It is non-GMO, vegan, halal, kosher certifiable, and gluten-free — meeting the stringent clean-label, free-from, and natural ingredient positioning demanded by modern food, nutraceutical, cosmetic, and pet food formulations. It carries E410 approval in the EU, GRAS status in the USA, and INS 410 globally.',
   },
 ];
 
 export const VISC_CHART = {
-  title: 'Viscosity range by grade (mPa·s at 1% solution)',
-  sub: 'Higher viscosity grades deliver greater thickening efficiency at equivalent concentration',
+  title: 'Max viscosity by LBG grade (mPa·s)',
+  sub: '1% aqueous solution, 25°C, Brookfield LVT — after full hot hydration',
   axisMax: 5000,
   ticks: [0, 1000, 2000, 3000, 4000, 5000],
-  axisLabel: 'Viscosity (mPa·s at 1% solution, 25°C)',
+  axisLabel: 'Max viscosity (mPa·s)',
   bars: [
-    { label: 'Standard food grade', value: 2500, note: ' ~2,500 mPa·s', color: '#C8943A' },
-    { label: 'High-viscosity grade', value: 3500, note: ' ~3,500 mPa·s', color: '#E8B840' },
-    { label: 'Low-viscosity grade', value: 1250, note: ' ~500–2,000 mPa·s', color: '#7EAAE8' },
-    { label: 'Pharma grade', value: 2500, note: ' ~1,000–3,500 mPa·s', color: '#A868C8' },
-    { label: 'Cosmetic grade', value: 2500, note: ' ~1,000–3,500 mPa·s', color: '#D878B8' },
+    { label: 'Standard food grade', value: 3500, note: 'Up to 3,500 mPa·s (1%, 25°C, fully hydrated)', color: '#C8943A' },
+    { label: 'High-viscosity grade', value: 4500, note: 'Up to 4,500 mPa·s (1%, 25°C, fully hydrated)', color: '#E8B840' },
+    { label: 'Low-viscosity grade', value: 2000, note: 'Up to 2,000 mPa·s (1%, 25°C, fully hydrated)', color: '#7EAAE8' },
+    { label: 'Pharma grade', value: 3500, note: 'Up to 3,500 mPa·s (1%, 25°C, fully hydrated)', color: '#A868C8' },
+    { label: 'Cosmetic grade', value: 3500, note: 'Up to 3,500 mPa·s (1%, 25°C, fully hydrated)', color: '#D878B8' },
   ],
-  note: '* Viscosity values are indicative at 1% aqueous solution, 25°C, fully hot-hydrated. Actual viscosity depends on processing temperature, shear history, pH, and presence of co-solutes. Contact VIVINE International for grade-specific TDS and samples.',
+  note: 'Viscosity values are indicative at 1% aqueous solution, fully hot-hydrated at 85°C for 15 min then cooled to 25°C, Brookfield LVT Spindle 3, 30 rpm. Actual viscosity depends on processing temperature, shear history, pH, and presence of co-solutes (salt, sugar).',
 };

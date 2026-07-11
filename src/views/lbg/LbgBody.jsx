@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 import S from '../../styles/products';
 import { IC, HIGHLIGHTS, INFO_CARDS, VISC_CHART } from '../../data/lbgContent';
 import { SPEC_TABLE, GRADES, REF_TABLE } from '../../data/lbgSpecs';
-import { REGULATORY, APP_DETAILS, SYNERGY } from '../../data/lbgApps';
+import { REGULATORY, APP_DETAILS, SYNERGY, GUAR_COMPARE } from '../../data/lbgApps';
 import { SEO_TITLE, SEO_PARAS, FOOTER_NOTE } from '../../data/lbgDetails';
 
 const fadeUp = { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, amount: 0.1 }, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } };
@@ -337,6 +337,33 @@ const RefTable = () => (
   </section>
 );
 
+const GuarCompare = () => (
+  <section>
+    <SectionHeader title="LBG vs. Guar Gum — choosing the right galactomannan" />
+    <motion.div {...fadeUp} className="rounded-md border overflow-x-auto" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
+      <table className="w-full text-[13px]" style={{ borderCollapse: 'collapse', minWidth: 720 }}>
+        <thead>
+          <tr style={{ background: 'rgba(201,168,76,0.1)' }}>
+            {GUAR_COMPARE.cols.map((h) => (
+              <th key={h} className="px-3.5 py-2.5 text-left text-[11px]" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)', fontWeight: 700, letterSpacing: '0.03em', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>{h}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {GUAR_COMPARE.rows.map((r, i) => (
+            <tr key={i} style={{ borderTop: '1px solid rgba(201,168,76,0.12)', verticalAlign: 'top' }}>
+              <td className="px-3.5 py-2.5" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)', fontWeight: 500, lineHeight: 1.5 }}>{r.property}</td>
+              <td className="px-3.5 py-2.5" style={{ fontFamily: "'Raleway', sans-serif", lineHeight: 1.5, color: r.lbgGood ? '#1E6B28' : 'var(--brown-warm)', fontWeight: r.lbgGood ? 600 : 400 }}>{r.lbg}</td>
+              <td className="px-3.5 py-2.5" style={{ fontFamily: "'Raleway', sans-serif", lineHeight: 1.5, color: r.guarGood ? '#1E6B28' : 'var(--brown-warm)', fontWeight: r.guarGood ? 600 : 400 }}>{r.guar}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <p className="px-3.5 py-2.5 text-[12px] italic" style={{ fontFamily: "'Raleway', sans-serif", color: 'var(--brown-warm)', borderTop: '1px solid rgba(201,168,76,0.15)' }}>{GUAR_COMPARE.note}</p>
+    </motion.div>
+  </section>
+);
+
 const Seo = () => (
   <section>
     <motion.div {...fadeUp} className="rounded-md border p-6" style={{ background: 'var(--cream)', borderColor: 'rgba(201,168,76,0.25)' }}>
@@ -363,15 +390,16 @@ export default function LbgBody() {
   return (
     <div className="min-w-0 flex flex-col gap-12">
       <Highlights />
-      <Regulatory />
       <InfoCards />
       <SpecTable />
+      <Regulatory />
+      <SynergySection />
+      <RefTable />
       <Grades />
       <ViscChart />
-      <SynergySection />
       <AppDetails />
-      <RefTable />
       <Seo />
+      <GuarCompare />
       <FooterNote />
     </div>
   );

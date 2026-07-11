@@ -39,6 +39,7 @@ export const SPEC_TABLE = [
   ['Heavy metals (as Pb)', '≤ 20 ppm'],
   ['Lead', '≤ 5 ppm'],
   ['Arsenic', '≤ 3 ppm'],
+  ['Total aerobic count', '≤ 5,000 CFU/g (food grade)'],
   ['Salmonella', 'Absent / 25 g'],
   ['E. coli', 'Absent / 1 g'],
   { section: 'Regulatory Approvals' },

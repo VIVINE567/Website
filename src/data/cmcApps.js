@@ -1,15 +1,205 @@
-// Sodium CMC "Quick reference table" — all grades at a glance
-
-export const REF_COLS = ['Grade', 'Viscosity (mPa·s)', 'Standard / Purity', 'Key features', 'Applications'];
-
-// `color` drives the coloured grade pill — brand earth palette (forest/gold/clay/stone)
-export const REF_TABLE = [
-  { grade: 'Low viscosity', color: { bg: '#F2E7CB', tx: '#9A7A2E' }, visc: '25–200', standard: '≥ 99.5%', features: 'Excellent solution clarity', apps: 'Beverages, Paper coating, Textile sizing' },
-  { grade: 'Medium viscosity', color: { bg: '#F2E7CB', tx: '#9A7A2E' }, visc: '200–800', standard: '≥ 99.5%', features: 'Good suspension properties', apps: 'Dairy products, Sauces, Creams & lotions' },
-  { grade: 'High viscosity', color: { bg: '#F1E7CD', tx: '#9A7A2E' }, visc: '800–8,000+', standard: '≥ 99.5%', features: 'Strong thickening and water retention', apps: 'Tile adhesives, Cement mortars, Drilling fluids' },
-  { grade: 'Food grade (E466)', color: { bg: '#E7EDDB', tx: '#3D4F2F' }, visc: '50–8,000', standard: 'E466 / FCC / JECFA', features: 'High purity, food compliant', apps: 'Ice cream, Bakery products, Sauces' },
-  { grade: 'Pharma grade', color: { bg: '#E0E8E2', tx: '#38564A' }, visc: '50–6,000', standard: 'USP / EP / BP', features: 'Controlled microbial limits', apps: 'Tablet binder, Oral suspensions, Ophthalmic solutions' },
-  { grade: 'Cosmetic grade', color: { bg: '#F0E3DA', tx: '#8A5A4A' }, visc: '100–3,000', standard: 'Cosmetic / CIR', features: 'Good film formation and stability', apps: 'Toothpaste, Shampoos, Skin gels' },
-  { grade: 'Industrial / technical grade', color: { bg: '#E9E3D3', tx: '#6B6450' }, visc: '25–5,000+', standard: '≥ 90%', features: 'Strong binding and thickening properties', apps: 'Paper sizing, Ceramic binders, Textile sizing' },
-  { grade: 'Oilfield grade', color: { bg: '#ECE1CF', tx: '#6E4E2E' }, visc: '50–8,000+', standard: 'API 13A / GB/T 5005', features: 'High salt tolerance and fluid loss control', apps: 'Drilling fluids, Completion fluids, Cementing systems' },
+// "Industry application ranking — Sodium CMC"
+export const RANK = [
+  {
+    num: '01',
+    name: 'Food & Beverage',
+    apps: 'Ice cream, bakery, sauces, dairy, beverages, processed foods',
+    star: true,
+    bg: '#E7EDDB', border: '#A8D0A8', tx: '#1A5020',
+  },
+  {
+    num: '02',
+    name: 'Oil & Gas Drilling',
+    apps: 'Rotary drilling mud, fluid loss control, water-based muds, workover fluids',
+    star: true,
+    bg: '#ECE1CF', border: '#D0A870', tx: '#6A3C08',
+  },
+  {
+    num: '03',
+    name: 'Detergents & Home Care',
+    apps: 'Laundry powder, liquid detergent, fabric anti-redeposition',
+    star: false,
+    bg: '#E1EDEC', border: '#90C8D8', tx: '#0A4860',
+  },
+  {
+    num: '04',
+    name: 'Paper & Board',
+    apps: 'Surface sizing, pigment coating, board strength, grease barrier',
+    star: false,
+    bg: '#E3E9EE', border: '#90A8D8', tx: '#0A2A68',
+  },
+  {
+    num: '05',
+    name: 'Pharmaceuticals',
+    apps: 'Tablet binder, disintegrant, sustained-release matrix, ophthalmic drops',
+    star: false,
+    bg: '#E0E8E2', border: '#B890D8', tx: '#3A0878',
+  },
+  {
+    num: '06',
+    name: 'Textile',
+    apps: 'Warp sizing, print paste thickener, finishing, fibre coating',
+    star: false,
+    bg: '#F0E3DA', border: '#D0A870', tx: '#7A3800',
+  },
+  {
+    num: '07',
+    name: 'Personal & Oral Care',
+    apps: 'Toothpaste binder, skincare gels, hair care, wound gels',
+    star: false,
+    bg: '#F5E1EA', border: '#D890B8', tx: '#780858',
+  },
+  {
+    num: '08',
+    name: 'Ceramics',
+    apps: 'Green-body binder, extrusion aid, glaze suspension, sanitaryware',
+    star: false,
+    bg: '#F1E7CD', border: '#C09878', tx: '#5A2808',
+  },
 ];
+
+export const REG_BADGES = [
+  { icon: '🇪🇺', strong: 'E466 — Cellulose Gum', span: 'EU Regulation (EC) No 1333/2008 — food additive' },
+  { icon: '🇺🇸', strong: 'GRAS — 21 CFR 182.1745', span: 'US FDA — Generally Recognised As Safe' },
+  { icon: '🌐', strong: 'JECFA / INS 466', span: 'FAO/WHO Joint Expert Committee on Food Additives' },
+  { icon: '📘', strong: 'Ph.Eur. — Carmellose Sodium', span: 'European Pharmacopoeia monograph' },
+  { icon: '📗', strong: 'USP-NF — Carmellose Sodium', span: 'United States Pharmacopeia & National Formulary' },
+  { icon: '⛽', strong: 'API Specification 13A', span: 'American Petroleum Institute — oilfield drilling grade' },
+  { icon: '☪️', strong: 'Halal & Kosher', span: 'Certified — available on request' },
+  { icon: '🌿', strong: 'Vegan', span: '100% plant / cellulose origin — no animal content' },
+];
+
+export const REF_COLS = ['Industry / Segment', 'Typical products', 'Recommended grade', 'Function of Sodium CMC', 'Dosage (% w/w)'];
+
+export const REF_TABLE = [
+  {
+    industry: 'Ice Cream & Frozen Desserts ⭐',
+    iStyle: { bg: '#E7EDDB', tx: '#1A5020' },
+    products: 'Ice cream, frozen yogurt, sorbet, gelato, ice milk',
+    grade: 'Medium–High viscosity, food grade (E466)',
+    fn: 'Ice crystal growth inhibition, body & chew improvement, heat-shock resistance, overrun stability, anti-melting; synergy with carrageenan and locust bean gum in multi-stabiliser systems',
+    dose: '0.10–0.25%',
+  },
+  {
+    industry: 'Bakery & Bread',
+    iStyle: { bg: '#E7EDDB', tx: '#1A5020' },
+    products: 'Sliced bread, gluten-free baked goods, cakes, biscuits, fillings',
+    grade: 'Medium viscosity, food grade',
+    fn: 'Moisture retention, shelf-life extension (anti-staling), dough strengthening, crumb softening, fat reduction in low-fat baked goods, gluten structure replacement in gluten-free formulations',
+    dose: '0.15–0.50%',
+  },
+  {
+    industry: 'Sauces, Dressings & Ketchup',
+    iStyle: { bg: '#E7EDDB', tx: '#1A5020' },
+    products: 'Tomato ketchup, salad dressings, mayonnaise, pourable sauces, condiments',
+    grade: 'Medium–High viscosity, food grade',
+    fn: 'Viscosity and texture control, emulsion stabilisation, syneresis prevention, pH-stable thickening (pH 3.5–7.0), clean flavour release, compatible with salt and vinegar systems',
+    dose: '0.10–0.50%',
+  },
+  {
+    industry: 'Dairy Products',
+    iStyle: { bg: '#E7EDDB', tx: '#1A5020' },
+    products: 'Flavoured milk, chocolate milk, yogurt drinks, processed cheese, cream analogues',
+    grade: 'Low–Medium viscosity, food grade',
+    fn: 'Protein stabilisation, suspension of cocoa and starch particles, prevention of whey separation, smooth mouthfeel, fat reduction texture compensation in low-fat dairy products',
+    dose: '0.05–0.25%',
+  },
+  {
+    industry: 'Rotary Drilling Mud ⭐',
+    iStyle: { bg: '#ECE1CF', tx: '#6A3C08' },
+    products: 'Water-based rotary drilling fluids, workover fluids, completion fluids',
+    grade: 'OCMA grade (API 13A §9) · HV grade (API 13A §10)',
+    fn: 'Fluid loss reduction (filtration control through cake formation on borehole wall), viscosity building, suspension of drill cuttings, mud cake thinness and impermeability, stable performance in freshwater and saline (NaCl, KCl) mud systems',
+    dose: '0.3–2.0 kg/m³ (0.1–0.7 lb/bbl)',
+  },
+  {
+    industry: 'Paper Surface Sizing',
+    iStyle: { bg: '#E3E9EE', tx: '#0A2A68' },
+    products: 'Fine printing papers, newsprint, copy paper, board surface sizing',
+    grade: 'Low–Medium viscosity, technical grade',
+    fn: 'Surface strength improvement (surface pick resistance, Scott bond), printability enhancement (ink absorption control, feathering reduction), porosity control, improved pen and inkjet ink holdout',
+    dose: '0.5–3.0 g/m² (size press)',
+  },
+  {
+    industry: 'Paper Coating',
+    iStyle: { bg: '#E3E9EE', tx: '#0A2A68' },
+    products: 'Coated fine paper, coated board, art paper, label paper',
+    grade: 'Low viscosity, technical/purified grade',
+    fn: 'Pigment coating rheology (co-binder, water retention during coating), coating holdout, gloss improvement, film formation on paper surface, ink adhesion; water retention preventing over-absorption of coating water into base sheet',
+    dose: '0.2–1.5% on coating weight',
+  },
+  {
+    industry: 'Warp Sizing',
+    iStyle: { bg: '#F0E3DA', tx: '#7A3800' },
+    products: 'Cotton, synthetic, and blended yarn warp sizing for weaving preparation',
+    grade: 'Medium viscosity, technical grade',
+    fn: 'Yarn strengthening and abrasion resistance during weaving, smooth adhesive coating on yarn surface, reduced yarn breakage and loom stoppages, easy desizing (complete water wash-off after weaving)',
+    dose: '2–8% on dry weight of yarn',
+  },
+  {
+    industry: 'Textile Print Paste',
+    iStyle: { bg: '#F0E3DA', tx: '#7A3800' },
+    products: 'Pigment and vat dye printing on cotton, blends, and synthetic fabrics',
+    grade: 'Medium–High viscosity, technical grade',
+    fn: 'Print paste thickening, pseudoplastic rheology for clean screen transfer, colour definition, prevention of bleeding or wicking on fabric, wash-off compatibility',
+    dose: '1–5% in print paste',
+  },
+  {
+    industry: 'Laundry Detergent ⭐',
+    iStyle: { bg: '#E1EDEC', tx: '#0A4860' },
+    products: 'Powder detergent, liquid detergent, laundry tablets, fabric care',
+    grade: 'Low–Medium viscosity, technical/food grade',
+    fn: 'Soil anti-redeposition (prevents removed soil re-depositing on fabric during wash), suspension stabilisation in liquid detergent, viscosity adjustment, fabric whiteness protection on cotton; effective at low concentration (0.3–1.0%) in both powder and liquid formats',
+    dose: '0.3–1.5%',
+  },
+  {
+    industry: 'Tablet Binder & Disintegrant ⭐',
+    iStyle: { bg: '#E0E8E2', tx: '#3A0878' },
+    products: 'Direct compression and wet granulation tablets across all therapeutic categories',
+    grade: 'Pharma grade (Ph.Eur. / USP-NF) — medium viscosity',
+    fn: 'Binder in dry and wet granulation (1.5–5%), disintegrant in immediate-release tablets (2–8%), improving tablet hardness, friability, and dissolution; soluble — disintegration by hydration and swelling rather than wicking',
+    dose: '1.5–8% of tablet weight',
+  },
+  {
+    industry: 'Ophthalmic & Oral Suspensions',
+    iStyle: { bg: '#E0E8E2', tx: '#3A0878' },
+    products: 'Artificial tear drops, eye lubricants, oral antibiotic suspensions, antacid suspensions',
+    grade: 'Pharma grade (Ph.Eur. / USP-NF) — low–medium viscosity',
+    fn: 'Viscosity agent in artificial tear formulations (0.5–1.5%), mucoadhesive for extended corneal contact time, suspension stabiliser in oral paediatric suspensions; listed in Ph.Eur. as Carmellose Sodium for ophthalmic use',
+    dose: '0.5–2.0%',
+  },
+  {
+    industry: 'Toothpaste ⭐',
+    iStyle: { bg: '#F5E1EA', tx: '#780858' },
+    products: 'Fluoride toothpaste, whitening toothpaste, sensitive toothpaste, gel toothpaste',
+    grade: 'Food/pharma grade — medium–high viscosity',
+    fn: 'Primary binder and thickener — provides cohesive gel structure, controls ribbon dispensing from tube, prevents separation of humectant and abrasive phases, stable in high pH (pH 7.0–9.5) toothpaste systems; used at 0.5–1.5% alongside carrageenan or xanthan in many commercial formulations',
+    dose: '0.5–1.5%',
+  },
+  {
+    industry: 'Skin Care & Hair Care',
+    iStyle: { bg: '#F5E1EA', tx: '#780858' },
+    products: 'Moisturisers, serums, shampoos, conditioners, hair gels, sunscreen',
+    grade: 'Food/purified grade — low–medium viscosity',
+    fn: 'Rheology modifier and thickener in emulsions and gels, film-former on skin and hair, humectant, conditioning film on hair fibres; compatible with anionic and non-ionic surfactant systems',
+    dose: '0.2–1.0%',
+  },
+  {
+    industry: 'Ceramic Green-Body Binder ⭐',
+    iStyle: { bg: '#F1E7CD', tx: '#5A2808' },
+    products: 'Wall tiles, floor tiles, sanitaryware (WC pans, wash basins), tableware, technical ceramics',
+    grade: 'Technical grade — medium–high viscosity',
+    fn: 'Green (unfired) body binder — improves green strength of pressed ceramic bodies by 20–40%, reducing cracking and breakage during handling before firing; also functions as extrusion plasticiser in extrusion of tiles and technical ceramics; burns out cleanly on firing without residue',
+    dose: '0.1–0.5% on dry ceramic body',
+  },
+  {
+    industry: 'Ceramic Glaze Suspension',
+    iStyle: { bg: '#F1E7CD', tx: '#5A2808' },
+    products: 'Ceramic glaze slip, engobe suspension, fritted glass frit suspension',
+    grade: 'Technical grade — low–medium viscosity',
+    fn: 'Glaze suspension stabiliser — prevents sedimentation of glaze minerals and frit particles, provides thixotropic rheology for even glaze application by dipping, spraying, or screen printing; improves glaze adhesion to bisqueware, reduces glaze crawling and pinholing defects after firing',
+    dose: '0.1–0.4% on glaze slip weight',
+  },
+];
+
+export const REF_NOTE = 'Note: Grades recommended above are indicative. Optimal viscosity grade, DS level, and purity should be selected based on the specific formulation, processing conditions, and regulatory requirements. Contact VIVINE International for technical grade selection support.';
