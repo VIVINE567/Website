@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
 const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919999999999';
-const EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'contact@VIVINE.com';
+const EMAIL = (process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'contact@vivine.com').toLowerCase();
 const CALL_NUMBER = '9619661133';
 
 export default function ChatWidget() {
