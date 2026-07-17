@@ -168,7 +168,7 @@ const buildUserEmail = (data) => {
                     ${products}
                     <p style="margin:22px 0 0;color:#5f4c35;line-height:1.6;">
                         Regards,<br />
-                        Team VIVINE
+                        VIVINE INTERNATIONAL
                     </p>
                 </div>
             </div>
@@ -186,7 +186,7 @@ const buildUserText = (data) => {
         ? `\n\nProducts noted: ${valueToText(data.products)}`
         : '';
 
-    return `Hi ${getSubmitterName(data)},\n\nThank you for contacting VIVINE. We have received your inquiry and our team will get back to you within 24 hours.${products}\n\nRegards,\nTeam VIVINE`;
+    return `Hi ${getSubmitterName(data)},\n\nThank you for contacting VIVINE. We have received your inquiry and our team will get back to you within 24 hours.${products}\n\nRegards,\nVIVINE INTERNATIONAL`;
 };
 
 const createTransporter = () => {
