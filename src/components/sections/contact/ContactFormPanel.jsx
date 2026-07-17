@@ -33,7 +33,7 @@ const PRODUCTS = [
   'PAC',
   'Croscarmellose Sodium (CCS)',
   'Alginic Acid',
-  'LBG',
+  'Locust Bean Gum (LBG)',
   'Cellulose Powder',
   'Modified Starch',
 ];
